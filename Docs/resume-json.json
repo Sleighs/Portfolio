@@ -1,0 +1,132 @@
+{
+  "selectedTemplate": 6,
+  "headings": {
+    "work": "Work Experience",
+    "education": "",
+    "skills": "What Do I Know?",
+    "awards": "",
+    "projects": "What Have I Built?"
+  },
+  "basics": {
+    "name": "Samuel Wright",
+    "phone": "6094722897",
+    "website": "github.com/sleighs",
+    "location": {
+      "address": "New York, NY"
+    },
+    "email": "wsright987@gmail.com"
+  },
+  "education": [
+    {
+      "institution": "",
+      "location": "",
+      "area": "",
+      "studyType": "",
+      "startDate": "",
+      "endDate": "",
+      "gpa": ""
+    }
+  ],
+  "work": [
+    {
+      "company": "Google",
+      "location": "Mountain View, CA",
+      "position": "Software Engineer",
+      "website": "",
+      "startDate": "May 2015",
+      "endDate": "Present",
+      "highlights": [
+        "Did cool stuff at company"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "name": "Web Technologies & Scripts/UI",
+      "level": "",
+      "keywords": [
+        "Javascript",
+        "CSS3",
+        "AJAX",
+        "HTML5",
+        "PHP"
+      ]
+    },
+    {
+      "keywords": [
+        "React",
+        "Redux",
+        "Express",
+        "Socket IO",
+        "Bootstrap"
+      ],
+      "name": "Libraries"
+    },
+    {
+      "keywords": [
+        "Node JS",
+        "XAMPP",
+        null
+      ],
+      "name": "Web Server Environments"
+    },
+    {
+      "keywords": [
+        "MySQL",
+        "MongoDb"
+      ],
+      "name": "Database"
+    },
+    {
+      "keywords": [
+        "Git",
+        "Firebase",
+        "AWS",
+        ""
+      ],
+      "name": "Versioning and Other Tools"
+    }
+  ],
+  "projects": [
+    {
+      "keywords": [
+        "Javascript",
+        "React",
+        "Firebase"
+      ],
+      "name": "Mint 2048",
+      "description": "A fresh twist on the classic 2048 puzzle game.",
+      "url": "github.com/Sleighs/Mint-2048"
+    },
+    {
+      "keywords": [
+        "JQuery",
+        "Javascript",
+        "Node JS"
+      ],
+      "name": "CashFlow JS",
+      "description": "An browser version of the Cash Flow 101 board game with new features, rules and customizations ",
+      "url": "github.com/Sleighs/CashFlowJs"
+    },
+    {
+      "keywords": [
+        ""
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "awarder": "",
+      "summary": ""
+    }
+  ],
+  "sections": [
+    "templates",
+    "profile",
+    "education",
+    "work",
+    "skills",
+    "projects",
+    "awards"
+  ]
+}
