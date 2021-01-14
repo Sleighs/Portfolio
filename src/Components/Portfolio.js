@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Header from './Header';
 
 class Portfolio extends Component {
-
   render() {
     return (
       <div className="Portfolio">
@@ -10,7 +9,6 @@ class Portfolio extends Component {
       </div>
     );
   }
-  
 }
 
 export default Portfolio;
