@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import './App.css';
+import Header from './Header';
 
-class Portfolio extends Component() {
+class Portfolio extends Component {
 
   render() {
     return (
       <div className="Portfolio">
-        portfolio
+            <Header />
       </div>
     );
   }
