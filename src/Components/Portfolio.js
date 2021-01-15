@@ -5,9 +5,10 @@ import Skills from './Skills';
 class Portfolio extends Component {
   render() {
     return (
-      <div className="Portfolio">
+      <div className={"Portfolio", 'm-5'}>
             <Header />
             <Skills />
+            <Projects />
       </div>
     );
   }

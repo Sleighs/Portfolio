@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Portfolio from './Components/Portfolio';
 import { ReactReduxContext } from 'react-redux';
 import { createStore } from 'redux';

@@ -136,8 +136,13 @@ class Header extends Component {
       }
 
     render (){
+        let containerStyle = {
+            textAlign: 'center',
+            margin: 'auto'
+        }
+        
         return (
-            <div className="header-container">
+            <div className={"header-container", "m-5"} style={containerStyle}>
                 <span id="name">Samuel Wright</span>
                 <br/>
                 <span id="title">SOFTWARE </span>
