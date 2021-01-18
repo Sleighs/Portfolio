@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import AppManager from '../AppManager';
 
 class Header extends Component {
@@ -20,6 +19,9 @@ class Header extends Component {
 
         this.init = this.init.bind(this);
         this.getText = this.getText.bind(this);
+    }
+    componentDidMount() {
+      this.init('start');
     }
 
     getText() {
@@ -56,15 +58,15 @@ class Header extends Component {
               typedText = [];
               reverse = false;
       
-              //close after one cycle through word list
-              if (this.state.pos === this.state.arr.length - 1) {
+              // Stops interval after one cycle through word list
+              /*if (this.state.pos === this.state.arr.length - 1) {
                   this.setState({
                     n: "start"
                   });
                   initBtn.innerHTML = "Start";
                   
                   clearInterval(AppManager.interval);
-              }
+              }*/
       
               // Move to next word or return to first word if at last word
               if (this.state.pos < this.state.arr.length - 1) {
@@ -138,17 +140,22 @@ class Header extends Component {
     render (){
         let containerStyle = {
             textAlign: 'center',
-            margin: 'auto'
+            margin: 'auto',
+            fontSize: '2em',
+            fontWeight: 'bold'
+        }
+        let buttonStyle = {
+          display: 'none'
         }
         
         return (
             <div className={"header-container", "m-5"} style={containerStyle}>
-                <span id="name">Samuel Wright</span>
+                <span id="name">SAMUEL WRIGHT</span>
                 <br/>
                 <span id="title">SOFTWARE </span>
                 <span id="log"></span>
                 <span id='glyph'> |</span>
-                <button id={'init-btn'} onClick={ ()=>{this.init(this.state.n)} }>Start</button>
+                <button id={'init-btn'} onClick={ ()=>{this.init(this.state.n)}} style={buttonStyle}>Start</button>
             </div>
         )
     }

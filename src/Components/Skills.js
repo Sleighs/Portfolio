@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import AppManager from '../AppManager';
 
 class Skills extends Component {
 
@@ -13,7 +12,7 @@ class Skills extends Component {
         }
 
         return (
-            <div className="skills-container" style={containerStyle}>
+            <div className={"container", "skills-container", "m-5"} style={containerStyle}>
                 <section id="do" style={doStyle}>
 					<div className="header-box">
 						<h3>What Do I Do?</h3>
