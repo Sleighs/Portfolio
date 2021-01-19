@@ -1,21 +1,28 @@
 import React, { Component } from 'react';
+import '../App.css';
 
 class Skills extends Component {
-
-
     render (){
         let containerStyle = {
-            margin: 'auto'
-        }
+			margin: '30px auto 30px auto',
+			fontSize: '1.2em'
+		}
+		let titleStyle = {
+			margin: '25px auto'
+		}
         let doStyle = {
-            textAlign: 'center'
-        }
+			textAlign: 'center',
+			margin: '40px auto 0 auto'
+		}
+		let knowStyle = {
+			margin: '50px auto 5px auto'
+		}
 
         return (
-            <div className={"container", "skills-container", "m-5"} style={containerStyle}>
-                <section id="do" style={doStyle}>
-					<div className="header-box">
-						<h3>What Do I Do?</h3>
+            <div className={"container"} id="skills-container" style={containerStyle}>
+                <div id="do" style={doStyle}>
+					<div className="header-box" style={titleStyle}>
+						<h3 className="title"><strong>WHAT DO I DO?</strong></h3>
 					</div>
 					<p>Work at AweSumo Education creating software</p>
 					<p>Create fun projects in my spare time</p>
@@ -27,10 +34,10 @@ class Skills extends Component {
 					<p>Keep track of every bug</p>
 					<p>Strictly follow security best practices</p>
 					<p>Never stop learning</p>
-				</section>
-                <section id="know">
-					<div class="header-box">
-						<h3>What Do I Know?</h3>
+				</div>
+                <div id="know" style={knowStyle}>
+					<div className="header-box" style={titleStyle}>
+						<h3 className="title"><strong>WHAT DO I KNOW?</strong></h3>
 					</div>
 					<ul>
 						<li>Javascript, PHP, C#, Python and several other programming languages</li>
@@ -39,9 +46,10 @@ class Skills extends Component {
 						<li>How to use a feature/dev/master branch workflow in Git</li>
 						<li>How to configure Apache, setup CRONs, manage packages, exit VIM, and other Linux Sys Admin tasks</li>
 						<li>How to query and interpret data to make meaningful insights</li>
-						<li>How to ask a great question on <a target="_blank" href="https://stackoverflow.com/">Stack Overflow</a></li>
+						<li>How to ask a great question on <a target="_blank" href="https://stackoverflow.com/" rel="noreferrer" >Stack Overflow</a></li>
+						<li>How to make an excellent <a target="_blank" href="https://github.com/Sleighs/google-maps-react-tutorial/blob/master/README.md" rel="noreferrer">Github Repository</a></li>
 					</ul>
-				</section>
+				</div>
             </div>
         )
     }

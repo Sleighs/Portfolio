@@ -1,5 +1,6 @@
 var AppManager = {
-    interval: null
+    interval: null,
+    newIntervalTime: 175
 };
 
 export default AppManager;

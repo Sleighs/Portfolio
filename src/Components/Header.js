@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import AppManager from '../AppManager';
+import '../App.css';
 
 class Header extends Component {
     constructor(props) {
@@ -21,27 +22,56 @@ class Header extends Component {
         this.getText = this.getText.bind(this);
     }
     componentDidMount() {
-      this.init('start');
+      AppManager.primaryInterval = setTimeout(()=>{
+        this.init('start');
+      }, 1090)
+      
+    }
+    // For precise interval times per word
+    getInterval(type){
+      var time;
+      //var random = Math.floor(Math.random() * 2800) + 200;
+      
+      switch(type){
+        case 1:
+          time = 500;
+          break;
+        case 2:
+          time = 1800;
+          break;
+        case 0:
+          time = 2000;
+          break;
+        default:
+          time = 2000
+      }
+      return time;
     }
 
     getText() {
-        var name = document.getElementById("name");
-        var title = document.getElementById("title");
-        var log = document.getElementById("log");
-        var initBtn = document.getElementById("init-btn");
+        //var name = document.getElementById("name");
+        //var title = document.getElementById("title");
+        //var log = document.getElementById("log");
 
         // Get word from array
         var word = this.state.arr[this.state.pos];
         // Transform word from string to array
         var newArr = word.split("");
 
-        var text = this.state.arr[this.state.pos];
-
         var typedText = this.state.typedText;
         var reverse = this.state.reverse;
         var a = this.state.a;
         var newText = this.state.newText;
-      
+
+        // Changes the time interval timer for spelling or deleting
+        var randomTime;
+        if (reverse === true){
+          randomTime = Math.floor(Math.random() * 225) + 25;
+        } else {
+          randomTime = Math.floor(Math.random() * 275) + 75;
+        }
+        AppManager.newIntervalTime = randomTime;
+
         //count += 1;
       
         // Delete text if reverse is true
@@ -57,6 +87,18 @@ class Header extends Component {
             if (a.join("") === "") {
               typedText = [];
               reverse = false;
+
+              //stop after full word delete
+              clearInterval(AppManager.interval);
+
+
+              var rand1 = Math.floor(Math.random() * 1750) + 200;
+
+              AppManager.primaryInterval = setTimeout(()=>{
+                this.init('start');
+              }, rand1)
+              
+
       
               // Stops interval after one cycle through word list
               /*if (this.state.pos === this.state.arr.length - 1) {
@@ -94,12 +136,20 @@ class Header extends Component {
             newText = a.join("");
       
             // If new word equals complete word make reverse true to begin delete animation
-            if (a.join("") === word) {
+            if (newText === word) {
               reverse = true;
+
+              //stop after full word typed
+              clearInterval(AppManager.interval);
+              var rand2 = Math.floor(Math.random() * 4000) + 100;
+              AppManager.primaryInterval = setTimeout(()=>{
+                this.init('start');
+              }, rand2)
             }
           }
         }
 
+        // Save the typed text for next iteration
         this.setState({
             typedText: typedText,
             reverse: reverse,
@@ -110,18 +160,15 @@ class Header extends Component {
       }
             
       init(type) {
-        var initBtn = document.getElementById("init-btn");
         var log = document.getElementById("log");
-
-        //var rand;
       
         if (type === "stop") {
             this.setState({
                 n: 'start'
             });
           
-          initBtn.innerHTML = "Start";
           clearInterval(AppManager.interval);
+          clearInterval(AppManager.primaryInterval);
         }
       
         if (type === "start") {
@@ -132,30 +179,21 @@ class Header extends Component {
             AppManager.interval = setInterval((interval) => {
                 this.getText();
                 log.innerHTML = this.state.newText;
-            }, 175)
-            initBtn.innerHTML = "Stop";
+            }, AppManager.newIntervalTime);
         }
       }
 
     render (){
-        let containerStyle = {
-            textAlign: 'center',
-            margin: 'auto',
-            fontSize: '2em',
-            fontWeight: 'bold'
-        }
-        let buttonStyle = {
-          display: 'none'
-        }
-        
         return (
-            <div className={"header-container", "m-5"} style={containerStyle}>
-                <span id="name">SAMUEL WRIGHT</span>
-                <br/>
-                <span id="title">SOFTWARE </span>
-                <span id="log"></span>
-                <span id='glyph'> |</span>
-                <button id={'init-btn'} onClick={ ()=>{this.init(this.state.n)}} style={buttonStyle}>Start</button>
+            <div id="header-container" className={"continer title"} onClick={ ()=>{this.init(this.state.n)}}>
+                <div id="name-container">
+                  <h1 id="name"><strong>SAMUEL WRIGHT</strong></h1>
+                </div>
+                <strong>
+                  <span id="title">SOFTWARE </span>
+                  <span id="log"></span>
+                  <span id='glyph'> |</span>
+                </strong>
             </div>
         )
     }

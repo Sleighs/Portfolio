@@ -1,27 +1,34 @@
 import React, { Component } from 'react';
+import '../App.css';
 
 class Projects extends Component {
     render (){
         let containerStyle = {
-            margin: 'auto'
+            margin: '30px auto'
         }
-        let tableHeader = {
-            textAlign: 'center'
-        }
+
         let rowStyle = {
             borderBottom: '1pt solid'
         }
 
         return (
-            <div className={"container","projects-container"} style={containerStyle}>
-                <div style={tableHeader}>WHAT I'VE BUILT</div>
-                <div className="projects-row" style={rowStyle}>
-                    CashFlow JS
-                </div>
-                <div className="projects-row" style={rowStyle}>
-                    Mint 2048
-                </div>
-            </div>
+            <table className={"table"} style={containerStyle}>
+                <thead>
+                    <tr>
+                        <td><h3 className="title"><strong>WHAT HAVE I BUILT?</strong></h3></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr className="row" style={rowStyle}>
+                        <td>Picture</td>
+                        <td>Description</td>
+                    </tr>
+                    <tr className="row" style={rowStyle}>
+                        <td>Description</td>
+                        <td>Picture</td>
+                    </tr>
+                </tbody>
+            </table>
         )
     }
 }

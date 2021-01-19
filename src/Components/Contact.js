@@ -1,31 +1,54 @@
 import React, { Component } from 'react';
+import '../App.css';
 
 class Contact extends Component {
     render (){
-        let containerStyle = {
+        let titleStyle = {
+            textAlign: 'center',
+            color: '#62c246'
+        }
+        let contactInfoStyle = {
+            textAlign: 'center'
+        }
+        let infoTextStyle = {
+            color: 'rgb(0,0,0)'
+        }
+        let contactFormStyle = {
+            maxWidth: 450,
             margin: 'auto'
+        }
+        let contactFormBtn = {
+            /*margin: 'auto',
+            padding: '5px 15px',
+            outline: 'none'*/
         }
         
         return (
-            <div className={"container", "contact-container", "m-5"} style={containerStyle}>
-                <h3>HOW YOU CAN REACH ME?</h3>
-                <a href="mailto:wsright987@gmail.com">WSRIGHT987@GMAIL.COM</a>
-                <div>Or use this contact form below:</div>
-                <form>
-                    <div>
-                        <span>Your Name </span>
-                        <input type="text"></input>
+            <div className={"container"} id="contact-container">
+                <div style={titleStyle}>
+                    <h3 className="title"><strong>HOW CAN YOU REACH ME?</strong></h3>
+                </div>
+                <div style={contactInfoStyle}>
+                    <a href="mailto:wsright987@gmail.com">WSRIGHT987@GMAIL.COM</a>
+                    <br/>
+                    <strong>609-472-2897</strong>
+                    <div style={infoTextStyle}>Or use this contact form below:</div>
+                </div>
+                
+                <form style={contactFormStyle}>
+                    <div className="form-group"> 
+                        <label for="inputName">Your Name</label>
+                        <input type="text" class="form-control" />
                     </div>
-                    <div>
-                         <span>Your Email </span>
-                        <input type="text"></input>
+                    <div className="form-group">
+                        <label for="inputEmail1">Your Email</label>
+                        <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
                     </div>
-                    <div>
-                        <span>Your Message </span>
-                        <input type="text"></input>
+                    <div className="form-group">
+                        <label for="inputMessage" className="form-text">Your Message </label>
+                        <textarea type="text" className="form-control"/>
                     </div>
-                    
-                    <button type="submit">Send</button>
+                    <input type="submit" className={"input for-control submit"} style={contactFormBtn} value="Send"/>
                 </form>
             </div>
         )

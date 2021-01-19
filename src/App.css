@@ -1,40 +1,33 @@
-.App {
+
+@font-face {
+  font-family: 'Rokkitt';
+  src: url(/src/resources/fonts/Rokkitt-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: 'Galdeano';
+  src: url(/src/resources/fonts/Galdeano-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Varta';
+  src: url('/src/resources/fonts/Varta-VariableFont_wght.ttf');
+}
+
+
+body {
+  font-family: 'Rokkitt';
+}
+
+#portfolio {
+  max-width: 800px;
+  height: 100%;
+}
+
+.title {
+  font-family: 'Varta';
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  font-size: 1.5em;
 }
 
 #container {
@@ -45,26 +38,35 @@
   margin: auto;
   text-align: center;
 }
+#header-container {
+  color: white;
+  padding: 18px;
+  width: 100%;
+  height: 200x;
+  font-size: 1.1em;
+  background: rgb(0,16,31);
+  background: linear-gradient(0deg, rgba(0,16,31,1) 97%, rgba(9,78,44,1) 99%, rgba(199,217,0,1) 100%);
+}
 
 #name {
-  font-size: 2.5em;
-  /*font-family: "Open Sans";*/
+  font-size: 2.8em;
   letter-spacing: 1px;
+  /*font-family: 'Frontman';*/
 }
 
 #title,
 #log {
   font-size: 2.2em;
-  /*font-family: "Open Sans";*/
   letter-spacing: 2px;
+  /*font-family: 'Frontman';*/
 }
 
 #glyph {
-  font-size: 2.5em;
-  font-family: "Open Sans";
+  font-size: 2.6em;
   animation-name: glyph;
-  animation-duration: 1.5s;
+  animation-duration: 1.45s;
   animation-iteration-count: infinite;
+  vertical-align: bottom;
 }
 
 @keyframes glyph {
@@ -79,15 +81,36 @@
   }
 }
 
-#init-btn {
-  display: block;
-  font-size: 1.5em;
-  font-family: "Open Sans";
-  letter-spacing: 1.5px;
-  padding: 10px 25px;
-  background: #0d47a1;
-  border-radius: 5px;
-  color: white;
-  opacity: 0.9;
+#do {
+  line-height: 20px; 
+}
+#know {
+
+}
+#info-container {
+  margin: 30px auto;
+}
+
+#github-container {
+  text-align: center;
+  font-size: 1.4em;
+  height: 125px;
+}
+
+#map-container {
+  height: 400px;
+  max-width: 600px;
   margin: auto;
+}
+
+#contact-container {
+  
+}
+
+#footer-container {
+    text-align: center;
+    margin: 30px auto;
+    font-size: 1.2em;
+    width: 100%;
+    height: 100px;
 }

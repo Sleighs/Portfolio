@@ -2,16 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Portfolio from './Components/Portfolio';
-import { ReactReduxContext } from 'react-redux';
-import { createStore } from 'redux';
-//import reportWebVitals from './reportWebVitals';
+import Portfolio from './Portfolio';
+//import { ReactReduxContext } from 'react-redux';
+//import { createStore } from 'redux';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Portfolio />
-  </React.StrictMode>,
+    <Portfolio />,
   document.getElementById('root')
 );  
 
-//reportWebVitals();
