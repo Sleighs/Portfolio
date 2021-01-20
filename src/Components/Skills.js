@@ -4,8 +4,7 @@ import '../App.css';
 class Skills extends Component {
     render (){
         let containerStyle = {
-			margin: '30px auto 30px auto',
-			fontSize: '1.2em'
+			margin: '30px auto 30px auto'
 		}
 		let titleStyle = {
 			margin: '25px auto'
@@ -24,7 +23,7 @@ class Skills extends Component {
 					<div className="header-box" style={titleStyle}>
 						<h3 className="title"><strong>WHAT DO I DO?</strong></h3>
 					</div>
-					<p>Work at AweSumo Education creating software</p>
+					<p>Work at AweSumo Enterprises creating software</p>
 					<p>Create fun projects in my spare time</p>
 					<p>Write quality code</p>
 					<p>Keep my functions small, focused, and easy to understand</p>

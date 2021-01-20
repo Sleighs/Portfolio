@@ -3,25 +3,22 @@ import { Map, GoogleApiWrapper, InfoWindow, Marker } from 'google-maps-react';
 import '../App.css';
 
 const mapStyles = {
-  width: '600px',
+  width: '90%',
   height: '300px',
-  //margin: 'auto',
-  display: 'block',
   position: 'relative'
+
 };
 
 export class MapContainer extends Component {
     constructor(props){
         super(props);
         this.state ={
-                showingInfoWindow: false,  // Hides or shows the InfoWindow
-                activeMarker: {},          // Shows the active marker upon click
-                selectedPlace: {}          // Shows the InfoWindow to the selected place upon a marker
-              };
+            showingInfoWindow: false,  // Hides or shows the InfoWindow
+            activeMarker: {},          // Shows the active marker upon click
+            selectedPlace: {}          // Shows the InfoWindow to the selected place upon a marker
+          };
         }
-    componentDidMount() {
-        
-    }
+    
     toggleBounce() {
         if (this.state.marker.getAnimation() !== null) {
         //marker.setAnimation(null);
@@ -89,5 +86,5 @@ export class MapContainer extends Component {
 }
 
 export default GoogleApiWrapper({
-    apiKey: 'AIzaSyClQckeNCdjuNJZVUas8aVEIGYu4ekTKqs'
-  })(MapContainer);
+  apiKey: 'AIzaSyClQckeNCdjuNJZVUas8aVEIGYu4ekTKqs'
+})(MapContainer);

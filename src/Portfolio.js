@@ -13,7 +13,7 @@ class Portfolio extends Component {
       //fontFamily: "Galdeano",
       fontSize: '1.2em'
     }
-
+    
     return (
       <div id="portfolio" className={"container"} style={portfolioStyle}>
         <Header />

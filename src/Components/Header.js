@@ -187,7 +187,7 @@ class Header extends Component {
         return (
             <div id="header-container" className={"continer title"} onClick={ ()=>{this.init(this.state.n)}}>
                 <div id="name-container">
-                  <h1 id="name"><strong>SAMUEL WRIGHT</strong></h1>
+                  <h2 id="name"><strong>SAMUEL WRIGHT</strong></h2>
                 </div>
                 <strong>
                   <span id="title">SOFTWARE </span>
