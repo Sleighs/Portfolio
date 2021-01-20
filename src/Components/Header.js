@@ -49,10 +49,6 @@ class Header extends Component {
     }
 
     getText() {
-        //var name = document.getElementById("name");
-        //var title = document.getElementById("title");
-        //var log = document.getElementById("log");
-
         // Get word from array
         var word = this.state.arr[this.state.pos];
         // Transform word from string to array
@@ -66,13 +62,11 @@ class Header extends Component {
         // Changes the time interval timer for spelling or deleting
         var randomTime;
         if (reverse === true){
-          randomTime = Math.floor(Math.random() * 225) + 25;
+          randomTime = Math.floor(Math.random() * 200) + 25;
         } else {
           randomTime = Math.floor(Math.random() * 275) + 75;
         }
         AppManager.newIntervalTime = randomTime;
-
-        //count += 1;
       
         // Delete text if reverse is true
         if (reverse === true) {
@@ -185,15 +179,17 @@ class Header extends Component {
 
     render (){
         return (
-            <div id="header-container" className={"continer title"} onClick={ ()=>{this.init(this.state.n)}}>
+            <div id="header-container" className={"continer"} onClick={ ()=>{this.init(this.state.n)}}>
                 <div id="name-container">
-                  <h2 id="name"><strong>SAMUEL WRIGHT</strong></h2>
+                  <h1 id="name"><strong>SAMUEL WRIGHT</strong></h1>
                 </div>
-                <strong>
-                  <span id="title">SOFTWARE </span>
-                  <span id="log"></span>
-                  <span id='glyph'> |</span>
-                </strong>
+                <div id="header-description">
+                  <h2>
+                    <span id="title">SOFTWARE </span>
+                    <span id="log"></span>
+                    <span id='glyph'> |</span>
+                  </h2>
+                </div>
             </div>
         )
     }

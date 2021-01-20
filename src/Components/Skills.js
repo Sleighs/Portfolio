@@ -9,6 +9,9 @@ class Skills extends Component {
 		let titleStyle = {
 			margin: '25px auto'
 		}
+		let info2 = {
+			fontSize: '.9em'
+		}
         let doStyle = {
 			textAlign: 'center',
 			margin: '40px auto 0 auto'
@@ -38,7 +41,7 @@ class Skills extends Component {
 					<div className="header-box" style={titleStyle}>
 						<h3 className="title"><strong>WHAT DO I KNOW?</strong></h3>
 					</div>
-					<ul>
+					<ul style={info2}>
 						<li>Javascript, PHP, C#, Python and several other programming languages</li>
 						<li>How to design user friendly UX with React, SASS, HTML5 Canvas, and other front end technologies</li>
 						<li>How to write efficient queries in both MySQL and MSSQL</li>
