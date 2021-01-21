@@ -27,7 +27,7 @@ class Skills extends Component {
 				<ul id="know-list">
 					<li>Javascript, PHP, C#, Python and several other programming languages</li>
 					<li>How to design user friendly UX with React, SASS, HTML5 Canvas, and other front end technologies</li>
-					<li>How to write efficient queries in both MySQL and MSSQL</li>
+					<li>How to write efficient MySQL queries</li>
 					<li>How to use a feature/dev/master branch workflow in Git</li>
 					<li>How to query and interpret data to make meaningful insights</li>
 					<li>How to ask a great question on Stack Overflow</li>
