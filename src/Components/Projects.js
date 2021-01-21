@@ -28,7 +28,7 @@ class Projects extends Component {
                 <div className="row">
                     <div className="col-md-7">
                         <h3><strong>CashFlow JS</strong></h3>
-                        <p><a target="_blank" href="https://sleighs.github.io/CashFlowJs/" rel="noreferrer">CashFLow JS</a> is an adaptation of the CashFlow 101 board game with additional gameplay options and rule customization that allows for many unique ways to play.</p>
+                        <p><a target="_blank" href="https://sleighs.github.io/CashFlowJs/" rel="noreferrer">CashFlow JS</a> is an adaptation of the CashFlow 101 board game with additional gameplay options and rule customization that allows for many unique ways to play.</p>
                         <p>
                             <a target="_blank" href="https://github.com/Sleighs/CashFlowJs/" rel="noreferrer">View the site yourself</a>
                         </p>

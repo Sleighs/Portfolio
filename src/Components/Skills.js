@@ -29,7 +29,6 @@ class Skills extends Component {
 					<li>How to design user friendly UX with React, SASS, HTML5 Canvas, and other front end technologies</li>
 					<li>How to write efficient queries in both MySQL and MSSQL</li>
 					<li>How to use a feature/dev/master branch workflow in Git</li>
-					<li>How to configure Apache, setup CRONs, manage packages, exit VIM, and other Linux Sys Admin tasks</li>
 					<li>How to query and interpret data to make meaningful insights</li>
 					<li>How to ask a great question on Stack Overflow</li>
 					<li>How to make an excellent <a target="_blank" href="https://github.com/Sleighs/google-maps-react-tutorial/blob/master/README.md" rel="noreferrer">Github Repository</a></li>

@@ -3,11 +3,13 @@ import { Map, GoogleApiWrapper, InfoWindow, Marker } from 'google-maps-react';
 import '../App.css';
 
 const mapStyle = {
-  width: '70%',
+  width: '75%',
+  maxWidth: '600px',
   height: '300px',
   position: 'relative',
   display: 'block',
-  margin: 'auto -15% auto 0'
+  margin: 'auto -25% auto 0',
+  float: 'left'
 
 };
 
@@ -88,5 +90,5 @@ export class MapContainer extends Component {
 }
 
 export default GoogleApiWrapper({
-  apiKey: 'AIzaSyClQckeNCdjuNJZVUas8aVEIGYu4ekTKqs'
+  apiKey: 'AIzaSyAcBp9-09CTRSP0hzcHK7UcxlIJ2zwcBy4'
 })(MapContainer);
