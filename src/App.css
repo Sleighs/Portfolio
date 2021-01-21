@@ -1,27 +1,17 @@
 
 @font-face {
   font-family: 'Rokkitt';
-  src: url(/src/resources/fonts/Rokkitt-VariableFont_wght.ttf);
-}
-
-@font-face {
-  font-family: 'Galdeano';
-  src: url(/src/resources/fonts/Galdeano-Regular.ttf);
-}
-
-@font-face {
-  font-family: 'Varta';
-  src: url('/src/resources/fonts/Varta-VariableFont_wght.ttf');
+  src: url('/src/Resources/Fonts/Rokkitt-VariableFont_wght.ttf');
 }
 
 @font-face {
   font-family: 'Cabin Bold';
-  src: url('/src/resources/fonts/Cabin-Bold.ttf');
+  src: url('/src/Resources/Fonts/Cabin-Bold.ttf');
 }
 
 @font-face {
   font-family: 'Cabin';
-  src: url('/src/resources/fonts/Cabin-VariableFont_wdth,wght.ttf');
+  src: url('/src/Resources/Fonts/Cabin-VariableFont_wdth,wght.ttf');
 }
 
 body {
@@ -161,6 +151,17 @@ body {
 }
 #projects-title {
   margin: 25px auto;
+}
+.projects-pic-container-mint {
+  display: block;
+  margin: auto;
+}
+.projects-pic-container-cashflow {
+  display: block;
+  margin: auto;
+}
+.projects-pic {
+  max-height: 200px;
 }
 #info-container {
   margin: 30px auto;

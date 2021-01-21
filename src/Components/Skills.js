@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import AppManager from '../AppManager';
 import '../App.css';
 
 class Skills extends Component {
@@ -9,7 +10,7 @@ class Skills extends Component {
 					<h3 className="title"><strong>WHAT DO I DO?</strong></h3>
 				</div>
 				<div id="do-list">
-					<p>Work at AweSumo Enterprises creating software</p>
+					{!AppManager.company ? null : <p>Work at AweSumo creating software</p>}
 					<p>Create fun projects in my spare time</p>
 					<p>Write quality code</p>
 					<p>Keep my functions small, focused, and easy to understand</p>
@@ -30,7 +31,7 @@ class Skills extends Component {
 					<li>How to use a feature/dev/master branch workflow in Git</li>
 					<li>How to configure Apache, setup CRONs, manage packages, exit VIM, and other Linux Sys Admin tasks</li>
 					<li>How to query and interpret data to make meaningful insights</li>
-					<li>How to ask a great question on <a target="_blank" href="https://stackoverflow.com/" rel="noreferrer" >Stack Overflow</a></li>
+					<li>How to ask a great question on Stack Overflow</li>
 					<li>How to make an excellent <a target="_blank" href="https://github.com/Sleighs/google-maps-react-tutorial/blob/master/README.md" rel="noreferrer">Github Repository</a></li>
 				</ul>
             </div>

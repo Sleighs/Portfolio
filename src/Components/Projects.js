@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import '../App.css';
+import mintPic from '../Resources/Images/portfolio-mint2048.png';
+import cashflowPic from '../Resources/Images/portfolio-cashflowjs.png';
 
 class Projects extends Component {
     render (){
@@ -8,11 +10,10 @@ class Projects extends Component {
                 <div id="projects-title">
                     <h3 className=""><strong>WHAT HAVE I BUILT?</strong></h3>
                 </div>
-                <div className="built-item row">
-                    
-                    <div class="col-md-5">
-                        <a target="_blank" href="https://github.com/sleighs/mint-2048" rel="noreferrer">
-                            <img class="img-responsive img-rounded" alt="Mint 2048" src="../resources/images/portfolio-mint2048.png"/>
+                <div className="row">
+                    <div className="col-md-5">
+                        <a className="projects-pic-container-mint" target="_blank" href="https://github.com/sleighs/mint-2048" rel="noreferrer" title="Play">
+                            <img className="img-responsive rounded projects-pic d-block mx-auto" alt="Mint 2048" src={mintPic}/>
                         </a>
                     </div>
                     <div className="col-md-7">
@@ -24,8 +25,8 @@ class Projects extends Component {
                     </div>
                 </div>
                 <hr/>
-                <div class="built-item row">
-                    <div class="col-md-7">
+                <div className="row">
+                    <div className="col-md-7">
                         <h3><strong>CashFlow JS</strong></h3>
                         <p><a target="_blank" href="https://sleighs.github.io/CashFlowJs/" rel="noreferrer">CashFLow JS</a> is an adaptation of the CashFlow 101 board game with additional gameplay options and rule customization that allows for many unique ways to play.</p>
                         <p>
@@ -33,8 +34,8 @@ class Projects extends Component {
                         </p>
                     </div>
                     <div class="col-md-5">
-                        <a target="_blank" href="https://github.com/Sleighs/CashFlowJs"rel="noreferrer">
-                            <img class="img-responsive img-rounded" alt="CashFlow JS" src="../resources/images/portfolio-cashflowjs.png"/>
+                        <a className="projects-pic-container-cashflow" target="_blank" href="https://github.com/Sleighs/CashFlowJs"rel="noreferrer" title="Play">
+                            <img className="img-responsive rounded projects-pic mx-auto d-block" alt="CashFlow JS" src={cashflowPic}/>
                         </a>
                     </div>
                 </div>
