@@ -2,10 +2,13 @@ import React, { Component } from 'react';
 import { Map, GoogleApiWrapper, InfoWindow, Marker } from 'google-maps-react';
 import '../App.css';
 
-const mapStyles = {
-  width: '90%',
+const mapStyle = {
+  width: '450px',
   height: '300px',
-  position: 'relative'
+  position: 'relative',
+  display: 'block',
+  margin: 'auto'
+  ,float: 'left'
 
 };
 
@@ -13,11 +16,11 @@ export class MapContainer extends Component {
     constructor(props){
         super(props);
         this.state ={
-            showingInfoWindow: false,  // Hides or shows the InfoWindow
-            activeMarker: {},          // Shows the active marker upon click
-            selectedPlace: {}          // Shows the InfoWindow to the selected place upon a marker
-          };
-        }
+          showingInfoWindow: false,
+          activeMarker: {},          
+          selectedPlace: {}          
+        };
+      }
     
     toggleBounce() {
         if (this.state.marker.getAnimation() !== null) {
@@ -26,7 +29,7 @@ export class MapContainer extends Component {
             this.setState({
 
             });
-        //marker.setAnimation(window.google.maps.Animation.BOUNCE);\
+        //marker.setAnimation(window.google.maps.Animation.BOUNCE);
         }
         //https://www.digitalocean.com/community/tutorials/how-to-integrate-the-google-maps-api-into-react-applications#step-2-%E2%80%94-using-map-and-googleapiwrapper
         //https://developers.google.com/maps/documentation/javascript/markers#maps_marker_animations-javascript
@@ -38,7 +41,7 @@ export class MapContainer extends Component {
         this.setState({
             selectedPlace: props,
             activeMarker: marker,
-            showingInfoWindow: true
+            showingInfoWindow: false
         });
     }
     
@@ -57,17 +60,17 @@ export class MapContainer extends Component {
       <Map
         google={this.props.google}
         zoom={10}
-        style={mapStyles}
+        style={mapStyle}
         initialCenter={
           {
-            lat: 40.699,
+            lat: 40.688,
             lng: -73.921
           }
         }
       >
         <Marker
           onClick={this.onMarkerClick}
-          name={'My area'}
+          name={'Where I Live'}
           draggable={false}
           animation={window.google.maps.Animation.DROP}
         />

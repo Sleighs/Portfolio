@@ -18,11 +18,17 @@ class Portfolio extends Component {
       <div id="portfolio" className={"container"} style={portfolioStyle}>
         <Header />
         <Skills />
+        <hr/>
         <Projects />
+        <hr/>
         <Info />
+        <hr/>
         <Github />
+        <hr/>
         <Location />
+        <hr/>
         <Contact />
+        <hr/>
         <Footer />
       </div>
     );

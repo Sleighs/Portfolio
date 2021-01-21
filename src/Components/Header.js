@@ -187,7 +187,7 @@ class Header extends Component {
                   <h2>
                     <span id="title">SOFTWARE </span>
                     <span id="log"></span>
-                    <span id='glyph'> |</span>
+                    <span id='glyph'>|</span>
                   </h2>
                 </div>
             </div>

@@ -26,7 +26,8 @@
 
 body {
   font-family: 'Rokkitt';
-  width: 100%;
+  width: 800;
+  margin: auto;
 }
 
 #portfolio {
@@ -36,16 +37,10 @@ body {
   display: block;
 }
 
-.title {
-  font-family: 'Cabin Bold';
-  text-align: center;
-  font-size: 1.5em;
-}
-
 #container {
   width: 500px;
   height: 150px;
-  padding: 2%;
+  padding: 2% 0;
   margin: auto;
   text-align: center;
 }
@@ -53,7 +48,7 @@ body {
   color: white;
   padding: 18px;
   width: 100%;
-  height: 200px;
+  /*height: 200px;*/
   font-size: 1em;
   border-radius: 3px;
   text-align: center;
@@ -63,13 +58,12 @@ body {
 }
 
 #name {
-  font-size: 2.4em;
-  letter-spacing: 5px;
-  line-height: 2;
+  font-size: 2.5em;
+  letter-spacing: 3.5px;
   font-Family: 'Rokkitt';
 }
 #header-description {
-  margin-top: -25px;
+  /*margin-top: -25px;*/
   
 }
 
@@ -88,6 +82,8 @@ body {
   animation-duration: 1.45s;
   animation-iteration-count: infinite;
   vertical-align: bottom;
+  line-height: 1;
+  letter-spacing: 3px;
 }
 
 @keyframes glyph {
@@ -101,12 +97,54 @@ body {
     opacity: 0;
   }
 }
-
+.title {
+  font-family: 'Cabin Bold';
+  text-align: center;
+  font-size: 1.7em;
+  opacity: .8;
+  color:rgba(0,16,31,1);
+}
+#skills-container {
+  width: 100%;
+}
 #do {
   line-height: 15px; 
 }
+#skill-title1 {
+  margin: 25px auto;
+}
+#do-list {
+  text-align: center;
+  line-height: 15px;
+  margin: 25px auto;
+}
+#skills-title2 {
+
+}
+#know-list {
+  font-size: '.9em';
+}
+#projects-title {
+  height: 115px;
+  width: 100%;
+  background: rgba(0,16,31,1);
+  color: white;
+  border: 1pt solid;
+  margin: 15px auto;
+  font-family: 'Cabin Bold';
+  text-align: center;
+  opacity: .9;
+}
+#projects-title h3 {
+  line-height: 3.3;
+  font-size: 1.7em;
+}
+
 #know {
 
+}
+#projects-title {
+  margin: 25px auto;
 }
 #info-container {
   margin: 30px auto;
@@ -114,7 +152,8 @@ body {
 
 #github-container {
   text-align: center;
-  height: 125px;
+  height: 100px;
+  padding: 2%;
 }
 #github-container a {
   font-size: 1.4em;
@@ -122,18 +161,26 @@ body {
 
 #map-container {
   height: 400px;
-  width: 100%;
+  width: 80%;
   margin: auto;
+  padding: 2%;
 }
 
 #contact-container {
-  
+  margin: 30px auto;
+  padding: 1%
 }
-
+#contact-title {
+  font-family: 'Cabin Bold';
+  text-align: center;
+  font-size: 1.7em;
+  opacity: 1;
+  color: #62c246;
+}
 #footer-container {
-    text-align: center;
-    margin: 30px auto;
-    font-size: 1.2em;
-    width: 100%;
-    height: 100px;
+  text-align: center;
+  margin: 30px auto;
+  font-size: 1.2em;
+  width: 100%;
+  height: 100px;
 }

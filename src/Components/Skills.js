@@ -4,44 +4,40 @@ import '../App.css';
 class Skills extends Component {
     render (){
         let containerStyle = {
-			margin: '30px auto 30px auto'
+			margin: '30px auto 30px auto',
+			width: '100%',
+			padding: 0
 		}
-		let titleStyle = {
-			margin: '25px auto'
-		}
-		let info2 = {
-			fontSize: '.9em'
-		}
-        let doStyle = {
-			textAlign: 'center',
-			margin: '40px auto 0 auto'
-		}
+
 		let knowStyle = {
 			margin: '50px auto 5px auto'
 		}
 
         return (
             <div className={"container"} id="skills-container" style={containerStyle}>
-                <div id="do" style={doStyle}>
-					<div className="header-box" style={titleStyle}>
+                <div id="do">
+					<div className="header-box" id="skills-title1">
 						<h3 className="title"><strong>WHAT DO I DO?</strong></h3>
 					</div>
-					<p>Work at AweSumo Enterprises creating software</p>
-					<p>Create fun projects in my spare time</p>
-					<p>Write quality code</p>
-					<p>Keep my functions small, focused, and easy to understand</p>
-					<p>Leave comments as I create and maintain code</p>
-					<p>Make tests for the code I write</p>
-					<p>Document every feature</p>
-					<p>Keep track of every bug</p>
-					<p>Strictly follow security best practices</p>
-					<p>Never stop learning</p>
+					<div id="do-list">
+						<p>Work at AweSumo Enterprises creating software</p>
+						<p>Create fun projects in my spare time</p>
+						<p>Write quality code</p>
+						<p>Keep my functions small, focused, and easy to understand</p>
+						<p>Leave comments as I create and maintain code</p>
+						<p>Make tests for the code I write</p>
+						<p>Document every feature</p>
+						<p>Keep track of every bug</p>
+						<p>Strictly follow security best practices</p>
+						<p>Never stop learning</p>
+					</div>
+					
 				</div>
                 <div id="know" style={knowStyle}>
-					<div className="header-box" style={titleStyle}>
+					<div className="header-box" id="skills-title2">
 						<h3 className="title"><strong>WHAT DO I KNOW?</strong></h3>
 					</div>
-					<ul style={info2}>
+					<ul id="know-list">
 						<li>Javascript, PHP, C#, Python and several other programming languages</li>
 						<li>How to design user friendly UX with React, SASS, HTML5 Canvas, and other front end technologies</li>
 						<li>How to write efficient queries in both MySQL and MSSQL</li>
