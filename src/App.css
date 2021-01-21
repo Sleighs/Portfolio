@@ -60,7 +60,7 @@ body {
 #name {
   font-size: 2.5em;
   letter-spacing: 3.5px;
-  font-Family: 'Rokkitt';
+  font-Family: 'Cabin Bold';
 }
 #header-description {
   /*margin-top: -25px;*/
@@ -69,15 +69,15 @@ body {
 
 #title,
 #log {
-  font-Family: 'Cabin Bold';
-  font-size: 1.1em;
+  font-Family: 'Rokkitt';
+  font-size: 1.4em;
   letter-spacing: 1px;
   font-weight: 400;
 
 }
 
 #glyph {
-  font-size: 1.6em;
+  font-size: 1.8em;
   animation-name: glyph;
   animation-duration: 1.45s;
   animation-iteration-count: infinite;
@@ -106,30 +106,46 @@ body {
 }
 #skills-container {
   width: 100%;
+  padding: 0;
+  margin: 25px auto;
 }
 #do {
   line-height: 15px; 
 }
-#skill-title1 {
-  margin: 25px auto;
+#skills-title1 {
+  margin: 40px auto 0 auto;
+  height: 45px;
+  width: 100%;
 }
 #do-list {
   text-align: center;
   line-height: 15px;
-  margin: 25px auto;
+  margin: 20px auto;
 }
 #skills-title2 {
-
+  text-align: center;
+  height: 115px;
+  width: 100%;
+  border: 10pt ridge rgba(0,16,31,.3);
+  margin: 25px auto;
+  font-family: 'Cabin Bold';
+  text-align: center;
+  opacity: .9;
+}
+#skills-title2 h3 {
+  line-height: 2.5;
+  font-size: 1.7em;
 }
 #know-list {
   font-size: '.9em';
+  max-width: 600px;
+  margin: auto;
 }
 #projects-title {
   height: 115px;
   width: 100%;
   background: rgba(0,16,31,1);
   color: white;
-  border: 1pt solid;
   margin: 15px auto;
   font-family: 'Cabin Bold';
   text-align: center;

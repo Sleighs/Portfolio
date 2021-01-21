@@ -8,7 +8,6 @@ const mapStyle = {
   position: 'relative',
   display: 'block',
   margin: 'auto'
-  ,float: 'left'
 
 };
 

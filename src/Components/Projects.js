@@ -12,12 +12,12 @@ class Projects extends Component {
                     
                     <div class="col-md-5">
                         <a target="_blank" href="https://github.com/sleighs/mint-2048" rel="noreferrer">
-                            <img class="img-responsive img-rounded" alt="Mint 2048" src="resources/images/portfolio-mint2048.png"/>
+                            <img class="img-responsive img-rounded" alt="Mint 2048" src="../resources/images/portfolio-mint2048.png"/>
                         </a>
                     </div>
                     <div className="col-md-7">
                         <h3><strong>Mint 2048</strong></h3>
-                        <p><a target="_blank" href="https://plus-7ed02.firebaseapp.com/" rel="noreferrer">Mint</a> is a sliding block puzzle game where players combine tiles, perform combos and use abilities to create the 2048 tile.</p>
+                        <p><a target="_blank" href="https://plus-7ed02.firebaseapp.com/" rel="noreferrer">Mint</a> is a sliding tile puzzle game where players combine tiles, perform combos and use abilities to create the 2048 tile.</p>
                         <p>
                             <a target="_blank" href="https://github.com/Sleighs/Mint-2048" rel="noreferrer">View the site yourself</a>
                         </p>
@@ -34,7 +34,7 @@ class Projects extends Component {
                     </div>
                     <div class="col-md-5">
                         <a target="_blank" href="https://github.com/Sleighs/CashFlowJs"rel="noreferrer">
-                            <img class="img-responsive img-rounded" alt="CashFlow JS" src="resources/images/portfolio-cashflowjs.png"/>
+                            <img class="img-responsive img-rounded" alt="CashFlow JS" src="../resources/images/portfolio-cashflowjs.png"/>
                         </a>
                     </div>
                 </div>

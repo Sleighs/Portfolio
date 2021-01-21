@@ -5,6 +5,7 @@ import Projects from './Components/Projects';
 import Location from './Components/Location';
 import Contact from './Components/Contact';
 import Footer from './Components/Footer';
+import AppManager from './AppManager';
 import './App.css';
 
 class Portfolio extends Component {
@@ -21,8 +22,8 @@ class Portfolio extends Component {
         <hr/>
         <Projects />
         <hr/>
-        <Info />
-        <hr/>
+        {!AppManager.info ? null : <Info />}
+        {!AppManager.info ? null : <hr/>}
         <Github />
         <hr/>
         <Location />
