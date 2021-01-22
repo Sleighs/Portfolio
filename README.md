@@ -1,4 +1,4 @@
-# Web Developer Resume 
+# Software Developer Portfolio
 
 This repository contains my portfolio.
 
