@@ -17,7 +17,7 @@ class Header extends Component {
             interval: null,
             n: 'start'
         }
-
+ 
         this.init = this.init.bind(this);
         this.getText = this.getText.bind(this);
     }
@@ -86,7 +86,7 @@ class Header extends Component {
               clearInterval(AppManager.interval);
 
 
-              var rand1 = Math.floor(Math.random() * 1750) + 200;
+              var rand1 = Math.floor(Math.random() * 1800) + 200;
 
               AppManager.primaryInterval = setTimeout(()=>{
                 this.init('start');
@@ -149,7 +149,6 @@ class Header extends Component {
             reverse: reverse,
             a: a,
             newText: newText
-
         })
       }
             
@@ -179,11 +178,11 @@ class Header extends Component {
 
     render (){
         return (
-            <div id="header-container" className={"continer"} onClick={ ()=>{this.init(this.state.n)}}>
+            <div id="header-container" className={"container-sm"} onClick={ ()=>{this.init(this.state.n)}}>
                 <div id="name-container">
                   <h1 id="name"><strong>SAMUEL WRIGHT</strong></h1>
                 </div>
-                <div id="header-description">
+                <div className="header-text" id="header-description">
                   <h2>
                     <span id="title">SOFTWARE </span>
                     <span id="log"></span>

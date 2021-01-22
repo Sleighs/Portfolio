@@ -16,14 +16,12 @@ class Portfolio extends Component {
     }
     
     return (
-      <div id="portfolio" className={"container"} style={portfolioStyle}>
+      <div id="portfolio" className={"container-md"} style={portfolioStyle}>
         <Header />
         <Skills />
         <hr/>
         <Projects />
         <hr/>
-        {!AppManager.info ? null : <Info />}
-        {!AppManager.info ? null : <hr/>}
         <Github />
         <hr/>
         <Location />
@@ -42,7 +40,7 @@ class Github extends Component {
     return(
       <div id="github-container" >
         <h3 className="title"><strong>DO I HAVE A GITHUB?</strong></h3>
-        <a href="http://www.github.com/sleighs" target="blank">Yes.</a>
+        <p id="github-text"><a  href="http://www.github.com/sleighs" target="blank">Yes.</a></p>
       </div>
     )
   }
@@ -53,8 +51,8 @@ class Info extends Component {
   render() {
     return(
       <div id="info-container" className="container">
-        <div>Info Section 1</div>
-        <div>Info Section 2</div>
+        <div>Section 1</div>
+        <div>Section 2</div>
       </div>
     )
   }

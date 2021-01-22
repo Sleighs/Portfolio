@@ -21,6 +21,7 @@ class Skills extends Component {
 					<p>Strictly follow security best practices</p>
 					<p>Never stop learning</p>
 				</div>
+				<br/>
 				<div className="header-box" id="skills-title2">
 					<h3 className=""><strong>WHAT DO I KNOW?</strong></h3>
 				</div>
@@ -31,7 +32,7 @@ class Skills extends Component {
 					<li>How to use a feature/dev/master branch workflow in Git</li>
 					<li>How to query and interpret data to make meaningful insights</li>
 					<li>How to ask a great question on Stack Overflow</li>
-					<li>How to make an excellent <a target="_blank" href="https://github.com/Sleighs/google-maps-react-tutorial/blob/master/README.md" rel="noreferrer">Github Repository</a></li>
+					<li>How to make an excellent <a target="_blank" href="https://github.com/Sleighs/google-maps-react-tutorial/" rel="noreferrer">Github Repository</a></li>
 				</ul>
             </div>
         )

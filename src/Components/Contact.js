@@ -2,6 +2,22 @@ import React, { Component } from 'react';
 import '../App.css';
 
 class Contact extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            name: '',
+            email: '',
+            messaage: '',
+            dataSent: ''
+       }
+       this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    handleSubmit(event) {
+        event.preventDefault();
+        console.log(this.state);
+    }
+    
     render (){
         let contactInfoStyle = {
             textAlign: 'center',
@@ -12,12 +28,19 @@ class Contact extends Component {
         }
         let contactFormStyle = {
             maxWidth: 450,
-            margin: 'auto'
+            margin: 'auto',
+            padding: '0 3%'
         }
         let contactFormBtn = {
-            /*margin: 'auto',
-            padding: '5px 15px',
-            outline: 'none'*/
+            margin: 'auto',
+            display: 'block',
+            padding: '5px 25px',
+            outline: 'none',
+            background: 'rgba(0, 187, 16, .5)',
+            border: '1pt solid white',
+            color: 'white',
+            fontSize: '1.2em',
+            borderRadius: '25px'
         }
         
         return (
@@ -32,24 +55,23 @@ class Contact extends Component {
                     
                 </div>
 
-                
-                <form style={contactFormStyle}>
+                <form style={contactFormStyle} onSubmit={this.handleSubmit}>
                     <div style={formOptionStyle}>
                         <p>Or use this contact form below:</p>
                     </div>
                     <div className="form-group"> 
                         <label for="inputName">Your Name</label>
-                        <input type="text" class="form-control" />
+                        <input type="text" className="form-control" id="name-input" name="name" value={this.state.name}  onChange={(e)=>{this.setState({ name: e.target.value })}}/>
                     </div>
                     <div className="form-group">
-                        <label for="inputEmail1">Your Email</label>
-                        <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
+                        <label for="inputEmail">Your Email</label>
+                        <input type="email" className="form-control" id="email-input" aria-describedby="emailHelp" value={this.state.email} onChange={(e)=>{this.setState({ email: e.target.value })}}/>
                     </div>
                     <div className="form-group">
                         <label for="inputMessage" className="form-text">Your Message </label>
-                        <textarea type="text" className="form-control"/>
+                        <textarea type="text" className="form-control" id="message-input" name="text-area" value={this.state.message} onChange={(e)=>{this.setState({ message: e.target.value })}}/>
                     </div>
-                    <input type="submit" className={"input for-control submit"} style={contactFormBtn} value="Send"/>
+                    <input type="submit" className={"input for-control submit"} style={contactFormBtn} value="Send" onClick={(e)=>{this.handleSubmit(e)}}/>
                 </form>
             </div>
         )

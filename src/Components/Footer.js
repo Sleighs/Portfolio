@@ -6,9 +6,9 @@ class Footer extends Component {
         return(
             <footer id="footer-container" className="container">
               <p>Thank you for reading!</p>
-              <p>
-                <a href="http://www.github.com/sleighs/cv" target="blank">View The Source Code</a>
-              </p>
+              <small>
+                <a href="http://www.github.com/sleighs/Portfolio" target="blank">View The Source Code</a>
+              </small>
             </footer>
         )
     }

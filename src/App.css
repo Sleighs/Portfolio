@@ -16,17 +16,22 @@
 
 body {
   font-family: 'Rokkitt';
-  width: 800;
+  width: 100%;
   margin: auto;
 }
 
+#root {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
 #portfolio {
   width: 100%;
   max-width: 800px;
   height: 100%;
   display: block;
+  margin: auto;
 }
-
 #container {
   width: 500px;
   height: 150px;
@@ -35,45 +40,67 @@ body {
   text-align: center;
 }
 #header-container {
+  margin-top: 4.5%;
   color: white;
-  padding: 18px;
+  padding: 4% 3% 3% 3%;
   width: 100%;
-  /*height: 200px;*/
-  font-size: 1em;
+  font-size: 1.1em;
   border-radius: 3px;
   text-align: center;
- /* text-shadow: 1px 1px 1px silver;*/
   background: rgb(0,16,31);
   background: linear-gradient(0deg, rgba(0,16,31,1) 97%, rgba(9,78,44,1) 99%, rgba(199,217,0,1) 100%);
 }
-
+.header-text {
+  padding: 2%;
+  animation-name: header-text;
+  animation-duration: 5.5s;
+  animation-iteration-count: 0;
+}
+@keyframes header-text {
+  0% {
+    opacity: 1;
+  }
+  97% {
+    opacity: 1;
+  } 
+  98% {
+    opacity: 0.8;
+  }
+  99% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#name-container {
+  margin-top: 4%;
+}
 #name {
   font-size: 2.5em;
-  letter-spacing: 3.5px;
-  font-Family: 'Cabin Bold';
-}
-#header-description {
-  /*margin-top: -25px;*/
-  
+  letter-spacing: 4px;
+  font-Family: 'Cabin';
+  text-shadow: .8px .5px 5.5px rgba(199,217,0,.5);
 }
 
 #title,
 #log {
   font-Family: 'Rokkitt';
-  font-size: 1.4em;
+  font-size: 1.6em;
   letter-spacing: 1px;
   font-weight: 400;
-
+  text-shadow: .8px .5px 4.5px rgba(199,217,0,.7);
 }
 
 #glyph {
-  font-size: 1.8em;
+  font-size: 2em;
   animation-name: glyph;
   animation-duration: 1.45s;
   animation-iteration-count: infinite;
   vertical-align: bottom;
-  line-height: 1;
+  line-height: 1.05;
   letter-spacing: 3px;
+  text-shadow: .8px .5px 4.5px rgba(199,217,0,.7);
 }
 
 @keyframes glyph {
@@ -93,6 +120,7 @@ body {
   font-size: 1.7em;
   opacity: .8;
   color:rgba(0,16,31,1);
+  text-shadow: .8px .5px 1px rgba(37, 4, 0, 0.5);
 }
 #skills-container {
   width: 100%;
@@ -110,17 +138,19 @@ body {
 #do-list {
   text-align: center;
   line-height: 15px;
-  margin: 20px auto;
+  margin: 20px auto 0 auto;
 }
 #skills-title2 {
   text-align: center;
   height: 115px;
   width: 100%;
   border: 10pt ridge rgba(0,16,31,.3);
-  margin: 25px auto;
+  margin: 5px auto 25px auto;
   font-family: 'Cabin Bold';
   text-align: center;
   opacity: .9;
+
+  text-shadow: .8px .5px 1px rgba(37, 4, 0, 0.5);
 }
 #skills-title2 h3 {
   line-height: 2.5;
@@ -140,17 +170,24 @@ body {
   font-family: 'Cabin Bold';
   text-align: center;
   opacity: .9;
+
+  text-shadow: .8px .5px 4px rgba(199,217,0,.7);
 }
 #projects-title h3 {
   line-height: 3.3;
   font-size: 1.7em;
 }
 
-#know {
-
-}
 #projects-title {
   margin: 25px auto;
+}
+.row {
+  padding: 0 2%;
+}
+.row h3 {
+
+  color:rgba(8, 10, 10, 0.9);
+  text-shadow: .8px .5px 1px rgba(104, 94, 94, 0.616);
 }
 .projects-pic-container-mint {
   display: block;
@@ -169,20 +206,24 @@ body {
 
 #github-container {
   text-align: center;
-  height: 100px;
-  padding: 2%;
+  padding: 7% 2% 2% 2%;
 }
 #github-container a {
   font-size: 1.4em;
 }
-
+#github-text {
+  line-height: 3;
+  margin: auto;
+}
 #map-container {
-  height: 400px;
+  height: 375px;
   width: 80%;
   margin: auto;
   padding: 2% 0;
 }
-
+#map-title {
+  margin: 10px auto 25px auto;
+}
 #contact-container {
   margin: 30px auto;
   padding: 1%
@@ -192,12 +233,13 @@ body {
   text-align: center;
   font-size: 1.7em;
   opacity: 1;
-  color: #62c246;
+  color: #62c246; 
+  text-shadow: .8px .5px .8px rgba(191, 229, 231, 0.6);
 }
 #footer-container {
   text-align: center;
   margin: 30px auto;
-  font-size: 1.2em;
+  font-size: 1.1em;
   width: 100%;
   height: 100px;
 }

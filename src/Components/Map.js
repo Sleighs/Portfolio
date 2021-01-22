@@ -2,27 +2,21 @@ import React, { Component } from 'react';
 import { Map, GoogleApiWrapper, InfoWindow, Marker } from 'google-maps-react';
 import '../App.css';
 
-const mapStyle = {
-  width: '75%',
-  maxWidth: '600px',
-  height: '300px',
-  position: 'relative',
-  display: 'block',
-  margin: 'auto -25% auto 0',
-  float: 'left'
-
-};
-
 export class MapContainer extends Component {
     constructor(props){
-        super(props);
-        this.state ={
-          showingInfoWindow: false,
-          activeMarker: {},          
-          selectedPlace: {}          
-        };
-      }
+      super(props);
+      this.state ={
+        showingInfoWindow: false,
+        activeMarker: {},          
+        selectedPlace: {}          
+      };
+    }
+
+    componentDidMount(){
+      document.getElementById('map-container').children[1].children[0].style.position = 'relative';
+    ;
     
+    }
     toggleBounce() {
         if (this.state.marker.getAnimation() !== null) {
         //marker.setAnimation(null);
@@ -32,9 +26,7 @@ export class MapContainer extends Component {
             });
         //marker.setAnimation(window.google.maps.Animation.BOUNCE);
         }
-        //https://www.digitalocean.com/community/tutorials/how-to-integrate-the-google-maps-api-into-react-applications#step-2-%E2%80%94-using-map-and-googleapiwrapper
-        //https://developers.google.com/maps/documentation/javascript/markers#maps_marker_animations-javascript
-    }
+     }
 
     onMarkerClick = (props, marker, e) => {
         //this.toggleBounce();
@@ -57,6 +49,16 @@ export class MapContainer extends Component {
     };*/
 
   render() {
+    const mapStyle = {
+      width: '100%',
+      maxWidth: '600px',
+      height: '265px',
+      position: 'relative',
+      display: 'block',
+      margin: 'auto 0',
+      float: 'left'
+    };
+
     return (
       <Map
         google={this.props.google}
@@ -80,7 +82,7 @@ export class MapContainer extends Component {
           visible={this.state.showingInfoWindow}
           onClose={this.onClose}
         >
-          <div>
+          <div className="map-infor">
             <h4>{this.state.selectedPlace.name}</h4>
           </div>
         </InfoWindow>
