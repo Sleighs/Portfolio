@@ -1,5 +1,5 @@
-# Web Developer Resume 
+# Software Developer Portfolio
 
-This repository contains my resume.
+This repository contains my portfolio.
 
-## [Check it out](https://resume-bbd43.firebaseapp.com/?)
+## [Check it out](https://samwright.space/)
