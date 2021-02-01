@@ -5,7 +5,6 @@ import Projects from './Components/Projects';
 import Location from './Components/Location';
 import Contact from './Components/Contact';
 import Footer from './Components/Footer';
-import AppManager from './AppManager';
 import './App.css';
 
 class Portfolio extends Component {
@@ -47,15 +46,14 @@ class Github extends Component {
   
 }
 
-class Info extends Component {
+/*class Info extends Component {
   render() {
     return(
       <div id="info-container" className="container">
-        <div>Section 1</div>
-        <div>Section 2</div>
+        <div></div>
       </div>
     )
   }
-}
+}*/
 
 export default Portfolio;

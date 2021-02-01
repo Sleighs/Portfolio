@@ -21,17 +21,16 @@ class Skills extends Component {
 					<p>Strictly follow security best practices</p>
 					<p>Never stop learning</p>
 				</div>
-				<br/>
-				<div className="header-box" id="skills-title2">
-					<h3 className=""><strong>WHAT DO I KNOW?</strong></h3>
+				<hr/>
+				<div id="skills2-header">
+					<h3 id="skills2-title"><strong>WHAT DO I KNOW?</strong></h3>
 				</div>
 				<ul id="know-list">
-					<li>Javascript, PHP, C#, Python and several other programming languages</li>
+					<li>Javascript, PHP, C# and several other programming languages</li>
 					<li>How to design user friendly UX with React, SASS, HTML5 Canvas, and other front end technologies</li>
 					<li>How to write efficient MySQL queries</li>
 					<li>How to use a feature/dev/master branch workflow in Git</li>
 					<li>How to query and interpret data to make meaningful insights</li>
-					<li>How to ask a great question on Stack Overflow</li>
 					<li>How to make an excellent <a target="_blank" href="https://github.com/Sleighs/google-maps-react-tutorial/" rel="noreferrer">Github Repository</a></li>
 				</ul>
             </div>

@@ -32,30 +32,48 @@ body {
   display: block;
   margin: auto;
 }
-#container {
+/*#container {
   width: 500px;
   height: 150px;
   padding: 2% 0;
   margin: auto;
   text-align: center;
-}
+}*/
 #header-container {
-  margin-top: 4.5%;
+  /*margin-top: 4.4%;*/
+  margin: auto;
   color: white;
-  padding: 4% 3% 3% 3%;
+  padding: 4% 1%;
   width: 100%;
+  max-width: 800px;
   font-size: 1.1em;
   border-radius: 3px;
   text-align: center;
   background: rgb(0,16,31);
   background: linear-gradient(0deg, rgba(0,16,31,1) 97%, rgba(9,78,44,1) 99%, rgba(199,217,0,1) 100%);
 }
+@media only screen and (max-width: 600px) {
+  #header-container {
+    padding: 4% 8%;
+    /*margin-top: 0;*/
+  }
+}
+
 .header-text {
   padding: 2%;
   animation-name: header-text;
   animation-duration: 5.5s;
   animation-iteration-count: 0;
 }
+@media only screen and (max-width: 450px) {
+  #header-container {
+    padding: 4% 8%;
+  }
+  #header-text {
+    font-size: 1em;
+  }
+}
+
 @keyframes header-text {
   0% {
     opacity: 1;
@@ -140,7 +158,7 @@ body {
   line-height: 15px;
   margin: 20px auto 0 auto;
 }
-#skills-title2 {
+#skills2-header {
   text-align: center;
   height: 115px;
   width: 100%;
@@ -152,7 +170,7 @@ body {
 
   text-shadow: .8px .5px 1px rgba(37, 4, 0, 0.5);
 }
-#skills-title2 h3 {
+#skills2-title {
   line-height: 2.5;
   font-size: 1.7em;
 }
@@ -161,26 +179,28 @@ body {
   max-width: 600px;
   margin: auto;
 }
-#projects-title {
+#projects-header {
   height: 115px;
   width: 100%;
   background: rgba(0,16,31,1);
   color: white;
-  margin: 15px auto;
+  margin: 25px auto;
   font-family: 'Cabin Bold';
   text-align: center;
   opacity: .9;
-
   text-shadow: .8px .5px 4px rgba(199,217,0,.7);
 }
-#projects-title h3 {
+/*#projects-container hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0,16,31,0.75) , rgba(0, 0, 0, 0));
+    opacity: .2;
+}*/
+#projects-title {
   line-height: 3.3;
   font-size: 1.7em;
 }
 
-#projects-title {
-  margin: 25px auto;
-}
 .row {
   padding: 0 2%;
 }
@@ -206,7 +226,7 @@ body {
 
 #github-container {
   text-align: center;
-  padding: 7% 2% 2% 2%;
+  padding: 5% 2% 2% 2%;
 }
 #github-container a {
   font-size: 1.4em;
@@ -219,7 +239,7 @@ body {
   height: 375px;
   width: 80%;
   margin: auto;
-  padding: 2% 0;
+  padding: 1% 0 3% 0;
 }
 #map-title {
   margin: 10px auto 25px auto;
@@ -228,7 +248,7 @@ body {
   margin: 30px auto;
   padding: 1%
 }
-#contact-title {
+#contact-header {
   font-family: 'Cabin Bold';
   text-align: center;
   font-size: 1.7em;
@@ -236,6 +256,36 @@ body {
   color: #62c246; 
   text-shadow: .8px .5px .8px rgba(191, 229, 231, 0.6);
 }
+
+@media only screen and (max-width: 450px) {
+  .title {
+    font-size: 1.4em;
+  }
+  #skills-title1 {
+
+  }
+  #skills2-title {
+    font-size: 1.4em;
+    line-height: 3;
+  }
+  #projects-title {
+    font-size: 1.4em;
+    line-height: 4;
+  }
+  .projects-row-title {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 1.6em;
+    opacity: .8;
+  }
+  #contact-header {
+    margin: 10px auto 25px auto;
+  }
+  #contact-title {
+    font-size: .7em;
+  }
+}
+
 #footer-container {
   text-align: center;
   margin: 30px auto;
