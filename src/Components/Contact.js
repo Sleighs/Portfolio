@@ -1,16 +1,11 @@
 import React, { Component } from 'react';
-import config from '../Resources/config';
-import axios from 'axios';
-
-import Firebase from 'firebase';
-import '../App.css';
-const API_PATH = 'http://192.168.1.18:3000/portfolio/src/api/message.php';
+import firebase from 'firebase';
+import { db }from '../firebase';
 
 class Contact extends Component {
     constructor(props){
         super(props);
         
-        //Firebase.initializeApp(config.firebase);
         this.state = {
             name: '',
             email: '',
@@ -20,38 +15,75 @@ class Contact extends Component {
        this.handleSubmit = this.handleSubmit.bind(this);
        this.resetSend = this.resetSend.bind(this)
     }
-    componentDidMount() {
-        //console.log(Firebase)
+
+    makeid(length) {
+        var result = "";
+        var characters =
+          "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        var charactersLength = 10;
+        for (var i = 0; i < length; i++) {
+          result += characters.charAt(Math.floor(Math.random() * charactersLength));
+        }
+        return result;
     }
 
     handleSubmit(event) {
-        /*axios({
-            method: 'post',
-            url: API_PATH,
-            headers: {
-                'content-type': 'application/json'
-            },
-            data: this.state
-        })
-        .then(result => {
-            console.log('axios results', result.data)
-            this.setState({
-                dataSent: result.data.sent,
-            })
-            //console.log(this.state)
-        })
-        .catch(error => this.setState({
-            error: error.message
-        }));
+        // Make a unique name for the message
+        var d = new Date();
+        var msgName = String(this.state.name + '-' + d.getTime()/* + '-' + this.makeid()*/);
 
-        event.preventDefault();*/
-        console.log(this.state);
+        // Get date of message
+        var date = String( d.getMonth() + 1) + '-' + String( d.getDate()) + '-' + String(d.getFullYear())
 
+        // Get time of message
+        var minutes = ()=>{
+            var a;
+            if (d.getMinutes() < 10) {
+                a = String('0' + d.getUTCMinutes());
+            } else {
+                a = String(d.getUTCMinutes());
+            }
+
+            return a;
+        }
+
+        var time = String(d.getHours()) + ':' + minutes() + '.' + String(d.getSeconds());
+        
+        // Make new id
+        var id = this.makeid();
+
+        // Add message to database
+        db.collection("messages").doc(msgName).set({
+            name: this.state.name,
+            email: this.state.email,
+            message: this.state.message,
+            date: date,
+            time: time,
+            timezone: d.getTimezoneOffset(),
+            id: id
+        })
+        .then(() => {
+            console.log("Great news! Message sent successfully!");
+            /*console.log({
+                name: this.state.name,
+                email: this.state.email,
+                message: this.state.message,
+                date: date,
+                time: time,
+                timezone: d.getTimezoneOffset(),
+                id: id
+            })*/
+        })
+        .catch((error) => {
+            console.error("Krikey! Error sending message: ", error);
+        });
+
+        // For component to show message was sent
         if (!this.state.datasent){
             this.setState({dataSent: true});
         } 
-
     }
+
     resetSend() {
         this.setState({dataSent: false});
     }
@@ -104,11 +136,9 @@ class Contact extends Component {
                 </div>
                     
                 {this.state.dataSent ?
-                <div className="msg">
+                <div className="msg"style={{ textAlign: 'center' }}>
                     <br/>
-                    <h2>MESSAGE SENT</h2>
-                    <br/>
-                    <p>Thanks for your time.</p>
+                    <p style={{ fontSize: '1.2em' }}>Great news! Message sent successfully!</p>
                     <button className="new-message-btn" style={contactFormBtn2} onClick={(e)=>{this.resetSend()}}>New Message</button>
                 </div> :
                 <form style={contactFormStyle} >
@@ -117,15 +147,32 @@ class Contact extends Component {
                     </div>
                     <div className="form-group"> 
                         <label name="inputName">Your Name</label>
-                        <input type="text" className="form-control" id="name-input" name="name" value={this.state.name}  onChange={(e)=>{this.setState({ name: e.target.value })}}/>
+                        <input type="text" 
+                            className="form-control" 
+                            id="name-input" 
+                            name="name" value={this.state.name}  
+                            onChange={(e)=>{this.setState({ name: e.target.value })}}
+                        />
                     </div>
                     <div className="form-group">
                         <label name="inputEmail">Your Email</label>
-                        <input type="email" className="form-control" id="email-input" aria-describedby="emailHelp" value={this.state.email} onChange={(e)=>{this.setState({ email: e.target.value })}}/>
+                        <input type="email" 
+                            className="form-control" 
+                            id="email-input" 
+                            aria-describedby="emailHelp" 
+                            value={this.state.email} 
+                            onChange={(e)=>{this.setState({ email: e.target.value })}}
+                        />
                     </div>
                     <div className="form-group">
                         <label name="inputMessage" className="form-text">Your Message </label>
-                        <textarea type="text" className="form-control" id="message-input" name="text-area" value={this.state.message} onChange={(e)=>{this.setState({ message: e.target.value })}}/>
+                        <textarea type="text" 
+                            className="form-control" 
+                            id="message-input" 
+                            name="text-area" 
+                            value={this.state.message} 
+                            onChange={(e)=>{this.setState({ message: e.target.value })}}
+                        />
                     </div>
                     <input type="submit" className={"input for-control submit"} style={contactFormBtn} value="Send" onClick={(e)=>{this.handleSubmit(e)}}/>
                 </form>}
