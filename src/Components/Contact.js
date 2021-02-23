@@ -30,7 +30,7 @@ class Contact extends Component {
     handleSubmit(event) {
         // Make a unique name for the message
         var d = new Date();
-        var msgName = String(this.state.name + '-' + d.getTime()/* + '-' + this.makeid()*/);
+        var msgName = String(this.state.name + '-' + d.getTime());
 
         // Get date of message
         var date = String( d.getMonth() + 1) + '-' + String( d.getDate()) + '-' + String(d.getFullYear())
@@ -50,7 +50,7 @@ class Contact extends Component {
         var time = String(d.getHours()) + ':' + minutes() + '.' + String(d.getSeconds());
         
         // Make new id
-        var id = this.makeid();
+        var id = this.makeid(10);
 
         // Add message to database
         db.collection("messages").doc(msgName).set({
