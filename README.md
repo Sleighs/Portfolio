@@ -1,6 +1,5 @@
 # Software Developer Portfolio
 
-This repository contains my portfolio.
+This repository contains a portfolio I created.
 
 ## [Check it out](https://samwright.space/) 
-## [Alt link](https://resume-bbd43.web.app/)
