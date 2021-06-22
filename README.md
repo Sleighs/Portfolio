@@ -1,6 +1,6 @@
 # Software Developer Portfolio
 
-This repository contains a portfolio I created with React and Firebase.
+This repository contains a software developer portfolio created with the React Javascript library and tools from Google's Firebase development platform. 
 
 ## [Check it out](https://samwright.space/) 
 
