@@ -1,7 +1,8 @@
 import firebase from "firebase";
+import firebaseKey from "./Resources/firebaseKey";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDM8mIKG75bihhtAtwpEpCAcH5FA9Zm2IM",
+  apiKey: firebaseKey,
   authDomain: "resume-bbd43.firebaseapp.com",
   databaseURL: "https://resume-bbd43-default-rtdb.firebaseio.com",
   projectId: "resume-bbd43",
