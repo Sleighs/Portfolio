@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../App.css';
 import mintPic from '../Resources/Images/portfolio-mint2048.png';
 import cashflowPic from '../Resources/Images/portfolio-cashflowjs.png';
+import heromatchupsPic from '../Resources/Images/portfolio-heromatchups.png';
 
 class Projects extends Component {
     render (){
@@ -15,7 +16,7 @@ class Projects extends Component {
                         <h3  className="projects-row-title"><strong>CashFlow JS</strong></h3>
                         <p><a target="_blank" href="https://sleighs.github.io/CashFlowJs/" rel="noreferrer">CashFlow JS</a> is an adaptation of the CashFlow 101 board game with additional gameplay options and rule customization that allows for many unique ways to play.</p>
                         <p>
-                            <a target="_blank" href="https://github.com/Sleighs/CashFlowJs/" rel="noreferrer">View the site yourself</a>
+                            <a target="_blank" href="https://github.com/Sleighs/CashFlowJs/" rel="noreferrer">Check out CashFlowJs</a>
                         </p>
                     </div>
                     <div className="col-md-5">
@@ -35,8 +36,24 @@ class Projects extends Component {
                         <h3 className="projects-row-title"><strong>Mint 2048</strong></h3>
                         <p><a target="_blank" href="https://mint2048.com/" rel="noreferrer">Mint</a> is a sliding tile puzzle game where players combine tiles, perform combos and use abilities to create the 2048 tile.</p>
                         <p>
-                            <a target="_blank" href="https://github.com/Sleighs/Mint-2048" rel="noreferrer">View the site yourself</a>
+                            <a target="_blank" href="https://github.com/Sleighs/Mint-2048" rel="noreferrer">Check out Mint 2048 </a>
                         </p>
+                    </div>
+                    
+                </div>
+                <hr/>
+                <div className="row">
+                    <div className="col-md-7">
+                        <h3  className="projects-row-title"><strong>HeroMatchups</strong></h3>
+                        <p><a target="_blank" href="https://heromatchups.com" rel="noreferrer">HeroMatchups</a> is a hero matchup and counter resource for Overwatch.</p>
+                        <p>
+                            <a target="_blank" href="https://github.com/Sleighs/HeroMatchups/" rel="noreferrer">Visit HeroMatchups</a>
+                        </p>
+                    </div>
+                    <div className="col-md-5">
+                        <a className="projects-pic-container-heromatchups" target="_blank" href="https://github.com/sleighs/heromatchups" rel="noreferrer" title="Visit">
+                            <img className="img-responsive rounded projects-pic d-block mx-auto" alt="HeroMatchups" src={heromatchupsPic}/>
+                        </a>
                     </div>
                 </div>
             </div>
