@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.7cd7c88f.chunk.css",
-    "main.js": "/static/js/main.6ae1c908.chunk.js",
-    "main.js.map": "/static/js/main.6ae1c908.chunk.js.map",
+    "main.js": "/static/js/main.b55c9a93.chunk.js",
+    "main.js.map": "/static/js/main.b55c9a93.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.2fd7dc15.js",
     "runtime-main.js.map": "/static/js/runtime-main.2fd7dc15.js.map",
     "static/css/2.ae9f1eb3.chunk.css": "/static/css/2.ae9f1eb3.chunk.css",
@@ -14,6 +14,7 @@
     "static/js/2.117976e8.chunk.js.LICENSE.txt": "/static/js/2.117976e8.chunk.js.LICENSE.txt",
     "static/media/App.css": "/static/media/Rokkitt-VariableFont_wght.03ed7688.ttf",
     "static/media/portfolio-cashflowjs.caf3d3b9.png": "/static/media/portfolio-cashflowjs.caf3d3b9.png",
+    "static/media/portfolio-heromatchups.c33b1f7a.png": "/static/media/portfolio-heromatchups.c33b1f7a.png",
     "static/media/portfolio-mint2048.f860bfe2.png": "/static/media/portfolio-mint2048.f860bfe2.png"
   },
   "entrypoints": [
@@ -21,6 +22,6 @@
     "static/css/2.ae9f1eb3.chunk.css",
     "static/js/2.117976e8.chunk.js",
     "static/css/main.7cd7c88f.chunk.css",
-    "static/js/main.6ae1c908.chunk.js"
+    "static/js/main.b55c9a93.chunk.js"
   ]
 }
