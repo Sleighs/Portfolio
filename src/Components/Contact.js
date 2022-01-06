@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import firebase from 'firebase';
-import { db }from '../firebase';
+import { db } from '../firebase';
 
 class Contact extends Component {
     constructor(props){
@@ -78,6 +78,20 @@ class Contact extends Component {
             console.error("Krikey! Error sending message: ", error);
         });
 
+        // Email message to inbox
+        /*db.collection('mail').add({
+            to: 'wsright987@gmail.com',
+            message: {
+              sname: this.state.name,
+              email: this.state.email,
+              message: this.state.message,
+              date: date,
+              time: time,
+              timezone: d.getTimezoneOffset(),
+              id: id
+            }
+          }).then(() => console.log('Queued email for delivery!'));
+*/
         // For component to show message was sent
         if (!this.state.datasent){
             this.setState({dataSent: true});
@@ -91,7 +105,12 @@ class Contact extends Component {
     render (){
         let contactInfoStyle = {
             textAlign: 'center',
-            fontSize: '1.2em'
+            fontSize: '1.2em',
+        }
+        let contactInfoStyle2 = {
+            textAlign: 'center',
+            fontSize: '.8em',
+            color: 'rgb(1,1,1,.25)',
         }
         let formOptionStyle = {
             textAlign: 'center'
@@ -99,7 +118,7 @@ class Contact extends Component {
         let contactFormStyle = {
             maxWidth: 450,
             margin: 'auto',
-            padding: '0 3%'
+            padding: '0 3%',
         }
         let contactFormBtn = {
             margin: 'auto',
@@ -110,7 +129,7 @@ class Contact extends Component {
             border: '1pt solid white',
             color: 'white',
             fontSize: '1.2em',
-            borderRadius: '25px'
+            borderRadius: '25px',
         }
         let contactFormBtn2 = {
             margin: 'auto',
@@ -121,7 +140,7 @@ class Contact extends Component {
             border: '1pt solid white',
             color: 'white',
             fontSize: '1.2em',
-            borderRadius: '25px'
+            borderRadius: '25px',
         }
         
         return (
@@ -133,6 +152,7 @@ class Contact extends Component {
                     <a href="mailto:wsright987@gmail.com">WSRIGHT987@GMAIL.COM</a>
                     <br/>
                     <strong>609-472-2897</strong>
+                    
                 </div>
                     
                 {this.state.dataSent ?

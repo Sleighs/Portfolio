@@ -213,7 +213,7 @@ body {
   display: block;
   margin: auto;
 }
-.projects-pic-container-cashflow {
+.projects-pic-container-cashflow, .projects-pic-container-realitycalc {
   display: block;
   margin: auto;
 }

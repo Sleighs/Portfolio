@@ -8,17 +8,6 @@ import Footer from './Components/Footer';
 import './App.css';
 
 class Portfolio extends Component {
-  constructor(props){
-    super(props);
-    this.state = {
-
-    }
-  }
-  
-  onComponentDidMount(){
-
-  }
-
   render() {
     let portfolioStyle = {
       fontSize: '1.2em'
