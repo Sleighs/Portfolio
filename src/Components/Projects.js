@@ -32,7 +32,7 @@ class Projects extends Component {
                         <h3  className="projects-row-title"><strong>RealityCalc.com</strong></h3>
                         <p>The <a target="_blank" href="https://realitycalc.com" rel="noreferrer">Male Reality Calculator</a> is a tool that uses US Census Bureau statistics to calculate the user's odds of meeting their dream woman.</p>
                         <p>
-                            <a target="_blank" href="https://github.com/Sleighs/reality-calculator/" rel="noreferrer">Check out the Male Reality Calculator</a>
+                            <a target="_blank" href="https://github.com/Sleighs/reality-calculator/" rel="noreferrer">Check out RealityCalc.com's repo</a>
                         </p>
                     </div>
                     <div className="col-md-5">
