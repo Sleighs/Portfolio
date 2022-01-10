@@ -15,28 +15,27 @@ export class MapContainer extends Component {
 
     componentDidMount(){
       document.getElementById('map-container').children[1].children[0].style.position = 'relative';
-    ;
-    
-    }
+    } 
+
+    /*
     toggleBounce() {
         if (this.state.marker.getAnimation() !== null) {
         //marker.setAnimation(null);
         } else {
-            this.setState({
-
-            });
+            //this.setState({ });
         //marker.setAnimation(window.google.maps.Animation.BOUNCE);
         }
-     }
+        
+    }*/
 
     onMarkerClick = (props, marker, e) => {
-        //this.toggleBounce();
-
         this.setState({
             selectedPlace: props,
             activeMarker: marker,
             showingInfoWindow: false
         });
+
+        //this.toggleBounce();
     }
     
     /*
@@ -57,7 +56,7 @@ export class MapContainer extends Component {
       position: 'relative',
       display: 'block',
       margin: 'auto 0',
-      float: 'left'
+      float: 'left',
     };
 
     return (
@@ -74,7 +73,7 @@ export class MapContainer extends Component {
       >
         <Marker
           onClick={this.onMarkerClick}
-          name={'Where I Live'}
+          name={'Where I\'m At'}
           draggable={false}
           animation={window.google.maps.Animation.DROP}
         />
@@ -83,7 +82,7 @@ export class MapContainer extends Component {
           visible={this.state.showingInfoWindow}
           onClose={this.onClose}
         >
-          <div className="map-infor">
+          <div className="map-info">
             <h4>{this.state.selectedPlace.name}</h4>
           </div>
         </InfoWindow>
