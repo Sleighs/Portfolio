@@ -32,11 +32,11 @@ class Projects extends Component {
                         <h3  className="projects-row-title"><strong>RealityCalc.com</strong></h3>
                         <p>The <a target="_blank" href="https://realitycalc.com" rel="noreferrer">Male Reality Calculator</a> is a tool that uses US Census Bureau statistics to calculate the user's odds of meeting their dream woman.</p>
                         <p>
-                            <a target="_blank" href="https://github.com/Sleighs/male-reality-calculator/" rel="noreferrer">Check out RealityCalc.com's repo</a>
+                            <a target="_blank" href="https://realitycalc.com/" rel="noreferrer">Check out RealityCalc.com</a>
                         </p>
                     </div>
                     <div className="col-md-5">
-                        <a className="projects-pic-container-realitycalc" target="_blank" href="https://github.com/Sleighs/reality-calculator"rel="noreferrer" title="Check it out">
+                        <a className="projects-pic-container-realitycalc" target="_blank" href="https://realitycalc.com"rel="noreferrer" title="Check it out">
                             <img className="img-responsive rounded projects-pic mx-auto d-block" alt="RealityCalc.com" src={realityCalcPic}/>
                         </a>
                     </div>
