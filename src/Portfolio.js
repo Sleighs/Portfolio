@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-import Header from './Components/Header';
-import Skills from './Components/Skills';
-import Projects from './Components/Projects';
-import Location from './Components/Location';
-import Contact from './Components/Contact';
-import Footer from './Components/Footer';
+import { 
+  Header,
+  Skills,
+  Projects,
+  Location,
+  Contact,
+  Footer
+} from './Components';
 import './App.css';
 
 class Portfolio extends Component {

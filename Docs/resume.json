@@ -12,7 +12,7 @@
     "phone": "6094722897",
     "website": "github.com/sleighs",
     "location": {
-      "address": "New York, NY"
+      "address": "Cherry Hill, NJ"
     },
     "email": "wsright987@gmail.com"
   },
@@ -110,8 +110,23 @@
     },
     {
       "keywords": [
-        ""
-      ]
+        "React",
+        "Redux",
+        "Node JS"
+      ],
+      "name": "heromatchups.com",
+      "description": "HeroMatchups is a hero matchup and counter resource for Blizzard's team-based multiplayer first-person shooter Overwatch.",
+      "url": "github.com/Sleighs/heromatchups"
+    },
+    {
+      "keywords": [
+        "React",
+        "Redux",
+        "MySQL"
+      ],
+      "name": "Male Reality Calculator",
+      "description": "The Male Reality Calculator is a popular online tool that uses U.S. Census Bureau statistics to calculate the user's odds of meeting their dream woman.",
+      "url": "realitycalc.com"
     }
   ],
   "awards": [

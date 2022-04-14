@@ -50,7 +50,7 @@ body {
   border-radius: 3px;
   text-align: center;
   background: rgb(0,16,31);
-  background: linear-gradient(0deg, rgba(0,16,31,1) 97%, rgba(9,78,44,1) 99%, rgba(199,217,0,1) 100%);
+  /*background: linear-gradient(0deg, rgba(0,16,31,1) 97%, rgba(9,78,44,1) 99%, rgba(199,217,0,1) 100%);*/
 }
 @media only screen and (max-width: 600px) {
   #header-container {
@@ -95,7 +95,7 @@ body {
   margin-top: 4%;
 }
 #name {
-  font-size: 2.5em;
+  font-size: 2.3em;
   letter-spacing: 4px;
   font-Family: 'Cabin';
   text-shadow: .8px .5px 5.5px rgba(199,217,0,.5);

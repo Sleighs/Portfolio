@@ -11,6 +11,7 @@
     "command": "^0.0.5",
     "firebase": "^8.2.4",
     "google-maps-react": "^2.0.6",
+    "node": "^16.14.2",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
