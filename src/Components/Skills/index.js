@@ -26,11 +26,12 @@ class Skills extends Component {
 					<h3 id="skills2-title"><strong>WHAT DO I KNOW?</strong></h3>
 				</div>
 				<ul id="know-list">
-					<li>Javascript, PHP, C# and several other programming languages</li>
-					<li>How to design user friendly UX with React, React Native, SASS, HTML5 Canvas, and other front end technologies</li>
-					<li>How to write efficient MySQL queries</li>
+					<li>HTML, CSS, Javascript (ES5, ES6) and Typescript languages</li>
+					<li>Node JS, MongoDB and PostgreSQL server side technologies</li>
+					<li>How to design user friendly UX with React, React Native, Redux, JQuery, HTML5 Canvas, SASS, and other front end technologies</li>
 					<li>How to use a feature/dev/master branch workflow in Git</li>
-					<li>How to query and interpret data to make meaningful insights</li>
+					<li>How to design, develop, deploy and support RESTful services</li>
+					<li>How to query and interpret Google Analytics data to make meaningful insights</li>
 					<li>How to make an excellent <a target="_blank" href="https://github.com/Sleighs/google-maps-react-tutorial/" rel="noreferrer">Github Repository</a></li>
 				</ul>
             </div>
