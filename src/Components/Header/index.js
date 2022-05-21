@@ -7,7 +7,12 @@ class Header extends Component {
         super(props);
         this.state = {
             // The algorithm types and deletes each word in the array
-            arr: ["ENGINEER", "ARCHITECT", "DEVELOPER"],
+            arr: [
+              /*"ENGINEER", "ARCHITECT", "DEVELOPER", */ 
+              "FRONT-END ENGINEER",
+              "REACT DEVELOPER",
+              "FULL STACK DEVELOPER"
+            ],
             pos: 0,
             text: null,
             typedText: [],
@@ -92,8 +97,6 @@ class Header extends Component {
                 this.init('start');
               }, rand1)
               
-
-      
               // Stops interval after one cycle through word list
               /*if (this.state.pos === this.state.arr.length - 1) {
                   this.setState({
@@ -183,8 +186,10 @@ class Header extends Component {
                   <h1 id="name"><strong>SAMUEL WRIGHT</strong></h1>
                 </div>
                 <div className="header-text" id="header-description">
-                  <h2>
-                    <span id="title">SOFTWARE </span>
+                  <h2 style={{
+                    textAlign: 'center',
+                  }}>
+                    <span id="title">{/* For a static word */}</span>
                     <span id="log"></span>
                     <span id='glyph'>|</span>
                   </h2>

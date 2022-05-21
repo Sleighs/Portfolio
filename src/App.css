@@ -48,7 +48,6 @@ body {
   max-width: 800px;
   font-size: 1.1em;
   border-radius: 3px;
-  text-align: center;
   background: rgb(0,16,31);
   /*background: linear-gradient(0deg, rgba(0,16,31,1) 97%, rgba(9,78,44,1) 99%, rgba(199,217,0,1) 100%);*/
 }
@@ -99,6 +98,7 @@ body {
   letter-spacing: 4px;
   font-Family: 'Cabin';
   text-shadow: .8px .5px 5.5px rgba(199,217,0,.5);
+  text-align: center;
 }
 
 #title,

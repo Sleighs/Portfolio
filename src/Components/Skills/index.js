@@ -11,7 +11,7 @@ class Skills extends Component {
 				</div>
 				<div id="do-list">
 					{/*!AppManager.company ? null : <p>Work at AweSumo creating software</p>*/}
-					<p>Create fun projects in my spare time</p>
+					<p>Create fun web projects in my spare time</p>
 					<p>Write quality code</p>
 					<p>Keep my functions small, focused, and easy to understand</p>
 					<p>Leave comments as I create and maintain code</p>
@@ -27,8 +27,8 @@ class Skills extends Component {
 				</div>
 				<ul id="know-list">
 					<li>HTML, CSS, Javascript (ES5, ES6) and Typescript languages</li>
-					<li>Node JS, MongoDB and PostgreSQL server side technologies</li>
-					<li>How to design user friendly UX with React, React Native, Redux, JQuery, HTML5 Canvas, SASS, and other front end technologies</li>
+					<li>Node JS, MongoDB and Firebase server side technologies</li>
+					<li>How to design user friendly UX with React, React Native, Redux, JQuery, HTML5 Canvas, SASS</li>
 					<li>How to use a feature/dev/master branch workflow in Git</li>
 					<li>How to design, develop, deploy and support RESTful services</li>
 					<li>How to query and interpret Google Analytics data to make meaningful insights</li>

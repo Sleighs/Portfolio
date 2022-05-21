@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
+import Cookies from 'universal-cookie'
 import { 
   Header,
   Skills,
@@ -9,26 +10,92 @@ import {
 } from './Components';
 import './App.css';
 
+const cookiesDarkMode = new Cookies()
+const darkModeCookies = cookiesDarkMode.get('darkModeData')
+
 class Portfolio extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      textColor: 'black',
+      backgroundColor: 'white',
+      darkMode: false,
+    }
+
+    this.toggleDarkMode = this.toggleDarkMode.bind(this);
+  }
+
+  componentDidMount(){
+    if (darkModeCookies === true){
+      this.setState({
+        textColor: 'white',
+        backgroundColor: 'black',
+        darkMode: true,
+      })
+    }
+  }
+
+  toggleDarkMode(){
+    if (!this.state.darkMode){
+      this.setState({
+        textColor: 'white',
+        backgroundColor: 'black',
+        darkMode: true,
+      })
+      cookiesDarkMode.set(
+        'darkModeData', 
+        true, 
+        {path:'/', maxAge: 1200,}
+      )
+    } else {
+      this.setState({
+        textColor: 'black',
+        backgroundColor: 'white',
+        darkMode: false,
+      })
+      cookiesDarkMode.set(
+        'darkModeData', 
+        false, 
+        {path:'/', maxAge: 1200,}
+      )
+    }
+    
+  }
+
   render() {
     let portfolioStyle = {
-      fontSize: '1.2em'
+      fontSize: '1.2em',
     }
 
     return (
-      <div id="portfolio" className={"container-md"} style={portfolioStyle}>
-        <Header />
-        <Skills />
-        <hr/>
-        <Projects />
-        <hr/>
-        <Github />
-        <hr/>
-        <Location />
-        <hr/>
-        <Contact />
-        <hr/>
-        <Footer />
+      <div 
+        style={{
+          height: '100%',
+          width: '100%',
+          color: this.state.textColor,
+          backgroundColor: this.state.backgroundColor,
+        }}
+      > 
+        <div 
+          id="portfolio" 
+          className={"container-md"} 
+          style={portfolioStyle}
+        >
+          <DarkMode toggle={this.toggleDarkMode} modeState={this.state.darkMode}/>
+          <Header />
+          <Skills />
+          <hr/>
+          <Projects />
+          <hr/>
+          <Github />
+          <hr/>
+          <Location />
+          <hr/>
+          <Contact />
+          <hr/>
+          <Footer />
+        </div>
+        
       </div>
     );
   }
@@ -47,14 +114,35 @@ class Github extends Component {
   
 }
 
-/*class Info extends Component {
-  render() {
-    return(
-      <div id="info-container" className="container">
-        <div></div>
-      </div>
-    )
-  }
-}*/
+const DarkMode = (props) => {
+  const { 
+    modeState,
+    toggle
+  } = props
+
+  const [darkModeState, getDarkModeState] = useState(modeState)
+
+  return(
+    <div id="dark-mode-container" 
+      style={{
+        display: 'none',
+        position: 'absolute',
+      }}>
+      <button onClick={()=>{
+        if (darkModeState === true){
+          toggle()
+          getDarkModeState(false)
+        } else {
+          toggle()
+          getDarkModeState(true)
+        }
+
+        console.log('darkMode ', modeState )
+      }}>
+        {modeState === true ? 'Dark On' : 'Light On'}
+      </button>
+    </div>
+  )
+}
 
 export default Portfolio;
