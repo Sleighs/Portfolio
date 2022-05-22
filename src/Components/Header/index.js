@@ -26,6 +26,7 @@ class Header extends Component {
         this.init = this.init.bind(this);
         this.getText = this.getText.bind(this);
     }
+
     componentDidMount() {
       AppManager.primaryInterval = setTimeout(()=>{
         this.init('start');
@@ -102,7 +103,7 @@ class Header extends Component {
                   this.setState({
                     n: "start"
                   });
-                  initBtn.innerHTML = "Start";
+                  //initBtn.innerHTML = "Start";
                   
                   clearInterval(AppManager.interval);
               }*/
@@ -181,7 +182,12 @@ class Header extends Component {
 
     render (){
         return (
-            <div id="header-container" className="container" onClick={ ()=>{this.init(this.state.n)}}>
+            <div id="header-container" className="container" 
+              onClick={ ()=>{this.init(this.state.n)}}
+              style={{
+                padding: this.props.resumePage === false ? '4% 1%' : '3% 1% 5% 1%'
+              }}
+              >
                 <div id="name-container">
                   <h1 id="name"><strong>SAMUEL WRIGHT</strong></h1>
                 </div>
@@ -194,7 +200,28 @@ class Header extends Component {
                     <span id='glyph'>|</span>
                   </h2>
                 </div>
-            </div>
+                {this.props.resumePage === true ? 
+                  <div className='github-text'
+                    style={{
+                      textAlign: 'center',
+                      margin: 'auto',
+                      marginTop: '-10px',
+                    }}
+                  >
+                    <a  href="http://www.github.com/sleighs" 
+                      target="blank"
+                      style={{
+                        color: 'white',
+                        fontSize: 38,
+                        textDecoration: 'none',
+                      }}
+                    >
+                      github.com/sleighs
+                    </a>
+                  </div>
+                  : <></>
+                }
+              </div>
         )
     }
 }

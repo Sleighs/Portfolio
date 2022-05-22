@@ -1,13 +1,29 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from "react-dom";
+
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Portfolio from './Portfolio';
 
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+import { 
+  Home, 
+  Resume 
+} from './Pages';
+
 const rootEle = document.getElementById('root');
 
 ReactDOM.render(
-    <Portfolio />,
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/resume" element={<Resume />} />
+    </Routes>
+  </BrowserRouter>,
   rootEle
 );  
 
