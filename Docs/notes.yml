@@ -9,3 +9,6 @@ Todo
 
 - resume page '/resume'
   - add react router
+  - check routing, 404 on web
+
+- check why pdf looks weird

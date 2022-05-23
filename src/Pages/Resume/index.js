@@ -71,7 +71,8 @@ class Resume extends Component {
       <div 
         style={{
           height: '100%',
-          width: '100%',
+          maxWidth: '871px',
+          margin: 'auto',
           color: this.state.textColor,
           backgroundColor: this.state.backgroundColor,
         }}
@@ -81,13 +82,13 @@ class Resume extends Component {
           className={"container-md"} 
           style={portfolioStyle}
         >
-          <DarkMode toggle={this.toggleDarkMode} modeState={this.state.darkMode}/>
           <Header resumePage={true}/>
-          <Skills />
+          <Skills resumePage={true}/>
           <hr/>
-          <Projects />
+          <br/>
+          <Projects resumePage={true}/>
+          <br/>
         </div>
-        
       </div>
     );
   }

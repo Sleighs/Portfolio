@@ -71,7 +71,8 @@ class Home extends Component {
       <div 
         style={{
           height: '100%',
-          width: '100%',
+          maxWidth: '871px',
+          margin: 'auto',
           color: this.state.textColor,
           backgroundColor: this.state.backgroundColor,
         }}

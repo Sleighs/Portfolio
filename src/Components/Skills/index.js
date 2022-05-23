@@ -3,9 +3,14 @@ import AppManager from '../../AppManager';
 import '../../App.css';
 
 class Skills extends Component {
+	constructor(props){
+        super(props)
+        this.state = {}
+    }
+
     render (){
         return (
-            <div className="container" id="skills-container">
+            <div className="container container-md" id="skills-container">
 				<div className="header-box" id="skills-title1">
 					<h3 className="title"><strong>WHAT DO I DO?</strong></h3>
 				</div>
@@ -32,7 +37,11 @@ class Skills extends Component {
 					<li>How to use a feature/dev/master branch workflow in Git</li>
 					<li>How to design, develop, deploy and support RESTful services</li>
 					<li>How to query and interpret Google Analytics data to make meaningful insights</li>
-					<li>How to make an excellent <a target="_blank" href="https://github.com/Sleighs/google-maps-react-tutorial/" rel="noreferrer">Github Repository</a></li>
+					{
+						this.props.resumePage === true 
+						? <></>
+						: <li>How to make an excellent <a target="_blank" href="https://github.com/Sleighs/google-maps-react-tutorial/" rel="noreferrer">Github Repository</a></li>
+					}
 				</ul>
             </div>
         )

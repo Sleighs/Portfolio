@@ -179,49 +179,96 @@ class Header extends Component {
             }, AppManager.newIntervalTime);
         }
       }
-
+  
     render (){
+
+      // Custom styling for resume view
+      let HeaderContainerStyle = (
+        this.props.resumePage === true 
+        ? {
+            padding: '3% 1% 5% 1%',
+          } 
+        : {
+          padding: '4% 1%',
+        }
+      )
+      let NameStyle = (
+        this.props.resumePage === true 
+        ? {
+            fontSize: '48px',
+          } 
+        : {}
+      )
+      let HeaderTextStyle = (
+        this.props.resumePage === true 
+        ? {
+            marginTop: -15,
+            textAlign: 'center',
+          } 
+        : {
+          textAlign: 'center',
+        }
+      )
+      let LogStyle = (
+        this.props.resumePage === true 
+        ? {
+          fontSize: '44px',
+          } 
+        : {}
+      )
+      let GlyphStyle = (
+        this.props.resumePage === true 
+        ? {
+            //fontSize: '56px',
+          } 
+        : {}
+      )
+
         return (
             <div id="header-container" className="container" 
               onClick={ ()=>{this.init(this.state.n)}}
-              style={{
-                padding: this.props.resumePage === false ? '4% 1%' : '3% 1% 5% 1%'
-              }}
-              >
+              style={HeaderContainerStyle}
+            >
+              <div>
                 <div id="name-container">
-                  <h1 id="name"><strong>SAMUEL WRIGHT</strong></h1>
+                  <h1 id="name" style={NameStyle}><strong>SAMUEL WRIGHT</strong></h1>
                 </div>
-                <div className="header-text" id="header-description">
-                  <h2 style={{
-                    textAlign: 'center',
-                  }}>
-                    <span id="title">{/* For a static word */}</span>
-                    <span id="log"></span>
-                    <span id='glyph'>|</span>
+                <div className="header-text" id="header-description" 
+                  style={HeaderTextStyle}>
+                  <h2>
+                    <span id="title" >{/* For a static word */}</span>
+                    <span id="log" style={LogStyle}></span>
+                    <span id='glyph' style={GlyphStyle}>|</span>
                   </h2>
                 </div>
-                {this.props.resumePage === true ? 
-                  <div className='github-text'
+              </div>
+              {this.props.resumePage === true ? 
+                <div className='github-text'
+                  style={{
+                    textAlign: 'center',
+                    margin: 'auto',
+                    marginTop: '-15px',
+                  }}
+                >
+                  <span style={{
+                    fontSize: 25,
+                  }}>
+                    (609)<span style={{fontSize: 14,}}> </span>472-2897 &#8226; wsright987@gmail.com
+                  </span>
+                  <a  href="http://www.github.com/sleighs" 
+                    target="blank"
                     style={{
-                      textAlign: 'center',
-                      margin: 'auto',
-                      marginTop: '-10px',
+                      color: 'white',
+                      fontSize: 35,
+                      display: 'block',
+                      textDecoration: 'none',
                     }}
                   >
-                    <a  href="http://www.github.com/sleighs" 
-                      target="blank"
-                      style={{
-                        color: 'white',
-                        fontSize: 38,
-                        textDecoration: 'none',
-                      }}
-                    >
-                      github.com/sleighs
-                    </a>
-                  </div>
-                  : <></>
-                }
-              </div>
+                    github.com/sleighs
+                  </a>
+                </div>
+              : <></> }
+            </div>
         )
     }
 }
