@@ -39,7 +39,7 @@ class Skills extends Component {
 					<li>How to query and interpret Google Analytics data to make meaningful insights</li>
 					{
 						this.props.resumePage === true 
-						? <></>
+						? <li>How to test Javascript and Typescript codebases with Jest</li>
 						: <li>How to make an excellent <a target="_blank" href="https://github.com/Sleighs/google-maps-react-tutorial/" rel="noreferrer">Github Repository</a></li>
 					}
 				</ul>
