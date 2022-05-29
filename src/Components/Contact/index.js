@@ -148,11 +148,21 @@ class Contact extends Component {
                 <div id="contact-header">
                     <h3 id="contact-title"><strong>HOW CAN YOU REACH ME?</strong></h3>
                 </div>
+                <div>
+                    <p style={{
+                        textAlign: 'center',
+                        display: 'none',
+                    }}>
+                        Schedule an appointment 
+                        <a style={{
+                        
+                        }} href="https://calendly.com/sleighs" target="blank">here</a>
+                    </p>
+                </div>
                 <div style={contactInfoStyle}>
                     <a href="mailto:wsright987@gmail.com">REALITYCALC@GMAIL.COM</a>
                     <br/>
                     <strong>609-472-2897</strong>
-                    
                 </div>
                     
                 {this.state.dataSent ?

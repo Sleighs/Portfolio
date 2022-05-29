@@ -1,0 +1,141 @@
+{
+  "selectedTemplate": 6,
+  "headings": {
+    "work": "Work Experience",
+    "education": "",
+    "skills": "What Do I Know?",
+    "awards": "",
+    "projects": "What Have I Built?"
+  },
+  "basics": {
+    "name": "Samuel Wright",
+    "phone": "6094722897",
+    "website": "github.com/sleighs",
+    "location": {
+      "address": "Cherry Hill, NJ"
+    },
+    "email": "wsright987@gmail.com"
+  },
+  "education": [
+    {
+      "institution": "",
+      "location": "",
+      "area": "",
+      "studyType": "",
+      "startDate": "",
+      "endDate": "",
+      "gpa": ""
+    }
+  ],
+  "work": [
+    {
+      "company": "Samuel Wright",
+      "location": "",
+      "position": "Consultant",
+      "website": "",
+      "startDate": "2019",
+      "endDate": "Present",
+      "highlights": [
+        "Test and develop web applications"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "name": "Languages",
+      "level": "",
+      "keywords": [
+        "Javascript",
+        "CSS",
+        "HTML",
+        "Typescript"
+      ]
+    },
+    {
+      "keywords": [
+        "React",
+        "React Native",
+        "Redux",
+        "Express",
+        "Socket IO",
+        "Bootstrap",
+        "AJAX"
+      ],
+      "name": "Libraries & Web Technologies"
+    },
+    {
+      "keywords": [
+        "Node JS",
+        "MySQL",
+        "MongoDb",
+        "Firebase"
+      ],
+      "name": "Server Side Technologies"
+    },
+    {
+      "keywords": [
+        "Git",
+        "Jest",
+        "Google Analytics"
+      ],
+      "name": "Versioning, Testing and Other Tools"
+    }
+  ],
+  "projects": [
+    {
+      "keywords": [
+        "Javascript",
+        "React",
+        "Firebase"
+      ],
+      "name": "Mint 2048",
+      "description": "A fresh twist on the classic 2048 puzzle game.",
+      "url": "github.com/Sleighs/Mint-2048"
+    },
+    {
+      "keywords": [
+        "JQuery",
+        "Javascript",
+        "Node JS"
+      ],
+      "name": "CashFlow JS",
+      "description": "An browser version of the Cash Flow 101 board game with new features, rules and customizations ",
+      "url": "github.com/Sleighs/CashFlowJs"
+    },
+    {
+      "keywords": [
+        "React",
+        "Redux",
+        "Node JS"
+      ],
+      "name": "heromatchups.com",
+      "description": "HeroMatchups is a hero matchup and counter resource for Blizzard's team-based multiplayer first-person shooter Overwatch.",
+      "url": "github.com/Sleighs/heromatchups"
+    },
+    {
+      "keywords": [
+        "React",
+        "Redux",
+        "MySQL"
+      ],
+      "name": "Male Reality Calculator",
+      "description": "The Male Reality Calculator is a popular online tool that uses U.S. Census Bureau statistics to calculate the user's odds of meeting their ideal woman.",
+      "url": "realitycalc.com"
+    }
+  ],
+  "awards": [
+    {
+      "awarder": "",
+      "summary": ""
+    }
+  ],
+  "sections": [
+    "templates",
+    "profile",
+    "education",
+    "work",
+    "skills",
+    "projects",
+    "awards"
+  ]
+}
