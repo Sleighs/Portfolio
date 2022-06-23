@@ -160,7 +160,7 @@ class Contact extends Component {
                     </p>
                 </div>
                 <div style={contactInfoStyle}>
-                    <a href="mailto:wsright987@gmail.com">REALITYCALC@GMAIL.COM</a>
+                    <a href="mailto:wsright987@gmail.com">WSRIGHT987@GMAIL.COM</a>
                     <br/>
                     <strong>609-472-2897</strong>
                 </div>

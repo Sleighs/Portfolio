@@ -66,13 +66,13 @@ class Projects extends Component {
                 <hr/>
                 <div className="row">
                     <div className="col-md-7">
-                        <h3  className="projects-row-title"><strong>HeroMatchups</strong></h3>
-                        <p><a target="_blank" href="https://heromatchups.com" rel="noreferrer">HeroMatchups</a> is a hero matchup and counter resource for Blizzard's team-based multiplayer first-person shooter Overwatch.</p>
+                        <h3  className="projects-row-title"><strong>Hero Matchups</strong></h3>
+                        <p><a target="_blank" href="https://hero-pick-app.web.app/" rel="noreferrer">Hero Matchups</a> is a hero matchup and counter resource for Blizzard's team-based multiplayer first-person shooter Overwatch.</p>
                         <p>
                             {
                                 this.props.resumePage === true
                                 ? <p>Try out and visit the source code at <a target="_blank" href="https://github.com/Sleighs/HeroMatchups/" rel="noreferrer">github.com/Sleighs/HeroMatchups</a></p>
-                                : <a target="_blank" href="https://github.com/Sleighs/HeroMatchups/" rel="noreferrer">Visit HeroMatchups</a>
+                                : <a target="_blank" href="https://github.com/Sleighs/HeroMatchups/" rel="noreferrer">Visit Hero Matchups</a>
                             }
                         </p>
                     </div>
