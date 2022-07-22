@@ -1,8 +1,6 @@
 # React Developer Portfolio
 
-This repository contains my software developer portfolio. 
-
-## [Check it out](https://samuelwright.dev/) 
+## Check it out at [https://samuelwright.dev/](https://samuelwright.dev/)
 
 ![](src/resources/images/portfolio-screenshot01.png)
 
