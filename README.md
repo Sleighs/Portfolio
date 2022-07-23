@@ -1,7 +1,8 @@
 # React Developer Portfolio
 
-This repository contains a software developer portfolio created with the React Javascript library and tools from Google's Firebase development platform. 
-
-## [Check it out](https://samuelwright.dev/) 
+## Check it out at [https://samuelwright.dev/](https://samuelwright.dev/)
 
 ![](src/resources/images/portfolio-screenshot01.png)
+
+[Resume via Google Docs](https://docs.google.com/document/d/1hxtYQADPKufPXtouH20UkLZbvx6W__pnQjeO4-qNqBk/edit?usp=sharing)
+
