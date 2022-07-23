@@ -18,38 +18,38 @@
   },
   "education": [
     {
-      "institution": "",
+      "institution": "V School",
       "location": "",
-      "area": "",
-      "studyType": "",
+      "area": "Web Development",
+      "studyType": "Certificate",
       "startDate": "",
-      "endDate": "",
+      "endDate": "2022",
       "gpa": ""
     }
   ],
   "work": [
     {
-      "position": "RealityCalc (Contract)",
+      "position": "RealityCalc.com",
       "location": "",
       "company": "Full Stack Engineer",
       "website": "realitycalc.com",
       "startDate": "November 2021",
       "endDate": "May 2022",
       "highlights": [
-        "Built stable and maintainable codebase using React.",
+        "Identified web-based user interactions and developed highly responsive user interface components via React concepts.",
         "Executed full-stack website launch with responsive mobile layout and cross-browser compatibility.",
-        "Accelerated client's Google ranking to page 1 for multiple keywords",
+        "Accelerated the site's Google ranking to page 1 for multiple keywords",
         "Coordinated with UX designers to create beautiful, functional and fast interfaces.",
         "Created modular, responsive templates using modern CSS techniques and JavaScript libraries."
       ]
     },
     {
-      "position": "Hero Matchups (Contract)",
+      "position": "Hero Matchups",
       "location": "",
-      "company": "Front End Developer",
+      "company": "Freelance Web Developer",
       "website": "heromatchups.com",
       "startDate": "April 2021",
-      "endDate": "August 2021",
+      "endDate": "June 2021",
       "highlights": [
         "Planned and managed the front-end development of the website.",
         "Collaborated with designers to ensure designs were efficient and technically sound.",
@@ -57,45 +57,49 @@
         "Conducted A/B testing to identify bugs and UI improvements.",
         "Utilized HTML, CSS and bootstrap within React framework to create a responsive user interface."
       ]
+    },
+    {
+      "position": "Merchandiser",
+      "location": "",
+      "company": "Shelf Tech",
+      "website": "",
+      "startDate": "April 2016",
+      "endDate": "July 2018",
+      "highlights": [
+        "Utilized merchandising strategies to showcase client's brands and products on retail floors.",
+        "Managed retail space through merchandising, stock replenishment, and visual display maintenance.",
+        "Performed new store set ups and resets to match floor plans."
+      ]
     }
   ],
   "skills": [
+    {
+      "name": "Languages",
+      "level": "",
+      "keywords": [
+        "HTML", "CSS", "JavaScript", "SQL"
+      ]
+    },
+    {
+      "keywords": [
+        "MongoDB",
+        "MySQL",
+        "FirebaseDB"
+      ],
+      "name": "Databases"
+    },
     {
       "keywords": [
         "React",
         "React Native",
         "Redux",
-        "Express",
-        "Socket IO",
-        "Bootstrap",
-        "AJAX"
-      ],
-      "name": "Libraries & Web Technologies"
-    },
-    {
-        "name": "Languages",
-        "level": "",
-        "keywords": [
-          "HTML", "CSS", "JavaScript", "TypeScript"
-        ]
-      },
-    {
-      "keywords": [
         "Node JS",
-        "MySQL",
-        "MongoDb",
-        "Firebase"
-      ],
-      "name": "Server Side Technologies"
-    },
-    {
-      "keywords": [
-        "Git",
+        "WebPack",
+        "Babel",
         "Jest",
-        "Storybook",
-        "Google Analytics"
+        "Git"
       ],
-      "name": "Versioning, Testing and Other Tools"
+      "name": "Tools"
     }
   ],
   "projects": [
@@ -122,9 +126,8 @@
   ],
   "awards": [
     {
-      "awarder": "",
-      "summary": "Front End Developer with experience managing all facets of site development, which includes architecture, site deployment and client management. Interested in blending technical skills with team collaboration experience to build exceptional, scalable applications in cooperation with excellent people."
-    
+      "summary": "Web Developer with experience managing all facets of site development, which includes architecture, deployment and client management. Interested in blending technical skills with team collaboration experience to build exceptional, scalable applications in cooperation with excellent people.",
+      "awarder": ""
     }
   ],
   "sections": [

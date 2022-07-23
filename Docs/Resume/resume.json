@@ -1,16 +1,16 @@
 {
-  "selectedTemplate": 6,
+  "selectedTemplate": 2,
   "headings": {
     "awards": "Summary",
-    "skills": "Skills",
     "work": "Work Experience",
+    "skills": "Skills",
     "projects": "Projects",
-    "education": ""
+    "education": "Education"
   },
   "basics": {
     "name": "Samuel Wright",
     "phone": "609-472-2897",
-    "website": " github.com/sleighs samuelwright.dev",
+    "website": " samuelwright.dev",
     "location": {
       "address": "Cherry Hill, NJ"
     },
@@ -18,12 +18,12 @@
   },
   "education": [
     {
-      "institution": "",
+      "institution": "V School",
       "location": "",
-      "area": "",
-      "studyType": "",
+      "area": "Web Development",
+      "studyType": "Certification",
       "startDate": "",
-      "endDate": "",
+      "endDate": "2022",
       "gpa": ""
     }
   ],
@@ -36,7 +36,7 @@
       "startDate": "November 2021",
       "endDate": "May 2022",
       "highlights": [
-        "Built stable and maintainable codebase using React.",
+        "Identified web-based user interactions and developed highly responsive user interface components via React concepts",
         "Executed full-stack website launch with responsive mobile layout and cross-browser compatibility.",
         "Accelerated client's Google ranking to page 1 for multiple keywords",
         "Coordinated with UX designers to create beautiful, functional and fast interfaces.",
@@ -49,7 +49,7 @@
       "company": "Front End Developer",
       "website": "heromatchups.com",
       "startDate": "April 2021",
-      "endDate": "August 2021",
+      "endDate": "June 2021",
       "highlights": [
         "Planned and managed the front-end development of the website.",
         "Collaborated with designers to ensure designs were efficient and technically sound.",
@@ -73,12 +73,15 @@
       "name": "Libraries & Web Technologies"
     },
     {
-        "name": "Languages",
-        "level": "",
-        "keywords": [
-          "HTML", "CSS", "JavaScript", "TypeScript"
-        ]
-      },
+      "name": "Languages",
+      "level": "",
+      "keywords": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "TypeScript"
+      ]
+    },
     {
       "keywords": [
         "Node JS",
@@ -122,9 +125,8 @@
   ],
   "awards": [
     {
-      "awarder": "",
-      "summary": "Front End Developer with experience managing all facets of site development, which includes architecture, site deployment and client management. Interested in blending technical skills with team collaboration experience to build exceptional, scalable applications in cooperation with excellent people."
-    
+      "summary": "Front End Developer with experience managing all facets of site development, which includes architecture, site deployment and client management. Interested in blending technical skills with team collaboration experience to build exceptional, scalable applications in cooperation with excellent people.",
+      "awarder": ""
     }
   ],
   "sections": [
