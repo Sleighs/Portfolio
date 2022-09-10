@@ -89,8 +89,8 @@ class Home extends Component {
           <Projects />
           <hr/>
           <Github />
-          <hr/>
-          <Location />
+          {/*<hr/>
+          <Location />*/}
           <hr/>
           <Contact />
           <hr/>

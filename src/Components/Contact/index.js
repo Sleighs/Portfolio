@@ -78,20 +78,6 @@ class Contact extends Component {
             console.error("Krikey! Error sending message: ", error);
         });
 
-        // Email message to inbox
-        /*db.collection('mail').add({
-            to: 'wsright987@gmail.com',
-            message: {
-              sname: this.state.name,
-              email: this.state.email,
-              message: this.state.message,
-              date: date,
-              time: time,
-              timezone: d.getTimezoneOffset(),
-              id: id
-            }
-          }).then(() => console.log('Queued email for delivery!'));
-*/
         // For component to show message was sent
         if (!this.state.datasent){
             this.setState({dataSent: true});
@@ -162,10 +148,12 @@ class Contact extends Component {
                 <div style={contactInfoStyle}>
                     <a href="mailto:wsright987@gmail.com">WSRIGHT987@GMAIL.COM</a>
                     <br/>
+                    <a href="https://www.linkedin.com/in/samuelwrightdev/">LinkedIn</a>
+                    <br/>
                     <strong>609-472-2897</strong>
                 </div>
                     
-                {this.state.dataSent ?
+                {/*this.state.dataSent ?
                 <div className="msg"style={{ textAlign: 'center' }}>
                     <br/>
                     <p style={{ fontSize: '1.2em' }}>Great news! Message sent successfully!</p>
@@ -205,7 +193,7 @@ class Contact extends Component {
                         />
                     </div>
                     <input type="submit" className={"input for-control submit"} style={contactFormBtn} value="Send" onClick={(e)=>{this.handleSubmit(e)}}/>
-                </form>}
+                    </form>*/}
             </div>
         )
     }

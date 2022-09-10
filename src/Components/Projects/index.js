@@ -25,7 +25,7 @@ class Projects extends Component {
                 >
                     <div className="col-md-7">
                         <h3  className="projects-row-title"><strong>Male Reality Calculator</strong></h3>
-                        <p>The Male Reality Calculator is a popular online tool, built with React and Redux, that uses U.S. Census Bureau statistics to calculate the user's odds of meeting their dream woman.</p>
+                        <p>Lead developer for the popular online tool The Male Reality Calculator. Built with React and Redux, the calculator uses U.S. Census Bureau statistics to calculate the user's odds of meeting their dream woman.</p>
                         <p>
                             {
                                 this.props.resumePage === true
@@ -67,7 +67,7 @@ class Projects extends Component {
                 <div className="row">
                     <div className="col-md-7">
                         <h3  className="projects-row-title"><strong>Hero Matchups</strong></h3>
-                        <p><a target="_blank" href="https://hero-pick-app.web.app/" rel="noreferrer">Hero Matchups</a> is a hero matchup and counter resource for Blizzard's team-based multiplayer first-person shooter Overwatch.</p>
+                        <p><a target="_blank" href="https://hero-pick-app.web.app/" rel="noreferrer">Hero Matchups</a> is a hero matchup and counter resource created for professional e-sports teams. The demo includes resources for Blizzard's team-based multiplayer first-person shooter Overwatch.</p>
                         <p>
                             {
                                 this.props.resumePage === true
