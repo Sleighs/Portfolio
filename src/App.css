@@ -147,7 +147,7 @@ body {
 #skills-container {
   width: 100%;
   padding: 0;
-  margin: 25px auto;
+  margin: 25px auto 25px auto;
 }
 #do {
   line-height: 15px; 
@@ -211,7 +211,6 @@ body {
   padding: 0 2%;
 }
 .projects__row h3 {
-
   color:rgba(8, 10, 10, 0.9);
   text-shadow: .8px .5px 1px rgba(104, 94, 94, 0.616);
 }
@@ -251,16 +250,49 @@ body {
   margin: 10px auto 25px auto;
 }
 #contact-container {
-  margin: 30px auto;
-  padding: 1%
+  margin: 25px auto 0px auto;
+  width: 90%;
+  font-size: 1em;
+  padding: 0;
+
+  display: flex;
 }
 #contact-header {
   font-family: 'Cabin Bold';
   text-align: center;
-  font-size: 1.7em;
   opacity: 1;
-  color: #62c246; 
-  text-shadow: .8px .5px .8px rgba(191, 229, 231, 0.6);
+  color:rgba(0,16,31,1);
+  text-shadow: .8px .5px 1px rgba(37, 4, 0, 0.5);
+  margin-bottom: 15px ;
+
+}
+
+#contact-title {
+  font-size: 1.2em;
+}
+
+.img-contact-link {
+  margin: auto 2%;
+  font-size: 1em;
+  margin-right: auto;
+}
+
+.portfolio-link {
+  color: rgba(71, 8, 1, 0.8)
+}
+.portfolio-link:hover {
+  text-decoration: none;
+}
+
+#projects-container a {
+
+}
+#projects-container a:hover {
+  text-decoration: none;
+}
+
+.portfolio-link2 {
+  color: rgba(71, 8, 1, 0.8)
 }
 
 @media only screen and (max-width: 768px) {
@@ -286,9 +318,7 @@ body {
   }
   #contact-header {
     margin: 10px auto 25px auto;
-  }
-  #contact-title {
-    font-size: .7em;
+    display: block;
   }
 }
 
@@ -297,5 +327,5 @@ body {
   margin: 30px auto;
   font-size: 1.1em;
   width: 100%;
-  height: 100px;
+  height: 50px;
 }

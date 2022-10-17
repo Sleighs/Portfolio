@@ -31,11 +31,11 @@ class Skills extends Component {
 					<h3 id="skills2-title"><strong>WHAT DO I KNOW?</strong></h3>
 				</div>
 				<ul id="know-list">
-					<li>HTML, CSS, Javascript (ES5, ES6) and Typescript languages</li>
-					<li>Node JS, MongoDB and Firebase server side technologies</li>
-					<li>How to design user friendly UX with React, React Native, Redux, JQuery, HTML5 Canvas, SASS</li>
-					<li>How to use a feature/dev/master branch workflow in Git</li>
+					{/*<li>HTML, CSS, Javascript (ES5, ES6) and Typescript languages</li>
+					<li>Node JS, MongoDB and Firebase server side technologies</li>*/}
+					<li>How to design user friendly web applications with React, React Native, Vue, PHP,  Redux, JQuery, HTML5 Canvas, SASS</li>
 					<li>How to design, develop, deploy and support RESTful services</li>
+					<li>How to maintain a feature/dev/master branch workflow in Git</li>
 					<li>How to query and interpret Google Analytics data to make meaningful insights</li>
 					{
 						this.props.resumePage === true 
