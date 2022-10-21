@@ -24,7 +24,7 @@ class Projects extends Component {
                     //style={{display:'none'}}
                 >
                     <div className="col-md-7">
-                        <h3  className="projects-row-title"><strong>Male Reality Calculator</strong></h3>
+                        <h3 className="projects-row-title"><strong>Male Reality Calculator</strong></h3>
                         <p>Lead developer for the popular online tool The Male Reality Calculator. Built with React and Redux, the calculator uses U.S. Census Bureau statistics to calculate the user's odds of meeting their dream woman.</p>
                         <p>
                             {
@@ -86,12 +86,12 @@ class Projects extends Component {
                 <div className="row">
                     <div className="col-md-7">
                         <h3  className="projects-row-title"><strong>Hero Matchups</strong></h3>
-                        <p><a target="_blank" href="https://hero-pick-app.web.app/" rel="noreferrer">Hero Matchups</a> is a hero matchup and counter resource created for professional e-sports teams. The demo includes resources for Blizzard's team-based multiplayer first-person shooter Overwatch.</p>
+                        <p><a target="_blank" href="https://hero-pick-app.web.app/" rel="noreferrer">Hero Matchups</a> is a hero matchup and counter resource created for a video game and e-sports blog. The demo includes resources for Blizzard's team-based multiplayer first-person shooter Overwatch.</p>
                         <p>
                             {
                                 this.props.resumePage === true
                                 ? <p>Try out and visit the source code at <a target="_blank" href="https://github.com/Sleighs/HeroMatchups/" rel="noreferrer">github.com/Sleighs/HeroMatchups</a></p>
-                                : <a target="_blank" href="https://github.com/Sleighs/HeroMatchups/" rel="noreferrer">Visit Hero Matchups</a>
+                                : <a target="_blank" href="https://github.com/Sleighs/HeroMatchups/" rel="noreferrer">Check out the demo</a>
                             }
                         </p>
                     </div>
