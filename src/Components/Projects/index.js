@@ -66,6 +66,19 @@ class Projects extends Component {
                 <hr/>
                 <div className="row">
                     <div className="col-md-7">
+                        <h3  className="projects-row-title"><strong>Hero Matchups API</strong></h3>
+                        <p>The <a target="_blank" href="https://github.com/Sleighs/hero-matchups-api/" rel="noreferrer">Hero Matchups API</a> is a character matchup and counter resource created for e-sports training and practice applications. Check out a live demo using resources for Blizzard's team-based first person shooter Overwatch 2 <a target="_blank" href="https://hero-pick-app.web.app/" rel="noreferrer">here</a>.</p>                    
+                        <p><a target="_blank" href="https://github.com/Sleighs/hero-matchups-api/" rel="noreferrer">Visit the repository</a></p>
+                    </div>
+                    <div className="col-md-5">
+                        <a className="projects-pic-container-heromatchups" target="_blank" href="https://github.com/sleighs/heromatchups" rel="noreferrer" title="Visit">
+                            <img className="img-responsive rounded projects-pic d-block mx-auto" alt="HeroMatchups" src={heromatchupsPic}/>
+                        </a>
+                    </div>
+                </div>
+                <hr/>
+                <div className="row">
+                    <div className="col-md-7">
                         <h3 className="projects-row-title"><strong>Mint 2048</strong></h3>
                         <p><a target="_blank" href="https://mint2048.com/" rel="noreferrer">Mint</a> is a sliding tile puzzle game where players combine tiles, perform combos and use abilities to create the 2048 tile.</p>
                         <p> 
@@ -79,25 +92,6 @@ class Projects extends Component {
                     <div className="col-md-5">
                         <a className="projects-pic-container-mint" target="_blank" href="https://github.com/sleighs/mint-2048" rel="noreferrer" title="Play">
                             <img className="img-responsive rounded projects-pic d-block mx-auto" alt="Mint 2048" src={mintPic}/>
-                        </a>
-                    </div>
-                </div>
-                <hr/>
-                <div className="row">
-                    <div className="col-md-7">
-                        <h3  className="projects-row-title"><strong>Hero Matchups</strong></h3>
-                        <p><a target="_blank" href="https://hero-pick-app.web.app/" rel="noreferrer">Hero Matchups</a> is a hero matchup and counter resource created for a video game and e-sports blog. The demo includes resources for Blizzard's team-based multiplayer first-person shooter Overwatch.</p>
-                        <p>
-                            {
-                                this.props.resumePage === true
-                                ? <p>Try out and visit the source code at <a target="_blank" href="https://github.com/Sleighs/HeroMatchups/" rel="noreferrer">github.com/Sleighs/HeroMatchups</a></p>
-                                : <a target="_blank" href="https://github.com/Sleighs/HeroMatchups/" rel="noreferrer">Check out the demo</a>
-                            }
-                        </p>
-                    </div>
-                    <div className="col-md-5">
-                        <a className="projects-pic-container-heromatchups" target="_blank" href="https://github.com/sleighs/heromatchups" rel="noreferrer" title="Visit">
-                            <img className="img-responsive rounded projects-pic d-block mx-auto" alt="HeroMatchups" src={heromatchupsPic}/>
                         </a>
                     </div>
                 </div>
