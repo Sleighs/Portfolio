@@ -1,0 +1,29 @@
+#contact-container {
+    margin: 25px auto 0px auto;
+    width: 90%;
+    font-size: 1em;
+    padding: 0;
+  
+    display: flex;
+    flex-direction: column;
+  }
+  #contact-header {
+    font-family: 'Cabin Bold';
+    text-align: center;
+    opacity: 1;
+    color:rgba(0,16,31,1);
+    text-shadow: .8px .5px 1px rgba(37, 4, 0, 0.5);
+    margin-bottom: 15px ;
+  
+  }
+  
+  #contact-title {
+    font-size: 1.2em;
+  }
+  
+  .img-contact-link {
+    margin: auto 2%;
+    font-size: 1em;
+    margin-right: auto;
+  }
+  

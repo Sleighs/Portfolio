@@ -1,51 +1,19 @@
-import React, { Component } from 'react';
-import AppManager from '../../AppManager';
+import React from 'react';
 import '../../App.css';
+import './style.css'
 
-class Skills extends Component {
-	constructor(props){
-        super(props)
-        this.state = {}
-    }
+const Skills = (props) => {
+  return (
+	<div className="container container-md" id="skills-container">
+	  <div className="skills-header" id="skills-title1">
+		<h3 className="skills-title"><strong>Skills</strong></h3>
+	  </div>
+			
+	  <div>
 
-    render (){
-        return (
-            <div className="container container-md" id="skills-container">
-				<div className="header-box" id="skills-title1">
-					<h3 className="title"><strong>WHAT DO I DO?</strong></h3>
-				</div>
-				<div id="do-list">
-					{/*!AppManager.company ? null : <p>Work at AweSumo creating software</p>*/}
-					<p>Create fun web projects in my spare time</p>
-					<p>Write quality code</p>
-					<p>Keep my functions small, focused, and easy to understand</p>
-					<p>Leave comments as I create and maintain code</p>
-					<p>Make tests for the code I write</p>
-					<p>Document every feature</p>
-					<p>Keep track of every bug</p>
-					<p>Strictly follow security best practices</p>
-					<p>Never stop learning</p>
-				</div>
-				<hr/>
-				<div id="skills2-header">
-					<h3 id="skills2-title"><strong>WHAT DO I KNOW?</strong></h3>
-				</div>
-				<ul id="know-list">
-					{/*<li>HTML, CSS, Javascript (ES5, ES6) and Typescript languages</li>
-					<li>Node JS, MongoDB and Firebase server side technologies</li>*/}
-					<li>How to design user friendly web applications with React, React Native, Vue, PHP,  Redux, JQuery, HTML5 Canvas, SASS</li>
-					<li>How to design, develop, deploy and support RESTful services</li>
-					<li>How to maintain a feature/dev/master branch workflow in Git</li>
-					<li>How to query and interpret Google Analytics data to make meaningful insights</li>
-					{
-						this.props.resumePage === true 
-						? <li>How to test Javascript and Typescript codebases with Jest</li>
-						: <li>How to make an excellent <a target="_blank" href="https://github.com/Sleighs/google-maps-react-tutorial/" rel="noreferrer">Github Repository</a></li>
-					}
-				</ul>
-            </div>
-        )
-    }
+	  </div>
+	</div>
+  )
 }
 
 export default Skills;

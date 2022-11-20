@@ -1,8 +1,23 @@
+@font-face {
+  font-family: 'Rokkitt';
+  src: url('/src/Resources/Fonts/Rokkitt-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: 'Cabin Bold';
+  src: url('/src/Resources/Fonts/Cabin-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Cabin';
+  src: url('/src/Resources/Fonts/Cabin-VariableFont_wdth,wght.ttf');
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  /*font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    sans-serif;*/
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

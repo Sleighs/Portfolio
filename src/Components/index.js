@@ -6,3 +6,4 @@ export { default as Contact } from "./Contact";
 export { default as Tag } from "./Tag";
 export { default as Footer } from "./Footer";
 export { default as Map } from "./Map";
+export { default as Nav } from './Nav'

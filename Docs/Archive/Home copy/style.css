@@ -1,0 +1,6 @@
+.section {
+    min-height: 400px;
+    width: 90%;
+    margin: 5% auto;
+    border: solid 1pt red; 
+}
