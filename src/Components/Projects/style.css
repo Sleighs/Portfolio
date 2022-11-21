@@ -2,7 +2,7 @@
     height: fit-content;
     min-height: 80px;
     width: 100%;
-    
+    text-align: center;
     /*
     background: rgba(0,16,31,1);
     color: white;
@@ -10,9 +10,6 @@
     opacity: .9;
     */
     margin: auto;
-    font-family: 'Cabin Bold';
-    text-align: center;
-    text-transform: uppercase;
     
 }
 
@@ -22,4 +19,8 @@
 
 .projects-row-title {
     font-family: 'Cabin Bold';
+}
+
+hr {
+    background-color: red;
 }

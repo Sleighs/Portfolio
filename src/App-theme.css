@@ -40,41 +40,23 @@
 }
 
 /* Home */
-.home-contact-info__link-light {
-    color: rgba(0,16,31,1);
-}
-.home-contact-info__link-light:visited {
-    color: rgba(0,16,31,1);
-}
 .home-contact-info__link-light a {
+    color: rgba(0,16,31,1);
+}
+.home-contact-info__link-light a:hover {
     color: rgba(0,16,31,1);
 }
 .home-contact-info__link-light a:visited {
     color: rgba(0,16,31,1); 
 }
 
-.home-contact-info__link-dark {
-    color: white;
-}
-.home-contact-info__link-dark:visited {
-    color: white;
-}
+
 .home-contact-info__link-dark a {
+    color: white;
+}
+.home-contact-info__link-dark a:hover {
     color: white;
 }
 .home-contact-info__link-dark a:visited {
     color: white;
 }
-/*
-.contact-info-link-light {
-    color: rgba(0,16,31,1);
-}
-.contact-info-link-light:visited {
-    color: rgba(0,16,31,1); 
-}
-.contact-info-link-dark {
-    color: white
-}
-.contact-info-link-dark:visited {
-    color: white;
-}*/
