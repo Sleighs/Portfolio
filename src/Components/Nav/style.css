@@ -2,7 +2,6 @@
   list-style: none;
 }
 .main-nav__list-item {
-  color: rgb(13, 18, 20);
   height: fit-content;
 }
 .main-nav__list-item a {
@@ -12,12 +11,6 @@
     
   display: flex;
   align-items: center;
-}
-.main-nav__list-item a:visited {
-  color:rgb(13, 18, 20);
-}
-.main-nav__list-item:hover {
-  color:rgb(13, 18, 20);
 }
 
 .navigation {
@@ -30,12 +23,9 @@
     background-color: rgb(13, 18, 20);
     color: rgb(255, 255, 255);
     */
-    color: rgb(13, 18, 20);
-    display: 0 2px 2px 2px rgba(9, 9, 9, 0.23);
     z-index: 100;
 
     padding-left: 1.34rem;
-    
   }
   
   .brand-name {
@@ -73,6 +63,11 @@
 
     
   }
+  .nav-link-highlighted:hover {
+    color: rgb(255, 77, 0);
+
+    
+  }
   .nav-link-normal {
     
   }
@@ -81,7 +76,7 @@
     height: 40px;
     width: 40px;
     padding: 0.5rem;
-    background-color: rgb(13, 18, 20);;
+    background-color: rgb(13, 18, 20);
     cursor: pointer;
     transition: background-color 0.2s ease-in-out;
     position: absolute;
@@ -135,3 +130,5 @@
   }
   
   */
+
+  

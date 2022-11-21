@@ -1,9 +1,12 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Link } from "react-router-dom";
+import { ThemeContext } from '../../Context/ThemeContext';
 import './style.css'
 
 export default function MainNav(props) {
     const {pageLocation, setPageLocation} = props
+
+    const { theme } = useContext(ThemeContext)
 
     const [isNavExpanded, setIsNavExpanded] = useState(false);
     
@@ -66,8 +69,8 @@ export default function MainNav(props) {
                 className=
                 {
                   pageLocation === 'home' 
-                  ? "nav-link-highlighted main-nav__list-item" 
-                  : "nav-link-normal main-nav__list-item"
+                  ? `nav-link-highlighted main-nav__list-item` 
+                  : `nav-link-normal main-nav__list-item main-nav__list-item-${theme}`
                 }
                 onClick={() => {
                   setPageLocation('home');
@@ -83,8 +86,8 @@ export default function MainNav(props) {
                 className=
                 {
                   pageLocation === 'projects' 
-                  ? "nav-link-highlighted main-nav__list-item" 
-                  : "nav-link-normal main-nav__list-item"
+                  ? `nav-link-highlighted main-nav__list-item` 
+                  : `nav-link-normal main-nav__list-item main-nav__list-item-${theme}`
                 }
                 onClick={() => {
                   setPageLocation('projects');
@@ -100,8 +103,8 @@ export default function MainNav(props) {
                 className=
                 {
                   pageLocation === 'about' 
-                  ? "nav-link-highlighted main-nav__list-item" 
-                  : "nav-link-normal main-nav__list-item"
+                  ? `nav-link-highlighted main-nav__list-item` 
+                  : `nav-link-normal main-nav__list-item main-nav__list-item-${theme}`
                 } 
                 onClick={() => {
                   setPageLocation('about');
@@ -117,8 +120,8 @@ export default function MainNav(props) {
                 className=
                 {
                   pageLocation === 'work' 
-                  ? "nav-link-highlighted main-nav__list-item" 
-                  : "nav-link-normal main-nav__list-item"
+                  ? `nav-link-highlighted main-nav__list-item` 
+                  : `nav-link-normal main-nav__list-item main-nav__list-item-${theme}`
                 }
                 onClick={() => {
                   setPageLocation('work');
@@ -134,8 +137,8 @@ export default function MainNav(props) {
                 className=
                 {
                   pageLocation === 'contact' 
-                  ? "nav-link-highlighted main-nav__list-item" 
-                  : "nav-link-normal main-nav__list-item"
+                  ? `nav-link-highlighted main-nav__list-item` 
+                  : `nav-link-normal main-nav__list-item main-nav__list-item-${theme}`
                 }
                 onClick={() => {
                   setPageLocation('contact');

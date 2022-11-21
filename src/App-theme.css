@@ -1,0 +1,80 @@
+/* Theme */
+.app-light {
+    background: white;
+    color: rgba(0,16,31,1);
+}
+.title-light {
+    color: rgba(0,16,31,1);
+    text-shadow: .8px .5px 1px rgba(37, 4, 0, 0.5);
+}
+  
+.app-dark {
+    background: rgb(13, 18, 20);
+    /*background-color:   rgba(0,16,31,1);;*/
+    color: white;
+}
+.title-dark {
+    color:white;
+    text-shadow: .8px .5px 1px rgba(37, 4, 0, 0.5);
+}
+
+/* Nav */
+.main-nav__list-item-light {
+    color: rgb(13, 18, 20);
+}
+.main-nav__list-item-light a:visited {
+    color: rgb(13, 18, 20);
+}
+.main-nav__list-item-light:hover {
+    color: rgb(13, 18, 20);
+}
+
+.main-nav__list-item-dark {
+    color: white;
+}
+.main-nav__list-item-dark a:visited {
+    color: white;
+}
+.main-nav__list-item-dark:hover {
+    color: white;
+}
+
+/* Home */
+.home-contact-info__link-light {
+    color: rgba(0,16,31,1);
+}
+.home-contact-info__link-light:visited {
+    color: rgba(0,16,31,1);
+}
+.home-contact-info__link-light a {
+    color: rgba(0,16,31,1);
+}
+.home-contact-info__link-light a:visited {
+    color: rgba(0,16,31,1); 
+}
+
+.home-contact-info__link-dark {
+    color: white;
+}
+.home-contact-info__link-dark:visited {
+    color: white;
+}
+.home-contact-info__link-dark a {
+    color: white;
+}
+.home-contact-info__link-dark a:visited {
+    color: white;
+}
+/*
+.contact-info-link-light {
+    color: rgba(0,16,31,1);
+}
+.contact-info-link-light:visited {
+    color: rgba(0,16,31,1); 
+}
+.contact-info-link-dark {
+    color: white
+}
+.contact-info-link-dark:visited {
+    color: white;
+}*/
