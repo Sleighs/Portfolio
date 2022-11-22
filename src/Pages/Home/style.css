@@ -3,6 +3,9 @@
 }
 .intro-section {
     margin: auto;
+    width: fit-content;
+    float: left;
+    padding: 2% 0;
     font-size: 1.1em;
 }
 .intro-section__description {

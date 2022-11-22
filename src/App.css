@@ -44,12 +44,31 @@ body {
   margin-bottom: 1%;
 }
 .nav-location__title1 {
-  color: red;
-}
-.nav-location__title2 {
-  
+
 }
 
+.nav-location__title-red {
+  color: red;
+}
+.nav-location__title2, .nav-location__title-normal {
+  
+}
+.nav-location__title3 {
+
+}
+
+.nav-location__title-blue {
+  color: blue;
+}
+.nav-location__title-gold {
+  color: gold;
+}
+.nav-location__title-orange {
+  color: orange;
+}
+.nav-location__title-yel {
+  color: yellow;
+}
 .title {
   font-family: 'Cabin Bold';
   text-align: center;
@@ -158,7 +177,9 @@ body {
   border: solid 1pt red; 
   */
 }
-
+.section-title {
+  font-size: 2em;
+}
 
 #footer-container {
   text-align: center;

@@ -8,10 +8,6 @@ import './style.css'
 const Projects = (props) => {
     return (
         <div id="projects-container">
-            <div id="projects-header">
-                <h3 id="projects-title" className="section-title"><strong>Projects</strong></h3>
-            </div>
-
             <div className="row" id="project2">
                 <div className="col-md-7">
                     <h3  className="projects-row-title"><strong>CashFlow JS</strong></h3>

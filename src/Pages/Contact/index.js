@@ -8,10 +8,10 @@ import { Contact } from '../../Components';
 
 const ContactPage = (props) => {
   return (
-    <div id='home-container'>
+    <div id='contact-container'>
       <div className='section contact-section' id='contact'>
-      <div id="contact-header">
-            <h3 id="contact-title"><strong>CONTACT</strong></h3>
+        <div id="contact-header">
+            <h3 id="contact-title" className="section-title"><strong>Contact</strong></h3>
         </div>
         <div style={{display: 'flex',}}>                
             <div className="img-contact-link">
