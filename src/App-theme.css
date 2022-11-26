@@ -51,7 +51,15 @@
 .main-nav__list-item-dark:hover {
     color: white;
 }
-
+.hamburger-dark {
+    background-color: rgb(13, 18, 20);
+    color: white;
+  }
+.hamburger-light {
+    /*background-color: rgb(255, 255, 255);
+    color: rgb(13, 18, 20);
+    */
+}
 /* Home */
 .home-contact-info__link-light a {
     color: rgba(0,16,31,1);

@@ -42,12 +42,11 @@ export default function MainNav(props) {
             <span className='nav-location__title' onClick={()=>{
               scrollTo('home');
               setPageLocation('home');
-              setIsNavExpanded(!isNavExpanded);
             }}>{'samuelwright.dev'}</span>
           </div>
         </div>
         <button
-          className="hamburger"
+          className={`hamburger hamburger-${theme}`}
           onClick={()=> {setIsNavExpanded(!isNavExpanded);}}
         >
           <svg
