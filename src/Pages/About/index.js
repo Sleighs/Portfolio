@@ -1,9 +1,7 @@
-import React, { Component, useContext, useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
-import Cookies from 'universal-cookie'
-import { Projects, Skills } from '../../Components';
+import React from 'react';
+import { Skills } from '../../Components';
+import Intro from '../../Components/Intro';
 
-import { DataContext } from '../../Context/DataContext';
 import './style-mobile.css';
 import './style.css'
 
@@ -14,7 +12,8 @@ const AboutPage = (props) => {
         <div id="about-header">
           <h3 id="about-title" className="section-title"><strong>About</strong></h3>
         </div>
-        
+        <Intro />
+        <Skills />
       </div>
     </div>
   )

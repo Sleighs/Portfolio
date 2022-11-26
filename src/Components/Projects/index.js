@@ -1,15 +1,60 @@
-import React from 'react';
+import React, { useContext, useEffect, useRef } from 'react';
 import mintPic from '../../Resources/Images/portfolio-mint2048.png';
 import cashflowPic from '../../Resources/Images/portfolio-cashflowjs.png';
 import heromatchupsPic from '../../Resources/Images/portfolio-heromatchups.png';
 import realityCalcPic from '../../Resources/Images/portfolio-realitycalc03.png';
 import './style.css'
+import { DataContext } from '../../Context/DataContext'
 
 const Projects = (props) => {
+    const { setPageLocation } = useContext(DataContext)
+
+    const hiddenRef = useRef();
+
+    useEffect(() => {
+        window.addEventListener('scroll', scrollHandler);
+        return () => window.removeEventListener('scroll', scrollHandler);
+    }, []);
+    
+    const scrollHandler = () => {
+        if(window.pageYOffset + window.innerHeight >= hiddenRef.current.offsetTop + 125) {
+           console.log(`Hidden element is now visible`);
+            setPageLocation('projects')
+        }
+    }
+
     return (
-        <div id="projects-container">
+        <div id="projects-container" ref={hiddenRef}>
+            <div className="row" id="project1">
+                <div className="col-md-7 project-description">
+                    <h3 className="projects-row-title"><strong>RealityCalc.com</strong></h3>
+                    <p>Lead developer for RealityCalc.com, home to the popular online tool The Male Reality Calculator hosted at RealityCalc.com. Built with React and Redux, the calculator uses U.S. Census Bureau statistics to calculate the user's odds of meeting their dream woman.</p>
+                    <p>
+                    <a target="_blank" href="https://realitycalc.com/" rel="noreferrer">Check it out</a>
+                    </p>
+                </div>
+                <div className="col-md-5">
+                    <a className="projects-pic-container-realitycalc" target="_blank" href="https://realitycalc.com"rel="noreferrer" title="Check it out">
+                    <img className="img-responsive rounded projects-pic mx-auto d-block" alt="RealityCalc.com" src={realityCalcPic}/>
+                    </a>
+                </div>
+            </div>
+            <hr/>
+            <div className="row"  id="project3">
+                <div className="col-md-7 project-description">
+                    <h3  className="projects-row-title"><strong>Hero Matchups API</strong></h3>
+                    <p>The <a target="_blank" href="https://github.com/Sleighs/hero-matchups-api/" rel="noreferrer">Hero Matchups API</a> is a character matchup and counter resource created for e-sports training and practice applications. Check out a live demo using resources for Blizzard's team-based first person shooter Overwatch 2 <a target="_blank" href="https://hero-pick-app.web.app/" rel="noreferrer">here</a>.</p>                    
+                    <p><a target="_blank" href="https://github.com/Sleighs/hero-matchups-api/" rel="noreferrer">Visit the repository</a></p>
+                </div>
+                <div className="col-md-5">
+                    <a className="projects-pic-container-heromatchups" target="_blank" href="https://github.com/sleighs/heromatchups" rel="noreferrer" title="Visit">
+                        <img className="img-responsive rounded projects-pic d-block mx-auto" alt="HeroMatchups" src={heromatchupsPic}/>
+                    </a>
+                </div>
+            </div>
+            <hr/>
             <div className="row" id="project2">
-                <div className="col-md-7">
+                <div className="col-md-7 project-description">
                     <h3  className="projects-row-title"><strong>CashFlow JS</strong></h3>
                     <p><a target="_blank" href="https://sleighs.github.io/CashFlowJs/" rel="noreferrer">CashFlow JS</a> is an adaptation of the CashFlow 101 board game with additional gameplay options and rule customization that allows for many unique ways to play.</p>
                     <p>
@@ -23,21 +68,8 @@ const Projects = (props) => {
                 </div>
             </div>
             <hr/>
-            <div className="row"  id="project3">
-                <div className="col-md-7">
-                    <h3  className="projects-row-title"><strong>Hero Matchups API</strong></h3>
-                    <p>The <a target="_blank" href="https://github.com/Sleighs/hero-matchups-api/" rel="noreferrer">Hero Matchups API</a> is a character matchup and counter resource created for e-sports training and practice applications. Check out a live demo using resources for Blizzard's team-based first person shooter Overwatch 2 <a target="_blank" href="https://hero-pick-app.web.app/" rel="noreferrer">here</a>.</p>                    
-                    <p><a target="_blank" href="https://github.com/Sleighs/hero-matchups-api/" rel="noreferrer">Visit the repository</a></p>
-                </div>
-                <div className="col-md-5">
-                    <a className="projects-pic-container-heromatchups" target="_blank" href="https://github.com/sleighs/heromatchups" rel="noreferrer" title="Visit">
-                        <img className="img-responsive rounded projects-pic d-block mx-auto" alt="HeroMatchups" src={heromatchupsPic}/>
-                    </a>
-                </div>
-            </div>
-            <hr/>
             <div className="row"  id="project4">
-                <div className="col-md-7">
+                <div className="col-md-7 project-description">
                     <h3 className="projects-row-title"><strong>Mint 2048</strong></h3>
                     <p><a target="_blank" href="https://mint2048.com/" rel="noreferrer">Mint</a> is a sliding tile puzzle game where players combine tiles, perform combos and use abilities to create the 2048 tile.</p>
                     <p>

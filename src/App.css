@@ -27,116 +27,28 @@ body {
   min-height: 100vh;
 }
 .app-container {
-  padding: 10% 5%;
   margin: auto;
   font-family: 'Rokkitt';
-  max-width: 1056px;
   width: 100%;
+  height: 100%;
 }
 
-.nav-location {
-  padding: .5rem 0;
-  font-size: 1.75rem;
-}
-.nav-location__title {
-  font-size: 1.1em;
-  font-weight: bold;
-  margin-bottom: 1%;
-}
-.nav-location__title1 {
 
-}
-
-.nav-location__title-red {
-  color: red;
-}
-.nav-location__title2, .nav-location__title-normal {
-  
-}
-.nav-location__title3 {
-
-}
-
-.nav-location__title-blue {
-  color: blue;
-}
-.nav-location__title-gold {
-  color: gold;
-}
-.nav-location__title-orange {
-  color: orange;
-}
-.nav-location__title-yel {
-  color: yellow;
-}
 .title {
-  font-family: 'Cabin Bold';
+  /*font-family: 'Cabin Bold';*/
   text-align: center;
   font-size: 1.7em;
   opacity: .8;
   
 }
-#skills-container {
-  width: 100%;
-  padding: 0;
-  margin: 25px auto 25px auto;
-}
-#do {
-  line-height: 15px; 
-}
-#skills-title1 {
-  margin: 40px auto 0 auto;
-  height: 45px;
-  width: 100%;
-}
-#do-list {
-  text-align: center;
-  line-height: 15px;
-  margin: 20px auto 0 auto;
-}
-#skills2-header {
-  text-align: center;
-  height: 115px;
-  width: 100%;
-  border: 10pt ridge rgba(0,16,31,.3);
-  margin: 5px auto 25px auto;
-  font-family: 'Cabin Bold';
-  text-align: center;
-  opacity: .9;
 
-  text-shadow: .8px .5px 1px rgba(37, 4, 0, 0.5);
-}
-#skills2-title {
-  line-height: 2.5;
-  font-size: 1.7em;
-}
-#know-list {
-  font-size: '.9em';
-  max-width: 600px;
-  margin: auto;
-}
-
-.projects__row {
-  padding: 0 2%;
-}
-.projects__row h3 {
-  color:rgba(8, 10, 10, 0.9);
-  text-shadow: .8px .5px 1px rgba(104, 94, 94, 0.616);
-}
-.projects-pic-container-mint {
-  display: block;
-  margin: auto;
-}
-.projects-pic-container-cashflow, 
-.projects-pic-container-realitycalc {
-  display: block;
-  margin: auto;
-}
-.projects-pic {
-  max-height: 200px;
-}
 #info-container {
   margin: 30px auto;
+}
+.intro-container {
+  width: 100%;
+  display: block;
+  margin: auto;
 }
 
 #github-container {
@@ -151,26 +63,11 @@ body {
   margin: auto;
 }
 
-
-.portfolio-link {
-  color: rgba(71, 8, 1, 0.8)
-}
-.portfolio-link:hover {
-  text-decoration: none;
+.row {
+  font-size: 1em;
 }
 
-#projects-container a {
-
-}
-#projects-container a:hover {
-  text-decoration: none;
-}
-
-.portfolio-link2 {
-  color: rgba(71, 8, 1, 0.8)
-}
 .section {
-  min-height: 200px;
   width: 90%;
   margin: auto;
   /*
@@ -178,49 +75,22 @@ body {
   */
 }
 .section-title {
-  font-size: 2em;
+  font-size: 2.25em;
+  /*font-family: 'Cabin';
+  */
+
+}
+
+.about-intro {
+  width: 55%;
+}
+.contact__info {
+  margin-top: 5%;
+  /*padding: 1.5%;*/
+  border-radius: 7px;
 }
 
 #footer-container {
-  text-align: center;
-  margin: 30px auto;
-  font-size: 1.1em;
-  width: 100%;
-  height: 50px;
-}
-
-@media only screen and (max-width: 768px) {
-  #header-container {
-    height: 385px;
-  }
-  .title {
-    font-size: 1.4em;
-  }
-  #skills-title1 {
-
-  }
-  #skills2-title {
-    font-size: 1.4em;
-    line-height: 3;
-  }
-  #projects-title {
-    font-size: 1.4em;
-    line-height: 4;
-  }
-  .projects-row-title {
-    text-align: center;
-    margin-top: 15px;
-    font-size: 1.6em;
-    opacity: .8;
-  }
-  #contact-header {
-    margin: 10px auto 25px auto;
-    display: block;
-  }
-  #contact-container {
-    flex-direction: column;
-    width: 60%;
-    margin: auto;
-    margin-top: 10%;
-  }
+  position: absolute;
+  min-width: 100vw;
 }

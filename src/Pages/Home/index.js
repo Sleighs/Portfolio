@@ -1,20 +1,34 @@
 import React, { useContext } from 'react';
+import { Contact, ContactInfo, Projects, Skills } from '../../Components';
+import Intro from '../../Components/Intro';
 import { ThemeContext } from '../../Context/ThemeContext';
 import './style-mobile.css';
-import './style.css'
+import './style-svg.css';
+import './style.css';
 
 const HomePage = (props) => {
   const { theme } = useContext(ThemeContext)
 
   return (
     <div id='home-container'>    
-      <div className='intro-section'>
-        <div className='intro-section__contact-info'>
-          <div className={`home-contact-info__link-${theme}`}><a className={`contact-info-link`} target="_blank" href="mailto:wsright987@gmail.com" rel="noreferrer">wsright987@gmail.com</a></div>
-          <div className={`home-contact-info__link-${theme}`}><a className={`contact-info-link`} target="_blank" href="http://github.com/sleighs" rel="noreferrer">github.com/sleighs</a></div>
-          <div className={`home-contact-info__link-${theme}`}>tel <a className={`contact-info-link`} target="_blank" href="tel:609-472-2897" rel="noreferrer">+1 (609) 472-2897</a></div>
-        </div>
+      <div className={"intro-container intro-container-" + theme} id="home">
+        <Intro />
+        <ContactInfo />
       </div>
+      <div className="section-header" id="projects">
+        <h3 className="section-title"><strong>Projects</strong></h3>
+      </div>
+      <div className={"home-projects__container"}>
+        <Projects />
+      </div>
+      <div className="section-header"  id="about">
+        <h3 className="section-title"><strong>Skills</strong></h3>
+      </div>
+      <Skills />
+      <div className="section-header"  id="contact">
+        <h3 className="section-title"><strong>Contact</strong></h3>
+      </div>
+      <Contact />
     </div>
   )
 }

@@ -1,31 +1,78 @@
-.main-nav__list {
+.main-nav {
   list-style: none;
+  max-width: 950px;
+  width: 100%;
+  display: flex;
+  align-content: center;
+  flex-direction: row;
+  margin: auto;
+  font-size: 1.6rem;
+  height: 50px;
+  padding-top: 5px;
 }
 .main-nav__list-item {
   height: fit-content;
+  margin-left: auto;
 }
-.main-nav__list-item a {
-  height: fit-content;
-  width: 90px;
-  /*border: 1pt solid gray;*/
-    
-  display: flex;
-  align-items: center;
+
+
+.nav-location__title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin: auto;
+  text-align: left;
+}
+.nav-location__title1 {
+
+}
+
+.nav-location__title-red {
+  /*color: rgb(255, 71, 97);
+  color: rgb(255, 50, 78);*/
+
+  color: rgb(255, 77, 0);
+}
+.nav-location__title2, .nav-location__title-normal {
+  
+}
+.nav-location__title3 {
+
+}
+
+.nav-location__title-blue {
+  color: blue;
+}
+.nav-location__title-gold {
+  color: gold;
+}
+.nav-location__title-orange {
+  color: orange;
+}
+.nav-location__title-yel {
+  color: yellow;
 }
 
 .navigation {
-    position: relative;
+    position: fixed;
     display: flex;
     align-items: center;
-    height: 40px;
+
     width: 100%;
+  
     /*padding: 0.5rem 0rem;
     background-color: rgb(13, 18, 20);
     color: rgb(255, 255, 255);
     */
     z-index: 100;
 
-    padding-left: 1.34rem;
+    /*
+    padding-left: 1.35rem;    
+    width: fit-content;
+    */
+
+    margin: auto;
+    top: 0;
+    font-size: 1.5em;
   }
   
   .brand-name {
@@ -34,12 +81,12 @@
     */
     font-size: 1.25rem;
     margin-left: 1rem;
-
-    font-family: 'Orbitron', sans-serif;
   }
   
   .navigation-menu {
-    margin-right: auto;
+    margin-left: auto;
+    padding-right: 1%;
+
   }
   
   .navigation-menu ul {
@@ -59,14 +106,16 @@
     width: 100%;
   }
   .nav-link-highlighted {
-    color: rgb(255, 77, 0);
-
+    font-weight: bold;
     
+    /*color: rgb(255, 71, 75);
+    color: rgb(255, 50, 78);
+    color: rgb(255, 77, 0);*/
+    color: rgb(255, 77, 70);
   }
   .nav-link-highlighted:hover {
-    color: rgb(255, 77, 0);
-
     
+    color: rgb(255, 77, 70);
   }
   .nav-link-normal {
     
@@ -75,13 +124,12 @@
     border: 0;
     height: 40px;
     width: 40px;
-    padding: 0.5rem;
     background-color: rgb(13, 18, 20);
     cursor: pointer;
     transition: background-color 0.2s ease-in-out;
     position: absolute;
-    top: 50%;
-    right: 25px;
+    top: 48%;
+    right: 20px;
     transform: translateY(-50%);
     display: none;
   }
@@ -90,7 +138,7 @@
     
   }
   
-  /*
+  
   @media screen and (max-width: 550px) {
     .hamburger {
       display: block;
@@ -129,6 +177,6 @@
     }
   }
   
-  */
+  
 
   

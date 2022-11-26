@@ -1,6 +1,5 @@
-#about-header {
+#skills-header {
     height: fit-content;
-    min-height: 80px;
     width: 100%;
     
     /*
@@ -11,11 +10,14 @@
     */
     
     margin: auto;
-    text-align: center;
     
     /*
     font-family: 'Cabin Bold';
     text-transform: uppercase;
     */
     
+}
+
+#skills-title {
+    text-align: center;
 }

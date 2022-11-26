@@ -1,12 +1,15 @@
-#home-container {
+#home-container {    
+    /*
+    padding-left: 1.25rem;
     padding-left: 2.75rem;
+    */
 }
+
 .intro-section {
-    margin: auto;
-    width: fit-content;
-    float: left;
-    padding: 2% 0;
+    display: flex;
     font-size: 1.1em;
+    margin: auto;
+    margin-top: 2%;
 }
 .intro-section__description {
     background-color: rgb(179, 178, 167, .5);
@@ -14,7 +17,10 @@
     display: none;
 }
 .intro-section__contact-info {
+    margin: auto;
+    width: fit-content;
     font-size: 1.15em;
+    margin-top: 15%;
 }
 
 .home-contact-info__link a {
@@ -26,3 +32,32 @@
 .contact-info-link {
     text-decoration: none;
 }
+.home-contact-info__link1 {
+    
+}
+.home-contact-info__link2 {
+    
+}
+.home-contact-info__link3 {
+    
+}
+.section-header {
+    min-height: 80px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top:80px;
+}
+.home-projects__container {
+    padding: 0 10%;
+}
+
+.section-title strong {
+    font-size: 1.30em;
+}
+.intro-container {
+    padding: 15% 9.8%;
+    height: 100vh;
+    background-position: 20%;
+    margin-bottom: 4.75%;
+}
+

@@ -1,18 +1,22 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import githubPic from '../../Resources/Images/portfolio-github.png';
 import emailPic from '../../Resources/Images/envelope-solid.png';
 
 import './style-mobile.css';
 import './style.css'
 import { Contact } from '../../Components';
+import { ThemeContext } from '../../Context/ThemeContext';
 
 const ContactPage = (props) => {
+  const { theme } = useContext(ThemeContext)
+
   return (
     <div id='contact-container'>
       <div className='section contact-section' id='contact'>
         <div id="contact-header">
             <h3 id="contact-title" className="section-title"><strong>Contact</strong></h3>
         </div>
+
         <div style={{display: 'flex',}}>                
             <div className="img-contact-link">
                 <img className="" alt="" src={emailPic}

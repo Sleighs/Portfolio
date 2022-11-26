@@ -3,7 +3,9 @@ export { default as Skills } from "./Skills";
 export { default as Projects } from "./Projects";
 export { default as Location } from "./Location";
 export { default as Contact } from "./Contact";
+export { default as ContactInfo } from "./ContactInfo";
 export { default as Tag } from "./Tag";
 export { default as Footer } from "./Footer";
 export { default as Map } from "./Map";
-export { default as Nav } from './Nav'
+export { default as Nav } from './Nav';
+export { default as ThemeToggle } from './ThemeToggle';
