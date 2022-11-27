@@ -15,7 +15,9 @@
   margin-left: auto;
 }
 
-
+.nav-location {
+  padding-left: 25px;
+}
 .nav-location__title {
   font-size: 1.6rem;
   font-weight: bold;
@@ -140,8 +142,17 @@
   
   
   @media screen and (max-width: 550px) {
-    .hamburger {
-      display: block;
+    .nav-location__title{
+      font-size: .9em;
+      padding-top: 2px;
+    }
+
+    .navigation-menu ul {
+      font-size: .9em;
+      padding-top: 4px;
+    }
+   /* .hamburger {
+      display: none;
     }
   
     .navigation-menu ul {
@@ -174,7 +185,7 @@
   
     .navigation-menu.expanded ul {
       display: block;
-    }
+    }*/
   }
   
   

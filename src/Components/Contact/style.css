@@ -2,7 +2,7 @@
     margin: auto;
     width: 90%;
     padding: 0;
-    padding-bottom: 12.5%;
+    padding-bottom: 16%;
     display: flex;
     flex-direction: column;
 }
@@ -40,4 +40,8 @@
   stroke-width: 0;
   stroke: currentColor;
   fill: currentColor;
+}
+
+.form-msg {
+  min-height: 150px;
 }

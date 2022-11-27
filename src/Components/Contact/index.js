@@ -207,7 +207,7 @@ const Contact = (props) => {
                 <div className="form-group contact-form__input-container">
                     <label name="inputMessage" className="form-text">Message</label>
                     <textarea type="text" 
-                        className="form-control" 
+                        className="form-control form-msg" 
                         id="message-input" 
                         placeholder='Message...'
                         name="message" 
@@ -215,7 +215,7 @@ const Contact = (props) => {
                         onChange={(e)=>{handleChange(e)}}                    />
                 </div>
                 <input type="submit" className={"input for-control submit"} style={contactFormBtn} value="Send" 
-                onClick={(e)=>{e.preventDefault(); handleSubmit(e);}}/>
+                    onClick={(e)=>{e.preventDefault(); handleSubmit(e);}}/>
                 </form>}
         </div>
     )

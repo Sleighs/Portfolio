@@ -84,7 +84,7 @@ export default function MainNav(props) {
                 {
                   pageLocation === 'home' 
                   ? `nav-link-highlighted main-nav__list-item` 
-                  : `nav-link-normal main-nav__list-item main-nav__list-item-${theme}`
+                  : `nav-link-normal main-nav__list-item main-nav__list-item-` + theme
                 }
                 onClick={() => {
                   scrollTo('home');
