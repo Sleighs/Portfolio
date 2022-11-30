@@ -109,10 +109,6 @@
   }
   .nav-link-highlighted {
     font-weight: bold;
-    
-    /*color: rgb(255, 71, 75);
-    color: rgb(255, 50, 78);
-    color: rgb(255, 77, 0);*/
     color: rgb(255, 77, 70);
   }
   .nav-link-highlighted:hover {
