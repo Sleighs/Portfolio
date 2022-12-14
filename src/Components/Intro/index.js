@@ -17,7 +17,6 @@ export default function Intro() {
   
   const scrollHandler = () => {
       if(window.pageYOffset + window.innerHeight >= hiddenRef.current.offsetTop) {
-          console.log(`Hidden element is now visible`);
           setPageLocation('home')
       }
   }

@@ -7,8 +7,7 @@ import './style.css'
 
 export default function MainNav(props) {
   const { pageLocation, setPageLocation } = useContext(DataContext)
-
-  const { theme, setTheme, changeTheme} = useContext(ThemeContext)
+  const { theme } = useContext(ThemeContext)
 
   const [isNavExpanded, setIsNavExpanded] = useState(false);
   

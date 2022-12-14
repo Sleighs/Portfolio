@@ -12,7 +12,7 @@ import { ThemeContext } from './Context/ThemeContext';
 
 const App = (props) => {
   const { pageLocation, setPageLocation } = useContext(DataContext);
-  const { theme, setTheme } = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
 
   return (
     <div id='app' className={`app-${theme}`}>

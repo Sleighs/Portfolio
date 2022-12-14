@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Contact, ContactInfo, Projects, Skills } from '../../Components';
+import { Contact, ContactInfo, Location, Projects, Skills } from '../../Components';
 import Intro from '../../Components/Intro';
 import { ThemeContext } from '../../Context/ThemeContext';
 import './style-mobile.css';
@@ -22,9 +22,10 @@ const HomePage = (props) => {
         <Projects />
       </div>
       <div className="section-header"  id="about">
-        <h3 className="section-title"><strong>Skills</strong></h3>
+        <h3 className="section-title"><strong>About</strong></h3>
       </div>
       <Skills />
+      <Location />
       <div className="section-header"  id="contact">
         <h3 className="section-title"><strong>Contact</strong></h3>
       </div>

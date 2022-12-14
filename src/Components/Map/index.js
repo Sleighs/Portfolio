@@ -1,96 +1,88 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect, useState } from 'react';
 import { Map, GoogleApiWrapper, InfoWindow, Marker } from 'google-maps-react';
 import '../../App.css';
-import mapsKey from '../../Resources/mapsKey';
 
-export class MapContainer extends Component {
-    constructor(props){
-      super(props);
-      this.state ={
-        showingInfoWindow: false,
-        activeMarker: {},          
-        selectedPlace: {}          
-      };
-    }
+const apiKey = process.env.REACT_APP_GOOGLE_MAPS_API_KEY
 
-    componentDidMount(){
-      document.getElementById('map-container').children[1].children[0].style.position = 'relative';
-    } 
+export function MapContainer(props) {
+  const [state, setState] = useState({
+    showingInfoWindow: false,
+    activeMarker: {},          
+    selectedPlace: {}          
+  })
 
-    /*
-    toggleBounce() {
-        if (this.state.marker.getAnimation() !== null) {
-        //marker.setAnimation(null);
-        } else {
-            //this.setState({ });
-        //marker.setAnimation(window.google.maps.Animation.BOUNCE);
-        }
-        
-    }*/
-
-    onMarkerClick = (props, marker, e) => {
-        this.setState({
-            selectedPlace: props,
-            activeMarker: marker,
-            showingInfoWindow: false
-        });
-
-        //this.toggleBounce();
-    }
+  useEffect(() => {
+    document.getElementById('map-container').children[1].children[0].style.position = 'relative';
+  },[])
     
-    /*
-    onClose = props => {
+  /*const toggleBounce = () => {
+      if (state.marker.getAnimation() !== null) {
+        //marker.setAnimation(null);
+      } else {
+        //this.setState({ });
+        //marker.setAnimation(window.google.maps.Animation.BOUNCE);
+      }
+  }*/
+
+  const onMarkerClick = (props, marker, e) => {
+    setState({
+        selectedPlace: props,
+        activeMarker: marker,
+        showingInfoWindow: false
+    });
+
+    //toggleBounce();
+  }
+    
+  /*
+  const onClose = props => {
     if (this.state.showingInfoWindow) {
-        this.setState({
+      this.setState({
         showingInfoWindow: false,
         activeMarker: null
-        });
+      });
     }
-    };*/
+  };*/
 
-  render() {
-    const mapStyle = {
-      width: '100%',
-      maxWidth: '600px',
-      height: '265px',
-      position: 'relative',
-      display: 'block',
-      margin: 'auto 0',
-      float: 'left',
-    };
+  const mapStyle = {
+    width: '100%',
+    height: '280px',
+    position: 'relative',
+    display: 'flex',
+    margin: '20px 0',
+  };
 
-    return (
-      <Map
-        google={this.props.google}
-        zoom={6}
-        style={mapStyle}
-        initialCenter={
-          {
-            lat: 39.855,
-            lng: -75.008
-          }
+  return (
+    <Map
+      google={props.google}
+      zoom={6}
+      style={mapStyle}
+      initialCenter={
+        {
+          lat: 39.855,
+          lng: -75.008
         }
+      }
+    >
+      <Marker
+        onClick={onMarkerClick}
+        name={'Where I\'m At'}
+        draggable={false}
+        animation={window.google.maps.Animation.DROP}
+      />
+      <InfoWindow
+        marker={state.activeMarker}
+        visible={state.showingInfoWindow}
+        onClose={props.onClose}
       >
-        <Marker
-          onClick={this.onMarkerClick}
-          name={'Where I\'m At'}
-          draggable={false}
-          animation={window.google.maps.Animation.DROP}
-        />
-        <InfoWindow
-          marker={this.state.activeMarker}
-          visible={this.state.showingInfoWindow}
-          onClose={this.onClose}
-        >
-          <div className="map-info">
-            <h4>{this.state.selectedPlace.name}</h4>
-          </div>
-        </InfoWindow>
-      </Map>
-    );
-  }
+        <div className="map-info">
+          <h4>{state.selectedPlace.name}</h4>
+        </div>
+      </InfoWindow>
+    </Map>
+  )
 }
 
 export default GoogleApiWrapper({
-  apiKey: mapsKey
+  apiKey: apiKey,
 })(MapContainer);

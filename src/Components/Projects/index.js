@@ -18,18 +18,17 @@ const Projects = (props) => {
     
     const scrollHandler = () => {
         if(window.pageYOffset + window.innerHeight >= hiddenRef.current.offsetTop + 125) {
-           console.log(`Hidden element is now visible`);
             setPageLocation('projects')
         }
     }
 
     let rowStyle = {
-        //display:'none',
+        display:'none',
     }
 
     return (
         <div id="projects-container" ref={hiddenRef}>
-            <div className="row" id="project1" style={rowStyle}>
+            <div className="row" id="project1">
                 <div className="col-md-7 project-description">
                     <h3 className="projects-row-title"><strong>RealityCalc.com</strong></h3>
                     <p>Lead developer for RealityCalc.com, home to the popular online tool The Male Reality Calculator hosted at RealityCalc.com. Built with React and Redux, the calculator uses U.S. Census Bureau statistics to calculate the user's odds of meeting their dream woman.</p>

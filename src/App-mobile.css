@@ -105,6 +105,9 @@
       background-size: 375%;;
 
     }
+    #map-container {
+      width: 80%;
+  }
 
   }
   

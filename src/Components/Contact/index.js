@@ -55,7 +55,6 @@ const Contact = (props) => {
     }
 
     function handleSubmit(event) {
-
         // Make a unique name for the message
         var d = new Date();
         var msgName = String(formData.name + '-' + d.getTime());

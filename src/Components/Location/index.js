@@ -1,16 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Map } from '..';
-import '../../App.css';
+import './style.css';
 
-class Location extends Component {
-    render(){
-        return(
-            <div id="map-container" className="container mx-auto d-block">
-                <h3 id="map-title" className="title"><strong>WHERE AM I?</strong></h3>
-                <Map />
-            </div>
-        )
-    }
-}
-
-export default Location;
+export default function Location(props){
+  return(
+    <div id="map-container" className="container mx-auto d-block">
+      <h3 className="section-subtitle">Where am I?</h3>
+      <Map />
+    </div>
+  )
+};

@@ -25,12 +25,16 @@
 }
 .navigation-dark {
    background-color: rgb(13, 18, 20);
-   box-shadow: 0px 0px 5px 1px rgba(255, 255, 255, 0.25);
+   box-shadow: 0px 0px 6px 1px rgba(255, 255, 255, 0.2);
+   /*box-shadow: 0px 0px 5px 1px rgba(255, 0, 0, 0.25);*/
+
 }
 .navigation-light {
     background-color: white;
     box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.25);
  }
+
+
 /* Nav */
 .main-nav__list-item-light {
     color: rgb(13, 18, 20);
@@ -60,6 +64,8 @@
     color: rgb(13, 18, 20);
     */
 }
+
+
 /* Home */
 .home-contact-info__link-light a {
     color: rgba(0,16,31,1);
