@@ -24,11 +24,13 @@ const App = (props) => {
 
         <Routes>
           <Route path="/" element={<HomePage />} />
+          {/*
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/skills" element={<SkillsPage />} />
           <Route path="/work" element={<WorkPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          */}
         </Routes>
         
         <Footer />

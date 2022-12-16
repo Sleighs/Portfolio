@@ -7,7 +7,10 @@ const apiKey = process.env.REACT_APP_GOOGLE_MAPS_API_KEY
 export function MapContainer(props) {
   const [state, setState] = useState({
     showingInfoWindow: false,
-    activeMarker: {},          
+    activeMarker: {
+      lat: 39.855,
+      lng: -75.008
+    },          
     selectedPlace: {}          
   })
 
@@ -59,8 +62,8 @@ export function MapContainer(props) {
       style={mapStyle}
       initialCenter={
         {
-          lat: 39.855,
-          lng: -75.008
+          lat: 39.8534057,
+          lng: -74.9828451
         }
       }
     >
@@ -69,6 +72,25 @@ export function MapContainer(props) {
         name={'Where I\'m At'}
         draggable={false}
         animation={window.google.maps.Animation.DROP}
+        visible={true}
+      />
+      <Marker 
+        name={'Favorite place to eat'}
+        draggable={false}
+        position={{
+          lat: 39.8569142,
+          lng: -75.0034956,
+        }} 
+        visible={false}
+      />
+      <Marker 
+        name={'Favorite park'}
+        draggable={false}
+        position={{
+          lat: 39.9169778,
+          lng: -75.0581273,
+        }} 
+        visible={false}
       />
       <InfoWindow
         marker={state.activeMarker}

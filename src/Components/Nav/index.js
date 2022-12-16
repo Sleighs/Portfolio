@@ -10,13 +10,12 @@ export default function MainNav(props) {
   const { theme } = useContext(ThemeContext)
 
   const [isNavExpanded, setIsNavExpanded] = useState(false);
-  
+  const [scrollPosition, setScrollPosition] = useState(0);
+
   const scrollTo = (id) => {
     const section = document.getElementById(id);
     section.scrollIntoView( { behavior: 'smooth', block: 'start' } );
   };
-
-  const [scrollPosition, setScrollPosition] = useState(0);
 
   const handleScroll = () => {
       const position = window.pageYOffset;
@@ -31,8 +30,15 @@ export default function MainNav(props) {
     };
   }, []);
 
+  const navStyle = {
+    boxShadow: 
+      theme === 'dark' && scrollPosition > 775 
+        ? '0px 0px 1px 1px rgba(255, 255, 255, 0.1)'
+        : ''
+  }
+
   return (
-    <nav className={`navigation navigation-${theme}`}>
+    <nav className={`navigation navigation-${theme}`} style={navStyle}>
       <div className="main-nav">
         <div className='nav-location'>
           <div className='nav-location__title'>

@@ -133,7 +133,7 @@ const DarkMode = (props) => {
           getDarkModeState(true)
         }
 
-        console.log('darkMode ', modeState )
+        //console.log('darkMode ', modeState )
       }}>
         {modeState === true ? 'Dark On' : 'Light On'}
       </button>
