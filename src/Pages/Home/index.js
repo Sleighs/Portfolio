@@ -25,7 +25,7 @@ const HomePage = (props) => {
         <h3 className="section-title"><strong>About</strong></h3>
       </div>
       <Skills />
-      <Location />
+      {/*<Location />*/}
       <div className="section-header"  id="contact">
         <h3 className="section-title"><strong>Contact</strong></h3>
       </div>

@@ -11,8 +11,7 @@
 }
 .main-nav {
   list-style: none;
-  max-width: 950px;
-  width: 100%;
+  width: 83%;
   display: flex;
   align-content: center;
   flex-direction: row;

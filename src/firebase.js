@@ -1,4 +1,6 @@
 import firebase from "firebase";
+//import { getAnalytics } from "firebase/analytics";
+
 import firebaseKey from "./Resources/firebaseKey";
 
 const firebaseConfig = {
@@ -15,5 +17,6 @@ const firebaseConfig = {
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 
 const db = firebaseApp.firestore();
+//const analytics = getAnalytics(firebaseApp);
 
 export { db };

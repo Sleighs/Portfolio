@@ -28,7 +28,7 @@ const Footer = props => {
         </a>
       </div>
       <div className="footer-text">
-        <p>2022 &#8729; Created by Samuel Wright</p>
+        <p>2023 &#8729; Created by Samuel Wright</p>
       </div>
     </footer>
   )
