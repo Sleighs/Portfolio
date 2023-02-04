@@ -32,13 +32,13 @@ const Projects = (props) => {
             <div className="row" id="project1" title="ChatPlus for Rumble">
                 <div className="col-md-7 project-description">
                     <h3 className="projects-row-title"><strong>ChatPlus</strong></h3>
-                    <p>ChatPlus is a Google Chrome extension that adds livestream chat features to Rumble.com.</p>
+                    <p>ChatPlus is a Google Chrome extension that adds livestream chat features to Rumble.com</p>
                     <>Features include:</>
                     <ul>
                         <li>User mention highlighting</li>
                         <li>Username color themes</li>
                         <li>Viewable chat participant list</li>
-                        <li>Chat message timestamps</li>
+                        <li>Easy user tagging</li>
                     </ul>
                     <p>
                     <a target="_blank" href="https://github.com/sleighs/chat-plus" rel="noreferrer">Check it out</a>
