@@ -44,7 +44,9 @@ const Projects = (props) => {
                     <a target="_blank" href="https://github.com/sleighs/chat-plus" rel="noreferrer">Find out more</a>
                     <br/>
                     <br/>
-                    <a target="_blank" href="https://drive.google.com/file/d/1XHCSSF0VVAW_WAB-6dpVU4ZMHo_F7nPE/view?usp=sharing" rel="noreferrer">Download</a>
+
+                    <a target="_blank" href="https://chrome.google.com/webstore/detail/chatplus-for-rumble/odlcomopigapcpmlpmmmhlhegajembio?hl=en&authuser=0" rel="noreferrer">Chrome Web Store</a>
+                    
                     </p>
                 </div>
                 <div className="col-md-5 project-pic-content chatplus-pic-container">
