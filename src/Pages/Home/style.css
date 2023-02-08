@@ -51,6 +51,9 @@
     text-align: center;
     padding-top: 80px;
 }
+.section-header-first {
+    padding-top: 120px;
+}
 .home-projects__container {
     padding: 0 10%;
 }

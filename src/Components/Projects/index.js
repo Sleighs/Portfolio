@@ -1,10 +1,13 @@
 import React, { useContext, useEffect, useRef } from 'react';
+
 import mintPic from '../../Resources/Images/portfolio-mint2048.png';
 import cashflowPic from '../../Resources/Images/portfolio-cashflowjs.png';
 import heromatchupsPic from '../../Resources/Images/portfolio-heromatchups.png';
 import realityCalcPic from '../../Resources/Images/portfolio-realitycalc03.png';
-import chatplusPic from '../../Resources/Images/chatplus-pic2.png';
+import chatplusPic from '../../Resources/Images/logo-600x400.png';
+
 import './style.css'
+
 import { DataContext } from '../../Context/DataContext'
 
 const Projects = (props) => {
@@ -23,30 +26,30 @@ const Projects = (props) => {
         }
     }
 
-    let rowStyle = {
-        display:'none',
-    }
 
     return (
         <div id="projects-container" ref={hiddenRef}>
             <div className="row" id="project1" title="ChatPlus for Rumble">
                 <div className="col-md-7 project-description">
                     <h3 className="projects-row-title"><strong>ChatPlus</strong></h3>
-                    <p>ChatPlus is a Google Chrome extension that adds livestream chat features to Rumble.com</p>
+                    <p>ChatPlus is a Google Chrome extension for Rumble that improves livestream chat user experience, enhances chat functionality and adds options to make Rumble more user-friendly. </p>
                     <>Features include:</>
                     <ul>
                         <li>User mention highlighting</li>
-                        <li>Username color themes</li>
-                        <li>Viewable chat participant list</li>
                         <li>Easy user tagging</li>
+                        <li>Full size chat</li>
+                        <li>Username color schemes</li>
                     </ul>
                     <p>
-                    <a target="_blank" href="https://github.com/sleighs/chat-plus" rel="noreferrer">Check it out</a>
+                    <a target="_blank" href="https://github.com/sleighs/chat-plus" rel="noreferrer">Find out more</a>
+                    <br/>
+                    <br/>
+                    <a target="_blank" href="https://drive.google.com/file/d/1XHCSSF0VVAW_WAB-6dpVU4ZMHo_F7nPE/view?usp=sharing" rel="noreferrer">Download</a>
                     </p>
                 </div>
                 <div className="col-md-5 project-pic-content chatplus-pic-container">
                     <a className="projects-pic-container-chatplus" target="_blank" href="https://github.com/sleighs/chat-plus"rel="noreferrer" title="Check it out">
-                    <img style={{ }} className="img-responsive rounded projects-pic mx-auto d-block" alt="ChatPlus" src={chatplusPic}/>
+                    <img className="img-responsive rounded projects-pic mx-auto d-block" alt="ChatPlus" src={chatplusPic}/>
                     </a>
                 </div>
             </div>

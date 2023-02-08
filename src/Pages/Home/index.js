@@ -15,7 +15,7 @@ const HomePage = (props) => {
         <Intro />
         <ContactInfo />
       </div>
-      <div className="section-header" id="projects">
+      <div className="section-header section-header-first" id="projects">
         <h3 className="section-title"><strong>Projects</strong></h3>
       </div>
       <div className={"home-projects__container"}>

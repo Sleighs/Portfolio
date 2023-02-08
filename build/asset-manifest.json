@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.3f56299d.chunk.css",
-    "main.js": "/static/js/main.4d2510f0.chunk.js",
-    "main.js.map": "/static/js/main.4d2510f0.chunk.js.map",
+    "main.css": "/static/css/main.218d435a.chunk.css",
+    "main.js": "/static/js/main.f5e6456d.chunk.js",
+    "main.js.map": "/static/js/main.f5e6456d.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.2fd7dc15.js",
     "runtime-main.js.map": "/static/js/runtime-main.2fd7dc15.js.map",
     "static/css/2.ae9f1eb3.chunk.css": "/static/css/2.ae9f1eb3.chunk.css",
-    "static/js/2.8d3bfdcd.chunk.js": "/static/js/2.8d3bfdcd.chunk.js",
-    "static/js/2.8d3bfdcd.chunk.js.map": "/static/js/2.8d3bfdcd.chunk.js.map",
+    "static/js/2.257250f1.chunk.js": "/static/js/2.257250f1.chunk.js",
+    "static/js/2.257250f1.chunk.js.map": "/static/js/2.257250f1.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.ae9f1eb3.chunk.css.map": "/static/css/2.ae9f1eb3.chunk.css.map",
-    "static/css/main.3f56299d.chunk.css.map": "/static/css/main.3f56299d.chunk.css.map",
-    "static/js/2.8d3bfdcd.chunk.js.LICENSE.txt": "/static/js/2.8d3bfdcd.chunk.js.LICENSE.txt",
+    "static/css/main.218d435a.chunk.css.map": "/static/css/main.218d435a.chunk.css.map",
+    "static/js/2.257250f1.chunk.js.LICENSE.txt": "/static/js/2.257250f1.chunk.js.LICENSE.txt",
     "static/media/index.css": "/static/media/Rokkitt-VariableFont_wght.03ed7688.ttf",
     "static/media/bootstrap-logo.94982f25.png": "/static/media/bootstrap-logo.94982f25.png",
-    "static/media/chatplus-pic2.b22e0b55.png": "/static/media/chatplus-pic2.b22e0b55.png",
     "static/media/css3-logo.c0112d27.png": "/static/media/css3-logo.c0112d27.png",
     "static/media/firebase-logo.51ec37c4.png": "/static/media/firebase-logo.51ec37c4.png",
     "static/media/html5-logo.f2af65a9.png": "/static/media/html5-logo.f2af65a9.png",
     "static/media/javascript-logo.52a7925d.png": "/static/media/javascript-logo.52a7925d.png",
     "static/media/jest-logo.c1f6e2a8.png": "/static/media/jest-logo.c1f6e2a8.png",
     "static/media/linux-logo.2d03d2bf.png": "/static/media/linux-logo.2d03d2bf.png",
+    "static/media/logo-600x400.1213e36b.png": "/static/media/logo-600x400.1213e36b.png",
     "static/media/mobile-icon.428d0965.png": "/static/media/mobile-icon.428d0965.png",
     "static/media/mongodb-logo.d9d09dcd.png": "/static/media/mongodb-logo.d9d09dcd.png",
     "static/media/node-logo.c6a2b287.png": "/static/media/node-logo.c6a2b287.png",
@@ -41,8 +41,8 @@
   "entrypoints": [
     "static/js/runtime-main.2fd7dc15.js",
     "static/css/2.ae9f1eb3.chunk.css",
-    "static/js/2.8d3bfdcd.chunk.js",
-    "static/css/main.3f56299d.chunk.css",
-    "static/js/main.4d2510f0.chunk.js"
+    "static/js/2.257250f1.chunk.js",
+    "static/css/main.218d435a.chunk.css",
+    "static/js/main.f5e6456d.chunk.js"
   ]
 }

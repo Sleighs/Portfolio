@@ -102,12 +102,13 @@
     box-shadow: 0px 0px 12px 1px rgba(55, 47, 47, 0.25);
 }
 
+
 /* Landing */
 .intro-container-dark {
     /*background-color: rgba(140, 0, 0, 1);*/
     background-color: rgba(255, 71, 70, 0);
     /*box-shadow: 0px 10px 250px rgb(52, 38, 38);*/
-    box-shadow: 0px 20px 250px rgb(52, 38, 38);
+    box-shadow: 0px 35px 250px rgb(52, 38, 38);
 
 }
 .intro-container-light {
@@ -115,7 +116,7 @@
     background-color: rgb(234, 223, 223);*/
 
     background-color: rgb(234, 223, 223, .95);
-    box-shadow: 0px 15px 200px rgb(159, 101, 101);
+    box-shadow: 0px 30px 200px rgb(159, 101, 101);
 
 }
 .about-intro-light {
