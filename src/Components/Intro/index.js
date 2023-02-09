@@ -22,7 +22,11 @@ export default function Intro() {
   }
 
   return (
-    <div className={"about-intro about-intro-" + theme } ref={hiddenRef}>
+    <div className={"about-intro about-intro-" + theme } ref={hiddenRef} 
+      style={{
+        overflow: 'hidden',
+        maxWidth: '100vw',
+      }}>
       <p className="about-intro__text">Hi, I'm Samuel Wright, a <strong>full stack developer</strong> focused on creating <strong>beautiful</strong> and <strong>user friendly</strong> applications while writing <strong>clean code</strong>.</p>
     </div>
   )

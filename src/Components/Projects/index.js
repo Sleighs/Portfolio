@@ -26,10 +26,9 @@ const Projects = (props) => {
         }
     }
 
-
     return (
         <div id="projects-container" ref={hiddenRef}>
-            <div className="row" id="project1" title="ChatPlus for Rumble">
+            <div className="row" id="project5" title="ChatPlus for Rumble">
                 <div className="col-md-7 project-description">
                     <h3 className="projects-row-title"><strong>ChatPlus</strong></h3>
                     <p>ChatPlus is a Google Chrome extension for Rumble that improves livestream chat user experience, enhances chat functionality and adds options to make Rumble more user-friendly. </p>

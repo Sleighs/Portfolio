@@ -16,7 +16,7 @@ const App = (props) => {
 
   return (
     <div id='app' className={`app-${theme}`}>
-      <div className='app-container'>
+      
         <Nav 
           pageLocation={pageLocation} 
           setPageLocation={setPageLocation}
@@ -34,7 +34,7 @@ const App = (props) => {
         </Routes>
         
         <Footer />
-      </div>
+      <div className='app-container hidden'></div>
     </div>
   )
 }
