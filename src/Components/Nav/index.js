@@ -12,11 +12,13 @@ export default function MainNav(props) {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
 
+  // Scroll to section of selected nav item
   const scrollTo = (id) => {
     const section = document.getElementById(id);
     section.scrollIntoView( { behavior: 'smooth', block: 'start' } );
   };
 
+  // Save current scroll position
   const handleScroll = () => {
       const position = window.pageYOffset;
       setScrollPosition(position);
@@ -37,6 +39,9 @@ export default function MainNav(props) {
         : ''
   }
 
+  // Detect if user is on mobile
+  const isMobile = window.innerWidth <= 550;
+
   return (
     <nav className={`navigation navigation-${theme}`} style={navStyle}>
       <div className="main-nav">
@@ -47,7 +52,7 @@ export default function MainNav(props) {
             <span className='nav-location__title' onClick={()=>{
               scrollTo('home');
               setPageLocation('home');
-            }}>{'samuelwright.dev'}</span>
+            }}>{isMobile ? '' : 'samuelwright.dev'}</span>
           </div>
         </div>
         <button
@@ -97,7 +102,7 @@ export default function MainNav(props) {
                   setIsNavExpanded(!isNavExpanded);
                 }}
               >
-                home
+                {isMobile ? 'samuelwright.dev' : 'home'}
               </div> 
             </li>
             <li className="main-nav__list-item-container">
