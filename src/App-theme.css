@@ -89,10 +89,10 @@
 }
 
 
+
 /* Skills */
 .skills__list h3 {
     /*color: rgb(255, 71, 71);*/
-
 }
 
 .skills__logo-container-dark {
@@ -106,10 +106,10 @@
 /* Landing */
 .intro-container-dark {
     /*background-color: rgba(140, 0, 0, 1);*/
-    background-color: rgba(255, 71, 70, 0);
     /*box-shadow: 0px 10px 250px rgb(52, 38, 38);*/
-    box-shadow: 0px 35px 250px rgb(52, 38, 38);
 
+    background-color: rgba(255, 71, 70, 0);
+    box-shadow: 0px 35px 250px rgb(52, 38, 38);
 }
 .intro-container-light {
     /*background-color: rgba(210, 0, 0, 1);
@@ -117,12 +117,16 @@
 
     background-color: rgb(234, 223, 223, .95);
     box-shadow: 0px 30px 200px rgb(159, 101, 101);
+}
 
+/* Intro */
+.about-intro-dark {
+    background-color: rgba(13, 18, 20, .75);
 }
 .about-intro-light {
-    /*background-color: rgba(140, 0, 0, 0.05);
-    */
+    background-color: rgba(236, 223, 223, .75);
 }
+
 .about-intro-dark {
     /*background-color: rgba(210, 0, 0, 0.05);
     
@@ -147,6 +151,15 @@
     color: rgb(255, 50, 78);
 */    
 
+}
+
+
+/* Contact Info */
+.contact__info-dark {
+    background-color: rgba(13, 18, 20, .9);
+}
+.contact__info-light {
+    background-color: rgba(236, 223, 223, .9);
 }
 
 

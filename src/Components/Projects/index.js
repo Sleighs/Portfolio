@@ -54,6 +54,24 @@ const Projects = (props) => {
                     </a>
                 </div>
             </div>
+
+            <hr/>
+
+            <div className="row" id="project1" style={{/*display:'none'*/}}>
+                <div className="col-md-7 project-description">
+                    <h3 className="projects-row-title"><strong>RealityCalc.com</strong></h3>
+                    <p>Lead developer for RealityCalc.com, home to the popular online dating tool The Male Reality Calculator hosted at RealityCalc.com. Built with React and Redux, the calculator uses U.S. Census Bureau statistics to calculate the user's odds of meeting their dream woman.</p>
+                    <p>
+                    <a target="_blank" href="https://realitycalc.com/" rel="noreferrer">Check it out</a>
+                    </p>
+                </div>
+                <div className="col-md-5 project-pic-content">
+                    <a className="projects-pic-container-realitycalc" target="_blank" href="https://realitycalc.com"rel="noreferrer" title="Check it out">
+                    <img className="img-responsive rounded projects-pic mx-auto d-block" alt="RealityCalc.com" src={realityCalcPic}/>
+                    </a>
+                </div>
+            </div>
+
             <hr/>
 
             <div className="row"  id="project3">
@@ -68,22 +86,24 @@ const Projects = (props) => {
                     </a>
                 </div>
             </div>
+
             <hr/>
 
-            <div className="row" id="project1" style={{display:'none'}}>
+            <div className="row"  id="project4">
                 <div className="col-md-7 project-description">
-                    <h3 className="projects-row-title"><strong>RealityCalc.com</strong></h3>
-                    <p>Lead developer for RealityCalc.com, home to the popular online dating tool The Male Reality Calculator hosted at RealityCalc.com. Built with React and Redux, the calculator uses U.S. Census Bureau statistics to calculate the user's odds of meeting their dream woman.</p>
+                    <h3 className="projects-row-title"><strong>Mint 2048</strong></h3>
+                    <p><a target="_blank" href="https://plus-7ed02.web.app/" rel="noreferrer">Mint</a> is a sliding tile puzzle game based on 2048 by Gabriele Cirulli where players combine tiles, perform combos and use special abilities to create the 2048 tile.</p>
                     <p>
-                    <a target="_blank" href="https://realitycalc.com/" rel="noreferrer">Check it out</a>
+                        <a target="_blank" href="https://github.com/Sleighs/Mint-2048" rel="noreferrer">Check out Mint 2048 </a>    
                     </p>
                 </div>
                 <div className="col-md-5 project-pic-content">
-                    <a className="projects-pic-container-realitycalc" target="_blank" href="https://realitycalc.com"rel="noreferrer" title="Check it out">
-                    <img className="img-responsive rounded projects-pic mx-auto d-block" alt="RealityCalc.com" src={realityCalcPic}/>
+                    <a className="projects-pic-container-mint" target="_blank" href="https://github.com/sleighs/mint-2048" rel="noreferrer" title="Play">
+                        <img className="img-responsive rounded projects-pic d-block mx-auto" alt="Mint 2048" src={mintPic}/>
                     </a>
                 </div>
             </div>
+
             <hr/>
             
             <div className="row" id="project2">
@@ -97,22 +117,6 @@ const Projects = (props) => {
                 <div className="col-md-5 project-pic-content">
                     <a className="projects-pic-container-cashflow" target="_blank" href="https://github.com/Sleighs/CashFlowJs"rel="noreferrer" title="Play">
                         <img className="img-responsive rounded projects-pic mx-auto d-block" alt="CashFlow JS" src={cashflowPic}/>
-                    </a>
-                </div>
-            </div>
-            <hr/>
-
-            <div className="row"  id="project4">
-                <div className="col-md-7 project-description">
-                    <h3 className="projects-row-title"><strong>Mint 2048</strong></h3>
-                    <p><a target="_blank" href="https://plus-7ed02.web.app/" rel="noreferrer">Mint</a> is a sliding tile puzzle game where players combine tiles, perform combos and use abilities to create the 2048 tile.</p>
-                    <p>
-                        <a target="_blank" href="https://github.com/Sleighs/Mint-2048" rel="noreferrer">Check out Mint 2048 </a>    
-                    </p>
-                </div>
-                <div className="col-md-5 project-pic-content">
-                    <a className="projects-pic-container-mint" target="_blank" href="https://github.com/sleighs/mint-2048" rel="noreferrer" title="Play">
-                        <img className="img-responsive rounded projects-pic d-block mx-auto" alt="Mint 2048" src={mintPic}/>
                     </a>
                 </div>
             </div>

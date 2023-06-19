@@ -1,3 +1,4 @@
+
 #home-container {    
     /*
     padding-left: 1.25rem;
@@ -5,15 +6,17 @@
     */
     margin-top: -30px;
     top: 0;
+
 }
 #home {
     
 }
 .intro-section {
     display: flex;
-    font-size: 1.1em;
+    font-size: 1em;
     margin: auto;
     margin-top: 2%;
+
 }
 .intro-section__description {
     background-color: rgb(179, 178, 167, .5);

@@ -91,15 +91,18 @@ body {
 
 .about-intro {
   width: 55%;
+  padding: 2%;
+  border-radius: 10px;
 }
 .contact__info {
   margin-top: 5%;
   border-radius: 7px;
+  padding: 2%;
+  border-radius: 10px;
 }
 
 #footer-container {
   position: absolute;
-  
   width: 100%;
   max-width: 100vw;
 }

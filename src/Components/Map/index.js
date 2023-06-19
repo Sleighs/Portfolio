@@ -54,7 +54,7 @@ export function MapContainer(props) {
     display: 'flex',
     margin: '20px 0',
   };
-
+/*
   return (
     <Map
       google={props.google}
@@ -103,6 +103,8 @@ export function MapContainer(props) {
       </InfoWindow>
     </Map>
   )
+  */
+ return (<div>Map</div>)
 }
 
 export default GoogleApiWrapper({

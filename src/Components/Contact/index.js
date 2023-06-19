@@ -142,6 +142,7 @@ const Contact = (props) => {
         width: '100%',
         border: '0pt solid white',
         //borderRadius: '25px',
+        fontFamily: 'Cabin',
     }
     let contactFormBtn2 = {
         margin: 'auto',
@@ -153,6 +154,7 @@ const Contact = (props) => {
         color: 'black',
         fontSize: '1.2em',
         borderRadius: '25px',
+        fontFamily: 'Cabin',
     }
         
     return (

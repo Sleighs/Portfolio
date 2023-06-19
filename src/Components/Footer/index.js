@@ -1,11 +1,40 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './style.css';
 
-const Footer = props => {
+const Footer = (props) => {
+  const proverbs = [
+    {latin: "Audentes fortuna iuvat.", english: "Fortune favors the bold.", author: "Virgil"},
+    {latin: "Fiat justitia, et pereat mundus", english: "Let justice be done, though the world should perish", author: "Ferdinand I"},
+    {latin: "Fiat justitia, ruat caelum", english: "Let justice be done, though the heavens fall.", author: "Anonymous" /*"Lucius Calpurnius Piso Caesoninus, Immanuel Kant"*/},
+    {latin: "Astra inclinant, sed non obligant.", english: "The stars incline us, they do not bind us.", author: "Anonymous"},
+    //{latin: "Igne natura renovatur integra.", english: "Through fire, nature is reborn whole.", author: "Anonymous"},
+    //{latin: "Flectere si nequeo superos, Acheronta movebo.", english: "If I can not bend the will of Heaven, I shall move Hell.", author: "Virgil"},
+  ]
+
+  let proverb = proverbs[Math.floor(Math.random() * proverbs.length)];
+
+  const [proverbText, setProverbText] = useState(proverb);
+
+  useEffect(() => {
+    let englishOrLatin = Math.floor(Math.random() * 2);
+    console.log(englishOrLatin, proverb)
+    setProverbText({
+      title: englishOrLatin === 0 ? proverb.english : proverb.latin,
+      text: englishOrLatin === 0 ? proverb.latin : proverb.english,
+      author: proverb?.author,
+    })
+
+    // Add hover box with proverb.title to #proverb
+    /*let proverbElement = document.getElementById("proverb");
+    proverbElement.addEventListener("mouseover", () => {
+      let hoverText = document.createElement("div");
+      hoverText.id = "proverb-hover-text";
+      hoverText.innerHTML = proverb.title;
+    })*/
+  }, [])
+
   return(
-    <footer id="footer-container" 
-    //className="container"
-      >
+    <footer id="footer-container">
       <div className="footer-icons">
         <a className={`footer-info-link`} style={{marginRight: 18,}} target="_blank" href="mailto:wsright987@gmail.com" rel="noreferrer">
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16" >
@@ -30,7 +59,8 @@ const Footer = props => {
         </a>
       </div>
       <div className="footer-text">
-        <p>2023 &#8729; Created by Samuel Wright</p>
+        <p style={{display: 'none'}}>2023 &#8729; Created by Samuel Wright</p>
+        <p id="proverb" style={{padding: '5px 0px 7px 0px'}} title={`"${proverbText?.title}" ${proverbText?.author ? '-' + proverbText.author : ''}`}>{`${proverbText?.text}`}</p>
       </div>
     </footer>
   )

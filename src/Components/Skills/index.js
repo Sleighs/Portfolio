@@ -46,7 +46,7 @@ const Skills = (props) => {
   return (
 	<div className="container container-md" id="skills-container" ref={hiddenRef}>
 	  <div className="skills__list" id="skills-list1">
-		<h3 className="section-subtitle">Front-end</h3>
+		<h3 className="section-subtitle skills__title">Front-end</h3>
 		<div className="skills__front-end">
 			{
 				frontEndSkills.map((item, index) => <SkillBox name={item} key={index}/>)
@@ -54,7 +54,7 @@ const Skills = (props) => {
 		</div>
 	  </div>
 	  <div className="skills__list" id="skills-list2">
-		<h3 className="section-subtitle">Back-end</h3>
+		<h3 className="section-subtitle skills__title">Back-end</h3>
 		<div className="skills__back-end">
 			{
 				backEndSkills.map((item, index) => <SkillBox name={item} key={index}/>)
@@ -62,7 +62,7 @@ const Skills = (props) => {
 		</div>
 	  </div>
 	  <div className="skills__list" id="skills-list3">
-		<h3 className="section-subtitle">Other</h3>
+		<h3 className="section-subtitle skills__title">Other</h3>
 		<div className="skills__other">
 			{
 				otherSkills.map((item, index) => <SkillBox name={item} key={index}/>)

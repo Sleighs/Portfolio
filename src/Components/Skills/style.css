@@ -51,3 +51,7 @@
 .skills__logo-text {
     text-transform: capitalize;
 }
+
+.skills__title {
+    font-family: 'Rokkitt';
+}
