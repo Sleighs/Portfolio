@@ -4,10 +4,14 @@ const DataContext = React.createContext()
 
 function DataContextProvider(props){ 
   const [pageLocation, setPageLocation] = useState('home')
+  const [projectsToDisplay, setProjectsToDisplay] = useState([
+    'chatplus', 'realitycalctest', 'heromatchups', 'mint', 'cashflow'
+  ])
 
   return (
     <DataContext.Provider value={{
-        pageLocation, setPageLocation
+        pageLocation, setPageLocation,
+        projectsToDisplay, setProjectsToDisplay,
     }}>
         {props.children}
     </DataContext.Provider>

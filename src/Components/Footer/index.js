@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './style.css';
+import Crypt from '../Crypt';
 
 const Footer = (props) => {
   const proverbs = [
@@ -35,6 +36,7 @@ const Footer = (props) => {
 
   return(
     <footer id="footer-container">
+      <Crypt />
       <div className="footer-icons">
         <a className={`footer-info-link`} style={{marginRight: 18,}} target="_blank" href="mailto:wsright987@gmail.com" rel="noreferrer">
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16" >

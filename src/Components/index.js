@@ -10,3 +10,4 @@ export { default as Map } from "./Map";
 export { default as Nav } from './Nav';
 export { default as ThemeToggle } from './ThemeToggle';
 export { default as ForceGraph } from './ForceGraph';
+export { default as Crypt } from './Crypt';
