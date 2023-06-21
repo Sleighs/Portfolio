@@ -28,7 +28,9 @@ const Projects = (props) => {
 
     return (
         <div id="projects-container" ref={hiddenRef}>
-            <div className="row project-chatplus" id="project5" title="ChatPlus for Rumble">
+            <div className="row project-chatplus" id="project5" title="ChatPlus for Rumble"
+                style={{display: projectsToDisplay.includes('chatplus') ? 'flex' : 'none'}}
+            >
                 <div className="col-md-7 project-description">
                     <h3 className="projects-row-title"><strong>ChatPlus</strong></h3>
                     <p>ChatPlus is a Google Chrome extension for Rumble that improves livestream chat user experience, enhances chat functionality and adds options to make Rumble more user-friendly. </p>
@@ -54,8 +56,7 @@ const Projects = (props) => {
                     </a>
                 </div>
             </div>
-
-            <hr/>
+            <hr style={{display: projectsToDisplay.includes('chatplus') ? 'flex' : 'none'}}/>
 
             <div className="row project-realitycalc" id="project1" 
                 style={{display: projectsToDisplay.includes('realitycalc') ? 'flex' : 'none'}}
@@ -73,11 +74,12 @@ const Projects = (props) => {
                     </a>
                 </div>
             </div>
-
             <hr style={{display: projectsToDisplay.includes('realitycalc') ? 'flex' : 'none'}}
 />
 
-            <div className="row project-heromatchups" id="project3">
+            <div className="row project-heromatchups" id="project3" 
+                style={{display: projectsToDisplay.includes('heromatchups') ? 'flex' : 'none'}}
+            >
                 <div className="col-md-7 project-description">
                     <h3  className="projects-row-title"><strong>Hero Matchups API</strong></h3>
                     <p>The <a target="_blank" href="https://github.com/Sleighs/hero-matchups-api/" rel="noreferrer">Hero Matchups API</a> is a character matchup and counter resource created for e-sports training and practice applications. Check out a live demo using resources for Blizzard's team-based first person shooter Overwatch 2 <a target="_blank" href="https://hero-pick-app.web.app/" rel="noreferrer">here</a>.</p>                    
@@ -89,10 +91,11 @@ const Projects = (props) => {
                     </a>
                 </div>
             </div>
+            <hr style={{display: projectsToDisplay.includes('heromatchups') ? 'flex' : 'none'}}/>
 
-            <hr/>
-
-            <div className="row project-mint"  id="project4">
+            <div className="row project-mint" id="project4" 
+                style={{display: projectsToDisplay.includes('mint') ? 'flex' : 'none'}}
+            >
                 <div className="col-md-7 project-description">
                     <h3 className="projects-row-title"><strong>Mint 2048</strong></h3>
                     <p><a target="_blank" href="https://plus-7ed02.web.app/" rel="noreferrer">Mint</a> is a sliding tile puzzle game based on 2048 by Gabriele Cirulli where players combine tiles, perform combos and use special abilities to create the 2048 tile.</p>
@@ -106,10 +109,11 @@ const Projects = (props) => {
                     </a>
                 </div>
             </div>
-
-            <hr/>
+            <hr style={{display: projectsToDisplay.includes('mint') ? 'flex' : 'none'}}/>
             
-            <div className="row project-cashflow" id="project2">
+            <div className="row project-cashflow" id="project2"
+                style={{display: projectsToDisplay.includes('cashflow') ? 'flex' : 'none'}}
+            >
                 <div className="col-md-7 project-description">
                     <h3  className="projects-row-title"><strong>CashFlow JS</strong></h3>
                     <p><a target="_blank" href="https://sleighs.github.io/CashFlowJs/" rel="noreferrer">CashFlow JS</a> is an adaptation of the CashFlow 101 board game with additional gameplay options and rule customization that allows for many unique ways to play.</p>

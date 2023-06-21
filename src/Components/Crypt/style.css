@@ -1,0 +1,7 @@
+.crypt__form-input-flash {
+    animation: flash 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    box-shadow: 1px 1px 10px #00ff51;
+    border: solid 1px #00ff51;
+}

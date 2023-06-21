@@ -8,7 +8,7 @@ export default function ContactInfo() {
   return (
     <div className={`contact__info contact__info-${theme}`}>
         <div className={`home-contact-info__link-${theme} home-contact-info__link1`}>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16" 
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-envelope-fill" viewBox="0 0 16 16" 
                 style={{
                     width: 20,
                     marginRight: 8,
@@ -19,7 +19,7 @@ export default function ContactInfo() {
             <a className={`contact-info-link`} target="_blank" href="mailto:wsright987@gmail.com" rel="noreferrer">wsright987@gmail.com</a>
         </div>
         <div className={`home-contact-info__link-${theme} home-contact-info__link2`}>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16"
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-github" viewBox="0 0 16 16"
                 style={{
                     width: 20,
                     marginRight: 8,
@@ -30,7 +30,7 @@ export default function ContactInfo() {
             <a className={`contact-info-link`} target="_blank" href="http://github.com/sleighs" rel="noreferrer">github.com/sleighs</a>
         </div>
         <div className={`home-contact-info__link-${theme} home-contact-info__link3`}>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-phone-fill" viewBox="0 0 16 16"
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-phone-fill" viewBox="0 0 16 16"
                 style={{
                     width: 20,
                     marginRight: 8,
