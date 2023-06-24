@@ -5,13 +5,13 @@ import Crypt from '../Crypt';
 const Footer = (props) => {
   const proverbs = [
     {latin: "Audentes fortuna iuvat.", english: "Fortune favors the bold.", author: "Virgil"},
-    //{latin: "Fiat justitia, et pereat mundus", english: "Let justice be done, though the world should perish", author: "Ferdinand I"},
     {latin: "Fiat justitia, ruat caelum", english: "Let justice be done, though the heavens fall.", author: "Anonymous" /*"Lucius Calpurnius Piso Caesoninus, Immanuel Kant"*/},
     {latin: "Astra inclinant, sed non obligant.", english: "The stars incline us, they do not bind us.", author: "Anonymous"},
+    {latin: "Aut viam inveniam aut faciam.", english: "I will either find a way or make one.", author: "Hannibal"},
+    //{latin: "Fiat justitia, et pereat mundus", english: "Let justice be done, though the world should perish", author: "Ferdinand I"},
     //{latin: "Vi veri universum vivus vici", english: "By the power of truth, I, while living, have conquered the universe", author: "Robert Nye, Faust"},
     //{latin: "Igne natura renovatur integra.", english: "Through fire, nature is reborn whole.", author: "Anonymous"},
     //{latin: "Flectere si nequeo superos, Acheronta movebo.", english: "If I can not bend the will of Heaven, I shall move Hell.", author: "Virgil"},
-    {latin: "Aut viam inveniam aut faciam.", english: "I will either find a way or make one.", author: "Hannibal"},
     //{latin: "Ut haec ipsa qui non sentiat deorum vim habere is nihil omnino sensurus esse videatur.", english: "If any man cannot feel the power of God when he looks upon the stars, then I doubt whether he is capable of any feeling at all.", author: "Horace"},
   ]
 
