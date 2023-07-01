@@ -21,6 +21,9 @@
 .row {
     margin: 3% auto;
 }
+.tag-row {
+    margin: 3% auto;
+}
 .project-description {
     font-family: 'Cabin';
 }
@@ -53,5 +56,11 @@ hr {
     }
     .row {
         margin: 9% auto;
+    }
+    .tag-row {
+        margin: 3% auto 6% auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }

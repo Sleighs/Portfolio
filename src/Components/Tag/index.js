@@ -1,34 +1,58 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 export default function Tag(props) {
   const {
     name
   } = props
 
-  //get color
+  const [borderColor, setBorderColor] = useState('lightgray')
 
+  const getBorderColor = (n) => {
+
+    switch (n) {
+      case 'React':
+        setBorderColor('#61dafb')
+        return
+      case 'JavaScript':
+        setBorderColor('#f0db4f')
+        return
+      case 'React Native':
+        setBorderColor('#red')
+        return
+      case 'CSS':
+        setBorderColor('lightgreen')
+        return
+      case 'JQuery':
+        setBorderColor('orange')
+        return
+      case 'Redux':
+        setBorderColor('#CE65B0 ')
+        return
+      case 'MongoDB':
+        setBorderColor('green')
+        return
+
+      default:
+        setBorderColor('gray')
+        return
+    }  
+  }
+
+  useEffect(() => {
+    getBorderColor(name)
+  }, [])
 
   return (
     <div className='tag-container'
       style={{
         display:'inline-block',
-        borderTopLeftRadius: '25%',
-        borderTopRightRadius: '25%',
-        borderBottomLeftRadius: '25%',
-        borderBottomRightRadius: '25%',
+        borderRadius: '5px',
         margin: '1%',
         padding: '1% 2%',
-        backgroundColor: 
-          name === 'react' ? 'lightblue' :
-          name === 'redux' ? 'lightyellow' :
-            'lightgray',
-        
+        border: `solid 2pt ${borderColor}`,
       }}>
-      <div style={{
-        
-        
-      }}>
-        {'#'+name}
+      <div style={{ }}>
+        {name}
       </div>
     </div>
   )

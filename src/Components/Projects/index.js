@@ -5,6 +5,7 @@ import cashflowPic from '../../Resources/Images/portfolio-cashflowjs.png';
 import heromatchupsPic from '../../Resources/Images/portfolio-heromatchups.png';
 import realityCalcPic from '../../Resources/Images/portfolio-realitycalc03.png';
 import chatplusPic from '../../Resources/Images/logo-600x400.png';
+import Tag from '../Tag';
 
 import './style.css'
 
@@ -41,6 +42,12 @@ const Projects = (props) => {
                         <li>Full size chat</li>
                         <li>Username color schemes</li>
                     </ul>
+                        <div className="tag-row">
+                            <Tag name={'JavaScript'}/> 
+                            <Tag name={'Chrome Extension'}/>
+                            <Tag name={'React'}/>
+                            <Tag name={'CSS'}/>
+                        </div>
                     <p>
                     <a target="_blank" href="https://github.com/sleighs/chat-plus" rel="noreferrer">Find out more</a>
                     <br/>
@@ -66,7 +73,12 @@ const Projects = (props) => {
                     <p>Lead developer for RealityCalc.com, home to the popular online dating tool The Male Reality Calculator hosted at RealityCalc.com. Built with React and Redux, the calculator uses U.S. Census Bureau statistics to calculate the user's odds of meeting their dream woman.</p>
                     <p>
                     <a target="_blank" href="https://realitycalc.com/" rel="noreferrer">Check it out</a>
-                    </p>
+                    </p>    
+                    <div className="tag-row">
+                        <Tag name={'JavaScript'}/> 
+                        <Tag name={'React'}/>
+                        <Tag name={'Redux'}/>
+                    </div>
                 </div>
                 <div className="col-md-5 project-pic-content">
                     <a className="projects-pic-container-realitycalc" target="_blank" href="https://realitycalc.com"rel="noreferrer" title="Check it out">
@@ -84,6 +96,11 @@ const Projects = (props) => {
                     <h3  className="projects-row-title"><strong>Hero Matchups API</strong></h3>
                     <p>The <a target="_blank" href="https://github.com/Sleighs/hero-matchups-api/" rel="noreferrer">Hero Matchups API</a> is a character matchup and counter resource created for e-sports training and practice applications. Check out a live demo using resources for Blizzard's team-based first person shooter Overwatch 2 <a target="_blank" href="https://hero-pick-app.web.app/" rel="noreferrer">here</a>.</p>                    
                     <p><a target="_blank" href="https://github.com/Sleighs/hero-matchups-api/" rel="noreferrer">Visit the repository</a></p>
+                    <div className="tag-row">
+                        <Tag name={'JavaScript'}/> 
+                        <Tag name={'React'}/>
+                        <Tag name={'MongoDB'}/>
+                    </div>
                 </div>
                 <div className="col-md-5 project-pic-content">
                     <a className="projects-pic-container-heromatchups" target="_blank" href="https://github.com/sleighs/heromatchups" rel="noreferrer" title="Visit">
@@ -102,6 +119,11 @@ const Projects = (props) => {
                     <p>
                         <a target="_blank" href="https://github.com/Sleighs/Mint-2048" rel="noreferrer">Check out Mint 2048 </a>    
                     </p>
+                    <div className="tag-row">
+                        <Tag name={'JavaScript'}/> 
+                        <Tag name={'React'}/>
+                        <Tag name={'CSS'}/>
+                    </div>
                 </div>
                 <div className="col-md-5 project-pic-content">
                     <a className="projects-pic-container-mint" target="_blank" href="https://github.com/sleighs/mint-2048" rel="noreferrer" title="Play">
@@ -119,7 +141,15 @@ const Projects = (props) => {
                     <p><a target="_blank" href="https://sleighs.github.io/CashFlowJs/" rel="noreferrer">CashFlow JS</a> is an adaptation of the CashFlow 101 board game with additional gameplay options and rule customization that allows for many unique ways to play.</p>
                     <p>
                         <a target="_blank" href="https://github.com/Sleighs/CashFlowJs/" rel="noreferrer">Check out CashFlowJs</a>  
+                        <br/>
+                        <br/>
+                        <a target="_blank" href="https://github.com/Sleighs/cashflow-mobile" rel="noreferrer">View CashFlowJs for mobile</a>
                     </p>
+                    <div className="tag-row">
+                        <Tag name={'JavaScript'}/> 
+                        <Tag name={'JQuery'}/>
+                        <Tag name={'React Native'}/>
+                    </div>
                 </div>
                 <div className="col-md-5 project-pic-content">
                     <a className="projects-pic-container-cashflow" target="_blank" href="https://github.com/Sleighs/CashFlowJs"rel="noreferrer" title="Play">

@@ -46,8 +46,7 @@ export default function Crypt() {
     }
 
     if (submitted === 'help') {
-      success = true
-      //console.log('List of codes:')
+      success = true;
       console.table({
         help: 'list codes in console',  
         lights: 'toggle light/dark mode',        
