@@ -13,7 +13,7 @@ export default function Tag(props) {
         margin: '1%',
         padding: '1% 2%',
         border: `solid 2pt ${
-          name === 'React' ? '#61dafb' :
+          name === 'React' ? '#6DC3F6' :
           name === 'JavaScript' ? '#f0db4f' :
           name === 'React Native' ? 'red' :
           name === 'CSS' ? '#5FF78D' :

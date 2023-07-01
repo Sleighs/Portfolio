@@ -28,8 +28,8 @@ const Footer = (props) => {
     let englishOrLatin = Math.floor(Math.random() * 2);
     console.table(proverb)
     setProverbText({
-      title: englishOrLatin === 0 ? proverb.english : proverb.latin,
-      text: englishOrLatin === 0 ? proverb.latin : proverb.english,
+      title: proverb.latin,//englishOrLatin === 0 ? proverb.english : proverb.latin,
+      text: proverb.english,//englishOrLatin === 0 ? proverb.latin : proverb.english,
       author: proverb?.author,
     })
 
