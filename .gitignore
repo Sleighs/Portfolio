@@ -2,7 +2,7 @@
 src/Resources/mapsKey.js
 src/Resources/firebaseKey.js
 
+.env
+
 node_modules
 /node_modules
-
-.env
