@@ -29,7 +29,7 @@ export default function Tag(props) {
         setBorderColor('#CE65B0 ')
         return
       case 'MongoDB':
-        setBorderColor('green')
+        setBorderColor('rgb(154, 217, 111)')
         return
 
       default:
