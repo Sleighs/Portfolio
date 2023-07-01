@@ -5,43 +5,6 @@ export default function Tag(props) {
     name
   } = props
 
-  const [borderColor, setBorderColor] = useState('lightgray')
-
-  const getBorderColor = (n) => {
-
-    switch (n) {
-      case 'React':
-        setBorderColor('#61dafb')
-        return
-      case 'JavaScript':
-        setBorderColor('#f0db4f')
-        return
-      case 'React Native':
-        setBorderColor('#red')
-        return
-      case 'CSS':
-        setBorderColor('lightgreen')
-        return
-      case 'JQuery':
-        setBorderColor('orange')
-        return
-      case 'Redux':
-        setBorderColor('#CE65B0 ')
-        return
-      case 'MongoDB':
-        setBorderColor('rgb(154, 217, 111)')
-        return
-
-      default:
-        setBorderColor('gray')
-        return
-    }  
-  }
-
-  useEffect(() => {
-    getBorderColor(name)
-  }, [])
-
   return (
     <div className='tag-container'
       style={{
@@ -49,9 +12,18 @@ export default function Tag(props) {
         borderRadius: '5px',
         margin: '1%',
         padding: '1% 2%',
-        border: `solid 2pt ${borderColor}`,
+        border: `solid 2pt ${
+          name === 'React' ? '#61dafb' :
+          name === 'JavaScript' ? '#f0db4f' :
+          name === 'React Native' ? 'red' :
+          name === 'CSS' ? '#5FF78D' :
+          name === 'JQuery' ? 'orange' :
+          name === 'Redux' ? '#CE65B0 ' :
+          name === 'MongoDB' ? '#99CC46' :
+          'rgb( 153, 185, 190)'
+        }`,
       }}>
-      <div style={{ }}>
+      <div>
         {name}
       </div>
     </div>

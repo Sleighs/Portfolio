@@ -46,7 +46,6 @@ const Projects = (props) => {
                             <Tag name={'JavaScript'}/> 
                             <Tag name={'Chrome Extension'}/>
                             <Tag name={'React'}/>
-                            <Tag name={'CSS'}/>
                         </div>
                     <p>
                     <a target="_blank" href="https://github.com/sleighs/chat-plus" rel="noreferrer">Find out more</a>
@@ -98,8 +97,8 @@ const Projects = (props) => {
                     <p><a target="_blank" href="https://github.com/Sleighs/hero-matchups-api/" rel="noreferrer">Visit the repository</a></p>
                     <div className="tag-row">
                         <Tag name={'JavaScript'}/> 
-                        <Tag name={'React'}/>
                         <Tag name={'MongoDB'}/>
+                        <Tag name={'React'}/>
                     </div>
                 </div>
                 <div className="col-md-5 project-pic-content">
