@@ -51,9 +51,7 @@ const Projects = (props) => {
                     <a target="_blank" href="https://github.com/sleighs/chat-plus" rel="noreferrer">Find out more</a>
                     <br/>
                     <br/>
-
                     <a target="_blank" href="https://chrome.google.com/webstore/detail/chatplus-for-rumble/odlcomopigapcpmlpmmmhlhegajembio?hl=en&authuser=0" rel="noreferrer">Chrome Web Store</a>
-                    
                     </p>
                 </div>
                 <div className="col-md-5 project-pic-content chatplus-pic-container">
@@ -74,9 +72,9 @@ const Projects = (props) => {
                     <a target="_blank" href="https://realitycalc.com/" rel="noreferrer">Check it out</a>
                     </p>    
                     <div className="tag-row">
-                        <Tag name={'JavaScript'}/> 
                         <Tag name={'React'}/>
                         <Tag name={'Redux'}/>
+                        <Tag name={'JavaScript'}/>
                     </div>
                 </div>
                 <div className="col-md-5 project-pic-content">

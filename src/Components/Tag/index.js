@@ -18,7 +18,7 @@ export default function Tag(props) {
           name === 'React Native' ? 'red' :
           name === 'CSS' ? '#5FF78D' :
           name === 'JQuery' ? 'orange' :
-          name === 'Redux' ? '#CE65B0 ' :
+          name === 'Redux' ? '#CA79C2 ' :
           name === 'MongoDB' ? '#99CC46' :
           'rgb( 153, 185, 190)'
         }`,
