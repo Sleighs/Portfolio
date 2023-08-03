@@ -117,8 +117,8 @@ const Projects = (props) => {
                         <a target="_blank" href="https://github.com/Sleighs/Mint-2048" rel="noreferrer">Check out Mint 2048 </a>    
                     </p>
                     <div className="tag-row">
-                        <Tag name={'JavaScript'}/> 
                         <Tag name={'React'}/>
+                        <Tag name={'JavaScript'}/> 
                         <Tag name={'CSS'}/>
                     </div>
                 </div>
