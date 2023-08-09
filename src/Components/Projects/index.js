@@ -5,6 +5,7 @@ import cashflowPic from '../../Resources/Images/portfolio-cashflowjs.png';
 import heromatchupsPic from '../../Resources/Images/portfolio-heromatchups.png';
 import realityCalcPic from '../../Resources/Images/portfolio-realitycalc03.png';
 import chatplusPic from '../../Resources/Images/logo-600x400.png';
+import ytpwebscraperPic from '../../Resources/Images/portfolio-ytpwebscraper.png';
 import Tag from '../Tag';
 
 import './style.css'
@@ -106,6 +107,29 @@ const Projects = (props) => {
                 </div>
             </div>
             <hr style={{display: projectsToDisplay.includes('heromatchups') ? 'flex' : 'none'}}/>
+            
+            <div className="row project-ytpwebscraper" id="project2"
+                style={{display: projectsToDisplay.includes('ytpwebscraper') ? 'flex' : 'none'}}
+            >
+                <div className="col-md-7 project-description">
+                    <h3  className="projects-row-title"><strong>YouTube Playlist Web Scraper</strong></h3>
+                    <p>This webscraper retrieves the information of each video in a Youtube playlist with Puppeteer and saves the data in a json file. </p>
+                    <p>
+                        <a target="_blank" href="https://github.com/Sleighs/youtube-playlist-web-scraper/" rel="noreferrer">Check out the repository here</a>  
+                    </p>
+                    <div className="tag-row">
+                        <Tag name={'Web Scraper'}/>
+                        <Tag name={'Node.js'}/>
+                        <Tag name={'JavaScript'}/> 
+                    </div>
+                </div>
+                <div className="col-md-5 project-pic-content">
+                    <a className="projects-pic-container-ytpwebscraper" target="_blank" href="https://github.com/Sleighs/youtube-playlist-web-scraper/"rel="noreferrer" title="GitHub">
+                        <img className="img-responsive rounded projects-pic mx-auto d-block" alt="CashFlow JS" src={ytpwebscraperPic}/>
+                    </a>
+                </div>
+            </div>
+            <hr style={{display: projectsToDisplay.includes('ytpwebscraper') ? 'flex' : 'none'}}/>
 
             <div className="row project-mint" id="project4" 
                 style={{display: projectsToDisplay.includes('mint') ? 'flex' : 'none'}}

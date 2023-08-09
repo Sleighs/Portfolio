@@ -9,7 +9,8 @@ function DataContextProvider(props){
     //'realitycalc', 
     'heromatchups', 
     'mint', 
-    'cashflow'
+    'cashflow',
+    'ytpwebscraper',
   ])
 
   return (

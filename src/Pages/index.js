@@ -5,3 +5,4 @@ export { default as WorkPage } from "./Work";
 export { default as ContactPage } from "./Contact";
 export { default as SkillsPage } from "./Skills";
 export { default as Resume } from "./Resume";
+export { default as TestPage } from "./Test";

@@ -6,7 +6,7 @@ import './App.css';
 import './App-theme.css';
 import './App-mobile.css';
 
-import { HomePage, ProjectsPage, AboutPage, WorkPage, ContactPage, SkillsPage } from './Pages';
+import { HomePage, ProjectsPage, AboutPage, WorkPage, ContactPage, SkillsPage, TestPage } from './Pages';
 import { DataContext } from './Context/DataContext';
 import { ThemeContext } from './Context/ThemeContext';
 
@@ -30,7 +30,9 @@ const App = (props) => {
           <Route path="/skills" element={<SkillsPage />} />
           <Route path="/work" element={<WorkPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/test" element={<TestPage />} />
           */}
+          
         </Routes>
         
         <Footer />
