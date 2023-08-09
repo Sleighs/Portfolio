@@ -113,7 +113,7 @@ const Projects = (props) => {
             >
                 <div className="col-md-7 project-description">
                     <h3  className="projects-row-title"><strong>YouTube Playlist Web Scraper</strong></h3>
-                    <p>This webscraper retrieves the information of each video in a Youtube playlist with Puppeteer and saves the data in a json file. </p>
+                    <p>A Node.js web scraper that retrieves the information of each video in a YouTube playlist with Puppeteer and saves the data in a json file. </p>
                     <p>
                         <a target="_blank" href="https://github.com/Sleighs/youtube-playlist-web-scraper/" rel="noreferrer">Check out the repository here</a>  
                     </p>
