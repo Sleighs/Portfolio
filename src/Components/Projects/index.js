@@ -141,7 +141,7 @@ const Projects = (props) => {
                         <a target="_blank" href="https://github.com/Sleighs/youtube-playlist-downloader/" rel="noreferrer">Check out the repository here</a>  
                     </p>
                     <p>
-                        <a target="_blank" href="https://github.com/Sleighs/youtube-playlist-downloader/" rel="noreferrer">Find the web scraper here</a>  
+                        <a target="_blank" href="https://github.com/Sleighs/youtube-playlist-web-scraper/" rel="noreferrer">Find the web scraper here</a>  
                     </p>
                     <div className="tag-row">
                         <Tag name={'Web Scraper'}/>
