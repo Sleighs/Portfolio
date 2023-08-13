@@ -1,17 +1,19 @@
+/* Add fonts */
 @font-face {
   font-family: 'Rokkitt';
-  src: url('/src/Resources/Fonts/Rokkitt-VariableFont_wght.ttf');
+  src: url('/src/Resources/fonts/Rokkitt-VariableFont_wght.ttf');
 }
 
 @font-face {
   font-family: 'Cabin Bold';
-  src: url('/src/Resources/Fonts/Cabin-Bold.ttf');
+  src: url('/src/Resources/fonts/Cabin-Bold.ttf');
 }
 
 @font-face {
   font-family: 'Cabin';
-  src: url('/src/Resources/Fonts/Cabin-VariableFont_wdth,wght.ttf');
+  src: url('/src/Resources/fonts/Cabin-VariableFont_wdth,wght.ttf');
 }
+
 
 body {
   margin: 0;
