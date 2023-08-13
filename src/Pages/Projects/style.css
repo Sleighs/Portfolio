@@ -1,0 +1,41 @@
+#projects-container {
+
+}
+
+.projects__row {
+    padding: 0 2%;
+  }
+  .projects__row h3 {
+    color:rgba(8, 10, 10, 0.9);
+    text-shadow: .8px .5px 1px rgba(104, 94, 94, 0.616);
+  }
+  .projects-pic-container-mint {
+    display: block;
+    margin: auto;
+  }
+  .projects-pic-container-cashflow, 
+  .projects-pic-container-realitycalc {
+    display: block;
+    margin: auto;
+  }
+  .projects-pic {
+    max-height: 200px;
+  }
+
+.portfolio-link {
+    color: rgba(71, 8, 1, 0.8)
+  }
+  .portfolio-link:hover {
+    text-decoration: none;
+  }
+  
+  #projects-container a {
+  
+  }
+  #projects-container a:hover {
+    text-decoration: none;
+  }
+  
+  .portfolio-link2 {
+    color: rgba(71, 8, 1, 0.8)
+  }

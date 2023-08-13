@@ -1,51 +1,88 @@
-import React, { Component } from 'react';
-import AppManager from '../../AppManager';
-import '../../App.css';
+import React, { useContext, useEffect, useRef, useState } from 'react';
+import logoPics from '../../Resources/Images/logos';
+import './style.css'
+import { ThemeContext } from '../../Context/ThemeContext';
+import { DataContext } from '../../Context/DataContext';
 
-class Skills extends Component {
-	constructor(props){
-        super(props)
-        this.state = {}
-    }
+const Skills = (props) => {
+  const { setPageLocation } = useContext(DataContext)
 
-    render (){
-        return (
-            <div className="container container-md" id="skills-container">
-				<div className="header-box" id="skills-title1">
-					<h3 className="title"><strong>WHAT DO I DO?</strong></h3>
-				</div>
-				<div id="do-list">
-					{/*!AppManager.company ? null : <p>Work at AweSumo creating software</p>*/}
-					<p>Create fun web projects in my spare time</p>
-					<p>Write quality code</p>
-					<p>Keep my functions small, focused, and easy to understand</p>
-					<p>Leave comments as I create and maintain code</p>
-					<p>Make tests for the code I write</p>
-					<p>Document every feature</p>
-					<p>Keep track of every bug</p>
-					<p>Strictly follow security best practices</p>
-					<p>Never stop learning</p>
-				</div>
-				<hr/>
-				<div id="skills2-header">
-					<h3 id="skills2-title"><strong>WHAT DO I KNOW?</strong></h3>
-				</div>
-				<ul id="know-list">
-					{/*<li>HTML, CSS, Javascript (ES5, ES6) and Typescript languages</li>
-					<li>Node JS, MongoDB and Firebase server side technologies</li>*/}
-					<li>How to design user friendly web applications with React, React Native, Vue, PHP,  Redux, JQuery, HTML5 Canvas, SASS</li>
-					<li>How to design, develop, deploy and support RESTful services</li>
-					<li>How to maintain a feature/dev/master branch workflow in Git</li>
-					<li>How to query and interpret Google Analytics data to make meaningful insights</li>
-					{
-						this.props.resumePage === true 
-						? <li>How to test Javascript and Typescript codebases with Jest</li>
-						: <li>How to make an excellent <a target="_blank" href="https://github.com/Sleighs/google-maps-react-tutorial/" rel="noreferrer">Github Repository</a></li>
-					}
-				</ul>
-            </div>
-        )
-    }
+  const hiddenRef = useRef();
+
+  const [frontEndSkills, setFrontEndSkills]	= useState([
+	'javascript', 
+	'react',
+	'redux',
+	'HTML5',
+	'CSS3',
+	'sass',
+	'bootstrap',
+  ])
+  const [backEndSkills, setBackEndSkills] = useState([
+	'mongodb',
+	'node',
+	'python',
+	'firebase'
+  ])
+  const [otherSkills, setOtherSkills] = useState([
+	'git',
+	'AdobeXD',
+	'photoshop',
+	'linux',
+	'jest'
+  ])
+
+  useEffect(() => {
+	window.addEventListener('scroll', scrollHandler);
+	return () => window.removeEventListener('scroll', scrollHandler);
+  }, []);
+
+  const scrollHandler = () => {
+	if(window.pageYOffset + window.innerHeight >= hiddenRef.current.offsetTop + 125) {
+		setPageLocation('about')
+	}
+  }
+
+  return (
+	<div className="container container-md" id="skills-container" ref={hiddenRef}>
+	  <div className="skills__list" id="skills-list1">
+		<h3 className="section-subtitle skills__title">Front-end</h3>
+		<div className="skills__front-end">
+			{
+				frontEndSkills.map((item, index) => <SkillBox name={item} key={index}/>)
+			}
+		</div>
+	  </div>
+	  <div className="skills__list" id="skills-list2">
+		<h3 className="section-subtitle skills__title">Back-end</h3>
+		<div className="skills__back-end">
+			{
+				backEndSkills.map((item, index) => <SkillBox name={item} key={index}/>)
+			}
+		</div>
+	  </div>
+	  <div className="skills__list" id="skills-list3">
+		<h3 className="section-subtitle skills__title">Other</h3>
+		<div className="skills__other">
+			{
+				otherSkills.map((item, index) => <SkillBox name={item} key={index}/>)
+			}
+		</div>
+	  </div>
+	</div>
+  )
+}
+
+
+const SkillBox = (props) => {
+	const { theme } = useContext(ThemeContext)
+
+	return (
+		<div className={"skills__logo-container skills__logo-container-" + theme}>
+			<img className="skills__logo-img" src={logoPics[props.name]} alt={props.name} />
+			<span className="skills__logo-text">{props.name}</span>
+		</div> 
+	)
 }
 
 export default Skills;

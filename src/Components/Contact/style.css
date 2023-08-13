@@ -1,0 +1,47 @@
+#contact-container {
+    margin: auto;
+    width: 90%;
+    padding: 0;
+    padding-bottom: 16%;
+    display: flex;
+    flex-direction: column;
+}
+  
+.img-contact-link {
+  margin: auto 2%;
+  font-size: 1em;
+  margin-right: auto;
+}
+
+
+.home-contact-info__link-dark, .home-contact-info__link-light {
+  
+}
+.contact-form {
+  width: 90%;
+  margin: auto;
+}
+.contact-form__input-container {
+  
+}
+.form-text {
+  width: fit-content;
+  text-align: left;
+  font-size: 1.2em;
+}
+.form-control {
+  width: 100%;
+}
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+.form-msg {
+  min-height: 150px;
+}

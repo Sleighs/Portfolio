@@ -1,0 +1,57 @@
+#skills-container {
+    padding: 0;
+    padding-top: 1%;
+    font-size: .95em;
+}
+
+.skills__list {
+    margin: auto;
+    text-align: center;
+    height: fit-content;
+}
+
+.skills__list h3 {
+
+}
+#skills-list1 {
+    margin: auto;
+    margin-bottom: 4%;
+}
+#skills-list2 {
+    margin: auto;
+    margin-bottom: 4%;
+}
+#skills-list3 {
+    margin: auto;
+    margin-bottom: 4%;
+}
+.skills__front-end, .skills__back-end, .skills__other {
+    
+}
+.skills__logo-container {
+    display: inline-block;
+    height: 120px;
+    width: 80px;
+    /*
+    border: solid 1pt red;
+    */
+    margin: 2% 1.5%;
+    padding: 2% 0 ;
+    border-radius: 1px;
+}
+
+.skills__logo-img {
+    max-height: 60px;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    margin-bottom: 9px;
+}
+
+.skills__logo-text {
+    text-transform: capitalize;
+}
+
+.skills__title {
+    font-family: 'Rokkitt';
+}

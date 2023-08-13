@@ -1,0 +1,10 @@
+#contact-header {
+    height: fit-content;
+    min-height: 80px;
+    width: 100%;
+    
+    text-align: center;
+    opacity: 1;
+    
+    text-shadow: .8px .5px 1px rgba(37, 4, 0, 0.5);
+  }

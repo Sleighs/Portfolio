@@ -1,65 +1,37 @@
-import React, { Component } from 'react';
-import Cookies from 'universal-cookie'
-import { 
-  Header,
-  Skills,
-  Projects,
-  Location,
-  Contact,
-  Footer
-} from '../../Components';
-import '../../App.css';
+import React, { useContext } from 'react';
+import { Contact, ContactInfo, Location, Projects, Skills } from '../../Components';
+import Intro from '../../Components/Intro';
+import { ThemeContext } from '../../Context/ThemeContext';
+import './style-mobile.css';
+import './style-svg.css';
+import './style.css';
 
-const cookiesDarkMode = new Cookies()
-const darkModeCookies = cookiesDarkMode.get('darkModeData')
+const HomePage = (props) => {
+  const { theme } = useContext(ThemeContext)
 
-class Home extends Component {
-  constructor(props){
-    super(props)
-    this.state = {
-      textColor: 'black',
-      backgroundColor: 'white',
-      darkMode: false,
-    }
-  }
-
-
-  render() {
-    let portfolioStyle = {
-      fontSize: '1.2em',
-    }
-
-    return (
-      <div 
-        style={{
-          height: '100%',
-          maxWidth: '871px',
-          margin: 'auto',
-          color: this.state.textColor,
-          backgroundColor: this.state.backgroundColor,
-        }}
-      > 
-        <div 
-          id="portfolio" 
-          className={"container-md"} 
-          style={portfolioStyle}
-        >
-          <Header  resumePage={false}/>
-          <Contact />
-          <Skills />
-          <hr/>
-          <Projects />
-          {/*
-          <hr/>
-          <Location />
-          */}
-          <hr/>
-          <Footer />
-        </div>
-        
+  return (
+    <div id='home-container'>    
+      <div className={"intro-container intro-container-" + theme} id="home">
+        <Intro />
+        <ContactInfo />
       </div>
-    );
-  }
+      <div className="section-header section-header-first" id="projects">
+        <h3 className="section-title"><strong>Projects</strong></h3>
+      </div>
+      <div className={"home-projects__container"}>
+        <Projects />
+      </div>
+      <div className="section-header"  id="about">
+        <h3 className="section-title"><strong>About</strong></h3>
+      </div>
+      <Skills />
+      {/*<Location />*/}
+      <div className="section-header"  id="contact">
+        <h3 className="section-title"><strong>Contact</strong></h3>
+      </div>
+      <Contact />
+    </div>
+  )
 }
 
-export default Home;
+export default HomePage;

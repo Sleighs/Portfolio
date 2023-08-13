@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'Rokkitt';
+    src: url('/src/Resources/Fonts/Rokkitt-VariableFont_wght.ttf');
+  }
+  
+  @font-face {
+    font-family: 'Cabin Bold';
+    src: url('/src/Resources/Fonts/Cabin-Bold.ttf');
+  }
+  
+  @font-face {
+    font-family: 'Cabin';
+    src: url('/src/Resources/Fonts/Cabin-VariableFont_wdth,wght.ttf');
+  }
+
+
+.about-intro {
+    font-family: 'Cabin';
+    
+}
+
+.about-intro__text {
+    font-size: 1.5em;
+}
+
+@media only screen and (min-width: 1230px) {
+    .about-intro__text {
+        width: 85%;
+    }
+}

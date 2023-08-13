@@ -1,0 +1,20 @@
+#work-header {
+    height: fit-content;
+    min-height: 80px;
+    width: 100%;
+    
+    /*
+    background: rgba(0,16,31,1);
+    color: white;
+    text-shadow: .8px .5px 4px rgba(199,217,0,.7);
+    opacity: .9;
+    */
+    margin: auto;
+    text-align: center;
+    
+    /*
+    font-family: 'Cabin Bold';
+    text-transform: uppercase;
+    */
+    
+}

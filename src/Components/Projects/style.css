@@ -1,0 +1,66 @@
+#projects-header {
+    height: fit-content;
+    min-height: 80px;
+    width: 100%;
+    text-align: center;
+    /*
+    background: rgba(0,16,31,1);
+    color: white;
+    text-shadow: .8px .5px 4px rgba(199,217,0,.7);
+    opacity: .9;
+    */
+    margin: auto;
+    
+}
+
+.projects-row-title {
+    /*font-family: 'Cabin Bold';*/
+
+}
+
+.row {
+    margin: 3% auto;
+}
+.tag-row {
+    margin: 3% auto;
+}
+.project-description {
+    font-family: 'Cabin';
+}
+hr {
+    background-color: rgba(255, 71, 70, 0.5);
+    width: 99%;
+    margin: auto;
+}
+
+#project1 {
+    margin-top: 4%;
+}
+
+.project-pic-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chatplus-pic-container {
+    margin-top: -50px
+}
+
+@media only screen and (max-width: 768px) {
+    .project-pic-content {
+        flex-direction: column;
+    }
+    .chatplus-pic-container {
+        margin-top: 0px;
+    }
+    .row {
+        margin: 9% auto;
+    }
+    .tag-row {
+        margin: 3% auto 6% auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,178 @@
+/* Theme */
+.app-light {
+    background: white;
+    color: rgba(0,16,31,1);
+}
+.title-light {
+    color: rgba(0,16,31,1);
+    text-shadow: .8px .5px 1px rgba(37, 4, 0, 0.5);
+}
+  
+.app-dark {
+    background: rgb(13, 18, 20);
+    /*background-color:   rgba(0,16,31,1);;*/
+    color: white;
+}
+.title-dark {
+    color:white;
+    text-shadow: .8px .5px 1px rgba(37, 4, 0, 0.5);
+}
+
+.section-title {
+    /*color: rgb(255, 71, 75);*/
+
+    color: rgb(255, 77, 70);
+}
+.navigation-dark {
+   background-color: rgb(13, 18, 20);
+   background-color: rgba(13, 18, 20, 1);
+   box-shadow: 0px 0px 2px 1px rgba(255, 255, 255, 0);
+   box-shadow: 0px 0px 2px 1px rgba(255, 0, 0, 0);
+}
+.navigation-light {
+    background-color: white;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.25);
+ }
+
+
+/* Nav */
+.main-nav__list-item-light {
+    color: rgb(13, 18, 20);
+}
+.main-nav__list-item-light a:visited {
+    color: rgb(13, 18, 20);
+}
+.main-nav__list-item-light:hover {
+    color: rgb(13, 18, 20);
+}
+
+.main-nav__list-item-dark {
+    color: white;
+}
+.main-nav__list-item-dark a:visited {
+    color: white;
+}
+.main-nav__list-item-dark:hover {
+    color: white;
+}
+.hamburger-dark {
+    background-color: rgb(13, 18, 20);
+    color: white;
+  }
+.hamburger-light {
+    /*background-color: rgb(255, 255, 255);
+    color: rgb(13, 18, 20);
+    */
+}
+
+
+/* Home */
+.home-contact-info__link-light a {
+    color: rgba(0,16,31,1);
+}
+.home-contact-info__link-light a:hover {
+    color: rgba(0,16,31,1);
+}
+.home-contact-info__link-light a:visited {
+    color: rgba(0,16,31,1); 
+}
+
+
+.home-contact-info__link-dark a {
+    color: white;
+}
+.home-contact-info__link-dark a:hover {
+    color: white;
+}
+.home-contact-info__link-dark a:visited {
+    color: white;
+}
+
+
+
+/* Skills */
+.skills__list h3 {
+    /*color: rgb(255, 71, 71);*/
+}
+
+.skills__logo-container-dark {
+    box-shadow: 0px 0px 12px 1px rgba(255, 255, 255, 0.25);
+}
+.skills__logo-container-light {
+    box-shadow: 0px 0px 12px 1px rgba(55, 47, 47, 0.25);
+}
+
+
+/* Landing */
+.intro-container-dark {
+    /*background-color: rgba(140, 0, 0, 1);*/
+    /*box-shadow: 0px 10px 250px rgb(52, 38, 38);*/
+
+    background-color: rgba(255, 71, 70, 0);
+    box-shadow: 0px 35px 250px rgb(52, 38, 38);
+}
+.intro-container-light {
+    /*background-color: rgba(210, 0, 0, 1);
+    background-color: rgb(234, 223, 223);*/
+
+    background-color: rgb(234, 223, 223, .95);
+    box-shadow: 0px 30px 200px rgb(159, 101, 101);
+}
+
+/* Intro */
+.about-intro-dark {
+    background-color: rgba(13, 18, 20, .75);
+}
+.about-intro-light {
+    background-color: rgba(236, 223, 223, .75);
+}
+
+.about-intro-dark {
+    /*background-color: rgba(210, 0, 0, 0.05);
+    
+    text-shadow: 0px 0px 3px rgb(71, 218, 255, .5);
+    */
+    text-shadow: 0px 0px 2px rgb(255, 50, 78, .5);
+
+}
+
+.about-intro-light strong {
+    /*color: rgb(118, 43, 43);*/
+    color: rgb(79, 0, 0);
+}
+.about-intro-dark strong {
+    /*
+    
+    color: rgb(255, 71, 97);
+    color: rgb(121, 181, 255);
+        color: rgb(178, 229, 249);
+
+    color: rgb(255, 255, 255);
+    color: rgb(255, 50, 78);
+*/    
+
+}
+
+
+/* Contact Info */
+.contact__info-dark {
+    background-color: rgba(13, 18, 20, .9);
+}
+.contact__info-light {
+    background-color: rgba(236, 223, 223, .9);
+}
+
+
+/* Footer */
+#footer-container {
+    background-color: rgb(255, 77, 70);
+}
+
+
+/* Theme Toggle */
+.theme-toggle-light {
+    color: darkred;
+}
+.theme-toggle-dark {
+    color: white;
+}
