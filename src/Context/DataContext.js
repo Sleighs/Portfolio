@@ -10,7 +10,8 @@ function DataContextProvider(props){
     'heromatchups', 
     'mint', 
     'cashflow',
-    'ytpwebscraper',
+    //'yt-playlist-webscraper',
+    'yt-playlist-downloader',
   ])
 
   return (

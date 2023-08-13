@@ -30,7 +30,7 @@ const Projects = (props) => {
 
     return (
         <div id="projects-container" ref={hiddenRef}>
-            <div className="row project-chatplus" id="project5" title="ChatPlus for Rumble"
+            <div className="row project-chatplus" id="project-chatplus" title="ChatPlus for Rumble"
                 style={{display: projectsToDisplay.includes('chatplus') ? 'flex' : 'none'}}
             >
                 <div className="col-md-7 project-description">
@@ -63,7 +63,7 @@ const Projects = (props) => {
             </div>
             <hr style={{display: projectsToDisplay.includes('chatplus') ? 'flex' : 'none'}}/>
 
-            <div className="row project-realitycalc" id="project1" 
+            <div className="row project-realitycalc" id="project-realitycalc" 
                 style={{display: projectsToDisplay.includes('realitycalc') ? 'flex' : 'none'}}
             >
                 <div className="col-md-7 project-description">
@@ -87,7 +87,7 @@ const Projects = (props) => {
             <hr style={{display: projectsToDisplay.includes('realitycalc') ? 'flex' : 'none'}}
 />
 
-            <div className="row project-heromatchups" id="project3" 
+            <div className="row project-heromatchups" id="project-heromatchups" 
                 style={{display: projectsToDisplay.includes('heromatchups') ? 'flex' : 'none'}}
             >
                 <div className="col-md-7 project-description">
@@ -108,8 +108,8 @@ const Projects = (props) => {
             </div>
             <hr style={{display: projectsToDisplay.includes('heromatchups') ? 'flex' : 'none'}}/>
             
-            <div className="row project-ytpwebscraper" id="project2"
-                style={{display: projectsToDisplay.includes('ytpwebscraper') ? 'flex' : 'none'}}
+            <div className="row project-ytpwebscraper" id="project-ytpwebscraper"
+                style={{display: projectsToDisplay.includes('yt-playlist-webscraper') ? 'flex' : 'none'}}
             >
                 <div className="col-md-7 project-description">
                     <h3  className="projects-row-title"><strong>YouTube Playlist Web Scraper</strong></h3>
@@ -125,13 +125,39 @@ const Projects = (props) => {
                 </div>
                 <div className="col-md-5 project-pic-content">
                     <a className="projects-pic-container-ytpwebscraper" target="_blank" href="https://github.com/Sleighs/youtube-playlist-web-scraper/"rel="noreferrer" title="GitHub">
-                        <img className="img-responsive rounded projects-pic mx-auto d-block" alt="CashFlow JS" src={ytpwebscraperPic}/>
+                        <img className="img-responsive rounded projects-pic mx-auto d-block" alt="YouTube Playlist Web Scraper" src={ytpwebscraperPic}/>
                     </a>
                 </div>
             </div>
-            <hr style={{display: projectsToDisplay.includes('ytpwebscraper') ? 'flex' : 'none'}}/>
+            <hr style={{display: projectsToDisplay.includes('yt-playlist-webscraper') ? 'flex' : 'none'}}/>
 
-            <div className="row project-mint" id="project4" 
+            <div className="row project-ytpwebscraper" id="project-ytpwebscraper"
+                style={{display: projectsToDisplay.includes('yt-playlist-downloader') ? 'flex' : 'none'}}
+            >
+                <div className="col-md-7 project-description">
+                    <h3  className="projects-row-title"><strong>YouTube Playlist Downloader</strong></h3>
+                    <p>A Node.js web scraper that downloads each video in a YouTube playlist, using Puppeteer to collect the videos and ytdl-core to download them.</p>
+                    <p>
+                        <a target="_blank" href="https://github.com/Sleighs/youtube-playlist-downloader/" rel="noreferrer">Check out the repository here</a>  
+                    </p>
+                    <p>
+                        <a target="_blank" href="https://github.com/Sleighs/youtube-playlist-downloader/" rel="noreferrer">Find the web scraper here</a>  
+                    </p>
+                    <div className="tag-row">
+                        <Tag name={'Web Scraper'}/>
+                        <Tag name={'JavaScript'}/> 
+                        <Tag name={'Node.js'}/>
+                    </div>
+                </div>
+                <div className="col-md-5 project-pic-content">
+                    <a className="projects-pic-container-ytpwebscraper" target="_blank" href="https://github.com/Sleighs/youtube-playlist-downloader/"rel="noreferrer" title="GitHub">
+                        <img className="img-responsive rounded projects-pic mx-auto d-block" alt="YouTube Playlist Downloader" src={ytpwebscraperPic}/>
+                    </a>
+                </div>
+            </div>
+            <hr style={{display: projectsToDisplay.includes('yt-playlist-downloader') ? 'flex' : 'none'}}/>
+
+            <div className="row project-mint" id="project-mint" 
                 style={{display: projectsToDisplay.includes('mint') ? 'flex' : 'none'}}
             >
                 <div className="col-md-7 project-description">
@@ -154,7 +180,7 @@ const Projects = (props) => {
             </div>
             <hr style={{display: projectsToDisplay.includes('mint') ? 'flex' : 'none'}}/>
             
-            <div className="row project-cashflow" id="project2"
+            <div className="row project-cashflow" id="project-cashflow"
                 style={{display: projectsToDisplay.includes('cashflow') ? 'flex' : 'none'}}
             >
                 <div className="col-md-7 project-description">
