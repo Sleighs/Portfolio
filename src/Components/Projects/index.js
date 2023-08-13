@@ -22,31 +22,6 @@ const Projects = (props) => {
         return () => window.removeEventListener('scroll', scrollHandler);
     }, []);
     
-<<<<<<< HEAD
-    render (){
-        return (
-            <div id="projects-container">
-                <div id="projects-header">
-                    <h3 id="projects-title"><strong>WHAT HAVE I BUILT?</strong></h3>
-                </div>
-                
-                <div className="row" 
-                    //style={{display:'none'}}
-                >
-                    <div className="col-md-7">
-                        <h3 className="projects-row-title"><strong>The Male Reality Calculator</strong></h3>
-                        <p>Lead developer for the popular online tool The Male Reality Calculator. Built with React and Redux, the calculator uses U.S. Census Bureau statistics to calculate the user's odds of meeting their dream woman.</p>
-                        <p>
-                            {
-                                this.props.resumePage === true
-                                ? <p>Check it out at <a target="_blank" href="https://realitycalc.com/" rel="noreferrer">RealityCalc.com</a></p>
-                                : <a target="_blank" href="https://realitycalc.com/" rel="noreferrer">Check it out</a>
-                            }
-                        </p>
-                        <div className="project-hashtag-row" style={{display: 'none',}}>
-                            <Tag name={'react'}/>
-                            <Tag name={'redux'}/>
-=======
     const scrollHandler = () => {
         if(window.pageYOffset + window.innerHeight >= hiddenRef.current.offsetTop + 125) {
             setPageLocation('projects')
@@ -72,7 +47,6 @@ const Projects = (props) => {
                             <Tag name={'JavaScript'}/> 
                             <Tag name={'Chrome Extension'}/>
                             <Tag name={'React'}/>
->>>>>>> 2.2
                         </div>
                     <p>
                     <a target="_blank" href="https://github.com/sleighs/chat-plus" rel="noreferrer">Find out more</a>
