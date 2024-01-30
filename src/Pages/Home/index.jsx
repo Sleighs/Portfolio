@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Contact, ContactInfo, Location, Projects, Skills } from '../../Components';
+import { Contact, ContactInfo, Projects, Skills } from '../../Components';
 import Intro from '../../Components/Intro';
 import { ThemeContext } from '../../Context/ThemeContext';
 import './style-mobile.css';

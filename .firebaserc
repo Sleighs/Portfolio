@@ -1,6 +1,9 @@
 {
   "projects": {
     "default": "resume-bbd43",
-    "staging": "resume-bbd43"
-  }
+    "staging": "resume-bbd43",
+    "live": "resume-bbd43"
+  },
+  "targets": {},
+  "etags": {}
 }
