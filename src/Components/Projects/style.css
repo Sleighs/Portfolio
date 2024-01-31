@@ -27,6 +27,7 @@
 .project-description {
     font-family: 'Cabin';
 }
+
 hr {
     background-color: rgba(255, 71, 70, 0.5);
     width: 99%;
@@ -42,9 +43,17 @@ hr {
     align-items: center;
     justify-content: center;
 }
-
+.projects-pic {
+  max-width: 315px;
+}
 .chatplus-pic-container {
     margin-top: -50px
+}
+
+@media only screen and (min-width: 950px) {
+  .projects-pic {
+    max-width: 360px;
+  }
 }
 
 @media only screen and (max-width: 768px) {

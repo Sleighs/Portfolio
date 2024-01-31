@@ -54,11 +54,13 @@
     text-align: center;
     padding-top: 80px;
 }
+
 .section-header-first {
     padding-top: 120px;
 }
+
 .home-projects__container {
-    padding: 0 10%;
+    padding: 0 8%;
 }
 
 .section-title strong {
@@ -72,3 +74,9 @@
     margin-bottom: 4.75%;
 }
 
+/* Mobile under 768px */
+@media only screen and (max-width: 768px) {
+  .home-projects__container {
+    padding: 0 10%;
+}
+}
