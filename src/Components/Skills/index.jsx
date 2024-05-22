@@ -33,14 +33,14 @@ const Skills = (props) => {
   ])
 
   useEffect(() => {
-	window.addEventListener('scroll', scrollHandler);
-	return () => window.removeEventListener('scroll', scrollHandler);
+		window.addEventListener('scroll', scrollHandler);
+		return () => window.removeEventListener('scroll', scrollHandler);
   }, []);
 
   const scrollHandler = () => {
-	if(window.pageYOffset + window.innerHeight >= hiddenRef.current.offsetTop + 125) {
-		setPageLocation('about')
-	}
+		if(window.pageYOffset + window.innerHeight >= hiddenRef.current.offsetTop + 125) {
+			setPageLocation('about')
+		}
   }
 
   return (

@@ -12,6 +12,7 @@ export default function Tag(props) {
         borderRadius: '5px',
         margin: '1%',
         padding: '1% 2%',
+        zIndex: 10,
         border: `solid 2pt ${
           /*
            Colors
