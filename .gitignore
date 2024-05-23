@@ -5,6 +5,8 @@ src/Resources/firebaseKey.js
 .env
 
 build
+dist
+.firebase
 
 /node_modules
 node_modules
