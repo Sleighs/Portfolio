@@ -3,11 +3,12 @@ import logoPics from '../../Resources/Images/logos';
 import './style.css'
 import { ThemeContext } from '../../Context/ThemeContext';
 import { DataContext } from '../../Context/DataContext';
+import Sparkle from '../Sparkle';
 
 const Skills = (props) => {
   const { setPageLocation } = useContext(DataContext)
 
-  const hiddenRef = useRef();
+  const hiddenRef = useRef(null);
 
   const [frontEndSkills, setFrontEndSkills]	= useState([
 	'javascript', 
@@ -45,7 +46,7 @@ const Skills = (props) => {
 
   return (
 	<div className="container container-md" id="skills-container" ref={hiddenRef}>
-	  <div className="skills__list" id="skills-list1">
+		<div className="skills__list" id="skills-list1">
 		<h3 className="section-subtitle skills__title">Front-end</h3>
 		<div className="skills__front-end">
 			{

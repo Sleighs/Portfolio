@@ -6,6 +6,13 @@
     font-size: 1.5em;
 }
 
+.about-intro__button {
+    transition: transform 0.25s ease-in-out;
+}
+.about-intro__button:hover {
+    transform: translateY(-6px)
+}
+
 @media only screen and (min-width: 1230px) {
     .about-intro__text {
         width: 85%;

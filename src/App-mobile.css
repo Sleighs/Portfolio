@@ -98,11 +98,13 @@
     .contact__info-dark {
       /*background-color: rgba(142, 142, 142, 0.9);
       background-color: rgba(39, 29, 29, 0.9);*/
-      background-color: rgba(13, 18, 20, 1);
+      /* background-color: rgba(13, 18, 20, 1); */
+      /* color: white; */
     }
     .contact__info-light {
       /*background-color: rgba(148, 93, 93, 0.1);*/
-      background-color: rgba(236, 223, 223, 1);
+      /* background-color: rgba(236, 223, 223, 1); */
+      /* color: black; */
     }
     
     .intro-container {
@@ -113,8 +115,7 @@
     }
 
     .intro-container {
-      background-size: 375%;;
-
+      background-size: 375%;
     }
     #map-container {
       width: 80%;

@@ -1,38 +1,53 @@
 import React, { useEffect, useRef } from 'react';
 
-const Sparkle = () => {
+const Sparkle = (props) => {
+  const { 
+    parentRef,
+    sectionType,
+  } = props;
+
   const canvasRef = useRef(null);
 
   useEffect(() => {
-    const canvas = canvasRef.current;
+    const canvas = canvasRef?.current;
     const ctx = canvas.getContext('2d');
     const sparkles = [];
-    const numSparkles = 10;
+    const numSparkles = 11;
 
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    const resizeCanvas = () => {
+      if (parentRef?.current) {
+        const { width, height } = parentRef.current.getBoundingClientRect();
+        canvas.width = width;
+        canvas.height = height;
+      } else {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+    };
+
 
     class Sparkle {
-      constructor(x, y, size, speedX, speedY, opacity) {
+      constructor(x, y, size, speedX, speedY, opacity, color) {
         this.x = x;
         this.y = y;
         this.size = size;
         this.speedX = speedX;
         this.speedY = speedY;
         this.opacity = opacity;
+        this.color = color;
       }
 
       draw() {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity})`;
+        ctx.fillStyle = `rgba(${this.color}, ${this.opacity})`;
         ctx.fill();
       }
 
       update() {
         this.x += this.speedX;
         this.y += this.speedY;
-        this.opacity -= 0.01;
+        this.opacity -= 0.006;
         if (this.opacity <= 0) {
           this.reset();
         }
@@ -45,6 +60,8 @@ const Sparkle = () => {
         this.speedX = (Math.random() - 0.5) * 0.5;
         this.speedY = (Math.random() - 0.5) * 0.5;
         this.opacity = Math.random();
+        this.color = Math.random() < 0.5 ? '255, 255, 255' : '255, 77, 70'; // White or Red
+
         //console.log('reset', this.speedX, this.speedY);
       }
     }
@@ -57,7 +74,8 @@ const Sparkle = () => {
         const speedX = (Math.random() - 0.5) * 0.5;
         const speedY = (Math.random() - 0.5) * 0.5;
         const opacity = Math.random();
-        sparkles.push(new Sparkle(x, y, size, speedX, speedY, opacity));
+        const color = Math.random() < 0.5 ? '255, 255, 255' : '255, 77, 70'; // White or Red
+        sparkles.push(new Sparkle(x, y, size, speedX, speedY, opacity, color));
       }
     }
 
@@ -70,6 +88,7 @@ const Sparkle = () => {
       requestAnimationFrame(animate);
     }
 
+    resizeCanvas();
     initSparkles();
     animate();
 
@@ -80,20 +99,38 @@ const Sparkle = () => {
       initSparkles();
     };
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+    
+    //window.addEventListener('resize', handleResize);
+    //return () => window.removeEventListener('resize', handleResize);
 
+    window.addEventListener('resize', resizeCanvas);
+    return () => window.removeEventListener('resize', resizeCanvas);
+  }, [parentRef]);
+
+  // return (
+  //   <canvas 
+  //     ref={canvasRef} 
+  //     style={{ 
+  //       position: parentRef ? 'absolute' : 'fixed', 
+  //       top: 0, 
+  //       left: 0, 
+  //       zIndex: 5,
+  //     }} />
+  //   );
   return (
-    <canvas 
-      ref={canvasRef} 
+    <canvas ref={canvasRef} 
       style={{ 
-        position: 'fixed', 
+        position: parentRef === null ? 'fixed' : 'absolute', 
         top: 0, 
         left: 0, 
-        zIndex: 1,
-      }} />
-    );
+        width: '100%', 
+        height: '100%', 
+        zIndex: 1, 
+        pointerEvents: 'none' 
+      }} 
+    />
+  );
+
 };
 
 export default Sparkle;

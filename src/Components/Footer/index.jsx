@@ -6,7 +6,7 @@ const Footer = (props) => {
   const proverbs = [
     {latin: "Audentes fortuna iuvat", english: "Fortune favors the bold", author: "Virgil"},
     {latin: "Fiat justitia, ruat caelum", english: "Let justice be done, though the heavens fall", author: "Anonymous" /*"Lucius Calpurnius Piso Caesoninus, Immanuel Kant"*/},
-    {latin: "Astra inclinant, sed non obligant", english: "The stars incline us, they do not bind us", author: "Anonymous"},
+    //{latin: "Astra inclinant, sed non obligant", english: "The stars incline us, they do not bind us", author: "Anonymous"},
     {latin: "Aut viam inveniam aut faciam", english: "I will either find a way or make one", author: "Hannibal"},
     //{latin: "Fiat justitia, et pereat mundus", english: "Let justice be done, though the world should perish", author: "Ferdinand I"},
     //{latin: "Vi veri universum vivus vici", english: "By the power of truth, I, while living, have conquered the universe", author: "Robert Nye, Faust"},
@@ -66,10 +66,15 @@ const Footer = (props) => {
           </svg>
         </a>
       </div>
-      {/*<Crypt />*/}
+      {/*<Crypt /> &#8729;*/}
       <div className="footer-text">
-        <p style={{display: 'none'}}>2023 &#8729; Created by Samuel Wright</p>
-        <p id="proverb" style={{padding: '5px 0px 7px 0px'}} title={`"${proverbText?.title}" ${proverbText?.author ? '-' + proverbText.author : ''}`}>{`${proverbText?.text}`}</p>
+        <p style={{
+          display: '',
+          fontFamily: 'Cabin',
+          fontSize: '.7em',
+          padding: '5px 0px 7px 0px',
+        }}> SAMUEL WRIGHT &copy;2024 </p>  
+        <p id="proverb" style={{display: 'none', padding: '5px 0px 7px 0px',}} title={`"${proverbText?.title}" ${proverbText?.author ? '-' + proverbText.author : ''}`}>{`${proverbText?.text}`}</p>
       </div>
     </footer>
   )

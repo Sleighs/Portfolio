@@ -158,7 +158,7 @@ const Contact = (props) => {
     }
         
     return (
-        <div className={"container"} id="contact-container" ref={hiddenRef}>
+        <div className="container" id="contact-container" ref={hiddenRef} style={{marginTop: '4%',}}>
             <div>
                 <p style={{
                     textAlign: 'center',
@@ -179,41 +179,42 @@ const Contact = (props) => {
                     style={contactFormBtn2} 
                     onClick={(e)=>{resetSend()}}>New Message</button>
             </div> 
-            : <form className='contact-form' >
-                <div style={/*formOptionStyle, */{display: 'none',}} >
-                    <p>Or use this contact form below:</p>
-                </div>
-                <div style={{display: 'none',}} className="form-group contact-form__input-container"> 
-                    <label name="inputName" className="form-text">Name</label>
+            : <form className='contact-form'>
+                <div style={{display: '',}} className="form-group contact-form__input-container"> 
+                    <label name="inputName" className="form-text" style={{display: 'none'}}>Name</label>
                     <input type="text" 
-                        className="form-control" 
+                        className={`contact__input contact__input-${theme}`} 
                         id="name-input" 
-                        
+                        placeholder='Name'
                         name="name" value={formData.name}  
                         onChange={(e)=>{handleChange(e)}}
+                        style={{zIndex: 10}}
                     />
                 </div>
-                <div className="form-group contact-form__input-container">
-                    <label name="inputEmail" className="form-text">Email</label>
+                <div className={`form-group contact-form__input-container form-group-${theme}`} >
+                    <label name="inputEmail" className="form-text" style={{display: 'none'}}>Email</label>
                     <input type="email" 
-                        className="form-control" 
+                        className={`contact__input contact__input-${theme}`} 
                         id="email-input" 
-                        placeholder='your@email.com'
+                        placeholder='Email'
                         aria-describedby="emailHelp" 
                         value={formData.email} 
                         name="email"
                         onChange={(e)=>{handleChange(e)}}
+                        style={{zIndex: 10}}
                     />
                 </div>
-                <div className="form-group contact-form__input-container">
-                    <label name="inputMessage" className="form-text">Message</label>
+                <div className={`form-group contact-form__input-container  form-group-${theme}`}>
+                    <label name="inputMessage" className="form-text" style={{display: 'none'}}>Message</label>
                     <textarea type="text" 
-                        className="form-control form-msg" 
+                        className={`form-msg contact__input contact__input-${theme}`} 
                         id="message-input" 
-                        placeholder='Message...'
+                        placeholder='Message'
                         name="message" 
                         value={formData.message} 
-                        onChange={(e)=>{handleChange(e)}}                    />
+                        onChange={(e)=>{handleChange(e)}}                    
+                        style={{zIndex: 10}}
+                    />
                 </div>
                 <input type="submit" className={"input for-control submit"} style={contactFormBtn} value="Send" 
                     onClick={(e)=>{e.preventDefault(); handleSubmit(e);}}/>

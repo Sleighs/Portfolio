@@ -3,8 +3,8 @@ import { Routes, Route } from 'react-router-dom';
 import { Footer, Nav } from './Components';
 
 import './App.css';
-import './App-theme.css';
 import './App-mobile.css';
+import './App-theme.css';
 
 import { HomePage } from './Pages';
 import { DataContext } from './Context/DataContext';

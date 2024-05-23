@@ -109,23 +109,6 @@ export default function MainNav(props) {
               <div
                 className=
                 {
-                  pageLocation === 'projects' 
-                  ? `nav-link-highlighted main-nav__list-item` 
-                  : `nav-link-normal main-nav__list-item main-nav__list-item-${theme}`
-                }
-                onClick={() => {
-                  setPageLocation('projects');
-                  scrollTo('projects');
-                  setIsNavExpanded(!isNavExpanded);
-                }}
-              >
-                projects
-              </div> 
-            </li>
-            <li className="main-nav__list-item-container">
-              <div
-                className=
-                {
                   pageLocation === 'about' 
                   ? `nav-link-highlighted main-nav__list-item` 
                   : `nav-link-normal main-nav__list-item main-nav__list-item-${theme}`
@@ -138,6 +121,23 @@ export default function MainNav(props) {
               >
                 about
               </div>
+            </li>
+            <li className="main-nav__list-item-container">
+              <div
+                className=
+                {
+                  pageLocation === 'projects' 
+                  ? `nav-link-highlighted main-nav__list-item` 
+                  : `nav-link-normal main-nav__list-item main-nav__list-item-${theme}`
+                }
+                onClick={() => {
+                  setPageLocation('projects');
+                  scrollTo('projects');
+                  setIsNavExpanded(!isNavExpanded);
+                }}
+              >
+                projects
+              </div> 
             </li>
             <li className="main-nav__list-item-container" style={{display:'none',}}>
               <div

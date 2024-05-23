@@ -162,6 +162,16 @@
     background-color: rgba(236, 223, 223, .9);
 }
 
+.contact__input-dark {
+    background-color: rgba(13, 18, 20, .9);
+    color: white;
+}
+.contact__input-light {
+    /* background-color: rgba(236, 223, 223, .9); */
+    color: black;
+}
+
+
 
 /* Footer */
 #footer-container {

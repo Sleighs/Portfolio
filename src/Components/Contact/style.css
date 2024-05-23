@@ -28,6 +28,7 @@
   width: fit-content;
   text-align: left;
   font-size: 1.2em;
+  margin: 4px 0;
 }
 .form-control {
   width: 100%;
@@ -44,4 +45,19 @@
 
 .form-msg {
   min-height: 150px;
+}
+
+#email-input, #message-input, 
+.form-group-dark, .form-group-light {
+  z-index: 10;
+  width: 100%;
+}
+
+.contact__input {
+  width: 100%;
+  padding: 1% 2%;
+  font-size: 1.2em;
+  border: 2px solid rgba(255, 77, 70, .7);
+  border-radius: 3px;
+  z-index: 10;
 }

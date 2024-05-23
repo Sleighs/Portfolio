@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 import { DataContext } from '../../Context/DataContext'
 import { ThemeContext } from '../../Context/ThemeContext'
 
@@ -27,7 +27,29 @@ export default function Intro() {
         overflow: 'hidden',
         maxWidth: '100vw',
       }}>
-      <p className="about-intro__text">Hi, I'm Samuel Wright, a <strong>full stack web developer</strong> focused on creating <strong>beautiful</strong> and <strong>user friendly</strong> applications while writing <strong>clean code</strong>.</p>
+      <div className="about-intro__" style={{
+        fontSize: '2.2em',
+      }}>Hi. I'm Sam.</div>
+      <div className="about-intro__" style={{
+        fontSize: '2.2em',
+      }}>
+        I'm a full stack web developer.
+      </div>
+      <button className={"about-intro__button about-intro__button-" + theme}
+        onClick={() => {
+          document.getElementById('about').scrollIntoView({ behavior: 'smooth' });        
+        }}
+        style={{
+          fontSize: '1.5em',
+          padding: '0.25em 1.5em',
+          marginTop: '1.75em',
+          backgroundColor: 'transparent',
+          border: theme === 'light' ? '5px solid rgb(255, 77, 70)' : '5px solid rgb(255, 77, 70)',
+          color: theme === 'light' ? 'rgb(255, 77, 70)' : 'rgb(255, 255, 255)',
+        }}
+      >
+        View my work
+      </button>
     </div>
   )
 }

@@ -111,3 +111,8 @@ body {
 .hidden {
   display: none;
 }
+
+form, 
+.skills__logo-container {
+  z-index: 100;
+}
