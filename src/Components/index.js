@@ -11,3 +11,4 @@ export { default as ForceGraph } from './ForceGraph';
 export { default as Crypt } from './Crypt';
 export { default as Sparkle } from './Sparkle';
 export { default as Work } from './Work'; 
+export { default as Intro } from './Intro';

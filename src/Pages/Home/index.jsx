@@ -1,23 +1,15 @@
 import React, { createRef, useContext } from 'react';
-import { Contact, ContactInfo, Projects, Skills, Sparkle, Work } from '../../Components';
-import Intro from '../../Components/Intro';
-import { ThemeContext } from '../../Context/ThemeContext';
-import './style-mobile.css';
-import './style-svg.css';
-import './style.css';
 import { useMediaQuery } from 'react-responsive';
+import { Contact, ContactInfo, Projects, Skills, Sparkle, Work, Intro } from '../../Components';
+import { ThemeContext } from '../../Context/ThemeContext';
+import './style-svg.css';
+import './style-mobile.css';
+import './style.css';
 
 const HomePage = (props) => {
   const { theme } = useContext(ThemeContext);
   const homeRef = createRef(null);
   const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
-  // const isMobile = () => {
-  //   if(window.innerWidth <= 768) {
-  //     return true;
-  //   } else {
-  //     return false;
-  //   }
-  // }
 
   return (
     <div id='home-container' ref={homeRef}>   
@@ -26,13 +18,13 @@ const HomePage = (props) => {
         <Intro />
         <ContactInfo />
       </div>
-      <div className="section-header section-header-first"  id="about">
+      <div className="section-header section-header-first" id="about">
         <h3 className="section-title"><strong>About</strong></h3>
       </div>
       <p className="about__text" style={{
         width: isMobile ? '90%' : '65%',
         height: 'fit-content',
-        margin: '5% auto 9% auto',
+        margin: '5% auto 12% auto',
         fontSize: isMobile ? '1.2em' : '1.5em',
       }}>
         With a dedication to a philosophy of lifelong learning, I'm a full stack developer with a strong passion passion for all facets of web development. The blend of creativity, logic, and endless opportunities for discovery fuels my enthusiasm for this field. When I step away from coding, I like to immerse myself in reading, playing guitar, and staying fit.

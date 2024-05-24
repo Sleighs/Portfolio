@@ -1,3 +1,6 @@
+#projects-container {
+    margin-top: 6%;;
+}
 #projects-header {
     height: fit-content;
     min-height: 80px;
@@ -23,6 +26,8 @@
 }
 .tag-row {
     margin: 3% auto;
+    padding: 0;
+    margin-left: -1%;
 }
 .project-description {
     font-family: 'Cabin';
@@ -51,6 +56,10 @@ hr {
     margin-top: -50px
 }
 
+.project-link-style {
+    text-decoration: none;
+}
+
 @media only screen and (min-width: 950px) {
   .projects-pic {
     max-width: 360px;
@@ -72,5 +81,11 @@ hr {
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .project-description__link {
+        text-align: center;
     }
 }

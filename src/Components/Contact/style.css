@@ -1,5 +1,5 @@
 #contact-container {
-    margin: auto;
+    margin: 6% auto auto auto;
     width: 90%;
     padding: 0;
     padding-bottom: 16%;
@@ -49,7 +49,7 @@
 
 #email-input, #message-input, 
 .form-group-dark, .form-group-light {
-  z-index: 10;
+  /* z-index: 10; */
   width: 100%;
 }
 
@@ -57,7 +57,18 @@
   width: 100%;
   padding: 1% 2%;
   font-size: 1.2em;
-  border: 2px solid rgba(255, 77, 70, .7);
+  border: 2px solid;
   border-radius: 3px;
-  z-index: 10;
+  margin: 4px 0;
+  z-index: 2;
+  opacity: 1;
+  border-color: rgba(199, 200, 212, 0.9); /* rgba(255, 77, 70, .7 */
+}
+.contact__input:focus {
+  border-color: rgba(199, 200, 212, 0.9); 
+  box-shadow: 0px 0px 2px 2px rgba(238, 185, 184, 0.9);
+  outline: none;
+}
+.contact__input::selection {
+  background-color: rgba(255, 77, 70, 0.7);
 }

@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import './style.css';
 
 const Sparkle = (props) => {
   const { 
@@ -119,13 +120,14 @@ const Sparkle = (props) => {
   //   );
   return (
     <canvas ref={canvasRef} 
+      className="sparkle-canvas"
       style={{ 
         position: parentRef === null ? 'fixed' : 'absolute', 
         top: 0, 
         left: 0, 
         width: '100%', 
         height: '100%', 
-        zIndex: 1, 
+        //zIndex: 1, 
         pointerEvents: 'none' 
       }} 
     />

@@ -158,7 +158,7 @@ const Contact = (props) => {
     }
         
     return (
-        <div className="container" id="contact-container" ref={hiddenRef} style={{marginTop: '4%',}}>
+        <div className="container" id="contact-container" ref={hiddenRef}>
             <div>
                 <p style={{
                     textAlign: 'center',
@@ -188,7 +188,6 @@ const Contact = (props) => {
                         placeholder='Name'
                         name="name" value={formData.name}  
                         onChange={(e)=>{handleChange(e)}}
-                        style={{zIndex: 10}}
                     />
                 </div>
                 <div className={`form-group contact-form__input-container form-group-${theme}`} >
@@ -201,7 +200,6 @@ const Contact = (props) => {
                         value={formData.email} 
                         name="email"
                         onChange={(e)=>{handleChange(e)}}
-                        style={{zIndex: 10}}
                     />
                 </div>
                 <div className={`form-group contact-form__input-container  form-group-${theme}`}>
@@ -212,8 +210,7 @@ const Contact = (props) => {
                         placeholder='Message'
                         name="message" 
                         value={formData.message} 
-                        onChange={(e)=>{handleChange(e)}}                    
-                        style={{zIndex: 10}}
+                        onChange={(e)=>{handleChange(e)}} 
                     />
                 </div>
                 <input type="submit" className={"input for-control submit"} style={contactFormBtn} value="Send" 

@@ -162,12 +162,24 @@
     background-color: rgba(236, 223, 223, .9);
 }
 
-.contact__input-dark {
-    background-color: rgba(13, 18, 20, .9);
+
+/* Contact Form */
+
+.contact__input-dark,
+.contact__input-dark:-webkit-autofill {
+    background-color: rgba(13, 18, 20, 1);
     color: white;
 }
-.contact__input-light {
-    /* background-color: rgba(236, 223, 223, .9); */
+.contact__input-dark:focus {
+    color: white;
+}
+
+.contact__input-light,
+.contact__input-light:-webkit-autofill {
+    background-color: white;
+    color: black;
+}
+.contact__input-light:focus {
     color: black;
 }
 
