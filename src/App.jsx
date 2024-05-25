@@ -16,17 +16,16 @@ const App = (props) => {
 
   return (
     <div id='app' className={`app-${theme}`}>
-      
-        <Nav 
-          pageLocation={pageLocation} 
-          setPageLocation={setPageLocation}
-        />
+      <Nav 
+        pageLocation={pageLocation} 
+        setPageLocation={setPageLocation}
+      />
 
-        <Routes>
-          <Route path="/" element={<HomePage />} />          
-        </Routes>
-        
-        <Footer />
+      <Routes>
+        <Route path="/" element={<HomePage />} />          
+      </Routes>
+      
+      <Footer />
       <div className='app-container hidden'></div>
     </div>
   )

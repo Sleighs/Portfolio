@@ -13,7 +13,7 @@ const Sparkle = (props) => {
     const canvas = canvasRef?.current;
     const ctx = canvas.getContext('2d');
     const sparkles = [];
-    const numSparkles = 11;
+    const numSparkles = 12;
 
     const resizeCanvas = () => {
       if (parentRef?.current) {
@@ -118,20 +118,40 @@ const Sparkle = (props) => {
   //       zIndex: 5,
   //     }} />
   //   );
+
   return (
-    <canvas ref={canvasRef} 
-      className="sparkle-canvas"
-      style={{ 
-        position: parentRef === null ? 'fixed' : 'absolute', 
-        top: 0, 
-        left: 0, 
-        width: '100%', 
-        height: '100%', 
-        //zIndex: 1, 
-        pointerEvents: 'none' 
-      }} 
-    />
-  );
+    <div style={{ 
+      position: parentRef === null ? 'fixed' : 'absolute', 
+      top: 0, 
+      left: 0, 
+      width: '100%', 
+      height: '100%', 
+      zIndex: 0, 
+      pointerEvents: 'none' 
+    }} >
+      <canvas ref={canvasRef} 
+        className="sparkle-canvas"
+        style={{
+          width: '100%', 
+          height: '100%', 
+        }}
+      />
+    </div>);
+
+  // return (
+  //   <canvas ref={canvasRef} 
+  //     className="sparkle-canvas"
+  //     style={{ 
+  //       position: parentRef === null ? 'fixed' : 'absolute', 
+  //       top: 0, 
+  //       left: 0, 
+  //       width: '100%', 
+  //       height: '100%', 
+  //       zIndex: 1, 
+  //       pointerEvents: 'none' 
+  //     }} 
+  //   />
+  // );
 
 };
 

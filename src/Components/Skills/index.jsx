@@ -79,11 +79,7 @@ const SkillBox = (props) => {
 	const { theme } = useContext(ThemeContext)
 
 	return (
-		<div className={"skills__logo-container skills__logo-container-" + theme}
-			style={{
-				zIndex: 11,
-			}}
-		>
+		<div className={"skills__logo-container skills__logo-container-" + theme}>
 			<img className="skills__logo-img" src={logoPics[props.name]} alt={props.name} />
 			<span className="skills__logo-text">{props.name}</span>
 		</div> 

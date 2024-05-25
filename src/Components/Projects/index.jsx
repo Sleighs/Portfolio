@@ -36,7 +36,9 @@ const Projects = (props) => {
             >
                 <div className="col-md-7 project-description">
                     <h3 className="projects-row-title"><strong>Male Reality Calculator</strong></h3>
-                    <p>Developer of the popular online dating tool The Male Reality Calculator. The calculator uses U.S. Census Bureau statistics to calculate the user's odds of meeting their ideal woman.</p>
+                    <p>Developer of the popular online dating tool The Male Reality Calculator. The calculator uses U.S. Census Bureau statistics to calculate the user's odds of meeting their ideal woman. 
+                    <p style={{display: 'none'}}>Featured on <a className="project-link-style" target="_blank" href="https://screenrant.com/what-is-reality-check-calculator-tinder-explained/" rel="noreferrer">Screenrant</a>.</p>
+                    </p>
                     <p className="project-description__link">
                         <a target="_blank" href="https://realitycalc.com/" rel="noreferrer">Realitycalc.com</a>
                     </p>    

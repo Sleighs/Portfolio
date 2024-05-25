@@ -9,10 +9,11 @@ export default function Tag(props) {
     <div className='tag-container'
       style={{
         display:'inline-block',
+        position: 'relative',
         borderRadius: '5px',
         margin: '1%',
         padding: '1% 2%',
-        zIndex: 10,
+        zIndex: 5,
         border: `solid 2pt ${
           /*
            Colors

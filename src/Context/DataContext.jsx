@@ -4,9 +4,9 @@ const DataContext = React.createContext()
 
 function DataContextProvider(props){ 
   const [pageLocation, setPageLocation] = useState('home')
-  const [projectsToDisplay, setProjectsToDisplay] = useState([
-    'chatplus', 
+  const [projectsToDisplay, setProjectsToDisplay] = useState([ 
     'realitycalc', 
+    'chatplus',
     'heromatchups', 
     'mint', 
     'cashflow',

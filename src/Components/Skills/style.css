@@ -31,19 +31,18 @@
 }
 .skills__logo-container {
     display: inline-block;
+    position: relative;
     height: 120px;
     width: 80px;
     margin: 2% 1.5%;
     padding: 2% 0 ;
     border-radius: 1px;
-    /* z-index: 11;  */
     transition: transform 0.5s ease-in-out;
+    opacity: 1;
 }
-
 .skills__logo-container:hover {
     transform: translateY(-5px)
 }
-
 
 .skills__logo-img {
     max-height: 60px;

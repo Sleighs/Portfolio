@@ -46,7 +46,6 @@ const HomePage = (props) => {
         <h3 className="section-title"><strong>Contact</strong></h3>
       </div>
       <Contact />
-      {/* <Sparkle />  */}
     </div>
   )
 }
