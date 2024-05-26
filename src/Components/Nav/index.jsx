@@ -20,7 +20,7 @@ export default function MainNav(props) {
 
   // Save current scroll position
   const handleScroll = () => {
-      const position = window.pageYOffset;
+      const position = window.pageYOffset;// || window.scrollY || window.scrollTop || document.getElementsByTagName("html")[0].scrollTop;
       setScrollPosition(position);
   };
 

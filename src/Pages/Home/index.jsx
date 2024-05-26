@@ -36,10 +36,10 @@ const HomePage = (props) => {
       <div className="home-projects__container">
         <Projects />
       </div>
-      <div className="section-header" id="work" style={{display: 'none',}}>
+      <div className="section-header" id="work" style={{display: '',}}>
         <h3 className="section-title"><strong>Work</strong></h3>
       </div>
-      <div className="home-projects__container" style={{display: 'none',}}>
+      <div className="home-projects__container" style={{display: '',}}>
         <Work />
       </div>
       <div className="section-header"  id="contact">

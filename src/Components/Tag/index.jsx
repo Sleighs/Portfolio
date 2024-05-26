@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 
 export default function Tag(props) {
   const {
@@ -24,14 +24,17 @@ export default function Tag(props) {
           */
 
           name === 'React' ? '#6DC3F6' :
-          name === 'JavaScript' ? '#f0db4f' :
+          name === 'CSS' ? '#f0db4f' :
           name === 'React Native' ? 'red' :
-          name === 'CSS' ? '#5FF78D' :
+          name === 'JavaScript' ? '#5FF78D' :
           name === 'JQuery' ? 'orange' :
           name === 'Redux' ? '#CA79C2 ' :
           name === 'MongoDB' ? '#99CC46' :
           name === 'Node.js' ? 'rgb(30, 85, 243)' :
           name === 'Puppeteer' ? 'rgb(64, 88, 193)':
+          name === 'Express' ? 'rgb(30, 85, 243)' :
+          name === 'D3' ? 'orange' :
+          //name === 'Liquid' ? 'rgb(30, 85, 243)' :
           'rgb( 153, 185, 190)'
         }`,
       }}>
