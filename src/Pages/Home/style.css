@@ -49,14 +49,14 @@
     
 }
 .section-header {
-    min-height: 80px;
-    margin: 0 auto;
+    min-height: auto;
     text-align: center;
-    padding-top: 80px;
+    /* padding-top: 80px; */
+    margin: 10% auto 8% auto;
 }
 
 .section-header-first {
-    padding-top: 105px;
+    padding-top: 5%;
 }
 
 .home-projects__container {
@@ -69,15 +69,21 @@
 
 .intro-container {
     padding: 16% 9.8%;
-    height: 100vh;
+    min-height: fit-content;
+    /* height: 100vh; */
     /*background-position: 6%;*/
     margin-bottom: 4.75%;
 }
 
-/* Mobile under 768px */
-@media only screen and (max-width: 768px) {
-  .home-projects__container {
-    padding: 0 10%;
+/* Mobile under 600px */
+@media only screen and (max-width: 600px) {
+    .home-projects__container {
+        padding: 0 10%;
+    }
+    
+    .intro-container {
+        min-height: fit-content;
+        height: 120vh;
     }
 }
 

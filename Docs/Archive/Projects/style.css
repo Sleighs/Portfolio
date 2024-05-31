@@ -1,5 +1,5 @@
 #projects-container {
-    margin-top: 7%;
+    margin-top: 6%;;
 }
 #projects-header {
     height: fit-content;
@@ -22,10 +22,10 @@
 }
 
 .row {
-    margin: 5% auto 3% auto;
+    margin: auto;
 }
 .tag-row {
-    margin: 5% auto;
+    margin: 3% auto;
     padding: 0;
     margin-left: -1%;
 }
@@ -51,7 +51,6 @@
 }
 .projects-pic {
   max-width: 315px;
-  max-height: 420px;
 }
 .chatplus-pic-container {
     margin-top: -50px
@@ -61,28 +60,26 @@
     text-decoration: none;
 }
 
-
-
 /* Animations */
 
-.project-left-slide {
+/* Animations */
+/* .project-left-slide {
     opacity: 0;
-    transform: translateX(-150px);
+    transform: translateX(-50px);
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
   }
 
 .project-right-slide {
     opacity: 0;
-    transform: translateX(150px);
+    transform: translateX(50px);
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
   }
 
 .project-in-view {
     opacity: 1;
     transform: translateX(0);
-}
-
-
+} */
+  
 
 @media only screen and (min-width: 950px) {
   .projects-pic {

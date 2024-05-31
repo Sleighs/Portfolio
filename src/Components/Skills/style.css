@@ -1,8 +1,6 @@
 #skills-container {
-    padding: 0;
-    padding-top: 1%;
+    padding: 1% 0 3% 0;
     font-size: .95em;
-    
 }
 
 .skills__list {

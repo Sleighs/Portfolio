@@ -1,12 +1,11 @@
 import React from 'react'
 
 export default function Tag(props) {
-  const {
-    name
-  } = props
+  const {  name } = props;
 
   return (
     <div className='tag-container'
+      key={name}
       style={{
         display:'inline-block',
         position: 'relative',
@@ -24,9 +23,9 @@ export default function Tag(props) {
           */
 
           name === 'React' ? '#6DC3F6' :
-          name === 'CSS' ? '#f0db4f' :
-          name === 'React Native' ? 'red' :
-          name === 'JavaScript' ? '#5FF78D' :
+          name === 'CSS' ? '#5FF78D' :
+          name === 'React Native' ? 'rgb(255, 77, 70)' :
+          name === 'JavaScript' ? '#f0db4f' :
           name === 'JQuery' ? 'orange' :
           name === 'Redux' ? '#CA79C2 ' :
           name === 'MongoDB' ? '#99CC46' :

@@ -36,13 +36,11 @@ body {
   height: 100%;
 }
 
-
 .title {
   /*font-family: 'Cabin Bold';*/
   text-align: center;
   font-size: 1.7em;
   opacity: .8;
-  
 }
 
 #info-container {

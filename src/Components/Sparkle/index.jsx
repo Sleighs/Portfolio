@@ -13,7 +13,7 @@ const Sparkle = (props) => {
     const canvas = canvasRef?.current;
     const ctx = canvas.getContext('2d');
     const sparkles = [];
-    const numSparkles = 12;
+    const numSparkles = 14;
 
     const resizeCanvas = () => {
       if (parentRef?.current) {
