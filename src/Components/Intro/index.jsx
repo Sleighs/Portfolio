@@ -37,7 +37,7 @@ export default function Intro() {
       </div>
       <button className={"about-intro__button about-intro__button-" + theme}
         onClick={() => {
-          document.getElementById('about').scrollIntoView({ behavior: 'smooth' });        
+          document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });        
         }}
         style={{
           fontSize: '1.5em',

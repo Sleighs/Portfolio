@@ -27,7 +27,7 @@ const HomePage = (props) => {
         margin: '5% auto 12% auto',
         fontSize: isMobile ? '1.2em' : '1.5em',
       }}>
-        With a dedication to a philosophy of lifelong learning, I'm a full stack developer with a strong passion passion for all facets of web development. The blend of creativity, logic, and endless opportunities for discovery fuels my enthusiasm for this field. When I step away from coding, I like to immerse myself in reading, playing guitar, and staying fit.
+        With a dedication to a philosophy of lifelong learning, I'm a full stack developer with a strong passion passion for all facets of web development. The blend of creativity, logic, and endless opportunities for discovery fuels my enthusiasm for this field. When I step away from coding, I like to immerse myself in reading, playing music, and staying fit.
       </p>
       <Skills />
       <div className="section-header" id="projects">

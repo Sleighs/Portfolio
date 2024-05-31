@@ -24,7 +24,7 @@ const ProjectData = [
   },
   {
     title: `ChatPlus`,
-    description: `ChatPlus is a Google Chrome extension for Rumble that improves livestream chat user experience. The extension introduces user-friendly features to improve user interaction and engagement.`,
+    description: `ChatPlus is a Google Chrome extension that enhances the Rumble livestream chat user experience. The extension introduces user-friendly features to improve user interaction and engagement.`,
     features: [
       'User mention highlighting',
       'Easy user tagging',
@@ -77,10 +77,10 @@ const ProjectData = [
     id: 'yt-playlist-downloader'
   },
   {
-    title: `Mint 2048`,
-    description: `Mint is a sliding tile puzzle game based on 2048 by Gabriele Cirulli where players combine tiles, perform combos and use special abilities to create the 2048 tile.`,
+    title: 'Mint 2048',
+    description: 'Mint is a sliding tile puzzle game based on 2048 by Gabriele Cirulli where players combine tiles, perform combos and use special abilities to create the 2048 tile.',
     links: [
-      { link: 'https: //github.com/sleighs/mint-2048', linkText: 'View repository', show: true },
+      { link: 'https://github.com/sleighs/mint-2048', linkText: 'View repository', show: true },
       { link: 'https://plus-7ed02.web.app/', linkText: 'Play Mint 2048', show: true }
     ],
     tags: ['React', 'JavaScript', 'CSS'],
@@ -93,9 +93,9 @@ const ProjectData = [
     description: `CashFlow JS is an adaptation of the CashFlow 101 board game with additional gameplay options and rule customization that allows for many unique ways to play.`,
     links: [
       {
-        link: 'https://github.com/Sleighs/CashFlowJS', linkText: 'Play CashFlow JS', show: true
+        link: 'https://github.com/Sleighs/CashFlowJS', linkText: 'View on GitHub', show: true
       },
-      { link: 'https://sleighs.github.io/CashFlowJS/', linkText: 'View on GitHub', show: true },
+      { link: 'https://sleighs.github.io/CashFlowJs/', linkText: 'Play CashFlow JS', show: true },
 
       { link: 'https://github.com/Sleighs/cashflow-mobile ', linkText: 'CashFlowJs for Mobile repository', show: true }
     ],

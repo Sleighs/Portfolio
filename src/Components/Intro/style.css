@@ -9,6 +9,7 @@
 .about-intro__button {
     /* transition: transform 0.25s ease-in-out; */
     transition: .24s ease-in-out;
+    user-select: none;
 }
 .about-intro__button:hover {
     transform: translateY(-6px);

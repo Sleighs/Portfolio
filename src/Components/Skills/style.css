@@ -37,6 +37,7 @@
     border-radius: 1px;
     transition: transform 0.5s ease-in-out;
     opacity: 1;
+    user-select: none;
 }
 .skills__logo-container:hover {
     transform: translateY(-5px)
@@ -48,6 +49,7 @@
     height: 100%;
     display: flex;
     margin-bottom: 9px;
+    user-select: none;
 }
 
 .skills__logo-text {
