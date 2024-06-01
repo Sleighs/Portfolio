@@ -31,7 +31,7 @@ const ProjectData = [
   },
   {
     title: `Male Reality Calculator`,
-    description: `Developer of the popular online dating tool The Male Reality Calculator. The calculator uses U.S. Census Bureau statistics to calculate the user's odds of meeting their ideal woman.`,
+    description: `The Male Reality Calculator is a popular online dating tool that uses U.S. Census Bureau statistics to calculate the user's odds of meeting their ideal woman.`,
     links: [
       { link: `https://realitycalc.com/`, linkText: `Realitycalc.com`, show: true },
     ],
