@@ -12,3 +12,4 @@ dist
 node_modules
 todo.md
 /.firebase
+*.cache
