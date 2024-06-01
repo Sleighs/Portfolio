@@ -10,6 +10,7 @@
   top: 0;
   font-size: 1.5em;
   font-family: 'Cabin';
+  user-select: none;
 }
 .main-nav {
   list-style: none;
@@ -26,6 +27,7 @@
 .main-nav__list-item {
   height: fit-content;
   margin-left: auto;
+  cursor: pointer;
 }
 
 .nav-location {
@@ -36,6 +38,7 @@
   font-weight: bold;
   margin: auto;
   text-align: left;
+  cursor: pointer;
 }
 .nav-location__title1 {
 
