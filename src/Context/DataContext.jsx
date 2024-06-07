@@ -1,18 +1,18 @@
-import React, {useState} from "react"
+import React, {useState} from "react";
 
-const DataContext = React.createContext()
+const DataContext = React.createContext();
 
 function DataContextProvider(props){ 
-  const [pageLocation, setPageLocation] = useState('home')
+  const [pageLocation, setPageLocation] = useState('home');
   const [projectsToDisplay, setProjectsToDisplay] = useState([ 
-    'realitycalc', 
+    //'realitycalc', 
     'chatplus',
     'heromatchups', 
     'mint', 
     'cashflow',
     //'yt-playlist-webscraper',
     'yt-playlist-downloader',
-  ])
+  ]);
 
   return (
     <DataContext.Provider value={{
@@ -24,4 +24,4 @@ function DataContextProvider(props){
   )
 }
 
-export {DataContext, DataContextProvider}
+export {DataContext, DataContextProvider};
