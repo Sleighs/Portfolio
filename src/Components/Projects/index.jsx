@@ -12,7 +12,7 @@ import './style.css'
 
 const ProjectData = [
   {
-    title: `ChatPlus`,
+    title: `ChatPlus for Rumble`,
     description: `ChatPlus is a Google Chrome extension that enhances the Rumble livestream chat user experience. The extension introduces user-friendly features to improve user interaction and engagement.`,
     features: [
       'User mention highlighting',
