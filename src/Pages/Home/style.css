@@ -83,8 +83,15 @@
     
     .intro-container {
         min-height: fit-content;
-        height: 120vh;
+        height: 115vh;
+        padding-top: 35%;
     }
+}
+@media only screen and (max-width: 400px) {
+  .intro-container {
+      height: 115vh;
+      padding-top: 40%;
+  }
 }
 
 

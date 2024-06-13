@@ -7,3 +7,5 @@ const BusinessPage = () => {
     </div>
   )
 }
+
+export default BusinessPage

@@ -196,13 +196,13 @@ const Project = (props) => {
       const bottom = ref.current.getBoundingClientRect().bottom;
       const windowHeight = window.innerHeight;
       if (top < windowHeight + windowHeight * .2) {
-        //setInView(true);
+        // setInView(true);
       } else {
-        //setInView(false);
+        // setInView(false);
       }
-      console.log('bottom', bottom, windowHeight);
+      //console.log('bottom', bottom, windowHeight);
       if (windowHeight - bottom > bottom * .9) {
-        //setInView(false);
+        // setInView(false);
       }
     }
   }, [scrollPosition]);
