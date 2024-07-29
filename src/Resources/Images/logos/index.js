@@ -14,14 +14,15 @@ import pythonLogo from './python-logo.png';
 import reactLogo from './react-logo.png';
 import reduxLogo from './redux-logo.png';
 import sassLogo from './sass-logo.png';
+import typescriptLogo from './ts-logo.png';
 
 const logoPics = {
-    AdobeXD: adobexdLogo,
+    adobexd: adobexdLogo,
     bootstrap: bootstrapLogo,
-    CSS3: css3Logo,
+    css3: css3Logo,
     firebase: firebaseLogo,
     git: gitLogo,
-    HTML5: html5Logo,
+    html5: html5Logo,
     javascript: javascriptLogo,
     jest: jestLogo,
     linux: linuxLogo,
@@ -32,6 +33,7 @@ const logoPics = {
     react: reactLogo,
     redux: reduxLogo,
     sass: sassLogo,
+    typescript: typescriptLogo,
 };
 
 export default logoPics;

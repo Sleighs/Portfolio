@@ -29,7 +29,7 @@ const HomePage = (props) => {
       }}>
         With a dedication to a philosophy of lifelong learning, I'm a full stack developer with a strong passion passion for all facets of web development. The blend of creativity, logic, and endless opportunities for discovery fuels my enthusiasm for this field. When I step away from coding, I like to immerse myself in reading, playing music, and staying fit.
       </p>
-      <Skills />
+      
       <div className="section-header" id="projects">
         <h3 className="section-title"><strong>Projects</strong></h3>
       </div>
@@ -42,6 +42,7 @@ const HomePage = (props) => {
       <div className="home-projects__container" style={{display: '',}}>
         <Work />
       </div> */}
+      <Skills />
       <div className="section-header"  id="contact">
         <h3 className="section-title"><strong>Contact</strong></h3>
       </div>

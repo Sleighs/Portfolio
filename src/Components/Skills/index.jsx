@@ -11,26 +11,27 @@ const Skills = (props) => {
   const hiddenRef = useRef(null);
 
   const [frontEndSkills, setFrontEndSkills]	= useState([
-	'javascript', 
-	'react',
-	'redux',
+	'JavaScript',
+  'TypeScript',
+	'React',
+	'Redux',
 	'HTML5',
 	'CSS3',
-	'sass',
-	'bootstrap',
+	'Sass',
+	'Bootstrap',
   ])
   const [backEndSkills, setBackEndSkills] = useState([
-	'mongodb',
-	'node',
-	'python',
-	'firebase'
+	'MongoDb',
+	'Node',
+	'Python',
+	'Firebase'
   ])
   const [otherSkills, setOtherSkills] = useState([
-	'git',
+	'Git',
 	'AdobeXD',
-	'photoshop',
-	'linux',
-	'jest'
+	'Photoshop',
+	'Linux',
+	'Jest'
   ])
 
   useEffect(() => {
@@ -80,7 +81,9 @@ const SkillBox = (props) => {
 
 	return (
 		<div className={"skills__logo-container skills__logo-container-" + theme}>
-			<img className="skills__logo-img" src={logoPics[props.name]} alt={props.name} />
+			<img className="skills__logo-img" src={logoPics[
+        String(props.name).toLowerCase()
+        ]} alt={props.name} />
 			<span className="skills__logo-text">{props.name}</span>
 		</div> 
 	)

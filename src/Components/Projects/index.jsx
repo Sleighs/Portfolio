@@ -239,7 +239,7 @@ const Project = (props) => {
         <img className="img-responsive rounded projects-pic mx-auto d-block" alt={projectData?.alt} src={projectData?.pic}/>
         </a>
       </div>
-      <hr/>
+      {projectIndex < ProjectData.length - 1 && <hr/>}
     </div>
   )
 }
