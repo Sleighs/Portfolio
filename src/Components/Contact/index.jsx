@@ -164,7 +164,7 @@ const Contact = (props) => {
                     textAlign: 'center',
                     display: 'none',
                 }}>
-                    Schedule an appointment 
+                    Schedule a Quick Call 
                     <a style={{
                     
                     }} href="https://calendly.com/sleighs" target="blank">here</a>
