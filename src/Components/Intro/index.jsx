@@ -25,31 +25,30 @@ export default function Intro() {
     <div className={"about-intro about-intro-" + theme } ref={hiddenRef} 
       style={{
         overflow: 'hidden',
-        maxWidth: '100vw',
-      }}>
-      <div className="about-intro__" style={{
-        fontSize: '2.2em',
-      }}>Hi. I'm Sam.</div>
-      <div className="about-intro__" style={{
-        fontSize: '2.2em',
-      }}>
-        I'm a full stack web developer.
+      }}
+    >
+      <div className="about-intro__content">
+        <div className="about-intro__title">
+          Your Trusted South Jersey Web Developer for Strategic Web and Marketing Solutions
+        </div>
+        <div className="about-intro__description">I'm Samuel, your partner in making solutions that reflect your vision and connect with contemporary audiences.</div>
+        
+        <button className={"about-intro__button about-intro__button-" + theme}
+          onClick={() => {
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });        
+          }}
+          style={{
+            fontSize: '1.5em',
+            padding: '0.25em 1.5em',
+            marginTop: '1.75em',
+            backgroundColor: 'transparent',
+            border: theme === 'light' ? '5px solid rgb(255, 77, 70)' : '5px solid rgb(255, 77, 70)',
+            color: theme === 'light' ? 'rgb(255, 77, 70)' : 'rgb(255, 255, 255)',
+          }}
+        >
+          Get in touch
+        </button>
       </div>
-      <button className={"about-intro__button about-intro__button-" + theme}
-        onClick={() => {
-          document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });        
-        }}
-        style={{
-          fontSize: '1.5em',
-          padding: '0.25em 1.5em',
-          marginTop: '1.75em',
-          backgroundColor: 'transparent',
-          border: theme === 'light' ? '5px solid rgb(255, 77, 70)' : '5px solid rgb(255, 77, 70)',
-          color: theme === 'light' ? 'rgb(255, 77, 70)' : 'rgb(255, 255, 255)',
-        }}
-      >
-        View my work
-      </button>
     </div>
   )
 }

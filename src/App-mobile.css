@@ -3,29 +3,7 @@
   .intro-container {
     
   }
-    .navigation {
-        margin: auto;
-        width: 100%;
-    }
-    .nav-location {
-      margin-left: 5px;
-    }
-    .nav-location__title {
-      font-size: .8em;
-      padding-top: 5px;
-    }
-    .nav-location__title-red, 
-    .nav-location__title2 {
-        display: none;
-    }
-    .navigation-menu {
-      padding-right: 10px;
-      font-size: .8em;
-      padding-top: 5px;
-    }
-    .nav-link-highlighted {
-      font-weight: normal;
-    }
+  
     #header-container {
       height: 385px;
     }
@@ -65,26 +43,9 @@
       width: 100%;
     }
 
-    /* Intro */
-    .about-intro {
-      width: 100%;
-      /*padding: 27% 0 2% 0;*/
-      margin: 14% auto 5% auto;
-      padding: 3%;
-      text-align: center;
-      border-radius: 5px;
-    }
-    .about-intro__text {
-      margin: 0 auto;
-    }
 
-    .about-intro-dark {
-      background-color: rgba(13, 18, 20, 1);
-    }
-    .about-intro-light {
-      background-color: rgba(236, 223, 223, 1);
-    }
 
+    /* Contact Info */
     .contact__info {
       width: fit-content;
       font-size: 1.25em;

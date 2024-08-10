@@ -1,11 +1,27 @@
 .about-intro {
     font-family: 'Cabin'; 
+  padding: 100px 40px;
+  
+}
+
+.about-intro__content {
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .about-intro__text {
     font-size: 1.5em;
 }
-
+.about-intro__title {
+  font-size: 80px;
+  line-height: 1.2;
+  font-weight: 700;
+  margin-bottom: 20px;
+  max-width: 1100px;
+}
+.about-intro__description {
+  font-size: 18px; 
+} 
 .about-intro__button {
     /* transition: transform 0.25s ease-in-out; */
     transition: .24s ease-in-out;
@@ -16,9 +32,50 @@
 }
 
 
-@media only screen and (min-width: 1230px) {
-    .about-intro__text {
-        width: 85%;
-    }
+@media only screen and (max-width: 1400px) {
+  .about-intro__title {
+    font-size: 70px;
+    line-height: 1.2;
+    max-width: 1000px;
+  }
+
     
 }
+
+@media only screen and (max-width: 1025px) {
+    .about-intro__title {
+      font-size: 60px;
+      line-height: 1.2;
+      max-width: 900px;
+    }
+  
+      
+  }
+@media only screen and (max-width: 768px) {
+    /* Intro */
+    .about-intro {
+      width: 100%;
+      /*padding: 27% 0 2% 0;*/
+      margin: 14% auto 5% auto;
+      padding: 3%;
+      text-align: center;
+      border-radius: 5px;
+    }
+    .about-intro__text {
+      margin: 0 auto;
+    }
+
+    .about-intro-dark {
+      background-color: rgba(13, 18, 20, 1);
+    }
+    .about-intro-light {
+      background-color: rgba(236, 223, 223, 1);
+    }
+
+    .about-intro__title {
+      font-size: 35px;
+      line-height: 1.2;
+      
+    }
+  
+  }

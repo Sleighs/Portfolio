@@ -12,6 +12,9 @@ export default function MainNav(props) {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
 
+  // Detect if user is on mobile
+  const isMobile = window.innerWidth <= 600;
+
   // Scroll to section of selected nav item
   const scrollTo = (id) => {
     const section = document.getElementById(id);
@@ -20,7 +23,7 @@ export default function MainNav(props) {
 
   // Save current scroll position
   const handleScroll = () => {
-      const position = window.pageYOffset;// || window.scrollY || window.scrollTop || document.getElementsByTagName("html")[0].scrollTop;
+      const position = window.pageYOffset || window.scrollY; /// || window.scrollTop || document.getElementsByTagName("html")[0].scrollTop;
       setScrollPosition(position);
   };
 
@@ -40,8 +43,7 @@ export default function MainNav(props) {
         : ''
   }
 
-  // Detect if user is on mobile
-  const isMobile = window.innerWidth <= 550;
+  
 
   return (
     <nav className={`navigation navigation-${theme}`} style={navStyle}>
@@ -56,6 +58,7 @@ export default function MainNav(props) {
             }}>{isMobile ? '' : 'samuelwright.dev'}</span>
           </div>
         </div>
+
         <button
           className={`hamburger hamburger-${theme}`}
           onClick={()=> {setIsNavExpanded(!isNavExpanded);}}
@@ -87,7 +90,10 @@ export default function MainNav(props) {
             />
           </svg>
         </button>
-        <div className={ isNavExpanded ? "navigation-menu expanded" : "navigation-menu"}>
+
+        <div className={ isNavExpanded ? "navigation-menu expanded" : "navigation-menu"} 
+        //style={{display: isNavExpanded ? 'block' : 'none'}}
+        >
           <ul>
             <li className="main-nav__list-item-container">
               <div
@@ -193,6 +199,20 @@ export default function MainNav(props) {
             </li>     
           </ul>
         </div>
+
+        {/* <div className="nav__contact-btn-container">
+          <button
+            className="nav__contact-btn"
+            onClick={() => {
+              scrollTo('contact');
+              setPageLocation('contact');
+              setIsNavExpanded(!isNavExpanded);
+            }}
+          >
+            
+          </button>
+        </div> */}
+
       </div>
       <ThemeToggle />
     </nav>

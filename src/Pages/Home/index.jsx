@@ -44,7 +44,7 @@ const HomePage = (props) => {
       </div> */}
       <Skills />
       <div className="section-header"  id="contact">
-        <h3 className="section-title"><strong>Contact</strong></h3>
+        <h3 className="section-title"><strong>Get in Touch</strong></h3>
       </div>
       <Contact />
     </div>
