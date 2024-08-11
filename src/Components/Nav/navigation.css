@@ -9,7 +9,7 @@
 }
 .navigation--top {
   display: flex;
-  height: 100px;
+  height: 70px;
   background-color: #0b1b1000;  
 }
 .navigation--middle {
@@ -34,7 +34,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 22px;
+  font-size: 19px;
   padding: 0;
 }
 .navigation--menu {

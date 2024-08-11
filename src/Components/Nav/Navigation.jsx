@@ -45,7 +45,7 @@ export default function Navigation(Props) {
     <div className={`navigation ${navState}`} ref={navbarRef}>
       <div className="navigation--container">
         <div className="navigation--logo">
-          <span style={{fontWeight: 400, fontSize: '30px', transform: 'translateY(-2px)'}}>S</span>
+          <span style={{fontWeight: 400, fontSize: '26px', transform: 'translateY(-2px)'}}>S</span>
           <span style={{fontWeight: 400}}>AMUEL</span>
           <span style={{fontWeight: 300}}>WRIGHT.DEV</span>
         </div>
@@ -112,14 +112,15 @@ const HamburgerMenu = (Props) => {
         <div className="hamburger-menu--contact-section">
           <div className="hamburger-menu--call-us">
             <div className="hamburger-menu--call-us-title">Call</div>
-            <div className="hamburger-menu--call-us-text">+1 609 472 2897</div>
             <div className="hamburger-menu--call-us-text">+1 267 540 8680</div>
+            
+            <div className="hamburger-menu--call-us-text">+1 609 472 2897</div>
           </div>
 
           <div className="hamburger-menu--email-us">
             <div className="hamburger-menu--email-us-title">Send a message</div>
-            <div className="hamburger-menu--email-us-text">swrightdev@gmail.com</div>
             <div className="hamburger-menu--email-us-text">samuel@thrillwebdigital.com</div>
+            <div className="hamburger-menu--email-us-text">swrightdev@gmail.com</div>
           </div>
         </div>      
 

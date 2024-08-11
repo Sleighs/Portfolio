@@ -10,7 +10,7 @@ export default function HomeAbout() {
          </div>
         <div className="home-services-preview--subtitle">Fast | Efficient | Professional</div>
 
-        <div>
+        <div style={{display: 'none'}}>
           When it comes to Search Engine Optimization, we don’t waste your money or time on needless trial and error, because we already know what works and what doesn’t! Our results are guaranteed – and if we can’t guarantee results, we won’t board you as a client.
         </div>
 
@@ -59,71 +59,7 @@ export default function HomeAbout() {
               </div>
             </div>
           </div>
-          <div className="home-services-preview--item">
-            <div className="home-services-preview--item-icon">
-              SUPPORT
-            </div>
-            <div className="home-services-preview--item-title">
-              There When You Need Us for Ongoing Support
-            </div>
-            <div className="home-services-preview--item-description">
-              A great website is never finished, and it's designed so you can easily manage your content updates (with complimentary training provided). But you're not alone in this! Our team is ready to support you in optimizing your online presence and to explore further marketing opportunities.
-            </div>
-            <div className="home-services-preview--item-button">
-              <div>Pulse your business</div>
-              <div className="home-services-preview--item-button-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-up-right" viewBox="0 0 16 16">
-                  <path fillRule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"/>
-                </svg>
-              </div>
-            </div>
-          </div>
-          <div className="home-services-preview--item">
-            <div className="home-services-preview--item-icon">
-              
-            </div>
-            <div className="home-services-preview--item-title">
-              Organic Search Engine Optimization
-            </div>
-            <div className="home-services-preview--item-description">
-              SEO is an excellent way to build brand trust and awareness, while generating quality website traffic. Optimization strategies are used to achieve long-term results without the need for ongoing investment. Keep your brand ahead of its competition, and watch your revenue grow.
-            </div>
-            <div className="home-services-preview--item-button">
-              <div>Pulse your business</div>
-              <div className="home-services-preview--item-button-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-up-right" viewBox="0 0 16 16">
-                  <path fillRule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"/>
-                </svg>
-              </div>
-            </div>
-          </div>
 
-
-
-
-
-
-
-
-          <div className="home-services-preview--item">
-            <div className="home-services-preview--item-icon">
-              
-            </div>
-            <div className="home-services-preview--item-title">
-              Design
-            </div>
-            <div className="home-services-preview--item-description">
-              With the help of our graphic design, custom website design, and development services, you can take your company to new heights. We concentrate on providing what is most important to your business.
-            </div>
-            <div className="home-services-preview--item-button">
-              <div>Pulse your business</div>
-              <div className="home-services-preview--item-button-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-up-right" viewBox="0 0 16 16">
-                  <path fillRule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"/>
-                </svg>
-              </div>
-            </div>
-          </div>
           <div className="home-services-preview--item">
             <div className="home-services-preview--item-icon">
              
@@ -143,6 +79,75 @@ export default function HomeAbout() {
               </div>
             </div>
           </div>
+          
+       
+
+          <div className="home-services-preview--item">
+            <div className="home-services-preview--item-icon">
+              SUPPORT
+            </div>
+            <div className="home-services-preview--item-title">
+              There When You Need Us for Ongoing Support
+            </div>
+            <div className="home-services-preview--item-description">
+              A great website is never finished, and it's designed so you can easily manage your content updates (with complimentary training provided). But you're not alone in this! Our team is ready to support you in optimizing your online presence and to explore further marketing opportunities.
+            </div>
+            <div className="home-services-preview--item-button">
+              <div>Pulse your business</div>
+              <div className="home-services-preview--item-button-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                  <path fillRule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+
+          {/*    
+          <div className="home-services-preview--item">
+            <div className="home-services-preview--item-icon">
+              
+            </div>
+            <div className="home-services-preview--item-title">
+              Organic Search Engine Optimization
+            </div>
+            <div className="home-services-preview--item-description">
+              SEO is an excellent way to build brand trust and awareness, while generating quality website traffic. Optimization strategies are used to achieve long-term results without the need for ongoing investment. Keep your brand ahead of its competition, and watch your revenue grow.
+            </div>
+            <div className="home-services-preview--item-button">
+              <div>Pulse your business</div>
+              <div className="home-services-preview--item-button-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                  <path fillRule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div className="home-services-preview--item">
+            <div className="home-services-preview--item-icon">
+              
+            </div>
+            <div className="home-services-preview--item-title">
+              Design
+            </div>
+            <div className="home-services-preview--item-description">
+              With the help of our graphic design, custom website design, and development services, you can take your company to new heights. We concentrate on providing what is most important to your business.
+            </div>
+            <div className="home-services-preview--item-button">
+              <div>Pulse your business</div>
+              <div className="home-services-preview--item-button-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                  <path fillRule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+          
           <div className="home-services-preview--item">
             <div className="home-services-preview--item-icon">
              
@@ -180,7 +185,9 @@ export default function HomeAbout() {
                 </svg>
               </div>
             </div>
-          </div>
+          </div> 
+          */}
+
         </div>
       </div>
     </div>

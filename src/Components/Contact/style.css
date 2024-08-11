@@ -1,8 +1,7 @@
 #contact-container {
-    margin: 6% auto auto auto;
+    margin: 25px auto;
     width: 90%;
     padding: 0;
-    padding-bottom: 16%;
     display: flex;
     flex-direction: column;
 }
