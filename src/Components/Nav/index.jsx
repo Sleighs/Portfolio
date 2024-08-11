@@ -4,6 +4,7 @@ import { DataContext } from '../../Context/DataContext';
 import { ThemeContext } from '../../Context/ThemeContext';
 import ThemeToggle from '../ThemeToggle';
 import './style.css'
+import ContactInfo from '../ContactInfo';
 
 export default function MainNav(props) {
   const { pageLocation, setPageLocation } = useContext(DataContext)
@@ -40,8 +41,10 @@ export default function MainNav(props) {
     boxShadow: 
       theme === 'dark' && scrollPosition > 775 
         ? '0px 0px 1px 1px rgba(255, 255, 255, 0.1)'
-        : ''
+        : '',
   }
+
+  
 
   
 
@@ -90,9 +93,9 @@ export default function MainNav(props) {
             />
           </svg>
         </button>
-
+        
         <div className={ isNavExpanded ? "navigation-menu expanded" : "navigation-menu"} 
-        //style={{display: isNavExpanded ? 'block' : 'none'}}
+        style={{display: 'none'}}
         >
           <ul>
             <li className="main-nav__list-item-container">

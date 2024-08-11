@@ -20,7 +20,10 @@
 .section-title {
     color: rgb(255, 77, 70);
 }
-.navigation-dark {
+
+
+/* Nav */
+/* .navigation-dark {
    background-color: rgb(13, 18, 20);
    background-color: rgba(13, 18, 20, 1);
    box-shadow: 0px 0px 2px 1px rgba(255, 255, 255, 0);
@@ -29,10 +32,8 @@
 .navigation-light {
     background-color: white;
     box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.25);
- }
+ } */
 
-
-/* Nav */
 .main-nav__list-item-light {
     color: rgb(13, 18, 20);
 }
@@ -120,10 +121,10 @@
 
 /* Intro */
 .about-intro-dark {
-    background-color: rgba(13, 18, 20, .75);
+    /* background-color: rgba(13, 18, 20, .75); */
 }
 .about-intro-light {
-    background-color: rgba(236, 223, 223, .75);
+    /* background-color: rgba(236, 223, 223, .75); */
 }
 
 .about-intro-dark {
@@ -155,10 +156,10 @@
 
 /* Contact Info */
 .contact__info-dark {
-    background-color: rgba(13, 18, 20, .9);
+    background-color: rgba(13, 18, 20, .7);
 }
 .contact__info-light {
-    background-color: rgba(236, 223, 223, .9);
+    background-color: rgba(236, 223, 223, .0);
 }
 
 

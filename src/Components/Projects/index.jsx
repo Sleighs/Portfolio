@@ -208,38 +208,46 @@ const Project = (props) => {
   }, [scrollPosition]);
 
   return (
-    <div className={`row project-${projectData.id} ${projectIndex % 2 === 0 ? 'project-left-slide' : 'project-right-slide'} ${inView ? 'project-in-view' : ''}`} 
-      id={`project-${projectData?.id}`}
-      ref={ref}
-      key={projectIndex}
-      style={{display: projectsToDisplay.includes(projectData?.id) ? 'flex' : 'none'}}
-    >
-      <div className="col-md-7 project-description">
-        <h3 className="projects-row-title"><strong>{projectData?.title}</strong></h3>
-        <p>{projectData?.description}</p>
-        {projectData?.features && 
-          <>
-            <p>Features include:</p>
-            <ul>
-              {projectData?.features.map((feature, index) => <li key={index}>{feature}</li>)}
-            </ul>
-          </>
-        }
+    <div className="home-projects__container">
+      <div className="section-header" id="projects">
+        <h3 className="section-title"><strong>Projects</strong></h3>
+      </div>
+      
+       
+      <div className={`row project-${projectData.id} ${projectIndex % 2 === 0 ? 'project-left-slide' : 'project-right-slide'} ${inView ? 'project-in-view' : ''}`} 
+        id={`project-${projectData?.id}`}
+        ref={ref}
+        key={projectIndex}
+        style={{display: projectsToDisplay.includes(projectData?.id) ? 'flex' : 'none'}}
+      >
+        <div className="col-md-7 project-description">
+          <h3 className="projects-row-title"><strong>{projectData?.title}</strong></h3>
+          <p>{projectData?.description}</p>
+          {projectData?.features && 
+            <>
+              <p>Features include:</p>
+              <ul>
+                {projectData?.features.map((feature, index) => <li key={index}>{feature}</li>)}
+              </ul>
+            </>
+          }
 
-        {projectData?.links.map((link, index) => 
-        <p className="project-description__link"><a key={index} target="_blank" href={link?.link} rel="noreferrer">{link?.linkText || link?.link}</a></p> )}
-     
-        <div className="tag-row">
-          {projectData?.tags.map((tag, index) => <Tag name={tag} />)}
+          {projectData?.links.map((link, index) => 
+          <p className="project-description__link"><a key={index} target="_blank" href={link?.link} rel="noreferrer">{link?.linkText || link?.link}</a></p> )}
+      
+          <div className="tag-row">
+            {projectData?.tags.map((tag, index) => <Tag name={tag} />)}
+          </div>
         </div>
-      </div>
 
-      <div className="col-md-5 project-pic-content">
-        <a className={`projects-pic-container-${projectData?.id}`} target="_blank" href={projectData?.links[0].link} rel="noreferrer" title="Check it out">
-        <img className="img-responsive rounded projects-pic mx-auto d-block" alt={projectData?.alt} src={projectData?.pic}/>
-        </a>
+        <div className="col-md-5 project-pic-content">
+          <a className={`projects-pic-container-${projectData?.id}`} target="_blank" href={projectData?.links[0].link} rel="noreferrer" title="Check it out">
+          <img className="img-responsive rounded projects-pic mx-auto d-block" alt={projectData?.alt} src={projectData?.pic}/>
+          </a>
+        </div>
+        {projectIndex < ProjectData.length - 1 && <hr/>}
       </div>
-      {projectIndex < ProjectData.length - 1 && <hr/>}
+    
     </div>
   )
 }

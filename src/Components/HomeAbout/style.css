@@ -1,0 +1,139 @@
+.home-about__container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.about__text {
+  width: 900px;
+}
+
+
+.home-services-preview {
+  /* background: #f6f6f6; */
+  width: 100%;
+  padding: 0 40px;
+  /* color: #021013; */
+  font-family: "Red Hat Display", sans-serif;
+}
+.home-services-preview--content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 80px 0;
+  
+}
+.home-services-preview--title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.home-services-preview--subtitle {
+  color: #38C1C9;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 auto 10px auto;
+}
+.home-services-preview--title {
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+  margin-bottom: 15px;
+  font-weight: 700;
+  
+}
+.home-services-preview--description {
+  max-width: 775px;
+  text-align: center;
+}
+.home-services-preview--items {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 420px;
+  margin: 40px auto 0 auto;
+  gap: 10px 10px;
+}
+.home-services-preview--item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* background: white; */
+  padding: 30px;
+  margin: auto 5px;
+  height: 100%;
+  min-height: 420px;
+  width: 100%;
+  font-size: 15px;
+  border-bottom: solid 4px #f6f6f6;
+}
+.home-services-preview--item:hover {
+  border-bottom:#021013 4px solid;
+}
+.home-services-preview--item-title {
+  color: #042026;
+  font-size: 24px;
+  font-weight: 500;
+  margin: 10px 0;
+}
+.home-services-preview--item-icon {
+  border: 1px solid #38C1C9;
+  border-radius: 5%;
+  width: 65px;
+  height: 65px;
+  display: none;
+}
+.home-services-preview--item-title {
+  color: #38C1C9;
+}
+
+
+.home-services-preview--item-button {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  border-bottom: solid 1px #0210137a;
+  width: fit-content;
+  display: none;
+}
+
+@media screen and (max-width: 1025px) {
+  .home-services-preview--items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .home-services-preview--item {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .home-services-preview--title-container {
+   padding: 0 20px; 
+  }
+  .home-services-preview--items {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    padding: 0 20px;
+  }
+  .home-services-preview--item {
+    width: 100%;
+  }
+}
