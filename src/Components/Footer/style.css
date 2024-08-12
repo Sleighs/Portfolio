@@ -3,16 +3,16 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  font-size: 1.1em;
+  font-size: 18px;
   width: 100%;
   height: fit-content;
-  padding: 40px 40px 40px 30px;
+  padding: 50px 50px 50px 50px;
   color: white;
   box-sizing: border-box;
   font-family: 'Rokkitt', serif;
 }
 .footer-content {
-  max-width: 1024px;
+  max-width: 1400px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -24,7 +24,7 @@
   width: 100%;
 }
 .footer-brand-info-container {
-  width: 200px;
+  width: 150px;
 } 
 .footer-icons {
   display: flex;

@@ -9,7 +9,7 @@
 }
 .navigation--top {
   display: flex;
-  height: 70px;
+  height: 80px;
   background-color: #0b1b1000;  
 }
 .navigation--middle {
@@ -55,10 +55,14 @@
 }
 .navigation--get-started-button {
   display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   padding: 12px 25px;
   background:rgb(48, 48, 48);
-
+  /* width: fit-content; */
+  width: 180px;
+  font-size: 16px;
 }
 .navigation--get-started-button:hover {
   color: #38C1C9;
@@ -76,7 +80,8 @@
 .hamburger-menu {
   position: fixed;
   top: 0;
-  left: 0;
+  
+  /* right: -100%; */
   flex-direction: column;
   justify-content: space-between;
   align-items: baseline;
@@ -117,9 +122,10 @@
 } */
 .hamburger-menu--open {
   display: flex;
+  right: 0;
 }
 .hamburger-menu--closed {
-  display: none;
+  /* display: none; */
 }
 .hamburger-menu--navigation {
   display: flex;
@@ -186,6 +192,108 @@
   border-bottom: solid 3px #38C1C9;
   gap: 10px;
 }
+
+
+
+
+
+
+
+/* ProposalRequestForm.css */
+
+.proposal-form-wrapper {
+  position: relative;
+}
+
+.proposal-form {
+  position: fixed;
+  top: 0;
+  left: -100%; /* Start off-screen */
+  width: 350px; /* Adjust the width as needed */
+  height: 100%;
+  background-color: #f9f9f9;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+  transition: left 0.4s ease-in-out; /* Smooth slide-in effect */
+  z-index: 1000;
+}
+
+.proposal-form.active {
+  left: 0; /* Slide into view */
+}
+
+.proposal-form h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.proposal-form .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+.proposal-form label {
+  display: block;
+  margin-top: 15px;
+  color: #555;
+}
+
+.proposal-form input,
+.proposal-form select,
+.proposal-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.proposal-form button[type="submit"] {
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.proposal-form button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Media Queries */
 

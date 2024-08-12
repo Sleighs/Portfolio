@@ -1,17 +1,21 @@
 import { useContext, useEffect, useRef, useState } from 'react';
 import './navigation.css'
 import Contact from '../Contact';
+import ThemeToggle from '../ThemeToggle';
+import ContactForm from '../Contact/ContactForm';
+import { DataContext } from '../../Context/DataContext';
 
 
 export default function Navigation(Props) {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [navState, setNavState] = useState('navigation--top');
-  const [isOpen, setIsOpen] = useState(false);
+
+  const { isOpen, setIsOpen, toggleForm } = useContext(DataContext);
 
   const navbarRef = useRef(null);
 
   const toggleMenu = () => {
-    console.log('toggled', isOpen);
+    //console.log('toggled', isOpen);
     setIsOpen(!isOpen);
   };
 
@@ -50,23 +54,18 @@ export default function Navigation(Props) {
           <span style={{fontWeight: 300}}>WRIGHT.DEV</span>
         </div>
 
-        <div className="navigation--menu" style={{display: 'none'}}>
-          <div className="navigation--menu-item">Home</div>
-          <div className="navigation--menu-item">About Us</div>
-          <div className="navigation--menu-item">Services +</div>
-          <div className="navigation--menu-item">Our Work</div>
-          <div className="navigation--menu-item">Contact Us</div>
-        </div>
-
-        <div className="navigation--get-started-button" onClick={toggleMenu}>Start your project</div>
+        {/* <div className="navigation--get-started-button" onClick={toggleMenu}>Start your project</div> */}
         
-        <div className="navigation--hamburger" onClick={toggleMenu}>
+        {/* <div className="navigation--hamburger" onClick={toggleMenu}>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-list" viewBox="0 0 16 16">
             <path fillRule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
           </svg>
-        </div>
+        </div> */}
       </div>
-      {isOpen && <HamburgerMenu isOpen={isOpen} setIsOpen={setIsOpen} />}
+
+      {/* <ThemeToggle /> */}
+      <ProposalRequestForm />
+      {/* {isOpen && <HamburgerMenu isOpen={isOpen} setIsOpen={setIsOpen} />} */}
     </div>
   )
 }
@@ -83,6 +82,7 @@ const HamburgerMenu = (Props) => {
           <span style={{fontWeight: 400}}>AMUEL</span>
           <span style={{fontWeight: 300}}>WRIGHT.DEV</span>
         </div>
+
         <div className="hamburger-menu--close-button" 
           onClick={() => setIsOpen(false)}
         >
@@ -128,3 +128,25 @@ const HamburgerMenu = (Props) => {
     </div>
   )
 }
+
+const ProposalRequestForm = (props) => {
+  const { isOpen, setIsOpen, toggleForm } = useContext(DataContext);
+
+
+  return (
+    <div className="proposal-form-wrapper">
+      <div className="navigation--hamburger" onClick={toggleForm}>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-list" viewBox="0 0 16 16">
+          <path fillRule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+        </svg>
+      </div>
+
+      <div className="navigation--get-started-button" 
+      id="openForm" 
+      onClick={toggleForm}>Start your project</div>
+
+      <ContactForm />
+
+    </div>
+  );
+};

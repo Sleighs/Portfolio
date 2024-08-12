@@ -13,11 +13,18 @@ function DataContextProvider(props){
     //'yt-playlist-webscraper',
     'yt-playlist-downloader',
   ]);
+  const [isOpen, setIsOpen] = useState(false); 
+  
+  const toggleForm = () => {
+    setIsOpen(!isOpen);
+  }
 
   return (
     <DataContext.Provider value={{
         pageLocation, setPageLocation,
         projectsToDisplay, setProjectsToDisplay,
+        isOpen, setIsOpen,
+        toggleForm
     }}>
         {props.children}
     </DataContext.Provider>

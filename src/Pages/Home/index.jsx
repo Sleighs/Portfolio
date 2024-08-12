@@ -35,7 +35,7 @@ const HomePage = (props) => {
       <div className="home-projects__container" style={{display: '',}}>
         <Work />
       </div> */}
-      <Skills />
+      {/* <Skills /> */}
       <div className="section-header"  id="contact">
         <h3 className="section-title"><strong>Get in Touch</strong></h3>
       </div>

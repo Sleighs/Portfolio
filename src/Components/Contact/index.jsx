@@ -9,6 +9,7 @@ import mobile3Pic from '../../Resources/Images/phone-fill.svg';
  
 import { db } from '../../firebase';
 import './style.css'
+import ContactForm from './ContactForm';
 
 const Contact = (props) => {
     const [formData, setFormData] = useState({
@@ -18,7 +19,7 @@ const Contact = (props) => {
     })
     const [dataSent, setDataSent] = useState(false)
 
-    const { setPageLocation } = useContext(DataContext)
+    const { setPageLocation, isOpen, setIsOpen, toggleForm } = useContext(DataContext)
     const { theme } = useContext(ThemeContext)
 
     const hiddenRef = useRef();
@@ -158,7 +159,8 @@ const Contact = (props) => {
     }
         
     return (
-        <div className="container" id="contact-container" ref={hiddenRef}>
+      <div className="container" id="contact-container" ref={hiddenRef}>
+        <div className="contact__content">
           <div style={{
               display: 'none',
             }}>
@@ -193,7 +195,9 @@ const Contact = (props) => {
                 New Message
             </button>
           </div> 
-          : <form className='contact-form'>
+          : 
+          <>
+            <form className='contact-form' style={{display: 'none'}}>
               <div style={{display: '',}} className="form-group contact-form__input-container"> 
                 <label name="inputName" className="form-text" style={{display: 'none'}}>Name</label>
                 <input type="text" 
@@ -229,8 +233,18 @@ const Contact = (props) => {
               </div>
               <input type="submit" className={"input for-control submit"} style={contactFormBtn} value="Send" 
                 onClick={(e)=>{e.preventDefault(); handleSubmit(e);}}/>
-            </form>}
+            </form>
+
+            <div className="contact-info">
+              <button className="contact-info__btn" style={contactFormBtn2} onClick={(e)=>{toggleForm(e)}}>Request a Proposal</button>
+            </div>
+            
+            <ContactForm isOpen={isOpen} toggleForm={toggleForm} />
+          
+            
+          </>}
         </div>
+      </div>
     )
 }
 
