@@ -4,6 +4,7 @@ import Contact from '../Contact';
 import ThemeToggle from '../ThemeToggle';
 import ContactForm from '../Contact/ContactForm';
 import { DataContext } from '../../Context/DataContext';
+import NavProposalForm from '../Contact/NavProposalForm';
 
 
 export default function Navigation(Props) {
@@ -145,7 +146,7 @@ const ProposalRequestForm = (props) => {
       id="openForm" 
       onClick={toggleForm}>Start your project</div>
 
-      <ContactForm />
+      <NavProposalForm />
 
     </div>
   );

@@ -10,7 +10,14 @@
   color: white;
   box-sizing: border-box;
   font-family: 'Rokkitt', serif;
+  position: relative;
 }
+/* #footer-container {
+  position: absolute;
+  width: 100%;
+  max-width: 100vw;
+} */
+
 .footer-content {
   max-width: 1400px;
   display: flex;

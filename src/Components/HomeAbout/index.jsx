@@ -6,7 +6,11 @@ export default function HomeAbout() {
     <div className="home-about__container">
       <div className="home-services-preview--content">
         <div className="section-header section-header-first" id="about">
-        <h3 className="section-title"><strong>Tailored Web Solutions</strong></h3>
+        <h3 className="section-title"><strong>
+          {/* Tailored Web Solutions */}
+          Amplify Your Brand
+          </strong>
+          </h3>
          </div>
         <div className="home-services-preview--subtitle">Fast | Efficient | Professional</div>
 
@@ -50,7 +54,7 @@ export default function HomeAbout() {
               GROWTH
             </div>
             <div className="home-services-preview--item-title">
-              Digital Marketing for Business Growth
+              Increase Your Reach with Digital Marketing
             </div>
             <div className="home-services-preview--item-description">
               Utilize our digital marketing services to maximize the potential of your company. We offer pertinent material, incredibly tailored interactions, and conversion-boosting data-driven insights. Our strategies are designed to drive sustained growth, helping you reach and engage with your target audience effectively.

@@ -34,7 +34,9 @@ export default function Intro() {
             Your Trusted South Jersey Web Developer for Strategic Web & Marketing Solutions.
             {/* Trusted South Jersey Web & Marketing Solutions */}
           </div>
-          <div className="about-intro__description">I'm Sam, your partner in making solutions that reflect your vision and connect with contemporary audiences.</div>
+          <div className="about-intro__description">
+            I'm Sam, your partner in making solutions that reflect your vision and connect with contemporary audiences. 
+            </div>
           
           <button className={"about-intro__button about-intro__button-" + theme}
             onClick={() => {

@@ -1,61 +1,94 @@
 import React, { useContext } from 'react'
 import { DataContext } from '../../Context/DataContext'
+import './contact-form.css'
 
 export default function ContactForm(props) {
-  const { isOpen, toggleForm } = useContext(DataContext);
+  const { 
+    handleProjectFormSubmit, 
+    formData, 
+    setFormData,
+    dataSent, 
+    setDataSent  
+  } = useContext(DataContext);
 
   return (
-    <div className={`proposal-form ${isOpen ? 'active' : ''}`}>
-      {toggleForm && <button onClick={toggleForm} id="closeForm" className="close-btn">&times;</button>}
-      <h2>Request a Proposal</h2>
-      <form>
-        <label htmlFor="name">Name:</label>
-        <input type="text" id="name" name="name" required />
+    <div className={`contact-form`}>
+      <div className="contact-form__content">
+       
+        <form className="contact-form__form"> 
+          <h2>Have a Project?</h2>
+          
+          <div className="contact-form__form-inputs">
+            <div className="form-input">
+              <label htmlFor="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Name"/>
+            </div>  
+            <div className="form-input">
+              <label htmlFor="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="Email"/>
+            </div>
+            <div className="form-input">
+              <label htmlFor="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="Phone Number"/>
+            </div>
+          </div>
 
-        <label htmlFor="email">Email:</label>
-        <input type="email" id="email" name="email" required />
+          <div className="contact-form__form-inputs2">
+            <label htmlFor="services">Type Of Project</label>
+            <select id="services" name="services" multiple>
+              <option value="websiteDesign">Website Design</option>
+              <option value="seo">Searh Engine Optimization</option>
+              <option value="payPerClick">Social Media</option>
+              <option value="other">Other</option>
+              {/* <option value="webDevelopment">Web Development</option> */}
+              {/* <option value="branding">Branding</option> */}
+              {/* <option value="digitalMarketing">Digital Marketing</option> */}
+            </select>
+          </div>
 
-        <label htmlFor="phone">Phone Number:</label>
-        <input type="tel" id="phone" name="phone" required />
+          <div className="contact-form__form-inputs3">
+            <div className="form-input">
+              <label htmlFor="website"> Website/Domain (If Applicable)</label>
+              <input type="url" id="website" name="website" placeholder="Website"/>
+            </div>
+            <div className="form-input" style={{display: 'none'}}>
+              <label htmlFor="budget">Estimated Budget:</label>
+              <select id="budget" name="budget">
+                <option value="" disabled selected>Select your budget range</option>
+                <option value="1000">$1,000 - $5,000</option>
+                <option value="5000">$5,000 - $10,000</option>
+                <option value="10000">$10,000 - $20,000</option>
+                <option value="20000">$20,000 - $50,000</option>
+                <option value="50000">$50,000+</option>
+              </select>
+            </div>
+          </div>
 
-        <label htmlFor="company">Company Name:</label>
-        <input type="text" id="company" name="company" />
+          <div className="" style={{display: 'none'}}>
+            <label htmlFor="timeline">Project Timeline:</label>
+            <select id="timeline" name="timeline">
+              <option value="" disabled selected>Select your timeline</option>
+              <option value="immediate">Immediate (1-2 weeks)</option>
+              <option value="short">Short Term (1-2 months)</option>
+              <option value="long">Long Term (2+ months)</option>
+            </select>
+          </div>
 
-        <label htmlFor="website">Current Website (if any):</label>
-        <input type="url" id="website" name="website" />
+          {/* <label htmlFor="details">Project Details</label> */}
+          <textarea id="details" name="details" rows="5" placeholder="How can we help you?"></textarea>
 
-        <label htmlFor="budget">Estimated Budget:</label>
-        <select id="budget" name="budget">
-          <option value="" disabled selected>Select your budget range</option>
-          <option value="1000">$1,000 - $5,000</option>
-          <option value="5000">$5,000 - $10,000</option>
-          <option value="10000">$10,000 - $20,000</option>
-          <option value="20000">$20,000 - $50,000</option>
-          <option value="50000">$50,000+</option>
-        </select>
+          <button type="submit" className="contact-form__send-button"
+          // onClick={() => handleProjectFormSubmit()}
+          >Send</button>
+        </form>
 
-        <label htmlFor="services">Services Needed:</label>
-        <select id="services" name="services" multiple>
-          <option value="webDesign">Web Design</option>
-          <option value="webDevelopment">Web Development</option>
-          <option value="seo">SEO</option>
-          <option value="branding">Branding</option>
-          <option value="digitalMarketing">Digital Marketing</option>
-        </select>
-
-        <label htmlFor="timeline">Project Timeline:</label>
-        <select id="timeline" name="timeline">
-          <option value="" disabled selected>Select your timeline</option>
-          <option value="immediate">Immediate (1-2 months)</option>
-          <option value="short">Short Term (2-4 months)</option>
-          <option value="long">Long Term (4+ months)</option>
-        </select>
-
-        <label htmlFor="details">Project Details:</label>
-        <textarea id="details" name="details" rows="5" placeholder="Provide more details about your project..." required></textarea>
-
-        <button type="submit">Submit Request</button>
-      </form>
+        <div className="contact-form__info">
+          <h2>Contact Information</h2>
+          <p>Phone: 123-456-7890</p>
+          <p>Email: 8gQ6z@example.com</p>
+          <p>Address: 123 Main St, Anytown USA</p>
+        </div>
+      </div>
     </div>
   )
 }

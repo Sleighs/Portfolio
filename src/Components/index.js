@@ -13,3 +13,4 @@ export { default as Sparkle } from './Sparkle';
 export { default as Work } from './Work'; 
 export { default as Intro } from './Intro';
 export { default as HomeAbout } from './HomeAbout';
+export { default as RiskReversal } from './RiskReversal';

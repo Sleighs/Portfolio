@@ -2,12 +2,12 @@ import React, { useContext, useState } from 'react';
 import './ProposalRequestForm.css';
 import { DataContext } from '../../Context/DataContext';
 
-const ProposalRequestForm = () => {
+const NavProposalForm = () => {
   const { isOpen, setIsOpen, toggleForm } = useContext(DataContext);
 
   return (
     <div className="proposal-form-wrapper">
-      <button onClick={toggleForm} id="openForm">Request a Proposal</button>
+      {/* <button onClick={toggleForm} id="openForm">Have a Project?</button> */}
       <div className={`proposal-form ${isOpen ? 'active' : ''}`}>
         <button onClick={toggleForm} id="closeForm" className="close-btn">&times;</button>
         <h2>Request a Proposal</h2>
@@ -58,11 +58,11 @@ const ProposalRequestForm = () => {
           <label htmlFor="details">Project Details:</label>
           <textarea id="details" name="details" rows="5" placeholder="Provide more details about your project..." required></textarea>
 
-          <button type="submit">Submit Request</button>
+          <button type="submit">Send</button>
         </form>
       </div>
     </div>
   );
 };
 
-export default ProposalRequestForm;
+export default NavProposalForm;
