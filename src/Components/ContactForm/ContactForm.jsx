@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { DataContext } from '../../Context/DataContext'
 import './contact-form.css'
+import { ThemeContext } from '../../Context/ThemeContext';
 
 export default function ContactForm(props) {
   const { 
@@ -10,15 +11,15 @@ export default function ContactForm(props) {
     dataSent, 
     setDataSent  
   } = useContext(DataContext);
+  const { theme } = useContext(ThemeContext);
 
   return (
-    <div className={`contact-form`}>
+    <div className={`contact-form contact-form-${theme}`}>
       <div className="contact-form__content">
-       
         <form className="contact-form__form"> 
           <h2>Have a Project?</h2>
           
-          <div className="contact-form__form-inputs">
+          <div className={`contact-form__form-inputs contact-form__form-inputs-${theme}`}>
             <div className="form-input">
               <label htmlFor="name">Name</label>
               <input type="text" id="name" name="name" placeholder="Name"/>
@@ -81,13 +82,6 @@ export default function ContactForm(props) {
           // onClick={() => handleProjectFormSubmit()}
           >Send</button>
         </form>
-
-        <div className="contact-form__info">
-          <h2>Contact Information</h2>
-          <p>Phone: 123-456-7890</p>
-          <p>Email: 8gQ6z@example.com</p>
-          <p>Address: 123 Main St, Anytown USA</p>
-        </div>
       </div>
     </div>
   )

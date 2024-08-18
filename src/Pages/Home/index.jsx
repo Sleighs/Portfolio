@@ -22,13 +22,13 @@ const HomePage = (props) => {
       
       <Intro />
       
-      {/* <HomeAbout /> */}
+      <HomeAbout />
       
       {/* <RiskReversal /> */}
 
       {/* <Work /> */}
       
-      {/* <Contact /> */}
+      <Contact />
     </div>
   )
 }

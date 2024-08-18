@@ -4,7 +4,7 @@ import { ThemeContext } from '../../Context/ThemeContext';
 
 // import { db } from '../../firebase';
 import './style.css'
-import ContactForm from './ContactForm';
+import ContactForm from '../ContactForm/ContactForm';
 
 const Contact = (props) => {
     const { 
@@ -84,10 +84,9 @@ const Contact = (props) => {
         
     return (
       <div className="container" id="contact-container" ref={hiddenRef}>
-        <div className="section-header"  id="contact">
-          <h3 className="section-title"><strong>Get in Touch</strong></h3>
-        </div>
-        
+
+        <h3 className="contact__title"><strong>Get in Touch</strong></h3>
+
         <div className="contact__content">
           
           <div style={{ display: 'none', textAlign: 'center'}}>
@@ -105,7 +104,7 @@ const Contact = (props) => {
           {dataSent 
           ? <div className="msg"style={{ textAlign: 'center' }}>
             <br/>
-            <p style={{ fontSize: '1.2em' }}>Message sent!</p>
+            <p style={{ fontSize: '20px' }}>Message sent!</p>
             <button className="new-message-btn" 
               style={contactFormBtn2} 
               onClick={(e)=>{resetSend()}}>
@@ -153,6 +152,18 @@ const Contact = (props) => {
             </form>
 
             <ContactForm />
+
+            <div className="contact-form__info">
+              <div className="contact-form__info-item">
+                 <h3>Call</h3>
+                <p>Phone: 609-742-2897</p>
+              </div>
+             
+              <div className="contact-form__info-item">
+                <h3>Message</h3>
+                <p>Email: swrightdev@gmail.com</p>
+              </div>
+            </div>    
                      
           </>}
         </div>

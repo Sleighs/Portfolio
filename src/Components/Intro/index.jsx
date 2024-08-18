@@ -43,6 +43,7 @@ export default function Intro() {
               document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });        
             }}
             style={{
+              display: 'none',
               fontSize: '1.5em',
               padding: '0.25em 1.5em',
               marginTop: '1.75em',

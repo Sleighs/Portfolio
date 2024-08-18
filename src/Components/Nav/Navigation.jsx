@@ -2,7 +2,7 @@ import { useContext, useEffect, useRef, useState } from 'react';
 import './navigation.css'
 import Contact from '../Contact';
 import ThemeToggle from '../ThemeToggle';
-import ContactForm from '../Contact/ContactForm';
+import ContactForm from '../ContactForm/ContactForm';
 import { DataContext } from '../../Context/DataContext';
 import NavProposalForm from '../Contact/NavProposalForm';
 
@@ -54,19 +54,27 @@ export default function Navigation(Props) {
           <span style={{fontWeight: 400}}>AMUEL</span>
           <span style={{fontWeight: 300}}>WRIGHT.DEV</span>
         </div>
+      </div>
 
-        {/* <div className="navigation--get-started-button" onClick={toggleMenu}>Start your project</div> */}
-        
-        {/* <div className="navigation--hamburger" onClick={toggleMenu}>
+      <div className="proposal-form-wrapper">
+        <div className="navigation--hamburger" onClick={toggleForm}>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-list" viewBox="0 0 16 16">
             <path fillRule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
           </svg>
-        </div> */}
+        </div>
+
+        <div className="navigation--get-started-button" 
+          id="openForm" 
+          onClick={toggleForm}
+        >
+          Start your project
+        </div>
+
+        <NavProposalForm />
+
       </div>
 
       {/* <ThemeToggle /> */}
-      <ProposalRequestForm />
-      {/* {isOpen && <HamburgerMenu isOpen={isOpen} setIsOpen={setIsOpen} />} */}
     </div>
   )
 }
@@ -143,8 +151,11 @@ const ProposalRequestForm = (props) => {
       </div>
 
       <div className="navigation--get-started-button" 
-      id="openForm" 
-      onClick={toggleForm}>Start your project</div>
+        id="openForm" 
+        onClick={toggleForm}
+      >
+        Start your project
+      </div>
 
       <NavProposalForm />
 
