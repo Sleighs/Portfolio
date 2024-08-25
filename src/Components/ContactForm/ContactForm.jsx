@@ -20,15 +20,15 @@ export default function ContactForm(props) {
           <h2>Have a Project?</h2>
           
           <div className={`contact-form__form-inputs contact-form__form-inputs-${theme}`}>
-            <div className="form-input">
+            <div className="contact-form__input">
               <label htmlFor="name">Name</label>
               <input type="text" id="name" name="name" placeholder="Name"/>
             </div>  
-            <div className="form-input">
+            <div className="contact-form__input">
               <label htmlFor="email">Email</label>
               <input type="email" id="email" name="email" placeholder="Email"/>
             </div>
-            <div className="form-input">
+            <div className="contact-form__input">
               <label htmlFor="phone">Phone Number</label>
               <input type="tel" id="phone" name="phone" placeholder="Phone Number"/>
             </div>
@@ -48,11 +48,11 @@ export default function ContactForm(props) {
           </div>
 
           <div className="contact-form__form-inputs3">
-            <div className="form-input">
+            <div className="contact-form__input">
               <label htmlFor="website"> Website/Domain (If Applicable)</label>
               <input type="url" id="website" name="website" placeholder="Website"/>
             </div>
-            <div className="form-input" style={{display: 'none'}}>
+            <div className="contact-form__input" style={{display: 'none'}}>
               <label htmlFor="budget">Estimated Budget:</label>
               <select id="budget" name="budget">
                 <option value="" disabled selected>Select your budget range</option>
