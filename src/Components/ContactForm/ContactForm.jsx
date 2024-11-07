@@ -19,7 +19,7 @@ export default function ContactForm(props) {
         <form className="contact-form__form"> 
           <h2>Have a Project?</h2>
           
-          <div className={`contact-form__form-inputs contact-form__form-inputs-${theme}`}>
+          <div className={`contact-form__form-inputs`}>
             <div className="contact-form__input">
               <label htmlFor="name">Name</label>
               <input type="text" id="name" name="name" placeholder="Name"/>
@@ -39,6 +39,7 @@ export default function ContactForm(props) {
             <select id="services" name="services" multiple>
               <option value="websiteDesign">Website Design</option>
               <option value="seo">Searh Engine Optimization</option>
+              <option value="googleReputation">Google Reputation Management</option>
               <option value="payPerClick">Social Media</option>
               <option value="other">Other</option>
               {/* <option value="webDevelopment">Web Development</option> */}
@@ -55,7 +56,7 @@ export default function ContactForm(props) {
             <div className="contact-form__input" style={{display: 'none'}}>
               <label htmlFor="budget">Estimated Budget:</label>
               <select id="budget" name="budget">
-                <option value="" disabled selected>Select your budget range</option>
+                <option value="" disabled defaultValue={'1000'}>Select your budget range</option>
                 <option value="1000">$1,000 - $5,000</option>
                 <option value="5000">$5,000 - $10,000</option>
                 <option value="10000">$10,000 - $20,000</option>
@@ -76,7 +77,7 @@ export default function ContactForm(props) {
           </div>
 
           {/* <label htmlFor="details">Project Details</label> */}
-          <textarea id="details" name="details" rows="5" placeholder="How can we help you?"></textarea>
+          <textarea id="contact-form__details" name="details" rows="5" placeholder="How can we help you?"></textarea>
 
           <button type="submit" className="contact-form__send-button"
           // onClick={() => handleProjectFormSubmit()}
