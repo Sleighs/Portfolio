@@ -19,6 +19,8 @@ const HomePage = (props) => {
       <Sparkle parentRef={null} />
 
       <Navigation />
+
+      {/* <Nav /> */}
       
       <Intro />
       
@@ -27,6 +29,10 @@ const HomePage = (props) => {
       {/* <RiskReversal /> */}
 
       {/* <Work /> */}
+
+      {/* <Projects /> */}
+
+      {/* <Skills /> */}
       
       <Contact />
     </div>
