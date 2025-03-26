@@ -93,14 +93,13 @@ const Sparkle = (props) => {
     initSparkles();
     animate();
 
-    const handleResize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-      sparkles.length = 0;
-      initSparkles();
-    };
+    // const handleResize = () => {
+    //   canvas.width = window.innerWidth;
+    //   canvas.height = window.innerHeight;
+    //   sparkles.length = 0;
+    //   initSparkles();
+    // };
 
-    
     //window.addEventListener('resize', handleResize);
     //return () => window.removeEventListener('resize', handleResize);
 
@@ -108,16 +107,6 @@ const Sparkle = (props) => {
     return () => window.removeEventListener('resize', resizeCanvas);
   }, [parentRef]);
 
-  // return (
-  //   <canvas 
-  //     ref={canvasRef} 
-  //     style={{ 
-  //       position: parentRef ? 'absolute' : 'fixed', 
-  //       top: 0, 
-  //       left: 0, 
-  //       zIndex: 5,
-  //     }} />
-  //   );
 
   return (
     <div style={{ 
@@ -136,23 +125,8 @@ const Sparkle = (props) => {
           height: '100%', 
         }}
       />
-    </div>);
-
-  // return (
-  //   <canvas ref={canvasRef} 
-  //     className="sparkle-canvas"
-  //     style={{ 
-  //       position: parentRef === null ? 'fixed' : 'absolute', 
-  //       top: 0, 
-  //       left: 0, 
-  //       width: '100%', 
-  //       height: '100%', 
-  //       zIndex: 1, 
-  //       pointerEvents: 'none' 
-  //     }} 
-  //   />
-  // );
-
+    </div>
+  );
 };
 
 export default Sparkle;

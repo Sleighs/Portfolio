@@ -1,10 +1,99 @@
 .contact__info {
-    width: fit-content;
-    font-size: 1.25em;
+  width: 100%;
+  height: fit-content;
+  /* font-size: 1.25em; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* margin-top: .5%; */
+  /*padding: 3%;*/
+  border-radius: 5px;
+
+  /* margin-top: -100px; */
+}
+.contact__content {
+  width: fit-content;
+  height: auto;
+  display: flex;
+  align-items: left;
+  flex-direction: row;
+  gap: 25px;
+  padding: 10px;
+}
+.home-contact-info__link {
+  font-size: 16px;
+  width: fit-content;
+}
+.home-contact-info__link a {
+  text-decoration: none;
+}
+.home-contact-info__link a:visited {
+    
+}
+.contact-info-link {
+  text-decoration: none;
+}
+.home-contact-info__link1 {
+    
+}
+.home-contact-info__link2 {
+    
+}
+.home-contact-info__link3 {
+    
+}
+@media screen and (max-width: 1025px) {
+  .home-contact-info__link {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .contact__info {
+    margin-top: -200px;
+    width: 100%;
+  }
+  .contact__content {
+    /* flex-direction: column; */
+    /* align-items: baseline; */
+    width: 100%;
     display: flex;
     flex-direction: column;
-    margin-top: .5%;
-    /*padding: 3%;*/
-    border-radius: 5px;
+    justify-content: flex-start;
+  }
+  .intro-container {
+    /* padding: 18% 9.8%; */
+    /* height: 100vh; */
+    background-position: 50%;
+    /* margin-bottom: 15%; */
+  }
 }
 
+
+
+
+
+
+
+    /* Contact Info */
+    .contact__info {
+      /* font-size: 1.25em; */
+      /* padding: 5%; */
+      /* margin-top: 8.5%; */
+  }
+    .contact__info-dark {
+      /*background-color: rgba(142, 142, 142, 0.9);
+      background-color: rgba(39, 29, 29, 0.9);*/
+      /* background-color: rgba(13, 18, 20, 1); */
+      /* color: white; */
+    }
+    .contact__info-light {
+      /*background-color: rgba(148, 93, 93, 0.1);*/
+      /* background-color: rgba(236, 223, 223, 1); */
+      /* color: black; */
+    }
+    
+
+
+    .intro-container {
+      /* background-size: 375%; */
+    } 

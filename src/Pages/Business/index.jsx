@@ -1,9 +1,9 @@
 const BusinessPage = () => {
   return (
     <div>
-      Digital Solutions and Web Design
+      ThrillWeb Digital
       609-472-2897
-      swrightdev@gmail.com
+      contact@thrillwebdigital.com
     </div>
   )
 }

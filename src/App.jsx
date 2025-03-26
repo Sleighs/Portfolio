@@ -16,11 +16,6 @@ const App = (props) => {
 
   return (
     <div id='app' className={`app-${theme}`}>
-      <Nav 
-        pageLocation={pageLocation} 
-        setPageLocation={setPageLocation}
-      />
-
       <Routes>
         <Route path="/" element={<HomePage />} />      
       </Routes>

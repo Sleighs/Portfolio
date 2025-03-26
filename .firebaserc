@@ -2,8 +2,10 @@
   "projects": {
     "default": "resume-bbd43",
     "staging": "resume-bbd43",
-    "live": "resume-bbd43"
+    "live": "resume-bbd43",
+    "pro": "resume-bbd43"
   },
   "targets": {},
-  "etags": {}
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
 }
