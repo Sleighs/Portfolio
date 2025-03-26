@@ -1,9 +1,79 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import './ProposalRequestForm.css';
 import { DataContext } from '../../Context/DataContext';
 
 const NavProposalForm = () => {
   const { isOpen, setIsOpen, toggleForm } = useContext(DataContext);
+  const formRef = useRef(null);
+  
+  // State to hold form data
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    company: '',
+    website: '',
+    services: [],
+    timeline: '',
+    details: ''
+  });
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (formRef.current && !formRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+      // Load data from local storage
+      const savedData = JSON.parse(localStorage.getItem('proposalFormData'));
+      const savedTimestamp = localStorage.getItem('proposalFormDataTimestamp');
+
+      // Check if the saved data is still valid (not expired)
+      if (savedData && savedTimestamp) {
+        const currentTime = new Date().getTime();
+        const expirationTime = parseInt(savedTimestamp) + 30 * 24 * 60 * 60 * 1000; // 30 days in milliseconds
+
+        if (currentTime < expirationTime) {
+          setFormData(savedData);
+        } else {
+          localStorage.removeItem('proposalFormData');
+          localStorage.removeItem('proposalFormDataTimestamp');
+        }
+      }
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isOpen, setIsOpen]);
+
+  // Save form data to local storage on change
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    const newValue = type === 'checkbox' ? checked : value;
+    setFormData((prevData) => {
+      const updatedData = { ...prevData, [name]: newValue };
+      localStorage.setItem('proposalFormData', JSON.stringify(updatedData));
+      localStorage.setItem('proposalFormDataTimestamp', new Date().getTime().toString()); // Save current timestamp
+      return updatedData;
+    });
+  };
+
+  // Handle form submission
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Here you can handle the form submission logic
+    console.log('Form submitted:', formData);
+    // Clear local storage after submission
+    localStorage.removeItem('proposalFormData');
+    localStorage.removeItem('proposalFormDataTimestamp');
+    setIsOpen(false);
+  };
+
+  if (!isOpen) return null;
 
   return (
     <div className="proposal-form-wrapper">
@@ -11,21 +81,21 @@ const NavProposalForm = () => {
       <div className={`proposal-form ${isOpen ? 'active' : ''}`}>
         <button onClick={toggleForm} id="closeForm" className="close-btn">&times;</button>
         <h2>Request a Proposal</h2>
-        <form>
+        <form ref={formRef} onSubmit={handleSubmit}>
           <label htmlFor="name">Name:</label>
-          <input type="text" id="name" name="name" required />
+          <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required />
 
           <label htmlFor="email">Email:</label>
-          <input type="email" id="email" name="email" required />
+          <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required />
 
           <label htmlFor="phone">Phone Number:</label>
-          <input type="tel" id="phone" name="phone" required />
+          <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleChange} required />
 
           <label htmlFor="company">Company Name:</label>
-          <input type="text" id="company" name="company" required />
+          <input type="text" id="company" name="company" value={formData.company} onChange={handleChange} required />
 
           <label htmlFor="website">Current Website (if any):</label>
-          <input type="url" id="website" name="website" />
+          <input type="url" id="website" name="website" value={formData.website} onChange={handleChange} />
 
           <div style={{display: 'none'}}>
             <label htmlFor="budget">Estimated Budget:</label>
@@ -39,7 +109,7 @@ const NavProposalForm = () => {
           </div>
 
           <label htmlFor="services">Services Needed:</label>
-          <select id="services" name="services" multiple required>
+          <select id="services" name="services" multiple onChange={handleChange} required>
             <option value="webDesign">Web Design</option>
             <option value="webDevelopment">Web Development</option>
             <option value="seo">SEO</option>
@@ -48,15 +118,15 @@ const NavProposalForm = () => {
           </select>
 
           <label htmlFor="timeline">Project Timeline:</label>
-          <select id="timeline" name="timeline" required>
-            <option value="" disabled selected>Select your timeline</option>
+          <select id="timeline" name="timeline" value={formData.timeline} onChange={handleChange} required>
+            <option value="" disabled>Select your timeline</option>
             <option value="immediate">Immediate (1-2 months)</option>
             <option value="short">Short Term (2-4 months)</option>
             <option value="long">Long Term (4+ months)</option>
           </select>
 
           <label htmlFor="details">Project Details:</label>
-          <textarea id="details" name="details" rows="5" placeholder="Provide more details about your project..." required></textarea>
+          <textarea id="details" name="details" rows="5" value={formData.details} onChange={handleChange} placeholder="Provide more details about your project..." required></textarea>
 
           <button type="submit">Send</button>
         </form>

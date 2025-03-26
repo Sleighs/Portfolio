@@ -24,15 +24,15 @@ const HomePage = (props) => {
       
       <Intro />
       
-      <HomeAbout />
+      {/* <HomeAbout /> */}
       
       {/* <RiskReversal /> */}
 
       {/* <Work /> */}
 
-      {/* <Projects /> */}
+      <Projects />
 
-      {/* <Skills /> */}
+      <Skills />
       
       <Contact />
     </div>

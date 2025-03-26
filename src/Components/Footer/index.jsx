@@ -117,7 +117,7 @@ const Footer = (props) => {
 
       </div>
       
-        <div className="footer-brand-info">2024</div>
+        <div className="footer-brand-info">2025</div>
     </footer>
   )
 }

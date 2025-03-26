@@ -154,6 +154,9 @@ const Projects = (props) => {
 
     return (
       <div id="projects-container" ref={hiddenRef}>
+        <div className="section-header" id="projects">
+          <h3 className="section-title"><strong>Projects</strong></h3>
+        </div>
         {ProjectData.map((project, index) => {
           if (project?.id) {
             return (
@@ -209,11 +212,6 @@ const Project = (props) => {
 
   return (
     <div className="home-projects__container">
-      <div className="section-header" id="projects">
-        <h3 className="section-title"><strong>Projects</strong></h3>
-      </div>
-      
-       
       <div className={`row project-${projectData.id} ${projectIndex % 2 === 0 ? 'project-left-slide' : 'project-right-slide'} ${inView ? 'project-in-view' : ''}`} 
         id={`project-${projectData?.id}`}
         ref={ref}
@@ -245,7 +243,7 @@ const Project = (props) => {
           <img className="img-responsive rounded projects-pic mx-auto d-block" alt={projectData?.alt} src={projectData?.pic}/>
           </a>
         </div>
-        {projectIndex < ProjectData.length - 1 && <hr/>}
+        {/* {projectIndex < ProjectData.length - 1 && <hr/>} */}
       </div>
     
     </div>
