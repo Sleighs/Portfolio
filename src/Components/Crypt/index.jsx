@@ -115,6 +115,21 @@ export default function Crypt() {
       console.log(`Sparkle count reset to default: ${DEFAULT_SPARKLE_COUNT}`);
     }
 
+    // Add project list command
+    if (submitted === 'list' || submitted === 'projects') {
+      success = true;
+      console.log('Available projects:');
+      console.table({
+        'chatplus': projectsToDisplay.includes('chatplus') ? 'visible' : 'hidden',
+        'realitycalc': projectsToDisplay.includes('realitycalc') ? 'visible' : 'hidden',
+        'heromatchups': projectsToDisplay.includes('heromatchups') ? 'visible' : 'hidden',
+        'mint': projectsToDisplay.includes('mint') ? 'visible' : 'hidden',
+        'cashflow': projectsToDisplay.includes('cashflow') ? 'visible' : 'hidden',
+        'yt-playlist-downloader': projectsToDisplay.includes('yt-playlist-downloader') ? 'visible' : 'hidden'
+      });
+      console.log("Use 'set-[projectname]' to toggle visibility");
+    }
+
     if (submitted === 'help') {
       success = true;
       console.table({
@@ -126,7 +141,8 @@ export default function Crypt() {
         'count-[0-100]': 'set number of sparkles',
         'set-[projectname]': 'toggle project visibility',
         'reset size': 'restore default sparkle size',
-        'reset count': 'restore default sparkle count'
+        'reset count': 'restore default sparkle count',
+        list: 'show available projects'
       });
     }
 
@@ -153,18 +169,26 @@ export default function Crypt() {
       setPlaceHolder('Invalid code')
 
       // If 3 failed attempts, display sequence of hints
-      if (failCount >= 2) { // Changed from > 3 to >= 2 to show on third attempt
+      if (failCount > 6){
         setTimeout(() => {
           setPlaceHolder(`Try 'help' or 'lights'`)
           console.log(`Try 'help' or 'lights'`)
-        }, 2750)
+        }, 1250)
+        setTimeout(() => {
+          setPlaceHolder(`Enter code`)
+        }, 20000)
+      } else if (failCount >= 2) { // Changed from > 3 to >= 2 to show on third attempt
+        setTimeout(() => {
+          setPlaceHolder(`Try 'help' or 'lights'`)
+          console.log(`Try 'help' or 'lights'`)
+        }, 2500)
         setTimeout(() => {
           setPlaceHolder(`Enter code`)
         }, 20000)
       } else {
         setTimeout(() => {
           setPlaceHolder('Enter code')
-        }, 2750)
+        }, 2500)
       }
 
       setFailCount(prev => prev + 1)
