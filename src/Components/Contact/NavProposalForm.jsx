@@ -20,6 +20,13 @@ const NavProposalForm = () => {
 
   useEffect(() => {
     const handleClickOutside = (event) => {
+      // Ignore clicks on the toggle buttons
+      if (event.target.closest('#openForm') || 
+          event.target.closest('.navigation--hamburger')) {
+        return;
+      }
+      
+      // Only close if clicking outside the form
       if (formRef.current && !formRef.current.contains(event.target)) {
         setIsOpen(false);
       }
@@ -97,7 +104,7 @@ const NavProposalForm = () => {
           <label htmlFor="website">Current Website (if any):</label>
           <input type="url" id="website" name="website" value={formData.website} onChange={handleChange} />
 
-          <div style={{display: 'none'}}>
+          {/* <div style={{display: 'none'}}>
             <label htmlFor="budget">Estimated Budget:</label>
             <select id="budget" name="budget" required>
               <option value="" disabled selected>Select your budget range</option>
@@ -106,7 +113,7 @@ const NavProposalForm = () => {
               <option value="20000">$20,000 - $50,000</option>
               <option value="50000">$50,000+</option>
             </select>
-          </div>
+          </div> */}
 
           <label htmlFor="services">Services Needed:</label>
           <select id="services" name="services" multiple onChange={handleChange} required>

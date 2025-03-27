@@ -388,7 +388,7 @@
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0;
 }
 
 .contact-section__info-row p {
@@ -462,6 +462,105 @@
 
 .contact-section__info-link:hover {
   color: var(--accent-color);
+}
+
+.crypto-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.crypto-address.memo {
+  font-size: 0.9rem;
+  color: var(--text-tertiary);
+}
+
+.contact-section__copy-all-button {
+  display: none;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.contact-section__copy-all-button:hover {
+  background: var(--border-color);
+}
+
+.donate-card {
+  width: 100% !important;
+  max-width: none !important;
+  padding: 2rem !important;
+}
+
+.donate-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.donate-description {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0 0 2rem 0;
+  max-width: 600px;
+}
+
+.donate-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.donate-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.donate-option {
+  background: var(--bg-secondary);
+  padding: 1rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.donate-option h4 {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+}
+
+.crypto-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.crypto-address {
+  font-family: monospace;
+  font-size: 0.9rem;
+  word-break: break-all;
+  color: var(--text-primary);
+}
+
+.crypto-address.memo {
+  font-size: 0.85rem;
+  color: var(--text-tertiary);
+  margin-top: -0.25rem;
+}
+
+.contact-section__copy-all-button:hover {
+  background: var(--accent-color);
+  color: white;
 }
 
 @media only screen and (max-width: 1024px) {

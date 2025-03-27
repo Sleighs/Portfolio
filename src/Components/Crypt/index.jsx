@@ -21,6 +21,8 @@ export default function Crypt() {
     if (
       code === 'lights' 
       || code === 'light'
+      || code === 'light mode'
+      || code === 'lightmode'
       || code === 'darkmode'
       || code === 'dark'
       || code === 'dark mode'

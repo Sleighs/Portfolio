@@ -13,44 +13,39 @@ const Footer = (props) => {
     //{latin: "Igne natura renovatur integra.", english: "Through fire, nature is reborn whole.", author: "Anonymous"},
     //{latin: "Flectere si nequeo superos, Acheronta movebo.", english: "If I can not bend the will of Heaven, I shall move Hell.", author: "Virgil"},
     //{latin: "Ut haec ipsa qui non sentiat deorum vim habere is nihil omnino sensurus esse videatur.", english: "If any man cannot feel the power of God when he looks upon the stars, then I doubt whether he is capable of any feeling at all.", author: "Horace"},
-  ]
+  ];
 
-  let proverb = proverbs[Math.floor(Math.random() * proverbs.length)];
+  // let proverb = proverbs[Math.floor(Math.random() * proverbs.length)];
 
-  const [proverbText, setProverbText] = useState(proverb);
+  // const [proverbText, setProverbText] = useState(proverb);
 
-  const newProverb = () => {
-    let newProverb = proverbs[Math.floor(Math.random() * proverbs.length)];
-    setProverbText(newProverb);
-  }
+  // // Scroll to seleced element
+  // const scrollTo = (id) => {
+  //   const section = document.getElementById(id);
+  //   section.scrollIntoView( { behavior: 'smooth', block: 'start' } );
+  // };
 
-  // Scroll to seleced element
-  const scrollTo = (id) => {
-    const section = document.getElementById(id);
-    section.scrollIntoView( { behavior: 'smooth', block: 'start' } );
-  };
+  // useEffect(() => {
+  //   let englishOrLatin = Math.floor(Math.random() * 2);
+  //   // console.table(proverb)
+  //   setProverbText({
+  //     title: proverb.latin,//englishOrLatin === 0 ? proverb.english : proverb.latin,
+  //     text: proverb.english,//englishOrLatin === 0 ? proverb.latin : proverb.english,
+  //     author: proverb?.author,
+  //   })
 
-  useEffect(() => {
-    let englishOrLatin = Math.floor(Math.random() * 2);
-    console.table(proverb)
-    setProverbText({
-      title: proverb.latin,//englishOrLatin === 0 ? proverb.english : proverb.latin,
-      text: proverb.english,//englishOrLatin === 0 ? proverb.latin : proverb.english,
-      author: proverb?.author,
-    })
-
-    // Add hover box with proverb.title to #proverb
-    /*let proverbElement = document.getElementById("proverb");
-    proverbElement.addEventListener("mouseover", () => {
-      let hoverText = document.createElement("div");
-      hoverText.id = "proverb-hover-text";
-      hoverText.innerHTML = proverb.title;
-    })*/
-  }, [])
+  //   // Add hover box with proverb.title to #proverb
+  //   /*let proverbElement = document.getElementById("proverb");
+  //   proverbElement.addEventListener("mouseover", () => {
+  //     let hoverText = document.createElement("div");
+  //     hoverText.id = "proverb-hover-text";
+  //     hoverText.innerHTML = proverb.title;
+  //   })*/
+  // }, [])
 
   return(
     <footer id="footer-container">
-      {/*<Crypt /> &#8729;*/}
+      <Crypt /> &#8729;
       <div className="footer-content">
         <div className='footer-contact-info-container'>
           <div className="footer-info-link-container">
@@ -69,11 +64,11 @@ const Footer = (props) => {
             Samuel Wright | Full Stack Web Developer 
             </div>  
           </div>
-          <div className="footer-info-link-container" style={{display: 'none', }}>
+          {/* <div className="footer-info-link-container" style={{display: 'none', }}>
             <div id="proverb">
                 <p style={{display: '', padding: '5px 0px 7px 0px',}} title={`"${proverbText?.title}" ${proverbText?.author ? '-' + proverbText.author : ''}`}>{`"${proverbText?.text}"`}</p>
             </div>
-          </div>
+          </div> */}
           <div className="footer-info-link-container">
             <a className={`footer-info-link`} target="_blank" href="tel:6094722897" rel="noreferrer">
               <svg style={{

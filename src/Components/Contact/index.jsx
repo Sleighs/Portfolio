@@ -9,7 +9,11 @@ const Contact = () => {
     const hiddenRef = useRef();
     const [copyStatus, setCopyStatus] = useState({
         email: false,
-        phone: false
+        phone: false,
+        btc: false,
+        xrp: false,
+        xrpMemo: false,
+        cashapp: false
     });
 
     useEffect(() => {
@@ -35,11 +39,25 @@ const Contact = () => {
         }
     };
 
+    const copyXRPDetails = async () => {
+        try {
+            const xrpAddress = 'rNbwQhHxJiDX6QwzHzxy4qRR3YuY4JyqS5';
+            const xrpMemo = '1234567'; // Replace with your actual memo
+            await navigator.clipboard.writeText(`Address: ${xrpAddress}\nMemo: ${xrpMemo}`);
+            setCopyStatus(prev => ({ ...prev, xrp: true }));
+            setTimeout(() => {
+                setCopyStatus(prev => ({ ...prev, xrp: false }));
+            }, 2000);
+        } catch (err) {
+            console.error('Failed to copy XRP details: ', err);
+        }
+    };
+
     return (
       <div className="contact-section" id="contact-container" ref={hiddenRef}>
         <div className="contact-section__header">
           <h2 className="contact-section__title">Let's Build Something Amazing</h2>
-          <p className="contact-section__subtitle">I'm always excited to hear about new projects and opportunities</p>
+          <p className="contact-section__subtitle">I'm always excited to hear about new projects.</p>
         </div>
 
         <div className="contact-section__content">
@@ -48,7 +66,7 @@ const Contact = () => {
               <div className="contact-section__card contact-section__card--primary">
                 <div className="contact-section__card-content">
                   <h3>Get in Touch</h3>
-                  <p>Ready to start your next project? Let's create something exceptional together.</p>
+                  <p>Whether you're looking to build something new or explore technical possibilities, I'd love to hear about it. I'm always open to exploring new ideas and collaborations.</p>
                   <div className="contact-section__cta">
                     {/* <a href="mailto:swrightdev@gmail.com" className="contact-section__button contact-section__button--primary">
                       Send an Email
@@ -143,6 +161,107 @@ const Contact = () => {
                   <p>github.com/sleighs</p>
                 </a>
                 <p className="contact-section__info-note">Check out my projects and contributions</p>
+              </div>
+            </div>
+
+            <div className="contact-section__donate">
+              <div className="contact-section__info-card donate-card">
+                <div className="contact-section__info-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 6c1.4 0 2.8 1.1 2.8 2.5V11c0 1.4-1.4 2.5-2.8 2.5-1.4 0-2.8-1.1-2.8-2.5V9.5C9.2 8.1 10.6 7 12 7z"/>
+                  </svg>
+                </div>
+                <h3>Support My Work</h3>
+                <p className="donate-description">
+                  If you find my projects helpful or interesting, consider sharing them with others or reaching out to say hi. Your support helps me continue creating open-source tools and engaging content.
+                </p>
+                <div className="donate-options">
+                  <div className="donate-option">
+                    <h4>Bitcoin</h4>
+                    <div className="contact-section__info-row">
+                      <p className="crypto-address">3Gi4kHsnoXfcVU44drVVXmSGd6cNjURNrg</p>
+                      <button 
+                        className="contact-section__copy-button"
+                        onClick={() => copyToClipboard('3Gi4kHsnoXfcVU44drVVXmSGd6cNjURNrg', 'btc')}
+                        aria-label="Copy Bitcoin address"
+                      >
+                        {copyStatus.btc ? (
+                          <svg className="contact-section__copy-icon" viewBox="0 0 24 24">
+                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                          </svg>
+                        ) : (
+                          <svg className="contact-section__copy-icon" viewBox="0 0 24 24">
+                            <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+                          </svg>
+                        )}
+                      </button>
+                    </div>
+                  </div>
+
+                  <div className="donate-option">
+                    <h4>XRP</h4>
+                    <div className="crypto-details">
+                        <div className="contact-section__info-row">
+                            <p className="crypto-address">rwnYLUsoBQX3ECa1A5bSKLdbPoHKnqf63J</p>
+                            <button 
+                                className="contact-section__copy-button"
+                                onClick={() => copyToClipboard('rwnYLUsoBQX3ECa1A5bSKLdbPoHKnqf63J', 'xrp')}
+                                aria-label="Copy XRP address"
+                            >
+                                {copyStatus.xrp ? (
+                                    <svg className="contact-section__copy-icon" viewBox="0 0 24 24">
+                                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                                    </svg>
+                                ) : (
+                                    <svg className="contact-section__copy-icon" viewBox="0 0 24 24">
+                                        <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+                                    </svg>
+                                )}
+                            </button>
+                        </div>
+                        <div className="contact-section__info-row">
+                            <p className="crypto-address memo">Memo: 1620796148</p>
+                            <button 
+                                className="contact-section__copy-button"
+                                onClick={() => copyToClipboard('1620796148', 'xrpMemo')}
+                                aria-label="Copy XRP memo"
+                            >
+                                {copyStatus.xrpMemo ? (
+                                    <svg className="contact-section__copy-icon" viewBox="0 0 24 24">
+                                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                                    </svg>
+                                ) : (
+                                    <svg className="contact-section__copy-icon" viewBox="0 0 24 24">
+                                        <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+                                    </svg>
+                                )}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                  <div className="donate-option">
+                    <h4>Cash App</h4>
+                    <div className="contact-section__info-row">
+                      <p>$samuelxwright</p>
+                      <button 
+                        className="contact-section__copy-button"
+                        onClick={() => copyToClipboard('$samuelwright', 'cashapp')}
+                        aria-label="Copy Cash App ID"
+                      >
+                        {copyStatus.cashapp ? (
+                          <svg className="contact-section__copy-icon" viewBox="0 0 24 24">
+                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                          </svg>
+                        ) : (
+                          <svg className="contact-section__copy-icon" viewBox="0 0 24 24">
+                            <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+                          </svg>
+                        )}
+                      </button>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

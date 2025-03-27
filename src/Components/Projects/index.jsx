@@ -160,7 +160,7 @@ const Projects = (props) => {
         {ProjectData.map((project, index) => {
           if (project?.id) {
             return (
-              <Project projectIndex={index} projectData={project} />
+              <Project projectIndex={index} projectData={project} key={project.id} />
             )
           } else { 
             return <></>}
@@ -211,7 +211,7 @@ const Project = (props) => {
   }, [scrollPosition]);
 
   return (
-    <div className="home-projects__container">
+    <div className="home-projects__container" key={projectIndex}>
       <div className={`row project-${projectData.id} ${projectIndex % 2 === 0 ? 'project-left-slide' : 'project-right-slide'} ${inView ? 'project-in-view' : ''}`} 
         id={`project-${projectData?.id}`}
         ref={ref}
@@ -230,11 +230,18 @@ const Project = (props) => {
             </>
           }
 
-          {projectData?.links.map((link, index) => 
-          <p className="project-description__link"><a key={index} target="_blank" href={link?.link} rel="noreferrer">{link?.linkText || link?.link}</a></p> )}
+          {projectData?.links.map((link, index) => (
+            <p key={`link-${projectIndex}-${index}`} className="project-description__link">
+              <a target="_blank" href={link?.link} rel="noreferrer">
+                {link?.linkText || link?.link}
+              </a>
+            </p> 
+          ))}
       
           <div className="tag-row">
-            {projectData?.tags.map((tag, index) => <Tag name={tag} />)}
+            {projectData?.tags.map((tag, index) => (
+              <Tag name={tag} key={`tag-${projectIndex}-${index}`}/>
+            ))}
           </div>
         </div>
 
@@ -243,9 +250,7 @@ const Project = (props) => {
           <img className="img-responsive rounded projects-pic mx-auto d-block" alt={projectData?.alt} src={projectData?.pic}/>
           </a>
         </div>
-        {/* {projectIndex < ProjectData.length - 1 && <hr/>} */}
       </div>
-    
     </div>
   )
 }

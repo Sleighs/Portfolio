@@ -27,7 +27,7 @@ function DataContextProvider(props){
   const [dataSent, setDataSent] = useState(false)
     
   const toggleForm = () => {
-    setIsOpen(!isOpen);
+    setIsOpen(prevState => !prevState);
   }
 
   function handleProjectFormSubmit(event) {

@@ -1,3 +1,4 @@
+
 .navigation {
   width: 100%;
   position: absolute;
@@ -69,31 +70,10 @@
 }
 .navigation--hamburger {
   display: none;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  width: 40px;
-  height: 40px;
-  margin-right: 15px;
 }
 
-.navigation--hamburger {
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
 
-.navigation--hamburger:hover {
-  transform: scale(1.1);
-}
 
-.navigation--hamburger svg {
-  transition: transform 0.3s ease;
-}
-
-.navigation--hamburger svg:hover {
-  transform: translateY(2px);
-}
 
 /* Hamburger menu */
 
@@ -225,22 +205,21 @@
   position: relative;
 }
 
-/* Update the proposal form styles */
 .proposal-form {
   position: fixed;
   top: 0;
-  right: -350px; /* Changed from left to right */
-  width: 350px;
+  left: -100%; /* Start off-screen */
+  width: 350px; /* Adjust the width as needed */
   height: 100%;
   background-color: #f9f9f9;
   padding: 20px;
-  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
-  transition: right 0.3s ease-in-out; /* Changed from left to right */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+  transition: left 0.4s ease-in-out; /* Smooth slide-in effect */
   z-index: 1000;
 }
 
 .proposal-form.active {
-  right: 0; /* Changed from left to right */
+  left: 0; /* Slide into view */
 }
 
 .proposal-form h2 {
