@@ -2,6 +2,14 @@
 .app-light {
     background: white;
     color: rgba(0,16,31,1);
+    --bg-darker: #f8fafc;  /* slate-50 */
+    --border-color: #e2e8f0; /* slate-200 */
+    --footer-bg: #f8fafc;
+    --pattern-color: rgba(0, 0, 0, 0.03);
+    --grid-color: rgba(0, 0, 0, 0.03);
+    --grid-highlight: rgba(255, 50, 78, 0.04);
+    --text-secondary: #475569;
+    --text-tertiary: #64748b;
 }
 .title-light {
     color: rgba(0,16,31,1);
@@ -11,6 +19,14 @@
 .app-dark {
     background: rgb(13, 18, 20);
     color: white;
+    --bg-darker: #0f172a;  /* slate-900 */
+    --border-color: #1e293b; /* slate-800 */
+    --footer-bg: #0f172a;
+    --pattern-color: rgba(255, 255, 255, 0.03);
+    --grid-color: rgba(255, 255, 255, 0.03);
+    --grid-highlight: rgba(255, 50, 78, 0.05);
+    --text-secondary: rgba(255, 255, 255, 0.95);  /* Updated: brighter text */
+    --text-tertiary: rgba(255, 255, 255, 0.8);   /* Updated: brighter text */
 }
 .title-dark {
     color:white;
@@ -18,9 +34,8 @@
 }
 
 .section-title {
-    color: rgb(255, 77, 70);
+  color: rgb(255, 77, 70);
 }
-
 
 /* Nav */
 /* .navigation-dark {
@@ -198,14 +213,29 @@
 
 /* Footer */
 #footer-container {
-    background-color: rgb(255, 77, 70);
+    background-color: var(--footer-bg);
+    background-image: 
+        linear-gradient(var(--grid-highlight) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-highlight) 1px, transparent 1px),
+        linear-gradient(var(--grid-color) .5px, transparent .5px),
+        linear-gradient(90deg, var(--grid-color) .5px, transparent .5px);
+    background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+    background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px;
+    position: relative;
+    overflow: hidden;
 }
 
-
-/* Theme Toggle */
-.theme-toggle-light {
-    color: darkred;
-}
-.theme-toggle-dark {
-    color: white;
+#footer-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(
+        circle at 50% -50%,
+        rgba(255, 50, 78, 0.05) 0%,
+        transparent 70%
+    );
+    pointer-events: none;
 }

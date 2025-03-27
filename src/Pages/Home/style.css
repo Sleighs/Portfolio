@@ -3,17 +3,19 @@
   padding-left: 1.25rem;
   padding-left: 2.75rem;
   */
-  margin-top: -30px;
+  /* margin-top: -30px; */
   top: 0;
-    
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 10px 15px -1px rgba(0, 0, 0, 0.33);
+
 }
 
-
 .section-header {
-    min-height: auto;
-    text-align: center;
-    /* padding-top: 80px; */
-    /* margin: 10% auto 8% auto; */
+  min-height: auto;
+  text-align: center;
+  /* padding-top: 80px; */
+  /* margin: 10% auto 8% auto; */
   margin: 20px auto;
 }
 

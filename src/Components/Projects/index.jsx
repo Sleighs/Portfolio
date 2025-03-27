@@ -155,7 +155,7 @@ const Projects = (props) => {
     return (
       <div id="projects-container" ref={hiddenRef}>
         <div className="section-header" id="projects">
-          <h3 className="section-title"><strong>Projects</strong></h3>
+          <h2 className="section-title"><strong>Projects</strong></h2>
         </div>
         {ProjectData.map((project, index) => {
           if (project?.id) {
