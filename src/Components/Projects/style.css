@@ -11,10 +11,6 @@
     text-align: center;
 }
 
-.section-title {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
 
 .home-projects__container {
     padding: 0 1rem;
@@ -22,7 +18,7 @@
 
 .row {
     margin: 4rem auto;
-    padding: 2rem;
+    padding: 2.5rem 2rem 2rem 2rem; 
     background: rgba(255, 255, 255, 0.02);
     border-radius: 12px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -37,6 +33,8 @@
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
     color: var(--text-primary);
+    font-weight: 600;
+    width: 100%;
 }
 
 .project-description {
@@ -62,24 +60,33 @@
 }
 
 .project-description__link {
-    margin: 1rem 0;
+    margin: 0.5rem 0;  /* Reduced from 1rem to 0.5rem */
 }
 
 .project-description__link a {
+  display: inline-block;
+    padding: 0.6rem 1.5rem;  /* Slightly reduced vertical padding */
+    font-size: 1.1rem;
+    border-radius: 8px;
+    background: var(--bg-primary);
     color: var(--accent-color);
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .project-description__link a:hover {
-    color: var(--accent-color-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(39, 10, 9, 0.1);
+    background: var(--accent-color);
+    color: var(--bg-primary);
 }
 
 .tag-row {
     margin: 2rem 0;
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 0.4rem;
 }
 
 .project-pic-content {
@@ -101,13 +108,6 @@
     transform: scale(1.02);
 }
 
-.row hr {
-    background-color: rgba(255, 71, 70, 0.2);
-    width: 100%;
-    margin: 2rem auto;
-    border: none;
-    height: 1px;
-}
 
 /* Animations */
 .project-left-slide {
@@ -135,7 +135,7 @@
 
 @media only screen and (max-width: 768px) {
     #projects-container {
-        padding: 1rem 2%;
+        padding: 3rem 2%;
     }
 
     .section-title {
@@ -143,7 +143,7 @@
     }
 
     .row {
-        margin: 2rem auto;
+        margin: 3rem auto 2rem auto;
         padding: 1.5rem;
     }
 
@@ -153,13 +153,19 @@
 
     .project-description {
         padding-right: 0;
+        width: 100%;
     }
 
     .projects-row-title {
-        font-size: 1.5rem;
+        font-size: 1.75rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .project-description h3 {
         text-align: center;
     }
-
     .project-description p {
         text-align: center;
     }
@@ -171,6 +177,11 @@
     .project-description__link {
         text-align: center;
     }
+
+    .project-description__link a {
+        width: 100%;
+        text-align: center;
+    }
 }
 
 @media only screen and (max-width: 480px) {
@@ -179,7 +190,7 @@
     }
 
     .row {
-        padding: 1rem;
+        padding: 2.5rem 1rem;
     }
 
     .section-title {

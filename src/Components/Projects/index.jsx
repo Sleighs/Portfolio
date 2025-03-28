@@ -22,7 +22,7 @@ const ProjectData = [
     links: [
       { link: 'https://github.com/sleighs/chat-plus', linkText: 'View on GitHub', show: true },
       { link: 'https://chrome.google.com/webstore/detail/chatplus-for-rumble/odlcomopigapcpmlpmmmhlhegajembio?hl=en&authuser=0', linkText: 'Chrome Web Store', show: true},
-      { link: 'https://addons.mozilla.org/en-US/firefox/addon/chatplus-for-rumble/', linkText: 'Firefox Add-on Store', show: true}
+      // { link: 'https://addons.mozilla.org/en-US/firefox/addon/chatplus-for-rumble/', linkText: 'Firefox Add-on Store', show: true}
     ],
     tags: ['JavaScript', 'WebExtensions API', 'React'],
     pic: chatplusPic,
@@ -155,12 +155,12 @@ const Projects = (props) => {
     return (
       <div id="projects-container" ref={hiddenRef}>
         <div className="section-header" id="projects">
-          <h3 className="section-title"><strong>Projects</strong></h3>
+          <h2 className="section-title"><strong>Projects</strong></h2>
         </div>
         {ProjectData.map((project, index) => {
           if (project?.id) {
             return (
-              <Project projectIndex={index} projectData={project} />
+              <Project projectIndex={index} projectData={project} key={project.id} />
             )
           } else { 
             return <></>}
@@ -211,7 +211,7 @@ const Project = (props) => {
   }, [scrollPosition]);
 
   return (
-    <div className="home-projects__container">
+    <div className="home-projects__container" key={projectIndex}>
       <div className={`row project-${projectData.id} ${projectIndex % 2 === 0 ? 'project-left-slide' : 'project-right-slide'} ${inView ? 'project-in-view' : ''}`} 
         id={`project-${projectData?.id}`}
         ref={ref}
@@ -219,7 +219,7 @@ const Project = (props) => {
         style={{display: projectsToDisplay.includes(projectData?.id) ? 'flex' : 'none'}}
       >
         <div className="col-md-7 project-description">
-          <h3 className="projects-row-title"><strong>{projectData?.title}</strong></h3>
+          <div className="projects-row-title">{projectData?.title}</div>
           <p>{projectData?.description}</p>
           {projectData?.features && 
             <>
@@ -230,11 +230,20 @@ const Project = (props) => {
             </>
           }
 
-          {projectData?.links.map((link, index) => 
-          <p className="project-description__link"><a key={index} target="_blank" href={link?.link} rel="noreferrer">{link?.linkText || link?.link}</a></p> )}
+          <div className="project-link-row">
+            {projectData?.links.map((link, index) => (
+              <div key={`link-${projectIndex}-${index}`} className="project-description__link">
+                <a target="_blank" href={link?.link} rel="noreferrer">
+                  {link?.linkText || link?.link}
+                </a>
+              </div> 
+            ))}
+          </div>
       
           <div className="tag-row">
-            {projectData?.tags.map((tag, index) => <Tag name={tag} />)}
+            {projectData?.tags.map((tag, index) => (
+              <Tag name={tag} key={`tag-${projectIndex}-${index}`}/>
+            ))}
           </div>
         </div>
 
@@ -243,9 +252,7 @@ const Project = (props) => {
           <img className="img-responsive rounded projects-pic mx-auto d-block" alt={projectData?.alt} src={projectData?.pic}/>
           </a>
         </div>
-        {/* {projectIndex < ProjectData.length - 1 && <hr/>} */}
       </div>
-    
     </div>
   )
 }

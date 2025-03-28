@@ -15,6 +15,11 @@ export default function Navigation(Props) {
 
   const navbarRef = useRef(null);
 
+  const toggleMenu = () => {
+    //console.log('toggled', isOpen);
+    setIsOpen(!isOpen);
+  };
+
   const scrollHandler = () => {
     if (window.scrollY > 290) {
       setNavState('navigation--middle');
@@ -53,15 +58,9 @@ export default function Navigation(Props) {
 
       <div className="proposal-form-wrapper">
         <div className="navigation--hamburger" onClick={toggleForm}>
-          {isOpen ? (
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-x-lg" viewBox="0 0 16 16">
-              <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
-            </svg>
-          ) : (
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-chevron-down" viewBox="0 0 16 16">
-              <path fillRule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
-            </svg>
-          )}
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-list" viewBox="0 0 16 16">
+            <path fillRule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+          </svg>
         </div>
 
         <div className="navigation--get-started-button" 
@@ -138,3 +137,28 @@ const HamburgerMenu = (Props) => {
     </div>
   )
 }
+
+const ProposalRequestForm = (props) => {
+  const { isOpen, setIsOpen, toggleForm } = useContext(DataContext);
+
+
+  return (
+    <div className="proposal-form-wrapper">
+      <div className="navigation--hamburger" onClick={toggleForm}>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-list" viewBox="0 0 16 16">
+          <path fillRule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+        </svg>
+      </div>
+
+      <div className="navigation--get-started-button" 
+        id="openForm" 
+        onClick={toggleForm}
+      >
+        Start your project
+      </div>
+
+      <NavProposalForm />
+
+    </div>
+  );
+};

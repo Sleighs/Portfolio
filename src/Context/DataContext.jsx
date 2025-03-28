@@ -25,9 +25,11 @@ function DataContextProvider(props){
     message: '',
   })
   const [dataSent, setDataSent] = useState(false)
-    
+  const [sparkleCount, setSparkleCount] = useState(14)
+  const [sparkleSize, setSparkleSize] = useState(Math.random() * 2 + 1)
+
   const toggleForm = () => {
-    setIsOpen(!isOpen);
+    setIsOpen(prevState => !prevState);
   }
 
   function handleProjectFormSubmit(event) {
@@ -104,7 +106,9 @@ function DataContextProvider(props){
       formData, setFormData,
       dataSent, setDataSent,
       toggleForm,
-      handleProjectFormSubmit   
+      handleProjectFormSubmit,
+      sparkleCount, setSparkleCount,
+      sparkleSize, setSparkleSize
     }}>
       {props.children}
     </DataContext.Provider>

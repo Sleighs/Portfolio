@@ -1,7 +1,72 @@
+.crypt__container {
+    margin: 1rem auto;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.crypt__form-input {
+    background: var(--footer-bg);
+    border: 1px solid var(--grid-color);
+    color: var(--text-secondary);
+    font-family: monospace;
+    font-size: 0.95rem;
+    padding: 8px 12px;
+    width: 200px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.crypt__form-input:focus {
+    outline: none;
+    border-color: var(--grid-highlight);
+    box-shadow: 0 0 20px var(--grid-highlight);
+    background: var(--footer-bg);
+}
+
+.crypt__form-input::placeholder {
+    color: var(--text-tertiary);
+    opacity: 0.7;
+}
+
 .crypt__form-input-flash {
     animation: flash 1s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    box-shadow: 1px 1px 10px #00ff51;
-    border: solid 1px #00ff51;
+}
+
+@keyframes flash {
+    0% { border-color: var(--grid-color); }
+    50% { border-color: var(--grid-highlight); }
+    100% { border-color: var(--grid-color); }
+}
+
+.crypt__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.crypt__help-button {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.crypt__help-button:hover {
+  background: var(--accent);
+  color: var(--bg-primary);
+  transform: scale(1.2);
 }

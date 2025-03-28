@@ -1,7 +1,5 @@
 
 @media only screen and (max-width: 768px) {
-
-
   #header-container {
     height: 385px;
   }
@@ -13,12 +11,6 @@
       font-weight: normal;
   }
 
-  .projects-row-title {
-    text-align: center;
-    margin-top: 15px;
-    font-size: 1.6em;
-    opacity: .8;
-  }
   #projects-container {
     padding: 0 2%;
   }

@@ -8,12 +8,14 @@ import javascriptLogo from './javascript-logo.png';
 import jestLogo from './jest-logo.png';
 import linuxLogo from './linux-logo.png';
 import mongodbLogo from './mongodb-logo.png';
+import nextjsLogo from './nextjs-logo.png';
 import nodeLogo from './node-logo.png';
 import photoshopLogo from './photoshop-logo.png';
 import pythonLogo from './python-logo.png';
 import reactLogo from './react-logo.png';
 import reduxLogo from './redux-logo.png';
 import sassLogo from './sass-logo.png';
+import shopifyLogo from './shopify-logo.png';
 import typescriptLogo from './ts-logo.png';
 
 const logoPics = {
@@ -27,12 +29,14 @@ const logoPics = {
     jest: jestLogo,
     linux: linuxLogo,
     mongodb: mongodbLogo,
+    nextjs: nextjsLogo,
     node: nodeLogo,
     photoshop: photoshopLogo,
     python: pythonLogo,
     react: reactLogo,
     redux: reduxLogo,
     sass: sassLogo,
+    shopify: shopifyLogo,
     typescript: typescriptLogo,
 };
 

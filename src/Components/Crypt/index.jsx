@@ -1,26 +1,55 @@
 import React, { useContext, useState } from 'react'
 import { ThemeContext } from '../../Context/ThemeContext';
 import { DataContext } from '../../Context/DataContext';
+import './style.css';
+import Tooltip from '../Tooltip';
+
+
+const commands = {
+  help: 'list codes in console',
+  lights: 'toggle light/dark mode',
+  'sparkle size': 'show current sparkle size',
+  'sparkle count': 'show current sparkle count',
+  'size-[0.1-100]': 'set sparkle size',
+  'count-[0-100]': 'set number of sparkles',
+  'set-[projectname]': 'toggle project visibility',
+  'reset size': 'restore default sparkle size',
+  'reset count': 'restore default sparkle count',
+  list: 'show available projects'
+};
 
 export default function Crypt() {
-  const  { changeTheme } = useContext(ThemeContext);
+  const { changeTheme } = useContext(ThemeContext);
   const { 
     projectsToDisplay, 
-    setProjectsToDisplay 
-  } = useContext(DataContext)
+    setProjectsToDisplay,
+    sparkleCount,
+    setSparkleCount,
+    sparkleSize,
+    setSparkleSize
+  } = useContext(DataContext);
 
   const [code, setCode] = useState('')
   const [placeHolder, setPlaceHolder] = useState('Enter code')
   const [failCount, setFailCount] = useState(0)
+  const [showTooltip, setShowTooltip] = useState(false);
+  const [tooltipCommands, setTooltipCommands] = useState({});
+  const [tooltipBtnVisible, setTooltipBtnVisible] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault()
     let success = false;
     const submitted = code
 
+    // Add default values
+    const DEFAULT_SPARKLE_SIZE = Math.random() * 2 + 1;
+    const DEFAULT_SPARKLE_COUNT = 14;
+
     if (
       code === 'lights' 
       || code === 'light'
+      || code === 'light mode'
+      || code === 'lightmode'
       || code === 'darkmode'
       || code === 'dark'
       || code === 'dark mode'
@@ -45,12 +74,86 @@ export default function Crypt() {
       }
     }
 
+    if (submitted.startsWith('sparklecount-') || submitted.startsWith('count-')) {
+      const count = parseInt(
+        submitted.startsWith('count-') 
+          ? submitted.substring(6)  // "count-" is 6 characters
+          : submitted.substring(12) // "sparklecount-" is 12 characters
+      );
+      if (!isNaN(count) && count >= 0 && count <= 100) {
+        setSparkleCount(count);
+        success = true;
+        console.log(`Sparkle count set to: ${count}`);
+      }
+    }
+
+    if (submitted.startsWith('sparklesize-') || submitted.startsWith('size-')) {
+      const size = parseFloat(
+        submitted.startsWith('size-') 
+          ? submitted.substring(5)  // "size-" is 5 characters
+          : submitted.substring(11) // "sparklesize-" is 11 characters
+      );
+      if (!isNaN(size) && size >= 0.1 && size <= 100) {
+        setSparkleSize(size);
+        success = true;
+        console.log(`Sparkle size set to: ${size}`);
+      }
+    }
+
+    // Sparkle control codes
+    if (
+      submitted === 'sparkle size' ||
+      submitted === 'sparklesize' ||
+      submitted === 'size'
+    ) {
+      success = true;
+      console.log(`Current sparkle size: ${sparkleSize}`);
+      console.log("Use 'size-[0.1-100]' to adjust");
+    }
+
+    if (
+      submitted === 'sparkle count' ||
+      submitted === 'sparklecount' ||
+      submitted === 'count'
+    ) {
+      success = true;
+      console.log(`Current sparkle count: ${sparkleCount}`);
+      console.log("Use 'count-[0-100]' to adjust");
+    }
+
+    if (submitted === 'reset size') {
+      setSparkleSize(DEFAULT_SPARKLE_SIZE);
+      success = true;
+      console.log(`Sparkle size reset to default: ${DEFAULT_SPARKLE_SIZE}`);
+    }
+
+    if (submitted === 'reset count') {
+      setSparkleCount(DEFAULT_SPARKLE_COUNT);
+      success = true;
+      console.log(`Sparkle count reset to default: ${DEFAULT_SPARKLE_COUNT}`);
+    }
+
+    // Add project list command
+    if (submitted === 'list' || submitted === 'projects') {
+      success = true;
+      const projects = {
+        'chatplus': projectsToDisplay.includes('chatplus') ? 'visible' : 'hidden',
+        'realitycalc': projectsToDisplay.includes('realitycalc') ? 'visible' : 'hidden',
+        'heromatchups': projectsToDisplay.includes('heromatchups') ? 'visible' : 'hidden',
+        'mint': projectsToDisplay.includes('mint') ? 'visible' : 'hidden',
+        'cashflow': projectsToDisplay.includes('cashflow') ? 'visible' : 'hidden',
+        'yt-playlist-downloader': projectsToDisplay.includes('yt-playlist-downloader') ? 'visible' : 'hidden'
+      };
+      setTooltipCommands(projects);
+      setShowTooltip(true);
+      console.table(projects);
+    }
+
     if (submitted === 'help') {
       success = true;
-      console.table({
-        help: 'list codes in console',  
-        lights: 'toggle light/dark mode',        
-      })
+      setTooltipCommands(commands);
+      setShowTooltip(true);
+      console.table(commands);
     }
 
     // flash input field if successful
@@ -75,21 +178,28 @@ export default function Crypt() {
       console.log(`'${submitted}' is not a valid code`)
       setPlaceHolder('Invalid code')
 
-      // If 3 failed attempts, display hint
-      if (failCount > 3) {
+      // If 3 failed attempts, display sequence of hints
+      if (failCount > 6){
         setTimeout(() => {
-          setPlaceHolder(`Try 'help'`)
-        }, 2750)
+          setPlaceHolder(`Try 'help' or 'lights'`)
+          console.log(`Try 'help' or 'lights'`)
+        }, 1250)
         setTimeout(() => {
           setPlaceHolder(`Enter code`)
-        }, 9000)
+        }, 20000)
+      } else if (failCount >= 2) { // Changed from > 3 to >= 2 to show on third attempt
+        setTimeout(() => {
+          setPlaceHolder(`Try 'help' or 'lights'`)
+          console.log(`Try 'help' or 'lights'`)
+        }, 2500)
+        setTimeout(() => {
+          setPlaceHolder(`Enter code`)
+        }, 20000)
       } else {
-         setTimeout(() => {
+        setTimeout(() => {
           setPlaceHolder('Enter code')
-          //setCode(submitted)
-        }, 2750)
+        }, 2500)
       }
-     
 
       setFailCount(prev => prev + 1)
     }
@@ -101,22 +211,34 @@ export default function Crypt() {
   }
 
   return (
-    <div className="crypt__container" style={{
-      margin: '2% auto 1% auto',
-    }}>
-      <form className="crypt__form" onSubmit={handleSubmit}> 
-        <input 
-          className="crypt__form-input" 
-          style={{
-            padding: '2px 7px 0 7px',
-            width: 200,
+    <div className="crypt__container">
+      <div className="crypt__wrapper">
+        <form className="crypt__form" onSubmit={handleSubmit}> 
+          <input 
+            className="crypt__form-input" 
+            type="text" 
+            value={code} 
+            onChange={handleCodeChange}
+            placeholder={placeHolder}
+          />
+        </form>
+        <button 
+          className="crypt__help-button"
+          style={{ opacity: failCount >= 3 ? .8 : 0 }}
+          onClick={() => {
+            setTooltipCommands(commands);
+            setShowTooltip(true);
           }}
-          type="text" 
-          value={code} 
-          onChange={handleCodeChange}
-          placeholder={placeHolder}
-        />
-      </form>
+        >
+          ?
+        </button>
+      </div>
+      <Tooltip
+        tooltipBtnVisible={tooltipBtnVisible}
+        commands={tooltipCommands}
+        visible={showTooltip}
+        onClose={() => setShowTooltip(false)}
+      />
     </div>
   )
 }

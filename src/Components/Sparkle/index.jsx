@@ -1,5 +1,6 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useContext, useEffect, useRef } from 'react';
 import './style.css';
+import { DataContext } from '../../Context/DataContext';
 
 const Sparkle = (props) => {
   const { 
@@ -7,13 +8,16 @@ const Sparkle = (props) => {
     sectionType,
   } = props;
 
+  const { sparkleCount, sparkleSize } = useContext(DataContext);
+
   const canvasRef = useRef(null);
+  
 
   useEffect(() => {
     const canvas = canvasRef?.current;
     const ctx = canvas.getContext('2d');
     const sparkles = [];
-    const numSparkles = 14;
+    const numSparkles = sparkleCount;
 
     const resizeCanvas = () => {
       if (parentRef?.current) {
@@ -31,7 +35,8 @@ const Sparkle = (props) => {
       constructor(x, y, size, speedX, speedY, opacity, color) {
         this.x = x;
         this.y = y;
-        this.size = size;
+        // Random size between 50-100% of sparkleSize
+        this.size = (Math.random() * 0.5 + 0.5) * size;
         this.speedX = speedX;
         this.speedY = speedY;
         this.opacity = opacity;
@@ -57,7 +62,8 @@ const Sparkle = (props) => {
       reset() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
-        this.size = Math.random() * 2 + 1;
+        // Random size between 50-100% of sparkleSize
+        this.size = (Math.random() * 0.5 + 0.5) * sparkleSize;
         this.speedX = (Math.random() - 0.5) * 0.5;
         this.speedY = (Math.random() - 0.5) * 0.5;
         this.opacity = Math.random();
@@ -71,12 +77,11 @@ const Sparkle = (props) => {
       for (let i = 0; i < numSparkles; i++) {
         const x = Math.random() * canvas.width;
         const y = Math.random() * canvas.height;
-        const size = Math.random() * 2 + 1;
         const speedX = (Math.random() - 0.5) * 0.5;
         const speedY = (Math.random() - 0.5) * 0.5;
         const opacity = Math.random();
         const color = Math.random() < 0.5 ? '255, 255, 255' : '255, 77, 70'; // White or Red
-        sparkles.push(new Sparkle(x, y, size, speedX, speedY, opacity, color));
+        sparkles.push(new Sparkle(x, y, sparkleSize, speedX, speedY, opacity, color));
       }
     }
 
@@ -90,22 +95,16 @@ const Sparkle = (props) => {
     }
 
     resizeCanvas();
+    sparkles.length = 0; // Clear existing sparkles
     initSparkles();
     animate();
 
-    // const handleResize = () => {
-    //   canvas.width = window.innerWidth;
-    //   canvas.height = window.innerHeight;
-    //   sparkles.length = 0;
-    //   initSparkles();
-    // };
-
-    //window.addEventListener('resize', handleResize);
-    //return () => window.removeEventListener('resize', handleResize);
-
     window.addEventListener('resize', resizeCanvas);
-    return () => window.removeEventListener('resize', resizeCanvas);
-  }, [parentRef]);
+    return () => {
+      window.removeEventListener('resize', resizeCanvas);
+      sparkles.length = 0; // Clean up sparkles on unmount
+    };
+  }, [parentRef, sparkleCount, sparkleSize]); // Add dependencies
 
 
   return (
