@@ -1,7 +1,22 @@
 import React, { useContext, useState } from 'react'
 import { ThemeContext } from '../../Context/ThemeContext';
 import { DataContext } from '../../Context/DataContext';
-import './style.css'
+import './style.css';
+import Tooltip from '../Tooltip';
+
+
+const commands = {
+  help: 'list codes in console',
+  lights: 'toggle light/dark mode',
+  'sparkle size': 'show current sparkle size',
+  'sparkle count': 'show current sparkle count',
+  'size-[0.1-100]': 'set sparkle size',
+  'count-[0-100]': 'set number of sparkles',
+  'set-[projectname]': 'toggle project visibility',
+  'reset size': 'restore default sparkle size',
+  'reset count': 'restore default sparkle count',
+  list: 'show available projects'
+};
 
 export default function Crypt() {
   const { changeTheme } = useContext(ThemeContext);
@@ -17,6 +32,9 @@ export default function Crypt() {
   const [code, setCode] = useState('')
   const [placeHolder, setPlaceHolder] = useState('Enter code')
   const [failCount, setFailCount] = useState(0)
+  const [showTooltip, setShowTooltip] = useState(false);
+  const [tooltipCommands, setTooltipCommands] = useState({});
+  const [tooltipBtnVisible, setTooltipBtnVisible] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -118,32 +136,24 @@ export default function Crypt() {
     // Add project list command
     if (submitted === 'list' || submitted === 'projects') {
       success = true;
-      console.log('Available projects:');
-      console.table({
+      const projects = {
         'chatplus': projectsToDisplay.includes('chatplus') ? 'visible' : 'hidden',
         'realitycalc': projectsToDisplay.includes('realitycalc') ? 'visible' : 'hidden',
         'heromatchups': projectsToDisplay.includes('heromatchups') ? 'visible' : 'hidden',
         'mint': projectsToDisplay.includes('mint') ? 'visible' : 'hidden',
         'cashflow': projectsToDisplay.includes('cashflow') ? 'visible' : 'hidden',
         'yt-playlist-downloader': projectsToDisplay.includes('yt-playlist-downloader') ? 'visible' : 'hidden'
-      });
-      console.log("Use 'set-[projectname]' to toggle visibility");
+      };
+      setTooltipCommands(projects);
+      setShowTooltip(true);
+      console.table(projects);
     }
 
     if (submitted === 'help') {
       success = true;
-      console.table({
-        help: 'list codes in console',
-        lights: 'toggle light/dark mode',
-        'sparkle size': 'show current sparkle size',
-        'sparkle count': 'show current sparkle count',
-        'size-[0.1-5]': 'set sparkle size',
-        'count-[0-100]': 'set number of sparkles',
-        'set-[projectname]': 'toggle project visibility',
-        'reset size': 'restore default sparkle size',
-        'reset count': 'restore default sparkle count',
-        list: 'show available projects'
-      });
+      setTooltipCommands(commands);
+      setShowTooltip(true);
+      console.table(commands);
     }
 
     // flash input field if successful
@@ -202,15 +212,33 @@ export default function Crypt() {
 
   return (
     <div className="crypt__container">
-      <form className="crypt__form" onSubmit={handleSubmit}> 
-        <input 
-          className="crypt__form-input" 
-          type="text" 
-          value={code} 
-          onChange={handleCodeChange}
-          placeholder={placeHolder}
-        />
-      </form>
+      <div className="crypt__wrapper">
+        <form className="crypt__form" onSubmit={handleSubmit}> 
+          <input 
+            className="crypt__form-input" 
+            type="text" 
+            value={code} 
+            onChange={handleCodeChange}
+            placeholder={placeHolder}
+          />
+        </form>
+        <button 
+          className="crypt__help-button"
+          style={{ opacity: failCount >= 3 ? .8 : 0 }}
+          onClick={() => {
+            setTooltipCommands(commands);
+            setShowTooltip(true);
+          }}
+        >
+          ?
+        </button>
+      </div>
+      <Tooltip
+        tooltipBtnVisible={tooltipBtnVisible}
+        commands={tooltipCommands}
+        visible={showTooltip}
+        onClose={() => setShowTooltip(false)}
+      />
     </div>
   )
 }

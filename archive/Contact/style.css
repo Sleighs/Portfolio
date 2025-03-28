@@ -129,8 +129,7 @@
 }
 
 .contact-section__title {
-  font-size: 3.5rem;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--text-primary);
   margin-bottom: 1rem;
   background: linear-gradient(45deg, var(--accent-color), var(--accent-color-hover));

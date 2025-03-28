@@ -79,7 +79,7 @@
   border: 2px solid;
   border-radius: 3px;
   margin: 4px 0;
-  z-index: 2;
+  z-index: 1; /* Lower z-index */
   opacity: 1;
   border-color: rgba(199, 200, 212, 0.9); /* rgba(255, 77, 70, .7 */
 }
@@ -121,7 +121,7 @@
   font-family: 'Red Hat Display', sans-serif;
   position: relative;
   overflow: visible;
-  z-index: 2;
+  z-index: 1; /* Lower z-index */
   /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.33); */
 }
 
@@ -145,7 +145,7 @@
 }
 
 .contact-section__title {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 700;
   color: #FF4D46;
   margin-bottom: 1.5rem;
