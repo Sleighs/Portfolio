@@ -22,7 +22,7 @@ const ProjectData = [
     links: [
       { link: 'https://github.com/sleighs/chat-plus', linkText: 'View on GitHub', show: true },
       { link: 'https://chrome.google.com/webstore/detail/chatplus-for-rumble/odlcomopigapcpmlpmmmhlhegajembio?hl=en&authuser=0', linkText: 'Chrome Web Store', show: true},
-      { link: 'https://addons.mozilla.org/en-US/firefox/addon/chatplus-for-rumble/', linkText: 'Firefox Add-on Store', show: true}
+      // { link: 'https://addons.mozilla.org/en-US/firefox/addon/chatplus-for-rumble/', linkText: 'Firefox Add-on Store', show: true}
     ],
     tags: ['JavaScript', 'WebExtensions API', 'React'],
     pic: chatplusPic,
@@ -219,7 +219,7 @@ const Project = (props) => {
         style={{display: projectsToDisplay.includes(projectData?.id) ? 'flex' : 'none'}}
       >
         <div className="col-md-7 project-description">
-          <h3 className="projects-row-title"><strong>{projectData?.title}</strong></h3>
+          <div className="projects-row-title">{projectData?.title}</div>
           <p>{projectData?.description}</p>
           {projectData?.features && 
             <>
@@ -230,13 +230,15 @@ const Project = (props) => {
             </>
           }
 
-          {projectData?.links.map((link, index) => (
-            <p key={`link-${projectIndex}-${index}`} className="project-description__link">
-              <a target="_blank" href={link?.link} rel="noreferrer">
-                {link?.linkText || link?.link}
-              </a>
-            </p> 
-          ))}
+          <div className="project-link-row">
+            {projectData?.links.map((link, index) => (
+              <div key={`link-${projectIndex}-${index}`} className="project-description__link">
+                <a target="_blank" href={link?.link} rel="noreferrer">
+                  {link?.linkText || link?.link}
+                </a>
+              </div> 
+            ))}
+          </div>
       
           <div className="tag-row">
             {projectData?.tags.map((tag, index) => (
