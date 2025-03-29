@@ -205,7 +205,7 @@ const NavProposalForm = () => {
               value={formData.timeline} 
               onChange={handleChange}
             >
-              <option value="" disabled>Select your timeline</option>
+              <option value="none">Select your timeline</option>
               <option value="immediate">Immediate (1-2 months)</option>
               <option value="short">Short Term (2-4 months)</option>
               <option value="long">Long Term (4+ months)</option>

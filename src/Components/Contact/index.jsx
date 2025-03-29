@@ -113,7 +113,7 @@ const Contact = () => {
                     )}
                   </button>
                 </div>
-                <p className="contact-section__info-note">Available Monday - Friday, 9am - 5pm EST</p>
+                <p className="contact-section__info-note">Available Monday - Friday, 9am - 6pm EST</p>
               </div>
 
               <div 
@@ -138,7 +138,7 @@ const Contact = () => {
                       className="contact-section__link"
                       title="Opens your email app"
                     >
-                      swrightdev@gmail.com
+                      <span className="contact-section__link-text-normal">swrightdev@gmail.com</span>
                     </a>
                   </p>
                   <button 
