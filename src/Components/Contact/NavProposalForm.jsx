@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useRef, useState } from 'react';
-import './ProposalRequestForm.css';
+import './NavProposalForm.css';  // Changed from './ProposalRequestForm.css'
 import { DataContext } from '../../Context/DataContext';
 
 const NavProposalForm = () => {
@@ -18,6 +18,39 @@ const NavProposalForm = () => {
     details: ''
   });
 
+  const [isClosing, setIsClosing] = useState(false);
+
+  const handleClose = () => {
+    setIsClosing(true);
+    setTimeout(() => {
+      setIsClosing(false);
+      setIsOpen(false);
+    }, 300); // Match animation duration
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      // Ignore clicks on the toggle buttons
+      if (event.target.closest('#openForm') || 
+          event.target.closest('.navigation--hamburger')) {
+        return;
+      }
+      
+      // Only close if clicking outside the form container
+      if (formRef.current && !formRef.current.contains(event.target)) {
+        handleClose();
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isOpen, setIsOpen]);
+
   useEffect(() => {
     const handleClickOutside = (event) => {
       // Ignore clicks on the toggle buttons
@@ -28,7 +61,7 @@ const NavProposalForm = () => {
       
       // Only close if clicking outside the form
       if (formRef.current && !formRef.current.contains(event.target)) {
-        setIsOpen(false);
+        handleClose();
       }
     };
 
@@ -83,59 +116,75 @@ const NavProposalForm = () => {
   if (!isOpen) return null;
 
   return (
-    <div className="proposal-form-wrapper">
-      {/* <button onClick={toggleForm} id="openForm">Have a Project?</button> */}
-      <div className={`proposal-form ${isOpen ? 'active' : ''}`}>
-        <button onClick={toggleForm} id="closeForm" className="close-btn">&times;</button>
-        <h2>Request a Proposal</h2>
+    <div className="proposal-form-overlay">
+      <div 
+        ref={formRef}
+        className={`proposal-form-container ${isClosing ? 'closing' : ''}`}
+      >
+        <div className="proposal-form-header">
+          <h2>Request a Proposal</h2>
+          <p>Let's discuss your project and make it happen</p>
+          <button 
+            className="proposal-form-close" 
+            onClick={handleClose}
+          >
+            ×
+          </button>
+        </div>
+        
         <form ref={formRef} onSubmit={handleSubmit}>
-          <label htmlFor="name">Name:</label>
-          <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required />
+          <div className="form-group">
+            <label htmlFor="name">Name</label>
+            <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required />
+          </div>
 
-          <label htmlFor="email">Email:</label>
-          <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required />
+          <div className="form-group">
+            <label htmlFor="email">Email</label>
+            <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required />
+          </div>
 
-          <label htmlFor="phone">Phone Number:</label>
-          <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleChange} required />
+          <div className="form-group">
+            <label htmlFor="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleChange} required />
+          </div>
 
-          <label htmlFor="company">Company Name:</label>
-          <input type="text" id="company" name="company" value={formData.company} onChange={handleChange} required />
+          <div className="form-group">
+            <label htmlFor="company">Company Name</label>
+            <input type="text" id="company" name="company" value={formData.company} onChange={handleChange} required />
+          </div>
 
-          <label htmlFor="website">Current Website (if any):</label>
-          <input type="url" id="website" name="website" value={formData.website} onChange={handleChange} />
+          <div className="form-group">
+            <label htmlFor="website">Current Website (if any)</label>
+            <input type="url" id="website" name="website" value={formData.website} onChange={handleChange} />
+          </div>
 
-          {/* <div style={{display: 'none'}}>
-            <label htmlFor="budget">Estimated Budget:</label>
-            <select id="budget" name="budget" required>
-              <option value="" disabled selected>Select your budget range</option>
-              <option value="5000">$5,000 - $10,000</option>
-              <option value="10000">$10,000 - $20,000</option>
-              <option value="20000">$20,000 - $50,000</option>
-              <option value="50000">$50,000+</option>
+          <div className="form-group">
+            <label htmlFor="services">Services Needed</label>
+            <select id="services" name="services" multiple onChange={handleChange} required>
+              <option value="webDesign">Web Design</option>
+              <option value="webDevelopment">Web Development</option>
+              <option value="seo">SEO</option>
+              <option value="branding">Branding</option>
+              <option value="digitalMarketing">Digital Marketing</option>
             </select>
-          </div> */}
+          </div>
 
-          <label htmlFor="services">Services Needed:</label>
-          <select id="services" name="services" multiple onChange={handleChange} required>
-            <option value="webDesign">Web Design</option>
-            <option value="webDevelopment">Web Development</option>
-            <option value="seo">SEO</option>
-            <option value="branding">Branding</option>
-            <option value="digitalMarketing">Digital Marketing</option>
-          </select>
+          <div className="form-group">
+            <label htmlFor="timeline">Project Timeline</label>
+            <select id="timeline" name="timeline" value={formData.timeline} onChange={handleChange} required>
+              <option value="" disabled>Select your timeline</option>
+              <option value="immediate">Immediate (1-2 months)</option>
+              <option value="short">Short Term (2-4 months)</option>
+              <option value="long">Long Term (4+ months)</option>
+            </select>
+          </div>
 
-          <label htmlFor="timeline">Project Timeline:</label>
-          <select id="timeline" name="timeline" value={formData.timeline} onChange={handleChange} required>
-            <option value="" disabled>Select your timeline</option>
-            <option value="immediate">Immediate (1-2 months)</option>
-            <option value="short">Short Term (2-4 months)</option>
-            <option value="long">Long Term (4+ months)</option>
-          </select>
+          <div className="form-group">
+            <label htmlFor="details">Project Details</label>
+            <textarea id="details" name="details" rows="5" value={formData.details} onChange={handleChange} placeholder="Provide more details about your project..." required></textarea>
+          </div>
 
-          <label htmlFor="details">Project Details:</label>
-          <textarea id="details" name="details" rows="5" value={formData.details} onChange={handleChange} placeholder="Provide more details about your project..." required></textarea>
-
-          <button type="submit">Send</button>
+          <button type="submit" className="submit-button">Send Proposal Request</button>
         </form>
       </div>
     </div>
