@@ -39,20 +39,6 @@ const Contact = () => {
         }
     };
 
-    const copyXRPDetails = async () => {
-        try {
-            const xrpAddress = 'rNbwQhHxJiDX6QwzHzxy4qRR3YuY4JyqS5';
-            const xrpMemo = '1234567'; // Replace with your actual memo
-            await navigator.clipboard.writeText(`Address: ${xrpAddress}\nMemo: ${xrpMemo}`);
-            setCopyStatus(prev => ({ ...prev, xrp: true }));
-            setTimeout(() => {
-                setCopyStatus(prev => ({ ...prev, xrp: false }));
-            }, 2000);
-        } catch (err) {
-            console.error('Failed to copy XRP details: ', err);
-        }
-    };
-
     return (
       <div className="contact-section" id="contact-container" ref={hiddenRef}>
         <div className="contact-section__header">
@@ -80,7 +66,12 @@ const Contact = () => {
             </div>
 
             <div className="contact-section__info">
-              <div className="contact-section__info-card">
+              <div 
+                className="contact-section__info-card"
+                onClick={() => copyToClipboard('+1 (609) 742-2897', 'phone')}
+                style={{ cursor: 'copy' }}
+                title={'Click to copy'}
+              >
                 <div className="contact-section__info-icon">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
@@ -88,10 +79,27 @@ const Contact = () => {
                 </div>
                 <h3>Let's Talk</h3>
                 <div className="contact-section__info-row">
-                  <p>+1 (609) 742-2897</p>
+                  <p style={{ width: '100%' }}>
+                    <a 
+                      href="tel:+16097422897"
+                      onClick={(e) => e.stopPropagation()}
+                      style={{ 
+                        textDecoration: 'none', 
+                        color: 'inherit',
+                        cursor: 'pointer'
+                      }}
+                      className="contact-section__link"
+                      title="Opens your phone app"
+                    >
+                      +1 (609) 742-2897
+                    </a>
+                  </p>
                   <button 
                     className="contact-section__copy-button"
-                    onClick={() => copyToClipboard('+1 (609) 742-2897', 'phone')}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      copyToClipboard('+1 (609) 742-2897', 'phone');
+                    }}
                     aria-label="Copy phone number"
                   >
                     {copyStatus.phone ? (
@@ -108,7 +116,12 @@ const Contact = () => {
                 <p className="contact-section__info-note">Available Monday - Friday, 9am - 5pm EST</p>
               </div>
 
-              <div className="contact-section__info-card">
+              <div 
+                className="contact-section__info-card"
+                onClick={() => copyToClipboard('swrightdev@gmail.com', 'email')}
+                style={{ cursor: 'copy' }}
+                title={'Click to copy'}
+              >
                 <div className="contact-section__info-icon">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
@@ -117,10 +130,23 @@ const Contact = () => {
                 </div>
                 <h3>Email Me</h3>
                 <div className="contact-section__info-row">
-                  <p>swrightdev@gmail.com</p>
+                  <p>
+                    <a 
+                      href="mailto:swrightdev@gmail.com"
+                      onClick={(e) => e.stopPropagation()}
+                      style={{ textDecoration: 'none', color: 'inherit' }}
+                      className="contact-section__link"
+                      title="Opens your email app"
+                    >
+                      swrightdev@gmail.com
+                    </a>
+                  </p>
                   <button 
                     className="contact-section__copy-button"
-                    onClick={() => copyToClipboard('swrightdev@gmail.com', 'email')}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      copyToClipboard('swrightdev@gmail.com', 'email');
+                    }}
                     aria-label="Copy email address"
                   >
                     {copyStatus.email ? (
@@ -137,7 +163,12 @@ const Contact = () => {
                 <p className="contact-section__info-note">I typically respond within 24 hours</p>
               </div>
 
-              <div className="contact-section__info-card">
+              <div 
+                className="contact-section__info-card"
+                onClick={() => window.open('https://www.google.com/maps/@39.8425295,-74.9254593,32881m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI1MDMyNS4xIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D', '_blank')}
+                style={{ cursor: 'pointer' }}
+                title="Opens Google Maps in new tab"
+              >
                 <div className="contact-section__info-icon">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <circle cx="12" cy="12" r="10"/>
@@ -146,20 +177,23 @@ const Contact = () => {
                   </svg>
                 </div>
                 <h3>Location</h3>
-                <p>South Jersey, NJ, USA</p>
+                <p className="contact-section__link">South Jersey, NJ, USA</p>
                 <p className="contact-section__info-note">Available for remote work worldwide</p>
               </div>
 
-              <div className="contact-section__info-card">
+              <div 
+                className="contact-section__info-card"
+                onClick={() => window.open('https://github.com/sleighs', '_blank')}
+                style={{ cursor: 'pointer' }}
+                title={'Opens GitHub in new tab'}
+              >
                 <div className="contact-section__info-icon">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
                   </svg>
                 </div>
                 <h3>GitHub</h3>
-                <a href="https://github.com/sleighs" target="_blank" rel="noopener noreferrer" className="contact-section__info-link">
-                  <p>github.com/sleighs</p>
-                </a>
+                <p className="contact-section__link">github.com/sleighs</p>
                 <p className="contact-section__info-note">Check out my projects and contributions</p>
               </div>
             </div>

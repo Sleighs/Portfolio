@@ -393,6 +393,23 @@
   align-items: center;
   gap: 0.75rem;
   margin-bottom: 0;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.contact-section__info-row:hover {
+  background-color: var(--bg-sSecondary);
+}
+
+.contact-section__link:hover {
+  color: var(--accent-color) !important;
+}
+
+.contact-section__info-row p {
+  margin: 0;
+  flex: 1;
+  width: 100%;
 }
 
 .contact-section__info-row p {
