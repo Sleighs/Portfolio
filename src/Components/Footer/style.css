@@ -13,7 +13,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 3rem 2rem 2rem;
+  padding: 3rem 4rem 2rem;
   background-color: var(--footer-bg);
   position: relative;
   overflow: hidden;
@@ -113,7 +113,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 1rem;
+  gap: .4rem;
 }
 
 .footer-section--right {

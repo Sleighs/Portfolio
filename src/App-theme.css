@@ -10,6 +10,7 @@
     --grid-highlight: rgba(255, 50, 78, 0.04);
     --text-secondary: #475569;
     --text-tertiary: #64748b;
+    --input-bg: #f1f5f9;  /* Slightly darker than bg-darker for light mode */
 }
 .title-light {
     color: rgba(0,16,31,1);
@@ -27,6 +28,7 @@
     --grid-highlight: rgba(255, 50, 78, 0.05);
     --text-secondary: rgba(255, 255, 255, 0.95);  /* Updated: brighter text */
     --text-tertiary: rgba(255, 255, 255, 0.8);   /* Updated: brighter text */
+    --input-bg: #1e293b;  /* Slightly lighter than bg-darker for dark mode */
 }
 .title-dark {
     color:white;
