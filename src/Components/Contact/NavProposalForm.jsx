@@ -90,14 +90,20 @@ const NavProposalForm = () => {
     };
   }, [isOpen, setIsOpen]);
 
-  // Save form data to local storage on change
+  // Update the handleChange function to handle multiple selections
   const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    const newValue = type === 'checkbox' ? checked : value;
+    const { name, value, type, selectedOptions } = e.target;
+    let newValue = value;
+
+    // Handle multiple select
+    if (type === 'select-multiple') {
+      newValue = Array.from(selectedOptions).map(option => option.value);
+    }
+
     setFormData((prevData) => {
       const updatedData = { ...prevData, [name]: newValue };
       localStorage.setItem('proposalFormData', JSON.stringify(updatedData));
-      localStorage.setItem('proposalFormDataTimestamp', new Date().getTime().toString()); // Save current timestamp
+      localStorage.setItem('proposalFormDataTimestamp', new Date().getTime().toString());
       return updatedData;
     });
   };
@@ -145,12 +151,12 @@ const NavProposalForm = () => {
 
           <div className="form-group">
             <label htmlFor="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleChange} required />
+            <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleChange} />
           </div>
 
           <div className="form-group">
             <label htmlFor="company">Company Name</label>
-            <input type="text" id="company" name="company" value={formData.company} onChange={handleChange} required />
+            <input type="text" id="company" name="company" value={formData.company} onChange={handleChange} />
           </div>
 
           <div className="form-group">
@@ -159,19 +165,46 @@ const NavProposalForm = () => {
           </div>
 
           <div className="form-group">
-            <label htmlFor="services">Services Needed</label>
-            <select id="services" name="services" multiple onChange={handleChange} required>
-              <option value="webDesign">Web Design</option>
-              <option value="webDevelopment">Web Development</option>
-              <option value="seo">SEO</option>
-              <option value="branding">Branding</option>
-              <option value="digitalMarketing">Digital Marketing</option>
-            </select>
+            <label>Services</label>
+            <div className="services-options">
+              {[
+                { value: 'webDesign', label: 'Web Design' },
+                { value: 'webDevelopment', label: 'Web Development' },
+                { value: 'seo', label: 'SEO' },
+                { value: 'branding', label: 'Branding' },
+                { value: 'digitalMarketing', label: 'Digital Marketing' }
+              ].map((service) => (
+                <label key={service.value} className="service-option">
+                  <input
+                    type="checkbox"
+                    name="services"
+                    value={service.value}
+                    checked={formData.services.includes(service.value)}
+                    onChange={(e) => {
+                      const value = e.target.value;
+                      setFormData(prev => ({
+                        ...prev,
+                        services: e.target.checked 
+                          ? [...prev.services, value]
+                          : prev.services.filter(s => s !== value)
+                      }));
+                    }}
+                  />
+                  <span>{service.label}</span>
+                </label>
+              ))}
+            </div>
           </div>
 
           <div className="form-group">
             <label htmlFor="timeline">Project Timeline</label>
-            <select id="timeline" name="timeline" value={formData.timeline} onChange={handleChange} required>
+            <select 
+              id="timeline" 
+              name="timeline" 
+              className="timeline-select"
+              value={formData.timeline} 
+              onChange={handleChange}
+            >
               <option value="" disabled>Select your timeline</option>
               <option value="immediate">Immediate (1-2 months)</option>
               <option value="short">Short Term (2-4 months)</option>
@@ -181,7 +214,7 @@ const NavProposalForm = () => {
 
           <div className="form-group">
             <label htmlFor="details">Project Details</label>
-            <textarea id="details" name="details" rows="5" value={formData.details} onChange={handleChange} placeholder="Provide more details about your project..." required></textarea>
+            <textarea id="details" name="details" rows="5" value={formData.details} onChange={handleChange} placeholder="Provide more details about your project..."></textarea>
           </div>
 
           <button type="submit" className="submit-button">Send Proposal Request</button>
