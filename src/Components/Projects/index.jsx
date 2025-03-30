@@ -140,17 +140,17 @@ const Projects = (props) => {
       };
     }, []);
 
-    useEffect(() => {
-      // if (hiddenRef?.current) {
-      //   const top = hiddenRef.current.getBoundingClientRect().top;
-      //   const windowHeight = window.innerHeight;
-      //   if (top < windowHeight + 250) {
-      //     setInView(true);
-      //   } else {
-      //     setInView(false);
-      //   }
-      // }
-    }, [scrollPosition]);
+    // useEffect(() => {
+    //   if (hiddenRef?.current) {
+    //     const top = hiddenRef.current.getBoundingClientRect().top;
+    //     const windowHeight = window.innerHeight;
+    //     if (top < windowHeight + 250) {
+    //       setInView(true);
+    //     } else {
+    //       setInView(false);
+    //     }
+    //   }
+    // }, [scrollPosition]);
 
     return (
       <div id="projects-container" ref={hiddenRef}>

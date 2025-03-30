@@ -196,4 +196,8 @@
     .section-title {
         font-size: 2rem;
     }
+
+    .projects-row-title {
+        text-align: center;
+    }
 }
