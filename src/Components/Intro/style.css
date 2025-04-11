@@ -77,7 +77,7 @@
 
 .about-intro__contact {
   display: flex;
-  gap: 0.5rem;
+  gap: 1rem;
   margin-top: .5rem;
   margin-bottom: 1rem;
   flex-wrap: wrap;
@@ -180,75 +180,7 @@
   transform-origin: left;
 }
 
-@media only screen and (max-width: 1400px) {
-  .about-intro__title {
-    font-size: 6ch;
-    line-height: 1.2;
-    max-width: 1000px;
-  }
 
-}
-
-@media only screen and (max-width: 1025px) {
-  .about-intro__title {
-    font-size: 50px;
-    line-height: 1.2;
-    max-width: 900px;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-    /* Intro */
-    .about-intro {
-      width: 100%;
-      /*padding: 27% 0 2% 0;*/
-      /* margin: 14% auto 5% auto; */
-      /* padding: 3%; */
-      text-align: center;
-      border-radius: 5px;
-    }
-    .about-intro__text {
-      margin: 0 auto;
-    }
-
-    /* .about-intro-dark {
-      background-color: rgba(13, 18, 20, 1);
-    }
-    .about-intro-light {
-      background-color: rgba(236, 223, 223, 1);
-    } */
-
-    .about-intro__title {
-      font-size: 2.5rem;
-    }
-  
-    .about-intro__contact {
-      flex-direction: row;
-      gap: 1rem;
-      justify-content: center;
-    }
-
-    .about-intro__contact-card {
-      padding: 0.5rem 0.75rem;
-      min-width: 180px;
-    }
-
-    .about-intro__contact-text {
-      font-size: 0.85rem;
-    }
-
-    .about-intro__quote-text {
-      font-size: 1.2rem;
-    }
-    
-    .about-intro__quote-author {
-      font-size: 0.9rem;
-    }
-
-    .about-intro__subtitle {
-      font-size: 1.4rem;
-    }
-  }
 
 .about-intro__quote {
   margin: .5rem auto;
@@ -348,4 +280,97 @@
     width: 16px;
     height: 16px;
   }
+}
+
+
+@media only screen and (max-width: 1400px) {
+  .about-intro__title {
+    font-size: 6ch;
+    line-height: 1.2;
+    max-width: 1000px;
+  }
+
+}
+
+@media only screen and (max-width: 1025px) {
+  .about-intro__title {
+    font-size: 50px;
+    line-height: 1.2;
+    max-width: 900px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* Intro */
+  .about-intro {
+    width: 100%;
+    /*padding: 27% 0 2% 0;*/
+    /* margin: 14% auto 5% auto; */
+    /* padding: 3%; */
+    text-align: center;
+    border-radius: 5px;
+  }
+  .about-intro__text {
+    margin: 0 auto;
+  }
+
+  /* .about-intro-dark {
+    background-color: rgba(13, 18, 20, 1);
+  }
+  .about-intro-light {
+    background-color: rgba(236, 223, 223, 1);
+  } */
+
+  .about-intro__title {
+    font-size: 2.5rem;
+  }
+
+  .about-intro__contact {
+    flex-direction: row;
+    gap: .5rem;
+    justify-content: center;
+  }
+
+  .about-intro__contact-card {
+    padding: 0.5rem 0.75rem;
+    min-width: 180px;
+    height: 40px;
+    margin: 0 auto;
+  }
+  .about-intro__contact-card-github {
+    margin: 0 auto;
+    min-width: 98px;
+    
+  }
+
+  .about-intro__contact-text {
+    font-size: 0.85rem;
+  }
+
+  .about-intro__quote-text {
+    font-size: 1.2rem;
+  }
+  
+  .about-intro__quote-author {
+    font-size: 0.9rem;
+  }
+
+  .about-intro__subtitle {
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .about-intro__contact {
+    flex-direction: column;
+  }
+  .about-intro__contact-card {
+    min-width: fit-content;
+    margin: 0 auto;
+  }
+
+  .about-intro__quote {
+    font-size: .9rem;
+  }
+  
 }

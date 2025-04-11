@@ -6,11 +6,36 @@ import heromatchupsPic from '../../Resources/Images/portfolio-heromatchups.png';
 import realityCalcPic from '../../Resources/Images/portfolio-realitycalc03.png';
 import chatplusPic from '../../Resources/Images/logo-600x400.png';
 import ytpwebscraperPic from '../../Resources/Images/portfolio-ytpwebscraper.png';
+import xPostSaverPic from '../../Resources/Images/x-post-saver1.png';
 import Tag from '../Tag';
 import './style.css'
 
 
 const ProjectData = [
+  {
+    title: 'X Post Saver',
+    description: 'X Post Saver is a browser extension that allows you to easily save X posts for later reference. It seamlessly integrates with X\'s interface to provide a smooth user experience for saving and managing posts.',
+    features: [
+      'Save X posts with one click',
+      'Export saved posts to your computer'
+    ],
+    links: [
+      { 
+        link: 'https://chromewebstore.google.com/detail/x-post-saver/lbocheaabffbopcjanfnaedhkockljcd?authuser=0&hl=en', 
+        linkText: 'Chrome Web Store', 
+        show: true 
+      },
+      { 
+        link: 'https://github.com/Sleighs/tweet-saver-browser-extension', 
+        linkText: 'View on GitHub', 
+        show: true 
+      }
+    ],
+    tags: ['JavaScript', 'React', 'Chrome Extension'],
+    pic: xPostSaverPic,
+    alt: 'X Post Saver Chrome Extension',
+    id: 'xpostsaver'
+  },
   {
     title: `ChatPlus for Rumble`,
     description: `ChatPlus is a Google Chrome extension that enhances the Rumble livestream chat user experience. The extension introduces user-friendly features to improve user interaction and engagement.`,
@@ -20,18 +45,29 @@ const ProjectData = [
       'Username color schemes'
     ],
     links: [
-      { link: 'https://github.com/sleighs/chat-plus', linkText: 'View on GitHub', show: true },
-      { link: 'https://chrome.google.com/webstore/detail/chatplus-for-rumble/odlcomopigapcpmlpmmmhlhegajembio?hl=en&authuser=0', linkText: 'Chrome Web Store', show: true},
-      // { link: 'https://addons.mozilla.org/en-US/firefox/addon/chatplus-for-rumble/', linkText: 'Firefox Add-on Store', show: true}
+      { 
+        link: 'https://github.com/sleighs/chat-plus', 
+        linkText: 'View on GitHub', 
+        show: true },
+      { 
+        link: 'https://chrome.google.com/webstore/detail/chatplus-for-rumble/odlcomopigapcpmlpmmmhlhegajembio?hl=en&authuser=0', 
+        linkText: 'Chrome Web Store', 
+        show: true
+      },
+      // { 
+      //   link: 'https://addons.mozilla.org/en-US/firefox/addon/chatplus-for-rumble/', 
+      //   linkText: 'Firefox Add-on Store', 
+      //   show: false
+      // }
     ],
-    tags: ['JavaScript', 'WebExtensions API', 'React'],
+    tags: ['JavaScript', 'WebExtensions API', 'Chrome Extension', 'React'],
     pic: chatplusPic,
     alt: 'ChatPlus for Rumble',
     id: 'chatplus'
   },
   {
     title: `Male Reality Calculator`,
-    description: `The Male Reality Calculator is a popular online dating tool that uses U.S. Census Bureau statistics to calculate the user's odds of meeting their ideal woman.`,
+    description: `A popular online tool that uses U.S. Census Bureau statistics to calculate the user's odds of meeting their ideal woman. Datasets updated along with census. Thanks to all who checked it out!`,
     links: [
       { link: `https://realitycalc.com/`, linkText: `Realitycalc.com`, show: true },
     ],

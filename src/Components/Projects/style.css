@@ -68,7 +68,8 @@
     padding: 0.6rem 1.5rem;  /* Slightly reduced vertical padding */
     font-size: 1.1rem;
     border-radius: 8px;
-    background: var(--bg-primary);
+    /* background: var(--bg-primary); */
+    background: rgba(255, 255, 255, 0.02);
     color: var(--accent-color);
     text-decoration: none;
     transition: all 0.2s ease-in-out;
@@ -77,9 +78,11 @@
 
 .project-description__link a:hover {
     transform: translateY(-1px);
-    box-shadow: 0 4px 8px rgba(39, 10, 9, 0.1);
-    background: var(--accent-color);
-    color: var(--bg-primary);
+    box-shadow: 0 4px 8px rgba(39, 10, 9, 0.2);
+    /* background: var(--accent-color); */
+    background: rgba(255, 255, 255, 0.1);
+
+    /* color: var(--bg-primary); */
 }
 
 .tag-row {
