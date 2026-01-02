@@ -65,18 +65,18 @@ const ProjectData = [
     alt: 'ChatPlus for Rumble',
     id: 'chatplus'
   },
-  {
-    title: `Male Reality Calculator`,
-    description: `A popular online tool that uses U.S. Census Bureau statistics to calculate the user's odds of meeting their ideal woman. Datasets updated along with census. Thanks to all who checked it out!`,
-    links: [
-      { link: `https://realitycalc.com/`, linkText: `Realitycalc.com`, show: true },
-    ],
-    tags: ['React', 'Redux', 'JavaScript'],
-    pic: realityCalcPic,
-    alt: 'Male Reality Calculator',
-    id: 'realitycalc',
-  },
-  
+  // {
+  //   title: `Male Reality Calculator`,
+  //   description: `A popular online tool that uses U.S. Census Bureau statistics to calculate the user's odds of meeting their ideal woman. Datasets updated along with census. Thanks to all who checked it out!`,
+  //   links: [
+  //     { link: `https://realitycalc.com/`, linkText: `Realitycalc.com`, show: true },
+  //   ],
+  //   tags: ['React', 'Redux', 'JavaScript'],
+  //   pic: realityCalcPic,
+  //   alt: 'Male Reality Calculator',
+  //   id: 'realitycalc',
+  // },
+
   {
     title: `Hero Matchups API`,
     description: `The Hero Matchups API is a character matchup and counter resource created for Blizzard's team-based first-person shooter Overwatch 2. Check out the documentation and live demo below.`,

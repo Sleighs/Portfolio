@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-// import { db } from '../firebase';
+import { db } from '../firebase';
 
 const DataContext = React.createContext();
 
@@ -24,6 +24,10 @@ function DataContextProvider(props){
     website: '',
     budget: '', 
     message: '',
+    company: '',
+    services: [],
+    timeline: '',
+    details: ''
   })
   const [dataSent, setDataSent] = useState(false)
   const [sparkleCount, setSparkleCount] = useState(14)
@@ -33,7 +37,7 @@ function DataContextProvider(props){
     setIsOpen(prevState => !prevState);
   }
 
-  function handleProjectFormSubmit(event) {
+  function handleProjectFormSubmit() {
     // Make a unique name for the message
     var d = new Date();
     var msgName = String(formData.name + '-' + d.getTime());
@@ -58,34 +62,25 @@ function DataContextProvider(props){
     // Make new id
     var id = makeid(10);
 
-    // Add message to database
-    // db.collection("messages").doc(msgName).set({
-    //   ...formData,
-    //   date: date,
-    //   time: time,
-    //   timezone: d.getTimezoneOffset(),
-    //   id: id
-    // })
-    // .then(() => {
-    //   console.log("Great news! Message sent successfully!");
-    //   /*console.log({
-    //       name: formData.name,
-    //       email: formData.email,
-    //       message: formData.message,
-    //       date: date,
-    //       time: time,
-    //       timezone: d.getTimezoneOffset(),
-    //       id: id
-    //   })*/
-    // })
-    // .catch((error) => {
-    //   console.error("Krikey! Error sending message: ", error);
-    // });
-
-    // For component to show message was sent
-    if (!dataSent){
-      setDataSent(true)
-    } 
+    // Add message to database and return the promise so callers can await
+    return db.collection("messages").doc(msgName).set({
+      ...formData,
+      date: date,
+      time: time,
+      timezone: d.getTimezoneOffset(),
+      id: id
+    })
+    .then(() => {
+      console.log("Great news! Message sent!");
+      if (!dataSent){
+        setDataSent(true)
+      }
+      return true;
+    })
+    .catch((error) => {
+      console.error("Krikey! Error sending message: ", error);
+      throw error;
+    });
   }
 
   function makeid(length) {

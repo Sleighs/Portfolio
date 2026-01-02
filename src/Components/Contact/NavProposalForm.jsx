@@ -3,22 +3,30 @@ import './NavProposalForm.css';  // Changed from './ProposalRequestForm.css'
 import { DataContext } from '../../Context/DataContext';
 
 const NavProposalForm = () => {
-  const { isOpen, setIsOpen, toggleForm } = useContext(DataContext);
+  const { 
+    isOpen, 
+    setIsOpen, 
+    toggleForm, 
+    formData, 
+    setFormData, 
+    handleProjectFormSubmit 
+  } = useContext(DataContext);
   const formRef = useRef(null);
   
   // State to hold form data
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    company: '',
-    website: '',
-    services: [],
-    timeline: '',
-    details: ''
-  });
+  // const [formData, setFormData] = useState({
+  //   name: '',
+  //   email: '',
+  //   phone: '',
+  //   company: '',
+  //   website: '',
+  //   services: [],
+  //   timeline: '',
+  //   details: ''
+  // });
 
   const [isClosing, setIsClosing] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
   const handleClose = () => {
     setIsClosing(true);
@@ -111,12 +119,22 @@ const NavProposalForm = () => {
   // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you can handle the form submission logic
     console.log('Form submitted:', formData);
-    // Clear local storage after submission
-    localStorage.removeItem('proposalFormData');
-    localStorage.removeItem('proposalFormDataTimestamp');
-    setIsOpen(false);
+
+    // Call the context submit handler and wait for completion
+    const doSubmit = async () => {
+      try {
+        await handleProjectFormSubmit();
+        // Clear local storage after submission
+        localStorage.removeItem('proposalFormData');
+        localStorage.removeItem('proposalFormDataTimestamp');
+        setSubmitted(true);
+      } catch (err) {
+        console.error('Error submitting proposal:', err);
+      }
+    };
+
+    doSubmit();
   };
 
   if (!isOpen) return null;
@@ -128,8 +146,8 @@ const NavProposalForm = () => {
         className={`proposal-form-container ${isClosing ? 'closing' : ''}`}
       >
         <div className="proposal-form-header">
-          <h2>Request a Proposal</h2>
-          <p>Let's discuss your project and make it happen</p>
+          {!submitted && <h2>Request a Proposal</h2>}          
+          {!submitted && <p>Let's discuss your project and make it happen</p>}
           <button 
             className="proposal-form-close" 
             onClick={handleClose}
@@ -138,7 +156,38 @@ const NavProposalForm = () => {
           </button>
         </div>
         
-        <form ref={formRef} onSubmit={handleSubmit}>
+        {submitted ? (
+          <div className="proposal-submitted">
+            <h3>Thanks — proposal request sent!</h3>
+            <p>I received your request and will respond shortly.</p>
+            <div className="proposal-submitted-actions">
+              <button className="send-another-button proposal-submitted-button" onClick={() => {
+                // reset form data for a new submission
+                setFormData({
+                  name: '',
+                  phone: '',
+                  email: '',
+                  projectType: [],
+                  website: '',
+                  budget: '',
+                  message: '',
+                  company: '',
+                  services: [],
+                  timeline: '',
+                  details: ''
+                });
+                setSubmitted(false);
+              }}>Send another</button>
+              <button className="new-button proposal-submitted-button" onClick={() => {
+                setSubmitted(false);
+              }}>Go Back</button>
+              {/* <button className="close-button proposal-submitted-button" onClick={handleClose}>Close</button> */}
+
+             
+            </div>
+          </div>
+        ) : (
+          <form ref={formRef} onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="name">Name</label>
             <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required />
@@ -146,7 +195,7 @@ const NavProposalForm = () => {
 
           <div className="form-group">
             <label htmlFor="email">Email</label>
-            <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required />
+            <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} />
           </div>
 
           <div className="form-group">
@@ -155,7 +204,7 @@ const NavProposalForm = () => {
           </div>
 
           <div className="form-group">
-            <label htmlFor="company">Company Name</label>
+            <label htmlFor="company">Company</label>
             <input type="text" id="company" name="company" value={formData.company} onChange={handleChange} />
           </div>
 
@@ -170,9 +219,11 @@ const NavProposalForm = () => {
               {[
                 { value: 'webDesign', label: 'Web Design' },
                 { value: 'webDevelopment', label: 'Web Development' },
+                { value: 'backendDevelopment', label: 'Backend Development' },
                 { value: 'seo', label: 'SEO' },
                 { value: 'branding', label: 'Branding' },
-                { value: 'digitalMarketing', label: 'Digital Marketing' }
+                { value: 'digitalMarketing', label: 'Digital Marketing' },
+                { value: 'otherServices', label: 'Other Services' }
               ].map((service) => (
                 <label key={service.value} className="service-option">
                   <input
@@ -196,7 +247,7 @@ const NavProposalForm = () => {
             </div>
           </div>
 
-          <div className="form-group">
+          {/* <div className="form-group">
             <label htmlFor="timeline">Project Timeline</label>
             <select 
               id="timeline" 
@@ -206,19 +257,20 @@ const NavProposalForm = () => {
               onChange={handleChange}
             >
               <option value="none">Select your timeline</option>
-              <option value="immediate">Immediate (1-2 months)</option>
-              <option value="short">Short Term (2-4 months)</option>
-              <option value="long">Long Term (4+ months)</option>
+              <option value="immediate">Immediate</option>
+              <option value="short">Short Term</option>
+              <option value="long">Long Term</option>
             </select>
-          </div>
+          </div> */}
 
           <div className="form-group">
             <label htmlFor="details">Project Details</label>
             <textarea id="details" name="details" rows="5" value={formData.details} onChange={handleChange} placeholder="Provide more details about your project..."></textarea>
           </div>
 
-          <button type="submit" className="submit-button">Send Proposal Request</button>
+          <button type="submit" className="submit-button">Send Proposal Request</button> 
         </form>
+      )}
       </div>
     </div>
   );
