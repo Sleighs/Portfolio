@@ -55,11 +55,9 @@
 
 /* Navigation Button */
 .navigation--get-started-button {
-  background: rgb(255, 77, 70);  /* Using section-title color */
   background-color: #2d3133;
   color: white;
   padding: 0.75rem 1.5rem;
-  /* border-radius: 8px; */
   font-size: 0.95rem;
   font-weight: 500;
   cursor: pointer;
@@ -69,6 +67,7 @@
   justify-content: center;
   align-items: center;
   width: 180px;
+  border-radius: 2px;
 }
 
 .navigation--get-started-button:hover {

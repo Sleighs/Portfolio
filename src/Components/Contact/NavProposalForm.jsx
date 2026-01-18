@@ -210,7 +210,7 @@ const NavProposalForm = () => {
 
           <div className="form-group">
             <label htmlFor="website">Current Website (if any)</label>
-            <input type="url" id="website" name="website" value={formData.website} onChange={handleChange} />
+            <input type="text" id="website" name="website" value={formData.website} onChange={handleChange} />
           </div>
 
           <div className="form-group">
