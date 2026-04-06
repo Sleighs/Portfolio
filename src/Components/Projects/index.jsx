@@ -82,6 +82,7 @@ const ProjectData = [
     description: `The Hero Matchups API is a character matchup and counter resource created for Blizzard's team-based first-person shooter Overwatch 2. Check out the documentation and live demo below.`,
     links: [
       { link: 'https://github.com/Sleighs/hero-matchups-api/', linkText: 'View on GitHub', show: true },
+      { link: 'https://hero-pick-app.web.app/', linkText: 'hero-pick-app.web.app', show: true },
       { link: 'https://heromatchups.com/', linkText: 'Heromatchups.com', show: true }
     ],
     tags: ['MongoDB', 'JavaScript',  'React'],
