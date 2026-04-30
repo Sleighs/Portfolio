@@ -137,12 +137,12 @@ export default function Crypt() {
     if (submitted === 'list' || submitted === 'projects') {
       success = true;
       const projects = {
-        'chatplus': projectsToDisplay.includes('chatplus') ? 'visible' : 'hidden',
-        'realitycalc': projectsToDisplay.includes('realitycalc') ? 'visible' : 'hidden',
-        'heromatchups': projectsToDisplay.includes('heromatchups') ? 'visible' : 'hidden',
-        'mint': projectsToDisplay.includes('mint') ? 'visible' : 'hidden',
-        'cashflow': projectsToDisplay.includes('cashflow') ? 'visible' : 'hidden',
-        'yt-playlist-downloader': projectsToDisplay.includes('yt-playlist-downloader') ? 'visible' : 'hidden'
+        'chatplus': projectsToDisplay.includes('chatplus') ? '' : 'hidden',
+        'realitycalc': projectsToDisplay.includes('realitycalc') ? '' : 'hidden',
+        'heromatchups': projectsToDisplay.includes('heromatchups') ? '' : 'hidden',
+        'mint': projectsToDisplay.includes('mint') ? '' : '',
+        'cashflow': projectsToDisplay.includes('cashflow') ? '' : 'hidden',
+        'yt-playlist-downloader': projectsToDisplay.includes('yt-playlist-downloader') ? '' : 'hidden'
       };
       setTooltipCommands(projects);
       setShowTooltip(true);
