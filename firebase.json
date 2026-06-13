@@ -1,6 +1,5 @@
 {
   "hosting": {
-    "site": "swright",
     "public": "dist",
     "ignore": [
       "firebase.json",

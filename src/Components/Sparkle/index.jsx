@@ -53,7 +53,7 @@ const Sparkle = (props) => {
       update() {
         this.x += this.speedX;
         this.y += this.speedY;
-        this.opacity -= 0.006;
+        this.opacity -= 0.001;
         if (this.opacity <= 0) {
           this.reset();
         }
@@ -77,8 +77,8 @@ const Sparkle = (props) => {
       for (let i = 0; i < numSparkles; i++) {
         const x = Math.random() * canvas.width;
         const y = Math.random() * canvas.height;
-        const speedX = (Math.random() - 0.5) * 0.5;
-        const speedY = (Math.random() - 0.5) * 0.5;
+        const speedX = (Math.random() - 0.5) * 0.1;
+        const speedY = (Math.random() - 0.5) * 0.1;
         const opacity = Math.random();
         const color = Math.random() < 0.5 ? '255, 255, 255' : '255, 77, 70'; // White or Red
         sparkles.push(new Sparkle(x, y, sparkleSize, speedX, speedY, opacity, color));

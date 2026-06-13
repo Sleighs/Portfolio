@@ -1,100 +1,114 @@
 .intro-container {
-  height: 100%;
+  --intro-nav-offset: clamp(4.5rem, 7vh + 1rem, 5.625rem);
+  --intro-padding-x: clamp(1.25rem, 4vw + 0.5rem, 3rem);
+  --intro-padding-y: clamp(1.5rem, 5vh, 3rem);
+  --intro-title-size: clamp(1.85rem, 4.2vw + 0.75rem, 4rem);
+  --intro-subtitle-size: clamp(1.05rem, 1.8vw + 0.5rem, 1.875rem);
+  --intro-contact-size: clamp(0.8125rem, 1vw + 0.5rem, 0.9375rem);
+  --intro-gap: clamp(0.625rem, 2vw, 1.25rem);
+  --intro-content-max: min(92vw, 72rem);
+
+  width: 100%;
   min-height: 100vh;
-  max-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
-  align-items: baseline;
   justify-content: center;
-  padding: 90px 40px 0 40px;
-  font-family: 'Red Hat Display'; 
-}  
+  align-items: stretch;
+  padding:
+    calc(var(--intro-nav-offset) + var(--intro-padding-y))
+    var(--intro-padding-x)
+    var(--intro-padding-y);
+  font-family: 'Red Hat Display';
+  box-sizing: border-box;
+}
+
 .intro-section {
   display: flex;
-  /* font-size: 1em; */
   margin: auto;
-  /* margin-top: 2%; */
-
 }
+
 .intro-section__description {
   background-color: rgb(179, 178, 167, .5);
-  /* padding: .75rem 1rem; */
   display: none;
 }
+
 .intro-section__contact-info {
   margin: auto;
   width: fit-content;
-  /* font-size: 1.15em; */
-  /* margin-top: 15%; */
 }
 
 .about-intro {
-  
+  width: 100%;
 }
 
 .about-intro__content {
-  max-width: 1400px;
+  width: 100%;
+  max-width: var(--intro-content-max);
   margin: 0 auto;
-  padding-top: 2rem;
 }
 
-.about-intro__text {
-    /* font-size: 1.5em; */
-}
 .about-intro__title {
-  font-size: 3.5rem;
+  font-size: var(--intro-title-size);
   font-weight: 700;
-  margin-bottom: 1rem;
-  line-height: 1.2;
+  margin-bottom: clamp(0.5rem, 2vh, 1rem);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
   color: var(--text-primary);
+  max-width: 18em;
+  text-wrap: balance;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 0.5s ease-out forwards;
 }
 
 .about-intro__subtitle {
-  font-size: 1.8rem;
+  font-size: var(--intro-subtitle-size);
   font-weight: 400;
-  margin-bottom: 1.5rem;
-  line-height: 1.4;
+  margin-bottom: clamp(1rem, 3vh, 1.75rem);
+  line-height: 1.35;
   color: var(--text-secondary);
+  max-width: 28em;
+  text-wrap: pretty;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 0.5s ease-out 0.2s forwards;
 }
 
 .about-intro__description {
-  font-size: 17px; 
-} 
-.about-intro__button {
-    /* transition: transform 0.25s ease-in-out; */
-    transition: .24s ease-in-out;
-    user-select: none;
+  font-size: clamp(0.9375rem, 1vw + 0.5rem, 1.0625rem);
 }
+
+.about-intro__button {
+  transition: .24s ease-in-out;
+  user-select: none;
+}
+
 .about-intro__button:hover {
-    transform: translateY(-6px);
+  transform: translateY(-6px);
 }
 
 .about-intro__contact {
-  display: flex;
-  gap: 1rem;
-  margin-top: .5rem;
-  margin-bottom: 1rem;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 11rem), 1fr));
+  gap: var(--intro-gap);
+  margin-top: clamp(0.5rem, 2vh, 1rem);
+  width: 100%;
+  max-width: 42rem;
 }
 
 .about-intro__contact-card {
   background: var(--bg-primary);
-  padding: 0.5rem 0rem;
+  padding: clamp(0.5rem, 1.5vw, 0.75rem) clamp(0.625rem, 2vw, 1rem);
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
   display: flex;
-  gap: 0.2rem;
+  gap: 0.35rem;
   align-items: center;
-  min-width: 160px;
+  min-width: 0;
 }
 
 .about-intro__contact-card:hover {
@@ -106,11 +120,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 16px;
-  height: 16px;
+  width: clamp(14px, 2vw, 18px);
+  height: clamp(14px, 2vw, 18px);
   color: var(--accent-color);
   flex-shrink: 0;
-  margin-right: 0.25rem;
 }
 
 .about-intro__contact-icon svg {
@@ -125,14 +138,13 @@
 
 .about-intro__contact-info {
   flex: 1;
+  min-width: 0;
 }
-
 
 .about-intro__contact-row {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  margin-bottom: 0.25rem;
 }
 
 .about-intro__contact-row p {
@@ -154,8 +166,11 @@
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
-  padding: 0.5rem 0;
-  font-size: .9rem;
+  padding: 0.35rem 0;
+  font-size: var(--intro-contact-size);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .about-intro__contact-text:hover {
@@ -180,18 +195,15 @@
   transform-origin: left;
 }
 
-
-
 .about-intro__quote {
   margin: .5rem auto;
-  padding: 1rem 1rem;
+  padding: 1rem;
   position: relative;
   animation: float 6s ease-in-out infinite;
-  max-width: 800px;
+  max-width: 50rem;
   display: flex;
   align-items: center;
   gap: 1rem;
-  /* display: none; */
 }
 
 .about-intro__quote-content {
@@ -223,7 +235,7 @@
 }
 
 .about-intro__quote-text {
-  font-size: 1.3rem;
+  font-size: clamp(1rem, 1.5vw + 0.5rem, 1.3rem);
   color: var(--text-secondary);
   font-style: italic;
   margin-bottom: 0.5rem;
@@ -235,7 +247,7 @@
 }
 
 .about-intro__quote-author {
-  font-size: 1rem;
+  font-size: clamp(0.875rem, 1vw + 0.4rem, 1rem);
   color: var(--text-tertiary);
   margin: 0;
   opacity: 0;
@@ -267,6 +279,45 @@
   }
 }
 
+/* Narrow phones: stack contact cards, center hero copy */
+@media only screen and (max-width: 540px) {
+  .about-intro__content {
+    text-align: center;
+  }
+
+  .about-intro__title,
+  .about-intro__subtitle {
+    margin-inline: auto;
+  }
+
+  .about-intro__contact {
+    grid-template-columns: 1fr;
+    max-width: 20rem;
+    margin-inline: auto;
+  }
+
+  .about-intro__contact-card {
+    justify-content: center;
+  }
+
+  .about-intro__contact-text {
+    white-space: normal;
+    text-align: center;
+  }
+}
+
+/* Short viewports: reduce vertical pressure so content doesn't feel cramped */
+@media only screen and (max-height: 700px) {
+  .intro-container {
+    --intro-padding-y: clamp(1rem, 3vh, 1.5rem);
+    justify-content: flex-start;
+  }
+
+  .about-intro__title {
+    line-height: 1.15;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .about-intro__quote {
     padding: 0.5rem;
@@ -280,97 +331,4 @@
     width: 16px;
     height: 16px;
   }
-}
-
-
-@media only screen and (max-width: 1400px) {
-  .about-intro__title {
-    font-size: 6ch;
-    line-height: 1.2;
-    max-width: 1000px;
-  }
-
-}
-
-@media only screen and (max-width: 1025px) {
-  .about-intro__title {
-    font-size: 50px;
-    line-height: 1.2;
-    max-width: 900px;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  /* Intro */
-  .about-intro {
-    width: 100%;
-    /*padding: 27% 0 2% 0;*/
-    /* margin: 14% auto 5% auto; */
-    /* padding: 3%; */
-    text-align: center;
-    border-radius: 5px;
-  }
-  .about-intro__text {
-    margin: 0 auto;
-  }
-
-  /* .about-intro-dark {
-    background-color: rgba(13, 18, 20, 1);
-  }
-  .about-intro-light {
-    background-color: rgba(236, 223, 223, 1);
-  } */
-
-  .about-intro__title {
-    font-size: 2.5rem;
-  }
-
-  .about-intro__contact {
-    flex-direction: row;
-    gap: .5rem;
-    justify-content: center;
-  }
-
-  .about-intro__contact-card {
-    padding: 0.5rem 0.75rem;
-    min-width: 180px;
-    height: 40px;
-    margin: 0 auto;
-  }
-  .about-intro__contact-card-github {
-    margin: 0 auto;
-    min-width: 98px;
-    
-  }
-
-  .about-intro__contact-text {
-    font-size: 0.85rem;
-  }
-
-  .about-intro__quote-text {
-    font-size: 1.2rem;
-  }
-  
-  .about-intro__quote-author {
-    font-size: 0.9rem;
-  }
-
-  .about-intro__subtitle {
-    font-size: 1.4rem;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .about-intro__contact {
-    flex-direction: column;
-  }
-  .about-intro__contact-card {
-    min-width: fit-content;
-    margin: 0 auto;
-  }
-
-  .about-intro__quote {
-    font-size: .9rem;
-  }
-  
 }

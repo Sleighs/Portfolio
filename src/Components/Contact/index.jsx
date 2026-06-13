@@ -43,7 +43,7 @@ const Contact = () => {
       <div className="contact-section" id="contact-container" ref={hiddenRef}>
         <div className="contact-section__header">
           <h2 className="contact-section__title">Let's Build Something Amazing</h2>
-          <p className="contact-section__subtitle">I'm always excited to hear about new projects.</p>
+          <p className="contact-section__subtitle">I'm always excited to talk about new projects.</p>
         </div>
 
         <div className="contact-section__content">

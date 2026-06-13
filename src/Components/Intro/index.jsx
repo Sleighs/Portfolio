@@ -85,11 +85,7 @@ export default function Intro() {
 
   return (
     <div className={"intro-container intro-container-" + theme} id="home"> 
-      <div className={"about-intro about-intro-" + theme } ref={hiddenRef} 
-        style={{
-          overflow: 'hidden',
-        }}
-      >
+      <div className={"about-intro about-intro-" + theme } ref={hiddenRef}>
         <div className="about-intro__content">
           <div className="about-intro__title">
           South Jersey web developer crafting fun and engaging solutions.
@@ -97,7 +93,7 @@ export default function Intro() {
           <div className="about-intro__subtitle">
             Let's build something extraordinary
           </div>
-          <div className="about-intro__quote">
+          {/* <div className="about-intro__quote">
             <button className="about-intro__quote-nav about-intro__quote-nav--prev" onClick={prevQuote}>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M15 18l-6-6 6-6"/>
@@ -112,7 +108,7 @@ export default function Intro() {
                 <path d="M9 18l6-6-6-6"/>
               </svg>
             </button>
-          </div>
+          </div> */}
           
           <div className="about-intro__contact">
             <div className="about-intro__contact-card">
