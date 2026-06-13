@@ -6,11 +6,13 @@ function ThemeContextProvider(props){
   const [theme, setTheme] = useState('dark');
   const [lightbulb, setLightbulb] = useState(false);
   
-  const changeTheme = () => {
-    if (theme === 'light'){
-      setTheme('dark')
-    } else {
+  const changeTheme = (type) => {
+    if (type) {
+      setTheme(type)
+    } else if (theme === 'dark'){
       setTheme('light')
+    } else {
+      setTheme('dark')
     }
   };
 

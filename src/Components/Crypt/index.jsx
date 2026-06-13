@@ -7,13 +7,13 @@ import Tooltip from '../Tooltip';
 
 const commands = {
   help: 'list codes in console',
-  lights: 'toggle light/dark mode',
+  lights: 'toggle light with: "lights", "light off", "lights on", "night", "night off", etc.',
   'sparkle size': 'show current sparkle size',
   'sparkle count': 'show current sparkle count',
-  'size-[0.1-100]': 'set sparkle size',
-  'count-[0-100]': 'set number of sparkles',
+  'size-[0.1-100]': 'set sparkle size (e.g. "size-11")',
+  'count-[0-100]': 'set number of sparkles (e.g. "count-20")',
   'set-[projectname]': 'toggle project visibility',
-  'reset size': 'restore default sparkle size',
+  'reset size': 'restore default sparkle size ',
   'reset count': 'restore default sparkle count',
   list: 'show available projects'
 };
@@ -46,17 +46,66 @@ export default function Crypt() {
     const DEFAULT_SPARKLE_COUNT = 14;
 
     if (
-      code === 'lights' 
-      || code === 'light'
+      code === 'light'
       || code === 'light mode'
       || code === 'lightmode'
-      || code === 'darkmode'
-      || code === 'dark'
-      || code === 'dark mode'
+      || code === 'lights on'
+      || code === 'lighton'
+      || code === 'darkoff'
+      || code === 'dark off'
+      || code === 'dark mode off'
+      || code === 'darkmodeoff'
+      || code === 'nightoff'
+      || code === 'night off'
+      || code === 'night mode off'
+      || code === 'nightmodeoff'
     ){
+      changeTheme('light')
+      success = true;
+    } 
+    
+    if (
+      code === 'dark'
+      || code === 'night'
+      || code === 'night mode'
+      || code === 'nightmode'
+      || code === 'night on'
+      || code === 'nighton'
+      || code === 'night mode on'
+      || code === 'nightmodeon'
+      || code === 'dark mode'
+      || code === 'darkmode'
+      || code === 'dark mode on'
+      || code === 'darkmodeon'
+      || code === 'dark on'
+      || code === 'lights off'
+      || code === 'light off'
+      || code === 'darkon'
+      || code === 'lightoff'
+      || code === 'lightsoff'
+    ){
+      changeTheme('dark')
+      success = true;
+    }
+
+    if (code === 'lights'
+      || code === 'toggle lights'
+      || code === 'togglelights'
+      || code === 'toggle light'
+      || code === 'togglelight'
+      || code === 'toggle night'
+      || code === 'togglenight'
+      || code === 'lights toggle'
+      || code === 'lightstoggle'
+      || code === 'lightstoggle'
+      || code === 'lightstoggle'
+      || code === 'night toggle'
+      || code === 'nightstoggle'
+     ){
       changeTheme()
       success = true;
     }
+
 
     // If the first 3 characters are 'set-' then change project display
     if (submitted.substring(0, 4) === 'set-') {

@@ -145,16 +145,18 @@
 }
 
 .contact-section__title {
-  font-size: 3rem;
+  font-size: clamp(1.85rem, 3vw + 0.75rem, 4rem);
   font-weight: 700;
-  color: #FF4D46;
-  margin-bottom: 1.5rem;
-  background: linear-gradient(45deg, #FF4D46, #FF6B66);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  /* text-fill-color: transparent; */
-  position: relative;
+  margin: 0 0 clamp(0.5rem, 2vh, 1rem);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  max-width: 18em;
+  margin-inline: auto;
+  text-wrap: balance;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s ease-out forwards;
 }
 
 .contact-section__subtitle {
@@ -636,10 +638,6 @@
     padding: 6rem 1.5rem 8rem;
   }
 
-  .contact-section__title {
-    font-size: 2.5rem;
-  }
-
   .contact-section__subtitle {
     font-size: 1.2rem;
   }
@@ -667,10 +665,6 @@
 }
 
 @media only screen and (max-width: 480px) {
-  .contact-section__title {
-    font-size: 2rem;
-  }
-
   .contact-section__card-content h3 {
     font-size: 1.75rem;
   }
