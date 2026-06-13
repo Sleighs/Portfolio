@@ -46,8 +46,7 @@ export default function Crypt() {
     const DEFAULT_SPARKLE_COUNT = 14;
 
     if (
-      code === 'light'
-      || code === 'light mode'
+      code === 'light mode'
       || code === 'lightmode'
       || code === 'lights on'
       || code === 'lighton'
@@ -89,6 +88,7 @@ export default function Crypt() {
     }
 
     if (code === 'lights'
+      || code === 'light'
       || code === 'toggle lights'
       || code === 'togglelights'
       || code === 'toggle light'
