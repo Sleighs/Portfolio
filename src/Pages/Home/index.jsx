@@ -1,6 +1,6 @@
 import React, { createRef, useContext } from 'react';
 import { useMediaQuery } from 'react-responsive';
-import { Contact, Projects, Skills, Sparkle, Work, Intro, Nav } from '../../Components';
+import { Contact, Projects, Skills, Sparkle, Support, Work, Intro, Nav } from '../../Components';
 import { ThemeContext } from '../../Context/ThemeContext';
 import './style-svg.css';
 import './style.css';
@@ -24,13 +24,18 @@ const HomePage = (props) => {
       
       <Intro />
 
-      {/* <Projects /> */}
+      
 
       {/* <Work /> */}
 
       <Contact />
       
-      <Skills />      
+      <Skills />   
+
+      <Projects />
+
+      <Support />
+
     </div>
   )
 }

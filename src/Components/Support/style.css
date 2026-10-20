@@ -1,0 +1,106 @@
+.support-section {
+  width: 100%;
+  padding: 5rem 2rem;
+  background: var(--bg-secondary);
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+.support-section__header {
+  max-width: 800px;
+  margin: 0 auto 2.5rem;
+  text-align: center;
+}
+
+.support-section__title {
+  margin: 0 0 0.75rem;
+  color: var(--text-primary);
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+}
+
+.support-section__subtitle {
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.support-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+  gap: 1rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.support-option {
+  padding: 1.25rem;
+  border-radius: 12px;
+  background: var(--bg-primary);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.support-option h3 {
+  margin: 0 0 0.75rem;
+  color: var(--text-primary);
+  font-size: 1.1rem;
+}
+
+.support-option__address {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.35rem 0;
+}
+
+.support-option__address p {
+  flex: 1;
+  margin: 0;
+  color: var(--text-primary);
+  font-family: monospace;
+  font-size: 0.9rem;
+  overflow-wrap: anywhere;
+}
+
+.support-option__address .support-option__memo {
+  color: var(--text-tertiary);
+  font-size: 0.85rem;
+}
+
+.support-copy-button {
+  position: relative;
+  display: flex;
+  flex: 0 0 40px;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0.5rem;
+  overflow: hidden;
+  border: 1px solid var(--accent-color);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--accent-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.support-copy-button:hover {
+  background: var(--accent-color);
+  color: white;
+}
+
+.support-copy-button:active {
+  transform: scale(0.95);
+}
+
+.support-copy-icon {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+@media only screen and (max-width: 768px) {
+  .support-section {
+    padding: 4rem 1.5rem;
+  }
+}

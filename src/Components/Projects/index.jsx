@@ -14,7 +14,7 @@ import './style.css'
 const ProjectData = [
   {
     title: 'X Post Saver',
-    description: 'X Post Saver is a browser extension that allows you to easily save X posts for later reference. It seamlessly integrates with X\'s interface to provide a smooth user experience for saving and managing posts.',
+    description: 'X Post Saver is a browser extension that allows users to save X posts for later reference. It seamlessly integrates with X\'s interface to provide a smooth user experience for saving and managing posts.',
     features: [
       'Save X posts with one click',
       'Export saved posts to your computer'
@@ -65,17 +65,17 @@ const ProjectData = [
     alt: 'ChatPlus for Rumble',
     id: 'chatplus'
   },
-  // {
-  //   title: `Male Reality Calculator`,
-  //   description: `A popular online tool that uses U.S. Census Bureau statistics to calculate the user's odds of meeting their ideal woman. Datasets updated along with census. Thanks to all who checked it out!`,
-  //   links: [
-  //     { link: `https://realitycalc.com/`, linkText: `Realitycalc.com`, show: true },
-  //   ],
-  //   tags: ['React', 'Redux', 'JavaScript'],
-  //   pic: realityCalcPic,
-  //   alt: 'Male Reality Calculator',
-  //   id: 'realitycalc',
-  // },
+  {
+    title: `Male Reality Calculator`,
+    description: `A popular online tool that uses U.S. Census Bureau statistics to calculate the user's odds of meeting their ideal woman. Datasets updated along with census. Thanks to all who checked it out!`,
+    links: [
+      { link: `https://realitycalc.com/`, linkText: `realitycalc.com`, show: true },
+    ],
+    tags: ['React', 'Redux', 'JavaScript'],
+    pic: realityCalcPic,
+    alt: 'Male Reality Calculator',
+    id: 'realitycalc',
+  },
 
   {
     title: `Hero Matchups API`,
@@ -83,7 +83,7 @@ const ProjectData = [
     links: [
       { link: 'https://github.com/Sleighs/hero-matchups-api/', linkText: 'View on GitHub', show: true },
       { link: 'https://hero-pick-app.web.app/', linkText: 'hero-pick-app.web.app', show: true },
-      { link: 'https://heromatchups.com/', linkText: 'Heromatchups.com', show: true }
+      { link: 'https://heromatchups.com/', linkText: 'heromatchups.com', show: true }
     ],
     tags: ['MongoDB', 'JavaScript',  'React'],
     pic: heromatchupsPic,
@@ -107,7 +107,7 @@ const ProjectData = [
     description: `A Node.js web scraper that downloads each video in a YouTube playlist, using Puppeteer to collect the videos and ytdl-core to download them.`,
     links: [
       { link: 'https://github.com/Sleighs/youtube-playlist-downloader/', linkText: 'View on GitHub', show: true },
-      { link: 'https://github.com/Sleighs/youtube-playlist-web-scraper/', linkText: 'Check out the YouTube playlist scraper here', show: true },
+      { link: 'https://github.com/Sleighs/youtube-playlist-web-scraper/', linkText: 'Check out the webscraper', show: true },
     ],
     tags: ['Web Scraper', 'Node.js', 'JavaScript'],
     pic: ytpwebscraperPic,
@@ -118,7 +118,7 @@ const ProjectData = [
     title: 'Mint 2048',
     description: 'Mint is a sliding tile puzzle game based on 2048 by Gabriele Cirulli where players combine tiles, perform combos and use special abilities to create the 2048 tile.',
     links: [
-      { link: 'https://github.com/sleighs/mint-2048', linkText: 'View repository', show: true },
+      { link: 'https://github.com/sleighs/mint-2048', linkText: 'View on GitHub', show: true },
       { link: 'https://plus-7ed02.web.app/', linkText: 'Play Mint 2048', show: true }
     ],
     tags: ['React', 'JavaScript', 'CSS'],
@@ -194,15 +194,114 @@ const Projects = (props) => {
         <div className="section-header" id="projects">
           <h2 className="section-title"><strong>Projects</strong></h2>
         </div>
-        {ProjectData.map((project, index) => {
+        {ProjectData.map((project) => {
           if (project?.id) {
             return (
-              <Project projectIndex={index} projectData={project} key={project.id} />
+              <ProjectItem projectData={project} key={project.id} />
             )
           } else { 
             return <></>}
         })} 
       </div>
+  )
+}
+
+const ProjectItem = (props) => {
+  const { projectData } = props;
+  const { projectsToDisplay } = useContext(DataContext);
+  const [detailsOpen, setDetailsOpen] = useState(false);
+
+  if (!projectsToDisplay.includes(projectData.id)) {
+    return null;
+  }
+
+  return (
+    <article
+      className="project-item"
+      id={`project-${projectData.id}`}
+      onClick={(event) => {
+        if (event.target.closest('a')) {
+          return;
+        }
+        setDetailsOpen(open => !open);
+      }}
+    >
+      <div className="project-item__main">
+        <h3 className="project-item__title">{projectData.title}</h3>
+        <nav className="project-item__links" aria-label={`${projectData.title} links`}>
+          {projectData.links.filter(link => link.show !== false).map((link, index) => (
+            <a
+              key={`project-item-link-${projectData.id}-${index}`}
+              href={link.link}
+              target="_blank"
+              rel="noreferrer"
+            >
+              {link.linkText || link.link}
+            </a>
+          ))}
+        </nav>
+        <button
+          className="project-item__details-toggle"
+          type="button"
+          aria-expanded={detailsOpen}
+          aria-controls={`project-details-${projectData.id}`}
+          onClick={(event) => {
+            event.stopPropagation(); // 👈 Stops the click from hitting the parent article
+            setDetailsOpen(open => !open);
+          }} 
+        >
+          Details
+        </button>
+      </div>
+      <ProjectDetailsModal
+        projectData={projectData}
+        isOpen={detailsOpen}
+        id={`project-details-${projectData.id}`}
+      />
+    </article>
+  )
+}
+
+const ProjectDetailsModal = ({ projectData, isOpen, id }) => {
+  const thumbnail = (
+    <img
+      className="project-details__thumbnail"
+      src={projectData.pic}
+      alt={projectData.alt}
+    />
+  );
+  const previewLink = projectData.links.find(link => link.show !== false);
+
+  return (
+    <section
+      className="project-details"
+      id={id}
+      aria-label={`${projectData.title} details`}
+      hidden={!isOpen}
+    >
+      <div className="project-details__thumbnail-container">
+        {previewLink ? (
+          <a href={previewLink.link} target="_blank" rel="noreferrer" title={`Open ${projectData.title}`}>
+            {thumbnail}
+          </a>
+        ) : thumbnail}
+      </div>
+      <div className="project-details__content">
+        {projectData.description && <p>{projectData.description}</p>}
+        {projectData.features && (
+          <ul>
+            {projectData.features.map((feature, index) => (
+              <li key={`project-details-feature-${projectData.id}-${index}`}>{feature}</li>
+            ))}
+          </ul>
+        )}
+        {projectData.tags && (
+          <div className="project-details__tags" aria-label="Technologies">
+            {projectData.tags.join(' · ')}
+          </div>
+        )}
+      </div>
+    </section>
   )
 }
 

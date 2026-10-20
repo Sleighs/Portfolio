@@ -15,3 +15,4 @@ export { default as Intro } from './Intro';
 export { default as HomeAbout } from './HomeAbout';
 export { default as RiskReversal } from './RiskReversal';
 export { default as ToolTip } from './Tooltip';
+export { default as Support } from './Support';
