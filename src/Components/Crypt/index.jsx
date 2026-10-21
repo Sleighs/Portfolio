@@ -186,6 +186,7 @@ export default function Crypt() {
     if (submitted === 'list' || submitted === 'projects') {
       success = true;
       const projects = {
+        'streamtimestampsaver': projectsToDisplay.includes('streamtimestampsaver') ? '' : 'hidden',
         'chatplus': projectsToDisplay.includes('chatplus') ? '' : 'hidden',
         'realitycalc': projectsToDisplay.includes('realitycalc') ? '' : 'hidden',
         'heromatchups': projectsToDisplay.includes('heromatchups') ? '' : 'hidden',

@@ -7,6 +7,7 @@ import realityCalcPic from '../../Resources/Images/portfolio-realitycalc03.png';
 import chatplusPic from '../../Resources/Images/logo-600x400.png';
 import ytpwebscraperPic from '../../Resources/Images/portfolio-ytpwebscraper.png';
 import xPostSaverPic from '../../Resources/Images/x-post-saver1.png';
+import githubPic from '../../Resources/Images/portfolio-github.png';
 import Tag from '../Tag';
 import './style.css'
 
@@ -35,6 +36,25 @@ const ProjectData = [
     pic: xPostSaverPic,
     alt: 'X Post Saver Chrome Extension',
     id: 'xpostsaver'
+  },
+  {
+    title: 'Stream Timestamp Saver',
+    description: 'A lightweight Chrome extension that automatically saves your position in YouTube videos and restores it when you return. It is useful for keeping your place in livestreams, podcasts, and long videos, and is not yet released.',
+    features: [
+      'Automatically saves your current playback position',
+      'Resumes videos from the saved position'
+    ],
+    links: [
+      {
+        link: 'https://github.com/Sleighs/stream-timestamp-saver',
+        linkText: 'View on GitHub',
+        show: true
+      }
+    ],
+    tags: ['JavaScript', 'Chrome Extension'],
+    pic: githubPic,
+    alt: 'Stream Timestamp Saver extension icon',
+    id: 'streamtimestampsaver'
   },
   {
     title: `ChatPlus for Rumble`,
@@ -83,7 +103,7 @@ const ProjectData = [
     links: [
       { link: 'https://github.com/Sleighs/hero-matchups-api/', linkText: 'View on GitHub', show: true },
       { link: 'https://hero-pick-app.web.app/', linkText: 'hero-pick-app.web.app', show: true },
-      { link: 'https://heromatchups.com/', linkText: 'heromatchups.com', show: true }
+      { link: 'https://heromatchups.com/', linkText: 'heromatchups.com', show: false }
     ],
     tags: ['MongoDB', 'JavaScript',  'React'],
     pic: heromatchupsPic,
@@ -135,7 +155,7 @@ const ProjectData = [
       },
       { link: 'https://sleighs.github.io/CashFlowJs/', linkText: 'Play CashFlow JS', show: true },
 
-      { link: 'https://github.com/Sleighs/cashflow-mobile ', linkText: 'CashFlowJs for Mobile repository', show: true }
+      { link: 'https://github.com/Sleighs/cashflow-mobile ', linkText: 'CashFlowJs for Mobile repo', show: true }
     ],
     tags: ['JavaScript', 'JQuery', 'CSS', 'React Native'],
     pic: cashflowPic,

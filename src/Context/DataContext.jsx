@@ -7,6 +7,7 @@ function DataContextProvider(props){
   const [pageLocation, setPageLocation] = useState('home');
   const [projectsToDisplay, setProjectsToDisplay] = useState([ 
     'xpostsaver',
+    'streamtimestampsaver',
     'chatplus',
     'realitycalc', 
     'heromatchups', 
