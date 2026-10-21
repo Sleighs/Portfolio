@@ -13,7 +13,7 @@ const Footer = () => {
         {/* Left Section - Info */}
         <div className="footer-section">
           <h4 className="footer-title">Samuel Wright</h4>
-          <p className="footer-tagline">Full Stack Web Developer creating modern web experiences</p>
+          <p className="footer-tagline">Full Stack Developer creating modern web experiences</p>
         </div>
 
         {/* Middle Section - Contact */}

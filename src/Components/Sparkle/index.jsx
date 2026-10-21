@@ -17,17 +17,15 @@ const Sparkle = (props) => {
     const canvas = canvasRef?.current;
     const ctx = canvas.getContext('2d');
     const sparkles = [];
-    const numSparkles = sparkleCount;
+    let pageHeight = window.innerHeight;
 
     const resizeCanvas = () => {
-      if (parentRef?.current) {
-        const { width, height } = parentRef.current.getBoundingClientRect();
-        canvas.width = width;
-        canvas.height = height;
-      } else {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-      }
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      pageHeight = Math.max(
+        window.innerHeight,
+        parentRef?.current?.scrollHeight || document.documentElement.scrollHeight
+      );
     };
 
 
@@ -45,7 +43,7 @@ const Sparkle = (props) => {
 
       draw() {
         ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.arc(this.x, this.y - window.scrollY, this.size, 0, Math.PI * 2);
         ctx.fillStyle = `rgba(${this.color}, ${this.opacity})`;
         ctx.fill();
       }
@@ -61,7 +59,7 @@ const Sparkle = (props) => {
 
       reset() {
         this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
+        this.y = Math.random() * pageHeight;
         // Random size between 50-100% of sparkleSize
         this.size = (Math.random() * 0.5 + 0.5) * sparkleSize;
         this.speedX = (Math.random() - 0.5) * 0.5;
@@ -74,9 +72,10 @@ const Sparkle = (props) => {
     }
 
     function initSparkles() {
+      const numSparkles = Math.ceil(sparkleCount * pageHeight / canvas.height);
       for (let i = 0; i < numSparkles; i++) {
         const x = Math.random() * canvas.width;
-        const y = Math.random() * canvas.height;
+        const y = Math.random() * pageHeight;
         const speedX = (Math.random() - 0.5) * 0.1;
         const speedY = (Math.random() - 0.5) * 0.1;
         const opacity = Math.random();
@@ -85,13 +84,14 @@ const Sparkle = (props) => {
       }
     }
 
+    let animationFrameId;
     function animate() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       sparkles.forEach(sparkle => {
         sparkle.update();
         sparkle.draw();
       });
-      requestAnimationFrame(animate);
+      animationFrameId = requestAnimationFrame(animate);
     }
 
     resizeCanvas();
@@ -100,8 +100,16 @@ const Sparkle = (props) => {
     animate();
 
     window.addEventListener('resize', resizeCanvas);
+    const resizeObserver = parentRef?.current
+      ? new ResizeObserver(resizeCanvas)
+      : null;
+    if (resizeObserver) {
+      resizeObserver.observe(parentRef.current);
+    }
     return () => {
       window.removeEventListener('resize', resizeCanvas);
+      resizeObserver?.disconnect();
+      cancelAnimationFrame(animationFrameId);
       sparkles.length = 0; // Clean up sparkles on unmount
     };
   }, [parentRef, sparkleCount, sparkleSize]); // Add dependencies
@@ -109,19 +117,19 @@ const Sparkle = (props) => {
 
   return (
     <div style={{ 
-      position: parentRef === null ? 'fixed' : 'absolute', 
+      position: 'fixed',
       top: 0, 
       left: 0, 
       width: '100%', 
       height: '100%', 
       zIndex: 0, 
       pointerEvents: 'none' 
-    }} >
+    }}>
       <canvas ref={canvasRef} 
         className="sparkle-canvas"
         style={{
-          width: '100%', 
-          height: '100%', 
+          width: '100%',
+          height: '100%',
         }}
       />
     </div>
