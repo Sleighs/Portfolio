@@ -11,6 +11,7 @@ import mongodbLogo from './mongodb-logo.png';
 import nextjsLogo from './nextjs-logo.png';
 import nodeLogo from './node-logo.png';
 import photoshopLogo from './photoshop-logo.png';
+import postgresLogo from './postgres-logo.svg';
 import pythonLogo from './python-logo.png';
 import reactLogo from './react-logo.png';
 import reduxLogo from './redux-logo.png';
@@ -32,6 +33,7 @@ const logoPics = {
     nextjs: nextjsLogo,
     node: nodeLogo,
     photoshop: photoshopLogo,
+    postgres: postgresLogo,
     python: pythonLogo,
     react: reactLogo,
     redux: reduxLogo,

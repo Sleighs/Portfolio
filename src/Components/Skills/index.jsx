@@ -26,7 +26,8 @@ const Skills = (props) => {
 	'MongoDb',
 	'Node',
 	'Python',
-	'Firebase'
+	'Firebase',
+  'Postgres'
   ])
   const [otherSkills, setOtherSkills] = useState([
 	'AdobeXD',
@@ -52,7 +53,7 @@ const Skills = (props) => {
 
   return (
 	<div className="container container-md" id="skills-container" ref={hiddenRef}>
-    {/* <h2 className="section-title">Skills</h2> */}
+    {/* <h2 className="section-title">Tools</h2> */}
 		<div className="skills__list" id="skills-list1">
       <div className="section-subtitle skills__title">Front-end</div>
       <div className="skills__front-end">

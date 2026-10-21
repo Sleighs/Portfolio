@@ -1,0 +1,54 @@
+#skills-container.skills-compact {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+  padding: 1rem 0;
+}
+
+.skills-compact__heading {
+  grid-column: 1 / -1;
+  margin: 0;
+  text-align: center;
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+.skills-compact__group {
+  min-width: 0;
+  text-align: center;
+}
+
+.section-subtitle.skills-compact__title {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.skills-compact__items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 85px);
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.skills__logo-container.skills-compact__item {
+  box-sizing: border-box;
+  height: 115px;
+  margin: 0.5rem auto;
+  padding: 12px 0 0;
+}
+
+.skills-compact__item .skills__logo-img {
+  max-height: 55px;
+}
+
+@media only screen and (max-width: 768px) {
+  #skills-container.skills-compact {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #skills-container.skills-compact {
+    grid-template-columns: 1fr;
+  }
+}
